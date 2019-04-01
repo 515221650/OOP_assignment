@@ -10,7 +10,7 @@
 class MyPlus: public  Operator_2{
 public:
     MyPlus(std::string &s, int x,int y);
-    virtual int Calc(Node **v);
+    virtual int Calc(MyGraph &v);
 };
 
 

@@ -5,7 +5,7 @@
 #include "myexp.h"
 MyExp::MyExp(std::string &s, int x) : Operator_1(s, x){}
 
-int MyExp::Calc(Node **v) {
-    val = expf(v[num]->Val());
+int MyExp::Calc(MyGraph &v) {
+    val = expf(v[num].NodePos->Val());
     return 0;
 }

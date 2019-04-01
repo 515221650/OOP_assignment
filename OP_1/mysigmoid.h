@@ -6,10 +6,10 @@
 #define OOP_MYSIGMOID_H
 
 #include "operator_1.h"
-class mysigmoid: public Operator_1{
+class MySigmoid: public Operator_1{
 public:
-    mysigmoid(std::string &s, int x);
-    virtual int Calc(Node **v);
+    MySigmoid(std::string &s, int x);
+    virtual int Calc(MyGraph &v);
 };
 
 #endif //OOP_MYSIGMOID_H

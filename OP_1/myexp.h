@@ -9,7 +9,7 @@
 class MyExp : public Operator_1 {
 public:
     MyExp(std::string &s, int x);
-    virtual int Calc(Node **v);
+    virtual int Calc(MyGraph &v);
 };
 
 

@@ -6,4 +6,4 @@
 
 MyConst::MyConst(std::string &s, float x) : Node(s, x){}
 
-int MyConst::Calc(Node **v) { return 0;}
+int MyConst::Calc(MyGraph &v) { return 0;}

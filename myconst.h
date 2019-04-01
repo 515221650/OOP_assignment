@@ -9,7 +9,7 @@
 class MyConst : public Node{
 public:
     MyConst(std::string &s, float x);
-    virtual int Calc(Node **v);
+    virtual int Calc(MyGraph &v);
 };
 
 

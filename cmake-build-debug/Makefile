@@ -47,10 +47,10 @@ RM = "D:\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\yzy\Desktop\OOP
+CMAKE_SOURCE_DIR = C:\Users\yzy\Desktop\OOP\OOP_assignment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\yzy\Desktop\OOP\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yzy\Desktop\OOP\cmake-build-debug\CMakeFiles C:\Users\yzy\Desktop\OOP\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yzy\Desktop\OOP\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -175,6 +175,33 @@ OP_1/mylog.s: OP_1/mylog.cpp.s
 OP_1/mylog.cpp.s:
 	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_1/mylog.cpp.s
 .PHONY : OP_1/mylog.cpp.s
+
+OP_1/myprint.obj: OP_1/myprint.cpp.obj
+
+.PHONY : OP_1/myprint.obj
+
+# target to build an object file
+OP_1/myprint.cpp.obj:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_1/myprint.cpp.obj
+.PHONY : OP_1/myprint.cpp.obj
+
+OP_1/myprint.i: OP_1/myprint.cpp.i
+
+.PHONY : OP_1/myprint.i
+
+# target to preprocess a source file
+OP_1/myprint.cpp.i:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_1/myprint.cpp.i
+.PHONY : OP_1/myprint.cpp.i
+
+OP_1/myprint.s: OP_1/myprint.cpp.s
+
+.PHONY : OP_1/myprint.s
+
+# target to generate assembly for a file
+OP_1/myprint.cpp.s:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_1/myprint.cpp.s
+.PHONY : OP_1/myprint.cpp.s
 
 OP_1/mysigmoid.obj: OP_1/mysigmoid.cpp.obj
 
@@ -310,6 +337,141 @@ OP_2/mydiv.s: OP_2/mydiv.cpp.s
 OP_2/mydiv.cpp.s:
 	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mydiv.cpp.s
 .PHONY : OP_2/mydiv.cpp.s
+
+OP_2/myequal.obj: OP_2/myequal.cpp.obj
+
+.PHONY : OP_2/myequal.obj
+
+# target to build an object file
+OP_2/myequal.cpp.obj:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/myequal.cpp.obj
+.PHONY : OP_2/myequal.cpp.obj
+
+OP_2/myequal.i: OP_2/myequal.cpp.i
+
+.PHONY : OP_2/myequal.i
+
+# target to preprocess a source file
+OP_2/myequal.cpp.i:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/myequal.cpp.i
+.PHONY : OP_2/myequal.cpp.i
+
+OP_2/myequal.s: OP_2/myequal.cpp.s
+
+.PHONY : OP_2/myequal.s
+
+# target to generate assembly for a file
+OP_2/myequal.cpp.s:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/myequal.cpp.s
+.PHONY : OP_2/myequal.cpp.s
+
+OP_2/mygreater.obj: OP_2/mygreater.cpp.obj
+
+.PHONY : OP_2/mygreater.obj
+
+# target to build an object file
+OP_2/mygreater.cpp.obj:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mygreater.cpp.obj
+.PHONY : OP_2/mygreater.cpp.obj
+
+OP_2/mygreater.i: OP_2/mygreater.cpp.i
+
+.PHONY : OP_2/mygreater.i
+
+# target to preprocess a source file
+OP_2/mygreater.cpp.i:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mygreater.cpp.i
+.PHONY : OP_2/mygreater.cpp.i
+
+OP_2/mygreater.s: OP_2/mygreater.cpp.s
+
+.PHONY : OP_2/mygreater.s
+
+# target to generate assembly for a file
+OP_2/mygreater.cpp.s:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mygreater.cpp.s
+.PHONY : OP_2/mygreater.cpp.s
+
+OP_2/mygreaterequal.obj: OP_2/mygreaterequal.cpp.obj
+
+.PHONY : OP_2/mygreaterequal.obj
+
+# target to build an object file
+OP_2/mygreaterequal.cpp.obj:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mygreaterequal.cpp.obj
+.PHONY : OP_2/mygreaterequal.cpp.obj
+
+OP_2/mygreaterequal.i: OP_2/mygreaterequal.cpp.i
+
+.PHONY : OP_2/mygreaterequal.i
+
+# target to preprocess a source file
+OP_2/mygreaterequal.cpp.i:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mygreaterequal.cpp.i
+.PHONY : OP_2/mygreaterequal.cpp.i
+
+OP_2/mygreaterequal.s: OP_2/mygreaterequal.cpp.s
+
+.PHONY : OP_2/mygreaterequal.s
+
+# target to generate assembly for a file
+OP_2/mygreaterequal.cpp.s:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mygreaterequal.cpp.s
+.PHONY : OP_2/mygreaterequal.cpp.s
+
+OP_2/myless.obj: OP_2/myless.cpp.obj
+
+.PHONY : OP_2/myless.obj
+
+# target to build an object file
+OP_2/myless.cpp.obj:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/myless.cpp.obj
+.PHONY : OP_2/myless.cpp.obj
+
+OP_2/myless.i: OP_2/myless.cpp.i
+
+.PHONY : OP_2/myless.i
+
+# target to preprocess a source file
+OP_2/myless.cpp.i:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/myless.cpp.i
+.PHONY : OP_2/myless.cpp.i
+
+OP_2/myless.s: OP_2/myless.cpp.s
+
+.PHONY : OP_2/myless.s
+
+# target to generate assembly for a file
+OP_2/myless.cpp.s:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/myless.cpp.s
+.PHONY : OP_2/myless.cpp.s
+
+OP_2/mylessequal.obj: OP_2/mylessequal.cpp.obj
+
+.PHONY : OP_2/mylessequal.obj
+
+# target to build an object file
+OP_2/mylessequal.cpp.obj:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mylessequal.cpp.obj
+.PHONY : OP_2/mylessequal.cpp.obj
+
+OP_2/mylessequal.i: OP_2/mylessequal.cpp.i
+
+.PHONY : OP_2/mylessequal.i
+
+# target to preprocess a source file
+OP_2/mylessequal.cpp.i:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mylessequal.cpp.i
+.PHONY : OP_2/mylessequal.cpp.i
+
+OP_2/mylessequal.s: OP_2/mylessequal.cpp.s
+
+.PHONY : OP_2/mylessequal.s
+
+# target to generate assembly for a file
+OP_2/mylessequal.cpp.s:
+	$(MAKE) -f CMakeFiles\OOP.dir\build.make CMakeFiles/OOP.dir/OP_2/mylessequal.cpp.s
+.PHONY : OP_2/mylessequal.cpp.s
 
 OP_2/myminus.obj: OP_2/myminus.cpp.obj
 
@@ -515,6 +677,9 @@ help:
 	@echo ... OP_1/mylog.obj
 	@echo ... OP_1/mylog.i
 	@echo ... OP_1/mylog.s
+	@echo ... OP_1/myprint.obj
+	@echo ... OP_1/myprint.i
+	@echo ... OP_1/myprint.s
 	@echo ... OP_1/mysigmoid.obj
 	@echo ... OP_1/mysigmoid.i
 	@echo ... OP_1/mysigmoid.s
@@ -530,6 +695,21 @@ help:
 	@echo ... OP_2/mydiv.obj
 	@echo ... OP_2/mydiv.i
 	@echo ... OP_2/mydiv.s
+	@echo ... OP_2/myequal.obj
+	@echo ... OP_2/myequal.i
+	@echo ... OP_2/myequal.s
+	@echo ... OP_2/mygreater.obj
+	@echo ... OP_2/mygreater.i
+	@echo ... OP_2/mygreater.s
+	@echo ... OP_2/mygreaterequal.obj
+	@echo ... OP_2/mygreaterequal.i
+	@echo ... OP_2/mygreaterequal.s
+	@echo ... OP_2/myless.obj
+	@echo ... OP_2/myless.i
+	@echo ... OP_2/myless.s
+	@echo ... OP_2/mylessequal.obj
+	@echo ... OP_2/mylessequal.i
+	@echo ... OP_2/mylessequal.s
 	@echo ... OP_2/myminus.obj
 	@echo ... OP_2/myminus.i
 	@echo ... OP_2/myminus.s

@@ -11,7 +11,7 @@
 class MyMul: public Operator_2{
 public:
     MyMul(std::string &s, int x,int y);
-    virtual int Calc(Node **v);
+    virtual int Calc(MyGraph &v);
 };
 
 #endif //OOP_MYMUL_H

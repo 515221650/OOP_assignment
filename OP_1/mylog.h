@@ -9,7 +9,7 @@
 class MyLog : public Operator_1{
 public:
     MyLog(std::string &s, int x);
-    virtual int Calc(Node **v);
+    virtual int Calc(MyGraph &v);
 };
 
 

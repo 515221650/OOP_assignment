@@ -4,5 +4,6 @@
 
 #include "node.h"
 
-Node::Node(string &s, float x = 0) : name(s), val(x){}
+Node::Node(std::string &s, float x) : name(s), val(x){}
 float Node::Val() {return val;}
+std::string Node::Name(){return name;}

@@ -11,7 +11,7 @@ class Operator_2:public Node{
 protected:
     int num1,num2;
 public:
-    virtual int Calc();
+    virtual int Calc(MyGraph &v);
     Operator_2(std::string &s, int x, int y);
 };
 

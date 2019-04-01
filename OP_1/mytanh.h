@@ -9,7 +9,7 @@
 class MyTanh : public Operator_1 {
 public:
     MyTanh(std::string &s, int x);
-    virtual int Calc(Node **v);
+    virtual int Calc(MyGraph &v);
 };
 
 

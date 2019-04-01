@@ -6,7 +6,7 @@
 
 MyMul::MyMul(std::string &s, int x, int y) : Operator_2(s, x, y) {}
 
-int MyMul::Calc(Node **v) {
-    val = v[num1]->Val() * v[num2]->Val();
+int MyMul::Calc(MyGraph &v) {
+    val = v[num1].NodePos->Val() * v[num2].NodePos->Val();
     return 0;
 }

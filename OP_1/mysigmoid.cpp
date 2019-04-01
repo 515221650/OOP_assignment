@@ -3,9 +3,9 @@
 //
 
 #include "mysigmoid.h"
-mysigmoid::mysigmoid(std::string &s, int x): Operator_1(s, x){}
+MySigmoid::MySigmoid(std::string &s, int x): Operator_1(s, x){}
 
-int mysigmoid::Calc(Node **v) {
-    val = 1.0/(1+expf(-v[num]->Val()));
+int MySigmoid::Calc(MyGraph &v) {
+    val = 1.0/(1+expf(-v[num].NodePos->Val()));
     return 0;
 }
