@@ -11,8 +11,3 @@ int MyVar::Calc(const MyGraph& g)
     return 0;
 }
 
-void MyVar::rev_val(float x)
-{
-    val = x;
-}
-

@@ -11,7 +11,6 @@ class MyVar : public Operator_0{
 public:
     virtual int Calc(const MyGraph& a);
     MyVar(std::string& name, float x);
-    virtual void rev_val(float x);
 };
 
 #endif //BIGHOMEWORK_MYVAR_H

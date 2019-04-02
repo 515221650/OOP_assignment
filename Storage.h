@@ -22,13 +22,17 @@ private:
 public:
     friend class Node;
     void insert_node(Node*, std::string);
-    NodeInfo operator [](int i) { return NodeInfoVec[i];}
+    NodeInfo& operator [](std::string &str){ return NodeInfoVec[StrToIntMap[str]];} //add
+    NodeInfo& operator [](int i) { return NodeInfoVec[i];}
     int str_to_int(std::string& str) { return StrToIntMap[str];}//还是重载下标运算符？？
     bool ph_if_rev(int i) { return PlaceholderRev[i];}
     int placeholder_rev_num() { return PlaceholderRev.size();}//感觉好不美观...
     void insert_placeholder_rev() { PlaceholderRev.push_back(0);}
     void empty_placeholder_rev();
     void mark_placeholder_rev(int rank);
+
+    void create_root();
+    void create_tree();
 };
 //记得delete node
 #endif //BIGHOMEWORK_STORAGE_H

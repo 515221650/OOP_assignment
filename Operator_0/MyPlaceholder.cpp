@@ -10,5 +10,3 @@ int MyPlaceholder::Calc(const MyGraph& g)
     if(!g.ph_if_rev(g.str_to_int(this->name))) return 3;
     return 0;
 }
-
-void MyPlaceholder::rev_val(float x) {val = x;}

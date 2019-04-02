@@ -13,7 +13,6 @@ private:
 public:
     MyPlaceholder(std::string& name, int RevRank);
     virtual int Calc(const MyGraph& a);
-    virtual void rev_val(float x);
     virtual int Rank(){return RevRank;}
 };
 

@@ -10,6 +10,7 @@
 class Operator_0 : public Node{
 public:
     Operator_0(std::string& name, float x);
+    virtual void Calc(const MyGraph &g) ;
 };
 
 
