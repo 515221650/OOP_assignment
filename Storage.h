@@ -18,18 +18,19 @@ private:
     };
     std::vector<NodeInfo> NodeInfoVec ;
     std::map <std::string, int> StrToIntMap ;
-    std::vector<bool> PlaceholderRev;//其实可以用map 也可以省一些函数，就是会慢一点？
+    std::map <std::string, float > PlaceholderRev;//其实可以用map 也可以省一些函数，就是会慢一点？
 public:
     friend class Node;
     void insert_node(Node*, std::string);
     NodeInfo& operator [](std::string &str){ return NodeInfoVec[StrToIntMap[str]];} //add
     NodeInfo& operator [](int i) { return NodeInfoVec[i];}
     int str_to_int(std::string& str) { return StrToIntMap[str];}//还是重载下标运算符？？
-    bool ph_if_rev(int i) { return PlaceholderRev[i];}
-    int placeholder_rev_num() { return PlaceholderRev.size();}//感觉好不美观...
-    void insert_placeholder_rev() { PlaceholderRev.push_back(0);}
-    void empty_placeholder_rev();
-    void mark_placeholder_rev(int rank);
+
+    void insert_placeholder_rev(const std::string &str, float x){PlaceholderRev[str] = x;}
+    std::pair<bool,float> GetPH(const std::string &str);
+    void empty_placeholder_rev(){PlaceholderRev.clear();}
+
+    void Mark(int x){NodeInfoVec[x].vis=1;}
 
     void create_root();
     void create_tree();

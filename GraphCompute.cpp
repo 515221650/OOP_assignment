@@ -25,11 +25,9 @@ void graph_compute(MyGraph& g)
             while(ParaNum--)
             {
                 std::cin>>ParaName>>x;
-                Node* pnode = g[ParaName].NodePos;
-                pnode->rev_val(x);
-                g.mark_placeholder_rev(pnode->Rank());
+                g.insert_placeholder_rev(ParaName, x)
             }
-            int ans = (g[g.str_to_int(aim)].NodePos)->Compt(g)
+            int ans = (g[g.str_to_int(aim)].NodePos)->Compt(g, g.str_to_int(aim))
             if(!ans)
             {
                 int res = g[aim].NodePos->Val();

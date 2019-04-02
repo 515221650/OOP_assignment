@@ -6,6 +6,7 @@
 #define BIGHOMEWORK_NODE_H
 
 #include "Storage.h"
+#define EPS 1E-8
 
 //void  MyComputation(std::string aim, MyGraph a);
 

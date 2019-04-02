@@ -3,20 +3,18 @@
 //
 #include "CreateFunc.h"
 #include "Storage.h"
+#define MK std::make_pair
 void MyGraph::insert_node(Node* NewNode, std::string name)
 {
     NodeInfoVec.push_back({NewNode, 0});
     StrToIntMap.insert(std::pair<std::string, int>(name, 0));
 }
 
-void MyGraph::empty_placeholder_rev()
+std::pair<bool,float> MyGraph::GetPH(const std::string &str)
 {
-    int VecSize = PlaceholderRev.size();
-    PlaceholderRev.resize(VecSize, 0);
-}
-void MyGraph::mark_placeholder_rev(int rank)
-{
-    PlaceholderRev[rank] = 1;
+    auto t = PlaceholderRev.find(str);
+    if(t != PlaceholderRev.end())return MK(1, t->second);
+    return MK(0,0);
 }
 
 #define MG (*this)

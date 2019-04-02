@@ -12,6 +12,7 @@ protected:
     int num1, num2, num3;
 public:
     virtual int Compt(const MyGraph& g);
+    virtual void Calc(const MyGraph &g) ;
     Operator_3(std::string& s, int x, int y, int z);
 };
 

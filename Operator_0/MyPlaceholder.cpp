@@ -7,6 +7,8 @@ MyPlaceholder::MyPlaceholder(std::string &name, int RevRank):Operator_0(name), R
 
 int MyPlaceholder::Calc(const MyGraph& g)
 {
-    if(!g.ph_if_rev(g.str_to_int(this->name))) return 3;
+    auto tmp = g.GetPH(this->name);
+    if(!tmp.first) return 3;
+    val = tmp.second;
     return 0;
 }
