@@ -11,6 +11,7 @@ class Operator_0 : public Node{
 public:
     Operator_0(std::string& name, float x);
     virtual void Calc(const MyGraph &g) ;
+    virtual int Compt(MyGraph &g, int x);
 };
 
 
