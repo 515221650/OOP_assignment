@@ -18,7 +18,7 @@ protected:
 public:
     virtual int Rank() = 0;
     virtual int Compt(const MyGraph& g) = 0;
-    Node(std::string &s, float x);
+    Node(std::string &s, float x = 0.0);
     friend void  MyComputation(std::string aim, MyGraph a);
     std::string Name() {return name;}
     float Val() {return val;}
