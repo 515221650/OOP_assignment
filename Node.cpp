@@ -3,6 +3,4 @@
 //
 #include "Node.h"
 
-Node::Node(std::string &s, float x = 0.0) :name(s), val(x) {}
-
-
+Node::Node(std::string &s, float x) :name(s), val(x) {}

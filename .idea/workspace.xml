@@ -12,14 +12,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bc3b254-3566-4b25-9528-ed897032f2f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/GraphCompute.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GraphCompute.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Node.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/Node.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operator_0/MyPlaceholder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_0/MyPlaceholder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operator_3/MyCond.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_3/MyCond.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/myexp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/myexp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/myexp.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/myexp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mylog.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mylog.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mylog.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mylog.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/myprint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/myprint.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/myprint.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/myprint.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mysigmoid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mysigmoid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mysigmoid.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mysigmoid.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mysin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mysin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mysin.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mysin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mytanh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mytanh.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/mytanh.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/mytanh.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/operator_1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/operator_1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_1/operator_1.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_1/operator_1.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mydiv.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mydiv.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mydiv.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mydiv.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myequal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myequal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myequal.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myequal.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mygreater.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mygreater.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mygreater.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mygreater.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mygreaterequal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mygreaterequal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mygreaterequal.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mygreaterequal.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myless.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myless.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myless.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myless.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mylessequal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mylessequal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mylessequal.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mylessequal.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myminus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myminus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myminus.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myminus.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mymul.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mymul.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/mymul.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/mymul.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myplus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myplus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/myplus.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/myplus.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/operator_2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/operator_2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OP_2/operator_2.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_2/operator_2.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Operator_3/Operator_3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_3/Operator_3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Operator_3/Operator_3.h" beforeDir="false" afterPath="$PROJECT_DIR$/Operator_3/Operator_3.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Storage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Storage.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Storage.h" beforeDir="false" afterPath="$PROJECT_DIR$/Storage.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,16 +64,51 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47181964">
+    <splitter split-orientation="horizontal" split-proportion="0.8228663">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/GraphCompute.cpp">
+            <entry file="file://$PROJECT_DIR$/Operator_1/mytanh.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+                <state relative-caret-position="209">
+                  <caret line="11" selection-start-line="11" selection-end-line="11" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Operator_1/mysigmoid.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="152">
+                  <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Operator_0/Operator_0.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="266">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-42" />
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -55,83 +121,37 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Operator_3/Operator_3.h">
+            <entry file="file://$PROJECT_DIR$/Operator_1/mysin.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Node.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Node.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="57">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Operator_3/MyCond.h">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Operator_3/MyCond.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor />
-                  <second_editor />
+                <state>
+                  <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Operator_3/Operator_3.cpp">
+            <entry file="file://$PROJECT_DIR$/Operator_1/mysin.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+                <state relative-caret-position="95">
+                  <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Operator_0/Operator_0.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="12" selection-end-column="41" />
-                </state>
-              </provider>
+            <entry file="file://$PROJECT_DIR$/Operator_2/mygreaterequal.cpp">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Storage.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="570">
-                  <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+                  <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
                   <folding>
                     <element signature="e#100#114#0" expanded="true" />
                   </folding>
@@ -148,7 +168,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MyComputation.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="133">
@@ -161,7 +181,7 @@
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="95">
-                  <caret line="5" column="560" selection-start-line="5" selection-start-column="560" selection-end-line="5" selection-end-column="560" />
+                  <caret line="5" column="740" selection-start-line="5" selection-start-column="740" selection-end-line="5" selection-end-column="740" />
                 </state>
               </provider>
             </entry>
@@ -235,7 +255,6 @@
         <option value="$PROJECT_DIR$/OP_2/myplus.cpp" />
         <option value="$PROJECT_DIR$/OP_2/myminus.cpp" />
         <option value="$PROJECT_DIR$/OP_2/mydiv.cpp" />
-        <option value="$PROJECT_DIR$/OP_1/operator_1.h" />
         <option value="$PROJECT_DIR$/OP_1/mysin.h" />
         <option value="$PROJECT_DIR$/OP_1/mylog.h" />
         <option value="$PROJECT_DIR$/OP_1/mysin.cpp" />
@@ -257,21 +276,26 @@
         <option value="$PROJECT_DIR$/Operator_0/MyPlaceholder.h" />
         <option value="$PROJECT_DIR$/Operator_0/Operator_0.h" />
         <option value="$PROJECT_DIR$/MyComputation.cpp" />
-        <option value="$PROJECT_DIR$/Operator_3/Operator_3.h" />
-        <option value="$PROJECT_DIR$/Node.h" />
         <option value="$PROJECT_DIR$/Operator_3/MyCond.cpp" />
         <option value="$PROJECT_DIR$/GraphCompute.cpp" />
         <option value="$PROJECT_DIR$/Storage.cpp" />
         <option value="$PROJECT_DIR$/Storage.h" />
         <option value="$PROJECT_DIR$/Operator_0/MyPlaceholder.cpp" />
         <option value="$PROJECT_DIR$/Operator_3/Operator_3.cpp" />
+        <option value="$PROJECT_DIR$/Node.h" />
+        <option value="$PROJECT_DIR$/Node.cpp" />
+        <option value="$PROJECT_DIR$/OP_2/operator_2.cpp" />
+        <option value="$PROJECT_DIR$/OP_2/operator_2.h" />
+        <option value="$PROJECT_DIR$/Operator_3/Operator_3.h" />
+        <option value="$PROJECT_DIR$/OP_1/operator_1.h" />
+        <option value="$PROJECT_DIR$/OP_1/operator_1.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="262" />
-    <option name="y" value="18" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="576" />
+    <option name="y" value="58" />
     <option name="width" value="1750" />
     <option name="height" value="965" />
   </component>
@@ -296,22 +320,12 @@
             <path>
               <item name="OOP" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOP_assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="OP_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="OP_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOP_assignment" type="462c0819:PsiDirectoryNode" />
               <item name="Operator_0" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OOP" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOP_assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="Operator_3" type="462c0819:PsiDirectoryNode" />
+              <item name="Operator_1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,18 +377,18 @@
       <workItem from="1553908689126" duration="233000" />
       <workItem from="1553959105378" duration="4579000" />
       <workItem from="1554003631905" duration="5472000" />
-      <workItem from="1554132480001" duration="12967000" />
+      <workItem from="1554132480001" duration="13791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23251000" />
+    <option name="totallyTimeSpent" value="24075000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="39" width="1400" height="772" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18628912" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16756032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -422,69 +436,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/stringfwd.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/math.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="148" column="19" selection-start-line="148" selection-start-column="19" selection-end-line="148" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mysin.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mylog.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mylog.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/myexp.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/myexp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_2/myminus.cpp">
+    <entry file="file://$PROJECT_DIR$/Operator_2/myminus.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/operator_1.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#90#110#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -502,80 +457,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mysigmoid.h">
+    <entry file="file://$PROJECT_DIR$/Operator_1/mysigmoid.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mytanh.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/operator_1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mysin.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mytanh.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_1/mysigmoid.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_2/mymul.h">
+    <entry file="file://$PROJECT_DIR$/Operator_2/mymul.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OP_2/mymul.cpp">
+    <entry file="file://$PROJECT_DIR$/Operator_2/mymul.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OP_2/myplus.h">
+    <entry file="file://$PROJECT_DIR$/Operator_2/myplus.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OP_2/myplus.cpp">
+    <entry file="file://$PROJECT_DIR$/Operator_2/myplus.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OP_2/myminus.h">
+    <entry file="file://$PROJECT_DIR$/Operator_2/myminus.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
@@ -619,13 +536,6 @@
     <entry file="file://$PROJECT_DIR$/GraphCompute.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CreateFunc.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Operator_0/Operator_0.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -664,13 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Operator_0/Operator_0.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyComputation.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -681,31 +584,41 @@
     <entry file="file://$PROJECT_DIR$/Operator_3/MyCond.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Node.cpp">
+    <entry file="file://$PROJECT_DIR$/Operator_0/MyPlaceholder.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="209">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="740" selection-start-line="5" selection-start-column="740" selection-end-line="5" selection-end-column="740" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CreateFunc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GraphCompute.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" column="79" selection-start-line="29" selection-start-column="79" selection-end-line="29" selection-end-column="79" />
+        <state relative-caret-position="481">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Node.h">
+    <entry file="file://$PROJECT_DIR$/Storage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Operator_3/MyCond.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="570">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding>
+            <element signature="e#100#114#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -717,17 +630,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Operator_0/MyPlaceholder.h">
+    <entry file="file://$PROJECT_DIR$/Operator_3/MyCond.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Operator_3/Operator_3.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="190">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -748,22 +654,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/Node.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="560" selection-start-line="5" selection-start-column="560" selection-end-line="5" selection-end-column="560" />
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Storage.h">
+    <entry file="file://$PROJECT_DIR$/Node.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        <state relative-caret-position="361">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_3/Operator_3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_2/operator_2.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_1/operator_1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_1/mytanh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_3/Operator_3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_2/operator_2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_1/operator_1.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding>
-            <element signature="e#100#114#0" expanded="true" />
+            <element signature="e#90#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_2/mygreater.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_2/mygreaterequal.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_1/mysin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_1/mytanh.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_0/Operator_0.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Operator_0/MyPlaceholder.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -772,10 +765,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Operator_3/Operator_3.cpp">
+    <entry file="file://$PROJECT_DIR$/Operator_1/mysigmoid.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state relative-caret-position="152">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Operator_1/mysin.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
