@@ -34,6 +34,8 @@ public:
 
     void create_root();
     void create_tree();
+    void graph_compute();
+    ~MyGraph();
 };
 //记得delete node
 #endif //BIGHOMEWORK_STORAGE_H

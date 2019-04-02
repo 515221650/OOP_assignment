@@ -6,6 +6,6 @@
 #define BIGHOMEWORK_MYCOMPUTATION_H
 
 #include "Storage.h"
-int MyComputation(std::string &StrAim, MyGraph& g);
+int MyGraph::MyComputation(std::string &StrAim);
 
 #endif //BIGHOMEWORK_MYCOMPUTATION_H

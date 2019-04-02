@@ -6,7 +6,7 @@
 #include "GraphCompute.h"
 #include "MyPlaceholder.h"
 
-void graph_compute(MyGraph& g)
+void MyGraph::graph_compute()
 {
     int q;
     std::cin>>q;
@@ -18,19 +18,19 @@ void graph_compute(MyGraph& g)
         std::string aim; float x;
         if(tmps == "EVAL")
         {
-            g.empty_placeholder_rev();
+            empty_placeholder_rev();
             int ParaNum;
             std::ParaName;
             std::cin>>aim>>ParaNum;
             while(ParaNum--)
             {
                 std::cin>>ParaName>>x;
-                g.insert_placeholder_rev(ParaName, x)
+                insert_placeholder_rev(ParaName, x)
             }
-            int ans = (g[g.str_to_int(aim)].NodePos)->Compt(g, g.str_to_int(aim))
+            int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim))
             if(!ans)
             {
-                int res = g[aim].NodePos->Val();
+                int res = NodeInfoVec[str_to_int(aim)].NodePos->Val();//把g[aim]改了
                 std::cout<<res<<std::endl;
                 myresult.push_back(res);
             }
@@ -45,14 +45,14 @@ void graph_compute(MyGraph& g)
         else if(tmps == "SETCONSTANT")
         {
             std::cin>>aim>>x;
-            g[aim].NodePos->rev_val(x);
+            NodeInfoVec[str_to_int(aim)].NodePos->rev_val(x);
             myresult.push_back(0.0);//这也算一次操作...
         }
         else if(tmps == "SETANSWER")
         {
             int rank;
             std::cin>>aim>>rank;
-            g[aim].NodePos->rev_val(myresult[rank]);
+            NodeInfoVec[str_to_int(aim)].NodePos->rev_val(myresult[rank-1]);
             myresult.push_back(0.0);
         }
     }

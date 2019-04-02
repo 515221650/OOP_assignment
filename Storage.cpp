@@ -76,3 +76,9 @@ void MyGraph::create_tree()
         }
     }
 }
+
+MyGraph::~MyGraph()
+{
+    int total = NodeInfoVec.size();
+    for(int i=0;i<total;i++) delete NodeInfoVec[i].NodePos;
+}

@@ -8,6 +8,6 @@
 #include "Storage.h"
 #include "MyComputation.h"
 
-void graph_compute(MyGraph& g);
+void MyGraph::graph_compute();
 
 #endif //BIGHOMEWORK_GRAPHCOMPUTE_H

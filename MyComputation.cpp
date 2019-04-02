@@ -5,7 +5,7 @@
 
 int MyComputation(std::string &StrAim, MyGraph& g)
 {
-    Node* aim = g[g.str_to_int(StrAim)].NodePos;
-    int status = aim->Compt(g);
+    Node* aim = NodeInfo[StrToIntMap[StrAim]].NodePos;
+    int status = aim->Compt(*this);
     return status;
 }
