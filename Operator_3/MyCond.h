@@ -7,9 +7,8 @@
 #include "Operator_3.h"
 
 class MyCond: public Operator_3{
-private:
-    virtual int Calc(const MyGraph& g);
 public:
+    virtual int Calc(MyGraph& g);
     MyCond(std::string& s, int x, int y, int z);
 };
 

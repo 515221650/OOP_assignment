@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/yzy/Desktop/OOP/OOP_assignment/GraphCompute.cpp
+iostream
+-
+vector
+-
+iomanip
+-
+Storage.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
+Operator_0/MyPlaceholder.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/MyPlaceholder.h
+
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Node.h
+iostream
+-
+cmath
+-
+Storage.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
+
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/MyPlaceholder.h
+Operator_0.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/Operator_0.h
+
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/Operator_0.h
+../Node.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Node.h
+
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
+map
+-
+vector
+-
+string
+-
+

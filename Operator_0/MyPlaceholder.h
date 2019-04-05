@@ -7,13 +7,10 @@
 
 #include "Operator_0.h"
 
-class MyPlaceholder:public Operator_0{
-private:
-    int RevRank;
+class MyPlaceholder : public Operator_0{
 public:
-    MyPlaceholder(std::string& name, int RevRank);
-    virtual int Calc(const MyGraph& a);
-    virtual int Rank(){return RevRank;}
+    MyPlaceholder(std::string& name);
+    virtual int Calc(MyGraph& v);
 };
 
 

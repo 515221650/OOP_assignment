@@ -6,7 +6,7 @@
 MyVar::MyVar(std::string &name, float x):Operator_0(name, x) {}
 
 
-int MyVar::Calc(const MyGraph& g)
+int MyVar::Calc(MyGraph& g)
 {
     return 0;
 }

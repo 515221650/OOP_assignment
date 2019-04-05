@@ -8,7 +8,7 @@
 
 class MyConst : public Operator_0{
 public:
-    virtual int Calc(const MyGraph& g);
+    virtual int Calc(MyGraph& g);
     MyConst(std::string& name, float x);
 };
 

@@ -9,9 +9,9 @@
 
 class Operator_0 : public Node{
 public:
-    Operator_0(std::string& name, float x);
-    virtual void Calc(const MyGraph &g) ;
+    Operator_0(std::string& name, float x = 0.0);
     virtual int Compt(MyGraph &g, int x);
+    virtual int Calc(MyGraph &g) = 0;
 };
 
 

@@ -11,8 +11,8 @@ class Operator_2:public Node{
 protected:
     int num1,num2;
 public:
-    virtual int Compt(const MyGraph& g, int x);
-    virtual int Calc(MyGraph &v);
+    virtual int Compt(MyGraph& g, int x);
+    virtual int Calc(MyGraph &v) = 0;
     Operator_2(std::string &s, int x, int y);
 };
 

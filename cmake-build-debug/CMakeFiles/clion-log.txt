@@ -1,30 +1,5 @@
-"D:\CLion\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=C:/MinGW/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/MinGW/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" D:\hwy\bighomework\0402\OOP_assignment
--- The C compiler identification is GNU 6.3.0
--- The CXX compiler identification is GNU 6.3.0
--- Check for working C compiler: C:/MinGW/bin/gcc.exe
--- Check for working C compiler: C:/MinGW/bin/gcc.exe -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: C:/MinGW/bin/g++.exe
--- Check for working CXX compiler: C:/MinGW/bin/g++.exe -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+"D:\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\yzy\Desktop\OOP\OOP_assignment
+-- Project: SERVER
 -- Configuring done
-CMake Error at CMakeLists.txt:6 (add_executable):
-  Cannot find source file:
-
-    myconst.cpp
-
-  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
-  .hpp .hxx .in .txx
-
-
-CMake Error at CMakeLists.txt:6 (add_executable):
-  No SOURCES given to target: OOP
-
-
--- Build files have been written to: D:/hwy/bighomework/0402/OOP_assignment/cmake-build-debug
+-- Generating done
+-- Build files have been written to: C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug

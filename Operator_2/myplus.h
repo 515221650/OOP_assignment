@@ -9,7 +9,7 @@
 
 class MyPlus: public  Operator_2{
 public:
-    MyPlus(std::string &s, int x,int y);
+    MyPlus(std::string &s, int x, int y);
     virtual int Calc(MyGraph &v);
 };
 

@@ -9,7 +9,7 @@
 
 class MyVar : public Operator_0{
 public:
-    virtual int Calc(const MyGraph& a);
+    virtual int Calc(MyGraph& a);
     MyVar(std::string& name, float x);
 };
 

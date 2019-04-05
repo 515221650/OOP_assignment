@@ -1,7 +1,6 @@
 #include <iostream>
-#include "MyIn.h"
 #include <vector>
-#include "GraphCompute.h"
+#include "storage.h"
 
 int main() {
     MyGraph i_love_compute;

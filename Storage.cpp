@@ -3,15 +3,25 @@
 //
 #include "CreateFunc.h"
 #include "Storage.h"
+#include <iostream>
+#include <map>
 #define MK std::make_pair
+
+void MyGraph::erase_mark()
+{
+    for(auto& i : NodeInfoVec)i.vis = false;
+}
+
 void MyGraph::insert_node(Node* NewNode, std::string name)
 {
     NodeInfoVec.push_back({NewNode, 0});
-    StrToIntMap.insert(std::pair<std::string, int>(name, 0));
+    StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
 }
 
+using namespace std;
 std::pair<bool,float> MyGraph::GetPH(const std::string &str)
 {
+//    cout<<str<<endl;
     auto t = PlaceholderRev.find(str);
     if(t != PlaceholderRev.end())return MK(1, t->second);
     return MK(0,0);
@@ -34,10 +44,14 @@ void MyGraph::create_root()
 
 }
 
+
+typedef void (*fun1) (std::string&, MyGraph&);
+typedef void (*fun2) (std::string&, std::string&, MyGraph&);
+
 void MyGraph::create_tree()
 {
 
-    std::map <std::string, void (std::string, MyGraph&)> ScanfMap1 = {
+    std::map <std::string, fun1> ScanfMap1 = {
             {"SIN", create_sin},
             {"LOG", create_log},
             {"EXP", create_exp},
@@ -47,13 +61,13 @@ void MyGraph::create_tree()
             {"COND", create_cond}
     };//match the func
 
-    std::map <std::string, void (std::string, std::string, MyGraph&)> ScanfMap2 = {
+    std::map <std::string, fun2> ScanfMap2 = {
             {"+", create_plus},
             {"-", create_minus},
             {"*", create_mul},
             {"/", create_div},
             {">", create_greater},
-            {"<", create_lesser},
+            {"<", create_less},
             {">=", create_greaterequal},
             {"<=", create_lessequal},
             {"==", create_equal}

@@ -4,9 +4,9 @@
 
 #include "Operator_0.h"
 
-Operator_0::Operator_0(std::string &name, float x = 0.0):Node(name,x){}
+Operator_0::Operator_0(std::string &name, float x):Node(name,x){}
 
-int Compt(MyGraph &g, int x)
+int Operator_0::Compt(MyGraph &g, int x)
 {
     int status = 0;
     status = Calc(g);
