@@ -21,7 +21,6 @@ void MyGraph::graph_compute()
         {
             empty_placeholder_rev();
             erase_mark();
-       //     cout<<NodeInfoVec[0].vis<<NodeInfoVec[1].vis<<NodeInfoVec[2].vis<<NodeInfoVec[3].vis<<endl;
             int ParaNum;
             std::string ParaName;
             std::cin>>aim>>ParaNum;
@@ -32,7 +31,6 @@ void MyGraph::graph_compute()
                 insert_placeholder_rev(ParaName, x);
             }
             int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim));
-            //cout<<ans<<endl;
             if(!ans)
             {
                 float res = NodeInfoVec[str_to_int(aim)].NodePos->Val();//把g[aim]改了
@@ -41,7 +39,6 @@ void MyGraph::graph_compute()
             }
             else
             {
-               // std::cout << "ERROR: ";
                 if(ans == 1) std::cout << "Division by zero" << std::endl;
                 if(ans == 2) std::cout << "LOG operators input must be positive" << std::endl;
                 if(ans == 3) std::cout << "Placeholder missing" << std::endl;

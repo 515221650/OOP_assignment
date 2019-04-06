@@ -24,8 +24,6 @@
 #include "Operator_2/mymul.h"
 #include "Operator_2/myminus.h"
 
-//#include "............................."
-
 void create_placeholder(std::string& name, MyGraph& g)
 {
     MyPlaceholder* NewPlaceHolder = new MyPlaceholder(name);

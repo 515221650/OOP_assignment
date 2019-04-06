@@ -1,3 +1,3 @@
-C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/OOP.dir
-C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/hwy/bighomework/0405/OOP_assignment/cmake-build-debug/CMakeFiles/OOP.dir
+D:/hwy/bighomework/0405/OOP_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/hwy/bighomework/0405/OOP_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir

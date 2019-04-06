@@ -21,7 +21,6 @@ void MyGraph::insert_node(Node* NewNode, std::string name)
 using namespace std;
 std::pair<bool,float> MyGraph::GetPH(const std::string &str)
 {
-//    cout<<str<<endl;
     auto t = PlaceholderRev.find(str);
     if(t != PlaceholderRev.end())return MK(1, t->second);
     return MK(0,0);

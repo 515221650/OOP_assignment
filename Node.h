@@ -10,8 +10,6 @@
 #include "Storage.h"
 #define EPS 1E-8
 
-//void  MyComputation(std::string aim, MyGraph a);
-using namespace std;
 class Node{
 protected:
     std::string name;
@@ -20,7 +18,7 @@ protected:
 public:
     virtual int Compt(MyGraph& g, int x) = 0;
     Node(std::string &s, float x = 0.0);
-    friend void  MyComputation(std::string aim, MyGraph a);
+   // friend void  MyComputation(std::string aim, MyGraph a);
     std::string Name() {return name;}
     float Val() {return val;}
     void rev_val(float x){val = x;return ;}

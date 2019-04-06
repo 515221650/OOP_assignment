@@ -1,7 +1,7 @@
 //
 // Created by hwy on 2019/3/30.
 //
-
+#include <iostream>
 #ifndef BIGHOMEWORK_STORAGE_H
 #define BIGHOMEWORK_STORAGE_H
 
@@ -30,7 +30,7 @@ public:
     std::pair<bool,float> GetPH(const std::string &str);
     void empty_placeholder_rev(){PlaceholderRev.clear();}
     void erase_mark();
-    void Mark(int x){NodeInfoVec[x].vis=1;return ;}
+    void Mark(int x){NodeInfoVec[x].vis=1;}
 
     void create_root();
     void create_tree();
