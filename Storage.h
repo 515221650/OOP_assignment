@@ -17,6 +17,7 @@ private:
         bool vis;
     };
     std::vector<NodeInfo> NodeInfoVec ;
+    std::vector<int>DerVec;
     std::map <std::string, int> StrToIntMap ;
     std::map <std::string, float > PlaceholderRev;
 public:
@@ -30,7 +31,9 @@ public:
     std::pair<bool,float> GetPH(const std::string &str);
     void empty_placeholder_rev(){PlaceholderRev.clear();}
     void erase_mark();
+    void erase_der();
     void Mark(int x){NodeInfoVec[x].vis=1;}
+    void push_der(int x);
 
     void create_root();
     void create_tree();

@@ -12,6 +12,8 @@ class MyMul: public Operator_2{
 public:
     MyMul(std::string &s, int x,int y);
     virtual int Calc(MyGraph &v);
+    virtual void Derivate(MyGraph &v);
+
 };
 
 #endif //OOP_MYMUL_H

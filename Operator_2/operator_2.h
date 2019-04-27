@@ -12,6 +12,7 @@ protected:
     int num1,num2;
 public:
     virtual int Compt(MyGraph& g, int x);
+    virtual void Derivate(MyGraph& g);
     virtual int Calc(MyGraph &v) = 0;
     Operator_2(std::string &s, int x, int y);
 };

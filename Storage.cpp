@@ -3,22 +3,26 @@
 //
 #include "CreateFunc.h"
 #include "Storage.h"
+#include "Node.h"
 #include <iostream>
 #include <map>
+#include <queue>
 #define MK std::make_pair
 
 void MyGraph::erase_mark()
 {
     for(auto& i : NodeInfoVec)i.vis = false;
 }
-
+void MyGraph::erase_der()
+{
+    for(auto& i :NodeInfoVec)i.NodePos ->rev_der(0);
+}
 void MyGraph::insert_node(Node* NewNode, std::string name)
 {
     NodeInfoVec.push_back({NewNode, 0});
     StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
 }
 
-using namespace std;
 std::pair<bool,float> MyGraph::GetPH(const std::string &str)
 {
     auto t = PlaceholderRev.find(str);
@@ -88,6 +92,12 @@ void MyGraph::create_tree()
             ScanfMap1[MyScanf[2]](MyScanf[0], MG);
         }
     }
+}
+
+
+void MyGraph::push_der(int x)
+{
+    DerVec.push_back(x);
 }
 
 MyGraph::~MyGraph()

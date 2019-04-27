@@ -10,3 +10,8 @@ int MyMul::Calc(MyGraph &v) {
     val = v[num1].NodePos->Val() * v[num2].NodePos->Val();
     return 0;
 }
+void MyMul::Derivate(MyGraph &v) {
+    v[num1].NodePos->add_der(v[num2].NodePos->Der()*der);
+    v[num2].NodePos->add_der(v[num1].NodePos->Der()*der);
+    return ;
+}
