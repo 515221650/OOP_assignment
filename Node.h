@@ -18,7 +18,7 @@ protected:
 public:
     friend class MyGraph;
     virtual int Compt(MyGraph& g, int x) = 0;
-    virtual void Derivate(MyGraph& g) = 0;
+    virtual int Derivate(MyGraph& g) = 0;
     Node(std::string &s, float x = 0.0);
    // friend void  MyComputation(std::string aim, MyGraph a);
     std::string Name() {return name;}

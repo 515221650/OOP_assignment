@@ -12,8 +12,8 @@ int MyDiv::Calc(MyGraph &v) {
     return 0;
 }
 
-void MyDiv::Derivate(MyGraph &v) {
+int MyDiv::Derivate(MyGraph &v) {
     v[num1].NodePos->add_der(der * 1.0/v[num2].NodePos->Val());
     v[num2].NodePos->add_der(-der * v[num1].NodePos->Val()/v[num2].NodePos->Val()/v[num2].NodePos->Val());
-    return ;
+    return 0;
 }

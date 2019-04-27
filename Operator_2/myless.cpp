@@ -9,3 +9,7 @@ int MyLess::Calc(MyGraph &v) {
     val = v[num1].NodePos->Val() - v[num2].NodePos->Val() < EPS ? 1.0 : 0.0;
     return 0;
 }
+
+int MyLess::Derivate(MyGraph &v) {
+    return 1;
+}

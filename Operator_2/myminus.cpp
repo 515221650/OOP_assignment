@@ -10,8 +10,8 @@ int MyMinus::Calc(MyGraph &v) {
     return 0;
 }
 
-void MyMinus::Derivate(MyGraph &v) {
+int MyMinus::Derivate(MyGraph &v) {
     v[num1].NodePos->add_der(der);
     v[num2].NodePos->add_der(-der);
-    return ;
+    return 0;
 }

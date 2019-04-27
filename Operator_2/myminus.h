@@ -11,7 +11,7 @@ class MyMinus: public Operator_2{
 public:
     MyMinus(std::string &s, int x,int y);
     virtual int Calc(MyGraph &v);
-    virtual void Derivate(MyGraph &v);
+    virtual int Derivate(MyGraph &v);
 };
 
 

@@ -11,6 +11,7 @@ int MyPrint::Calc(MyGraph &v) {
     val = v[num].NodePos->Val();
     return 0;
 }
-void MyPrint::Derivate(MyGraph& v){
+int MyPrint::Derivate(MyGraph& v){
     v[num].NodePos-> add_der(der);
+    return 0;
 }

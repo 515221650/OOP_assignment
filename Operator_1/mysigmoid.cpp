@@ -10,6 +10,7 @@ int MySigmoid::Calc(MyGraph &v) {
     return 0;
 }
 
-void MySigmoid::Derivate(MyGraph& v){
+int MySigmoid::Derivate(MyGraph& v){
     v[num].NodePos-> add_der((1.0/(1+expf(-v[num].NodePos->Val()))/(1+expf(v[num].NodePos->Val()))) * der);
+    return 0;
 }

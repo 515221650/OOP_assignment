@@ -9,6 +9,7 @@
 class MyCond: public Operator_3{
 public:
     virtual int Calc(MyGraph& g);
+    virtual int Derivate(MyGraph& g);
     MyCond(std::string& s, int x, int y, int z);
 };
 

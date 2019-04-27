@@ -39,10 +39,20 @@ void MyGraph::graph_compute()
                 erase_der();
                 ans_node->rev_der(1);
                 reverse(DerVec.begin(),DerVec.end());
-                for(auto i : DerVec)NodeInfoVec[i].NodePos->Derivate(*this);
-                float res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
-                std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
-                myresult.push_back(res);
+                int DerStatus = 0
+                for(auto i : DerVec)
+                    if(DerStatus = NodeInfoVec[i].NodePos->Derivate(*this)) break;
+                if(DerStatus)
+                {
+                    std::cout<<"Underivable"<<std::endl;
+                    myresult.push_back(0);//?
+                }
+                else
+                {
+                    float res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
+                    std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
+                    myresult.push_back(res);
+                }
             }
             else
             {

@@ -11,3 +11,9 @@ int MyCond::Calc(MyGraph& g)
     else val = g[num3].NodePos->Val();
     return 0;
 }
+int MyCond::Derivate(MyGraph& g)
+{
+    return 1;
+}
+
+

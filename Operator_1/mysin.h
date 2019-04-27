@@ -11,7 +11,7 @@ class MySin : public Operator_1 {
 public:
     MySin(std::string &s, int x);
     virtual int Calc(MyGraph &v);
-    virtual void Derivate(MyGraph& g);
+    virtual int Derivate(MyGraph& g);
 };
 
 

@@ -10,7 +10,7 @@ class MySigmoid: public Operator_1{
 public:
     MySigmoid(std::string &s, int x);
     virtual int Calc(MyGraph &v);
-    virtual void Derivate(MyGraph& g);
+    virtual int Derivate(MyGraph& g);
 };
 
 #endif //OOP_MYSIGMOID_H

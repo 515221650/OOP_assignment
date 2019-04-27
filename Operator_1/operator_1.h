@@ -14,7 +14,7 @@ public:
     Operator_1(std::string &s, int x);
     virtual int Calc(MyGraph &g) = 0;
     virtual int Compt(MyGraph &g, int x);
-    virtual void Derivate(MyGraph& g) = 0;
+    virtual int Derivate(MyGraph& g) = 0;
 };
 
 

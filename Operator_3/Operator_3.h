@@ -13,6 +13,7 @@ protected:
 public:
     virtual int Compt(MyGraph& g, int x);
     virtual int Calc(MyGraph &g) = 0;
+    virtual int Derivate(MyGraph& g) = 0;
     Operator_3(std::string& s, int x, int y, int z);
 };
 

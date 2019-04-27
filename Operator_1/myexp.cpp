@@ -10,7 +10,8 @@ int MyExp::Calc(MyGraph &v) {
     return 0;
 }
 
-void MyExp::Derivate(MyGraph& v)
+int MyExp::Derivate(MyGraph& v)
 {
     v[num].NodePos-> add_der(expf(v[num].NodePos->Val()) * der);
+    return 0;
 }

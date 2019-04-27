@@ -11,6 +11,7 @@ int MySin::Calc(MyGraph &v) {
     return 0;
 }
 
-void MySin::Derivate(MyGraph& v){
+int MySin::Derivate(MyGraph& v){
     v[num].NodePos-> add_der(cos(v[num].NodePos->Val())+der);
+    return 0;
 }
