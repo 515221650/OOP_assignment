@@ -10,6 +10,7 @@ class MyLessEqual : public Operator_2 {
 public:
     MyLessEqual(std::string &s, int x,int y);
     virtual int Calc(MyGraph &v);
+    virtual void Derivate(MyGraph &v);
 };
 
 

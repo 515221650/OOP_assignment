@@ -9,3 +9,7 @@ int MyTanh::Calc(MyGraph &v) {
     val = tanhf(v[num].NodePos->Val());
     return 0;
 }
+
+void MyTanh::Derivate(MyGraph& v){
+    v[num].NodePos-> add_der((4.0/(expf(-2*v[num].NodePos->Val())+expf(2*v[num].NodePos->Val())+2)+der);
+}

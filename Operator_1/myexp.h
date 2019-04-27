@@ -10,6 +10,7 @@ class MyExp : public Operator_1 {
 public:
     MyExp(std::string &s, int x);
     virtual int Calc(MyGraph &v);
+    virtual void Derivate(MyGraph& g);
 };
 
 

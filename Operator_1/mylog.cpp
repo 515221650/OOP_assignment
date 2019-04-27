@@ -11,3 +11,7 @@ int MyLog::Calc(MyGraph &v) {
     val = logf(v[num].NodePos->Val());
     return 0;
 }
+
+void MyLog::Derivate(MyGraph& v){
+    v[num].NodePos-> add_der(1.0/v[num].NodePos->Val() * der);
+}

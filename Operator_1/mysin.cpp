@@ -10,3 +10,7 @@ int MySin::Calc(MyGraph &v) {
     val = sinf(v[num].NodePos->Val());
     return 0;
 }
+
+void MySin::Derivate(MyGraph& v){
+    v[num].NodePos-> add_der(cos(v[num].NodePos->Val())+der);
+}

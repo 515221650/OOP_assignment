@@ -10,6 +10,7 @@ class MyPrint : public Operator_1{
 public:
     MyPrint(std::string &s, int x);
     virtual int Calc(MyGraph &v);
+    virtual void Derivate(MyGraph& g);
 };
 
 

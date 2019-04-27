@@ -11,7 +11,6 @@ int Operator_0::Compt(MyGraph &g, int x)
     int status = 0;
     status = Calc(g);
     g.Mark(x);
-    g.push_der(x);
     return status;
 }
 
