@@ -4,3 +4,8 @@
 #include "Node.h"
 
 Node::Node(std::string &s, float x) :name(s), val(x) {}
+
+int Node::Derivate(MyGraph& g)
+{
+    return 0;
+}

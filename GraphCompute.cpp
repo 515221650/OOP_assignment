@@ -39,7 +39,7 @@ void MyGraph::graph_compute()
                 erase_der();
                 ans_node->rev_der(1);
                 reverse(DerVec.begin(),DerVec.end());
-                int DerStatus = 0
+                int DerStatus = 0;
                 for(auto i : DerVec)
                     if(DerStatus = NodeInfoVec[i].NodePos->Derivate(*this)) break;
                 if(DerStatus)
