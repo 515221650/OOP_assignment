@@ -3,7 +3,7 @@ project(OOP)
 MESSAGE(STATUS "Project: SERVER")
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(OOP main.cpp node.cpp node.h
+add_executable(main main.cpp Node.cpp Node.h
         Operator_1/operator_1.cpp Operator_1/operator_1.h
         Operator_2/operator_2.cpp Operator_2/operator_2.h
         Operator_3/Operator_3.cpp Operator_3/Operator_3.h
@@ -30,4 +30,7 @@ add_executable(OOP main.cpp node.cpp node.h
         Storage.cpp Storage.h
         CreateFunc.cpp CreateFunc.h
         GraphCompute.cpp
-        )
+        Layer/layer.cpp Layer/layer.h
+        Layer/Dense.cpp Layer/Dense.h
+        Layer/Input.cpp Layer/Input.h
+        Neural_network.cpp Neural_network.h)

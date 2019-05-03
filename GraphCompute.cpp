@@ -62,7 +62,7 @@ void MyGraph::graph_compute()
             else
             {
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
-                if(ans == 2) std::cout << "ERROR: LOG operators input must be positive" << std::endl;
+                if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
                 myresult.push_back(0.0);//???
             }
@@ -93,7 +93,7 @@ void MyGraph::graph_compute()
             else
             {
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
-                if(ans == 2) std::cout << "ERROR: LOG operators input must be positive" << std::endl;
+                if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
                 myresult.push_back(0.0);//???
             }
@@ -102,14 +102,14 @@ void MyGraph::graph_compute()
         else if(tmps == "SETCONSTANT")
         {
             is>>aim>>x;
-            NodeInfoVec[str_to_int(aim)].NodePos->rev_val(x);
+            change_var(aim, x);
             myresult.push_back(0.0);//这也算一次操作...
         }
         else if(tmps == "SETANSWER")
         {
             int rank;
             is>>aim>>rank;
-            NodeInfoVec[str_to_int(aim)].NodePos->rev_val(myresult[rank-1]);
+            change_var(aim, myresult[rank-1]);
             myresult.push_back(0.0);
         }
 

@@ -34,7 +34,8 @@ public:
     void erase_der();
     void Mark(int x){NodeInfoVec[x].vis=1;}
     void push_der(int x);
-
+    void change_var(std::string &name, float x);
+    void change_var(int id, float x);
     void create_root();
     void create_tree();
     void graph_compute();
