@@ -4,10 +4,11 @@
 
 #include "myprint.h"
 #include <iostream>
+#include <iomanip>
 MyPrint::MyPrint(std::string &s, int x): Operator_1(s, x){}
 
 int MyPrint::Calc(MyGraph &v) {
-    std::cout<<"Print Operator: "<<v[num].NodePos->Name()<<"="<<v[num].NodePos->Val()<<std::endl;
+    std::cout<<"Print Operator: "<<v[num].NodePos->Name()<<"="<<std::fixed<<std::setprecision(4)<<v[num].NodePos->Val()<<std::endl;
     val = v[num].NodePos->Val();
     return 0;
 }

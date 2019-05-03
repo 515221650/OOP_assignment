@@ -20,11 +20,7 @@ void MyGraph::erase_der()
 void MyGraph::insert_node(Node* NewNode, std::string name)
 {
     NodeInfoVec.push_back({NewNode, 0});
-    if(StrToIntMap.find(name)!=StrToIntMap.end())
-    {
-        StrToIntMap.erase(name);
-        std::cout<<"ERASE!!!"<<std::endl;
-    }
+    if(StrToIntMap.find(name)!=StrToIntMap.end()) StrToIntMap.erase(name);
     StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
 }
 

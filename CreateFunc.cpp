@@ -106,7 +106,6 @@ void create_plus(std::string& name, std::string& x, MyGraph& g)
     std::cin>>StrPara;
     int IntPara1 = g.str_to_int(x);
     int IntPara2 = g.str_to_int(StrPara);
-
     MyPlus* NewNode = new MyPlus(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
 }

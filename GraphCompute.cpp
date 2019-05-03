@@ -61,9 +61,9 @@ void MyGraph::graph_compute()
             }
             else
             {
-                if(ans == 1) std::cout << "Division by zero" << std::endl;
-                if(ans == 2) std::cout << "LOG operators input must be positive" << std::endl;
-                if(ans == 3) std::cout << "Placeholder missing" << std::endl;
+                if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
+                if(ans == 2) std::cout << "ERROR: LOG operators input must be positive" << std::endl;
+                if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
                 myresult.push_back(0.0);//???
             }
             DerVec.clear();
@@ -92,23 +92,23 @@ void MyGraph::graph_compute()
             }
             else
             {
-                if(ans == 1) std::cout << "Division by zero" << std::endl;
-                if(ans == 2) std::cout << "LOG operators input must be positive" << std::endl;
-                if(ans == 3) std::cout << "Placeholder missing" << std::endl;
+                if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
+                if(ans == 2) std::cout << "ERROR: LOG operators input must be positive" << std::endl;
+                if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
                 myresult.push_back(0.0);//???
             }
             DerVec.clear();
         }
         else if(tmps == "SETCONSTANT")
         {
-            std::cin>>aim>>x;
+            is>>aim>>x;
             NodeInfoVec[str_to_int(aim)].NodePos->rev_val(x);
             myresult.push_back(0.0);//这也算一次操作...
         }
         else if(tmps == "SETANSWER")
         {
             int rank;
-            std::cin>>aim>>rank;
+            is>>aim>>rank;
             NodeInfoVec[str_to_int(aim)].NodePos->rev_val(myresult[rank-1]);
             myresult.push_back(0.0);
         }
