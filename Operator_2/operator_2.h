@@ -5,7 +5,7 @@
 #ifndef OOP_OPERATOR_2_H
 #define OOP_OPERATOR_2_H
 
-#include "../node.h"
+#include "../Node.h"
 
 class Operator_2:public Node{
 protected:

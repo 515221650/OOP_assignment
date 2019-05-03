@@ -62,7 +62,7 @@ void MyGraph::graph_compute()
             else
             {
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
-                if(ans == 2) std::cout << "ERROR: LOG operators input must be positive" << std::endl;
+                if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
                 myresult.push_back(0.0);//???
             }
@@ -93,7 +93,7 @@ void MyGraph::graph_compute()
             else
             {
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
-                if(ans == 2) std::cout << "ERROR: LOG operators input must be positive" << std::endl;
+                if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
                 myresult.push_back(0.0);//???
             }

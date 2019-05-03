@@ -5,7 +5,7 @@
 #ifndef OOP_OPERATOR_1_H
 #define OOP_OPERATOR_1_H
 
-#include "../node.h"
+#include "../Node.h"
 #include <cmath>
 class Operator_1:public Node{
 protected:
