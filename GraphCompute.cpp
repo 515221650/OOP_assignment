@@ -5,6 +5,7 @@
 #include <vector>
 #include <iomanip>
 #include <algorithm>
+#include <sstream>
 #include "Storage.h"
 #include "Operator_0/MyPlaceholder.h"
 
@@ -12,11 +13,15 @@ void MyGraph::graph_compute()
 {
     int q;
     std::cin>>q;
+    std::cin.get();
     std::vector<float> myresult;
     while(q--)
     {
+        std::string line;
+        getline(std::cin, line);
+        std::stringstream is(line);
         std::string tmps;
-        std::cin>>tmps;
+        is>>tmps;
         std::string aim, aim2; float x;
         if(tmps == "DERIVATIVE")
         {
@@ -24,11 +29,11 @@ void MyGraph::graph_compute()
             erase_mark();
             int ParaNum;
             std::string ParaName;
-            std::cin>>aim>>aim2>>ParaNum;
-
+            is>>aim>>aim2;
+            if(!(is>>ParaNum)) ParaNum = 0;
             while(ParaNum--)
             {
-                std::cin>>ParaName>>x;
+                is>>ParaName>>x;
                 insert_placeholder_rev(ParaName, x);
             }
             int aim_num = str_to_int(aim);
@@ -68,13 +73,13 @@ void MyGraph::graph_compute()
             empty_placeholder_rev();
             erase_mark();
             int ParaNum;
-
-            std::string ParaName;
-            std::cin>>aim>>ParaNum;
+            is>>aim;
+            if(!(is>>ParaNum)) ParaNum = 0;
 
             while(ParaNum--)
             {
-                std::cin>>ParaName>>x;
+                std::string ParaName;
+                is>>ParaName>>x;
                 insert_placeholder_rev(ParaName, x);
             }
 

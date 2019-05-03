@@ -17,7 +17,7 @@ private:
         bool vis;
     };
     std::vector<NodeInfo> NodeInfoVec ;
-    std::vector<int>DerVec;
+    std::vector<int> DerVec;
     std::map <std::string, int> StrToIntMap ;
     std::map <std::string, float > PlaceholderRev;
 public:
