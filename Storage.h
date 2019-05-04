@@ -10,6 +10,7 @@
 #include <string>
 
 class Node;
+class Neural_network;
 class MyGraph{
 private:
     struct NodeInfo{
@@ -22,6 +23,7 @@ private:
     std::map <std::string, float > PlaceholderRev;
 public:
     friend class Node;
+    friend class Neural_network;
     void insert_node(Node*, std::string);
     NodeInfo& operator [](std::string &str){ return NodeInfoVec[StrToIntMap[str]];} //add
     NodeInfo& operator [](int i) { return NodeInfoVec[i];}
@@ -34,7 +36,8 @@ public:
     void erase_der();
     void Mark(int x){NodeInfoVec[x].vis=1;}
     void push_der(int x);
-
+    void change_var(std::string &name, float x);
+    void change_var(int id, float x);
     void create_root();
     void create_tree();
     void graph_compute();

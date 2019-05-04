@@ -30,4 +30,7 @@ add_executable(main main.cpp Node.cpp Node.h
         Storage.cpp Storage.h
         CreateFunc.cpp CreateFunc.h
         GraphCompute.cpp
-        )
+        Layer/layer.cpp Layer/layer.h
+        Layer/Dense.cpp Layer/Dense.h
+        Layer/Input.cpp Layer/Input.h
+        Neural_network.cpp Neural_network.h)

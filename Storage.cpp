@@ -101,6 +101,14 @@ void MyGraph::push_der(int x)
     DerVec.push_back(x);
 }
 
+void MyGraph::change_var(std::string &name, float x)
+{
+    NodeInfoVec[str_to_int(name)].NodePos->rev_val(x);
+}
+void MyGraph::change_var(int id, float x)
+{
+    NodeInfoVec[id].NodePos->rev_val(x);
+}
 MyGraph::~MyGraph()
 {
     int total = NodeInfoVec.size();
