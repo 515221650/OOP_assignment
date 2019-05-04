@@ -8,21 +8,8 @@
 #include <map>
 #include <queue>
 #define MK std::make_pair
+#define MG (*this)
 
-void MyGraph::erase_mark()
-{
-    for(auto& i : NodeInfoVec)i.vis = false;
-}
-void MyGraph::erase_der()
-{
-    for(auto& i :NodeInfoVec)i.NodePos ->rev_der(0);
-}
-void MyGraph::insert_node(Node* NewNode, std::string name)
-{
-    NodeInfoVec.push_back({NewNode, 0});
-    if(StrToIntMap.find(name)!=StrToIntMap.end()) StrToIntMap.erase(name);
-    StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
-}
 
 std::pair<bool,float> MyGraph::GetPH(const std::string &str)
 {
@@ -31,7 +18,6 @@ std::pair<bool,float> MyGraph::GetPH(const std::string &str)
     return MK(0,0);
 }
 
-#define MG (*this)
 
 void MyGraph::create_root()
 {
@@ -48,10 +34,8 @@ void MyGraph::create_root()
 
 }
 
-
 typedef void (*fun1) (std::string&, MyGraph&);
 typedef void (*fun2) (std::string&, std::string&, MyGraph&);
-
 void MyGraph::create_tree()
 {
 
@@ -95,10 +79,16 @@ void MyGraph::create_tree()
     }
 }
 
-
 void MyGraph::push_der(int x)
 {
     DerVec.push_back(x);
+}
+
+void MyGraph::insert_node(Node* NewNode, std::string name)
+{
+    NodeInfoVec.push_back({NewNode, 0});
+    if(StrToIntMap.find(name)!=StrToIntMap.end()) StrToIntMap.erase(name);
+    StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
 }
 
 void MyGraph::change_var(std::string &name, float x)
@@ -108,6 +98,15 @@ void MyGraph::change_var(std::string &name, float x)
 void MyGraph::change_var(int id, float x)
 {
     NodeInfoVec[id].NodePos->rev_val(x);
+}
+
+void MyGraph::erase_mark()
+{
+    for(auto& i : NodeInfoVec)i.vis = false;
+}
+void MyGraph::erase_der()
+{
+    for(auto& i :NodeInfoVec)i.NodePos ->rev_der(0);
 }
 MyGraph::~MyGraph()
 {

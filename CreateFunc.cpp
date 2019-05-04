@@ -24,11 +24,14 @@
 #include "Operator_2/mymul.h"
 #include "Operator_2/myminus.h"
 
+//operator_0
+
 void create_placeholder(std::string& name, MyGraph& g)
 {
     MyPlaceholder* NewPlaceHolder = new MyPlaceholder(name);
     g.insert_node(NewPlaceHolder, name);
 }
+
 void create_const(std::string& name, MyGraph& g)
 {
     float val;
@@ -36,6 +39,7 @@ void create_const(std::string& name, MyGraph& g)
     MyConst* NewConst = new MyConst(name, val);
     g.insert_node(NewConst, name);
 }
+
 void create_var(std::string& name, MyGraph& g)
 {
     float val;
@@ -43,6 +47,8 @@ void create_var(std::string& name, MyGraph& g)
     MyVar* NewVar = new MyVar(name, val);
     g.insert_node(NewVar, name);
 }
+
+// operator_1
 
 void create_sin(std::string& name, MyGraph& g)
 {
@@ -142,6 +148,7 @@ void create_div(std::string& name, std::string& x, MyGraph& g)
     MyDiv* NewNode = new MyDiv(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
 }
+
 void create_greater(std::string& name, std::string& x, MyGraph& g)
 {
     std::string StrPara;
@@ -199,6 +206,7 @@ void create_equal(std::string& name, std::string& x, MyGraph& g)
 }
 
 //Operator_3
+
 void create_cond(std::string& name, MyGraph& g)
 {
     std::string StrPara[3];

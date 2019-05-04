@@ -12,25 +12,31 @@
 
 class Node{
 protected:
-    std::string name;
     float val, der, dersum;
+    std::string name;
+
     virtual int Calc(MyGraph& g) = 0;//private or public
+
 public:
+    Node(std::string &s, float x = 0.0):name(s), val(x) {}
+
     friend class MyGraph;
-    virtual int Compt(MyGraph& g, int x) = 0;
-    virtual int Derivate(MyGraph& g);
-    Node(std::string &s, float x = 0.0);
-   // friend void  MyComputation(std::string aim, MyGraph a);
+
+    virtual int Derivate(MyGraph& g) = 0;      // 求导
+    virtual int Compt(MyGraph& g, int x) = 0;  //compt the value in node
+
     std::string Name() {return name;}
     float Val() {return val;}
     float Der() {return der;}
     float DerSum() {return dersum;}
+
     void rev_val(float x){val = x;return ;}
     void rev_der(float x){der = x;return ;}
-    void add_der(float x){der += x;return ;}
     void rev_dersum(float x){dersum = x;}
-    void add_dersum(float x){der += x;}
+
+    void add_der(float x){der += x;return ;}
     void add_val(float x){val+=x;}
+    void add_dersum(float x){der += x;}
 };
 
 #endif //BIGHOMEWORK_NODE_H

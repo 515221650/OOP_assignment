@@ -50,7 +50,7 @@ void MyGraph::graph_compute()
                 if(DerStatus)
                 {
                     std::cout<<"Underivable"<<std::endl;
-                    myresult.push_back(0);//?
+                    myresult.push_back(0);
                 }
                 else
                 {

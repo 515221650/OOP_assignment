@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.obj"
-  "CMakeFiles/main.dir/Node.cpp.obj"
   "CMakeFiles/main.dir/Operator_1/operator_1.cpp.obj"
   "CMakeFiles/main.dir/Operator_2/operator_2.cpp.obj"
   "CMakeFiles/main.dir/Operator_3/Operator_3.cpp.obj"
@@ -31,6 +30,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Layer/Dense.cpp.obj"
   "CMakeFiles/main.dir/Layer/Input.cpp.obj"
   "CMakeFiles/main.dir/Neural_network.cpp.obj"
+  "CMakeFiles/main.dir/test_minst.cpp.obj"
+  "CMakeFiles/main.dir/yangli.cpp.obj"
   "main.pdb"
   "main.exe"
   "main.exe.manifest"

@@ -6,6 +6,7 @@
 #define BIGHOMEWORK_CREATEFUNC_H
 #include "Storage.h"
 
+// the function creating node
 void create_placeholder(std::string& name, MyGraph& g);
 void create_const(std::string& name, MyGraph& g);
 void create_var(std::string& name, MyGraph& g);

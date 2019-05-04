@@ -12,11 +12,12 @@ class Layer {
 protected:
     int in_num, out_num;
     std::vector<int>out_vec;
+
 public:
-    friend Neural_network;
     Layer(int _in, int _out): in_num(_in), out_num(_out){}
-    int output(int num){return out_vec[num];}
+
     int get_size(){return out_num;}
+    int output(int num){return out_vec[num];}
     virtual void change_input(const std::vector<double> &input, MyGraph &G){};
 };
 

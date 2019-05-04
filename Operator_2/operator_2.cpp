@@ -4,9 +4,6 @@
 #include <iostream>
 #include "operator_2.h"
 
-Operator_2::Operator_2(std::string &s, int x = 0,int y = 0):Node(s), num1(x), num2(y){};
-
-
 int Operator_2::Compt(MyGraph& g, int x)
 {
     int status = 0;

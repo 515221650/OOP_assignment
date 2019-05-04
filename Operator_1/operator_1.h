@@ -11,10 +11,11 @@ class Operator_1:public Node{
 protected:
     int num;
 public:
-    Operator_1(std::string &s, int x);
+    Operator_1(std::string &s, int x = 0):Node(s), num(x){};
+
     virtual int Calc(MyGraph &g) = 0;
-    virtual int Compt(MyGraph &g, int x);
     virtual int Derivate(MyGraph& g) = 0;
+    virtual int Compt(MyGraph &g, int x);
 };
 
 
