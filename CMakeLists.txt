@@ -34,4 +34,4 @@ add_executable(main main.cpp Node.h
         Layer/Dense.cpp Layer/Dense.h
         Layer/Input.cpp Layer/Input.h
         Neural_network.cpp Neural_network.h
-        test_minst.h)
+        test_minst.h test_minst.cpp)

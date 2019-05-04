@@ -50,7 +50,9 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
                     id = i;
                 }
             }
+
             if(id == TargetData[num])cnt_correct += 1.0;
+
             for (int i = 0; i < out_num; i++)
             {
                 int pos = output(i);
@@ -69,11 +71,9 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
                 }
             }
 
-
-
             if((num + 1) % batchsize == 0 || num == InputData.size() - 1)
             {
-                for (int i = 1; i < out_num; i++)
+                for (int i = 1; i < seq.size(); i++)
                 {
                     auto nowd = dynamic_cast<Dense *>(seq[i]);
                     for (auto j: nowd->W)
@@ -84,6 +84,7 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
                 }
                 for (auto i: G.NodeInfoVec)i.NodePos->rev_dersum(0);
             }
+
         }
         std::cout << "epoch::" << time << " " << "accuracy:" << cnt_correct/InputData.size() << std::endl;
     }
