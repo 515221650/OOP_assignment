@@ -265,10 +265,7 @@
 		<Unit filename="C:/Users/yzy/Desktop/OOP/OOP_assignment-master/main.cpp">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="C:/Users/yzy/Desktop/OOP/OOP_assignment-master/test_minst.cpp">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="C:/Users/yzy/Desktop/OOP/OOP_assignment-master/yangli.cpp">
+		<Unit filename="C:/Users/yzy/Desktop/OOP/OOP_assignment-master/test_minst.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="C:/Users/yzy/Desktop/OOP/OOP_assignment-master/CMakeLists.txt">

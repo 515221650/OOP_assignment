@@ -959,60 +959,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-test_minst.obj: test_minst.cpp.obj
-
-.PHONY : test_minst.obj
-
-# target to build an object file
-test_minst.cpp.obj:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/test_minst.cpp.obj
-.PHONY : test_minst.cpp.obj
-
-test_minst.i: test_minst.cpp.i
-
-.PHONY : test_minst.i
-
-# target to preprocess a source file
-test_minst.cpp.i:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/test_minst.cpp.i
-.PHONY : test_minst.cpp.i
-
-test_minst.s: test_minst.cpp.s
-
-.PHONY : test_minst.s
-
-# target to generate assembly for a file
-test_minst.cpp.s:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/test_minst.cpp.s
-.PHONY : test_minst.cpp.s
-
-yangli.obj: yangli.cpp.obj
-
-.PHONY : yangli.obj
-
-# target to build an object file
-yangli.cpp.obj:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/yangli.cpp.obj
-.PHONY : yangli.cpp.obj
-
-yangli.i: yangli.cpp.i
-
-.PHONY : yangli.i
-
-# target to preprocess a source file
-yangli.cpp.i:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/yangli.cpp.i
-.PHONY : yangli.cpp.i
-
-yangli.s: yangli.cpp.s
-
-.PHONY : yangli.s
-
-# target to generate assembly for a file
-yangli.cpp.s:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/yangli.cpp.s
-.PHONY : yangli.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -1115,12 +1061,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... test_minst.obj
-	@echo ... test_minst.i
-	@echo ... test_minst.s
-	@echo ... yangli.obj
-	@echo ... yangli.i
-	@echo ... yangli.s
 .PHONY : help
 
 

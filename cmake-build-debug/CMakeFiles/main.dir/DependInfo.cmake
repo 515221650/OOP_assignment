@@ -35,8 +35,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Operator_3/Operator_3.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/cmake-build-debug/CMakeFiles/main.dir/Operator_3/Operator_3.cpp.obj"
   "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Storage.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/cmake-build-debug/CMakeFiles/main.dir/Storage.cpp.obj"
   "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/main.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/cmake-build-debug/CMakeFiles/main.dir/main.cpp.obj"
-  "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/test_minst.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/cmake-build-debug/CMakeFiles/main.dir/test_minst.cpp.obj"
-  "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/yangli.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/cmake-build-debug/CMakeFiles/main.dir/yangli.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

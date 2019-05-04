@@ -85,10 +85,6 @@ CMakeFiles/main.dir/Neural_network.cpp.obj
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Neural_network.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Node.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Storage.h
-CMakeFiles/main.dir/Node.cpp.obj
- C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Node.cpp
- C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Node.h
- C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Storage.h
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Node.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Operator_0/MyConst.cpp
@@ -229,5 +225,11 @@ CMakeFiles/main.dir/Storage.cpp.obj
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Storage.cpp
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Storage.h
 CMakeFiles/main.dir/main.cpp.obj
+ C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Layer/Dense.h
+ C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Layer/Input.h
+ C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Layer/layer.h
+ C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Neural_network.h
+ C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Node.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/Storage.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment-master/main.cpp
+ C:/Users/yzy/Desktop/OOP/OOP_assignment-master/test_minst.h

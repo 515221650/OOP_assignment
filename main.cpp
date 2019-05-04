@@ -2,7 +2,7 @@
 #include <vector>
 #include "Storage.h"
 #include <stdio.h>
-#include "test_minst.cpp"
+#include "test_minst.h"
 
 int main()
 {

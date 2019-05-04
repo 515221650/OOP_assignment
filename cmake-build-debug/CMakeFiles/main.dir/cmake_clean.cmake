@@ -30,8 +30,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Layer/Dense.cpp.obj"
   "CMakeFiles/main.dir/Layer/Input.cpp.obj"
   "CMakeFiles/main.dir/Neural_network.cpp.obj"
-  "CMakeFiles/main.dir/test_minst.cpp.obj"
-  "CMakeFiles/main.dir/yangli.cpp.obj"
   "main.pdb"
   "main.exe"
   "main.exe.manifest"

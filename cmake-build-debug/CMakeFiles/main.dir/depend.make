@@ -85,10 +85,6 @@ CMakeFiles/main.dir/Neural_network.cpp.obj: ../Neural_network.h
 CMakeFiles/main.dir/Neural_network.cpp.obj: ../Node.h
 CMakeFiles/main.dir/Neural_network.cpp.obj: ../Storage.h
 
-CMakeFiles/main.dir/Node.cpp.obj: ../Node.cpp
-CMakeFiles/main.dir/Node.cpp.obj: ../Node.h
-CMakeFiles/main.dir/Node.cpp.obj: ../Storage.h
-
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj: ../Node.h
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj: ../Operator_0/MyConst.cpp
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj: ../Operator_0/MyConst.h
@@ -228,6 +224,12 @@ CMakeFiles/main.dir/Storage.cpp.obj: ../Node.h
 CMakeFiles/main.dir/Storage.cpp.obj: ../Storage.cpp
 CMakeFiles/main.dir/Storage.cpp.obj: ../Storage.h
 
+CMakeFiles/main.dir/main.cpp.obj: ../Layer/Dense.h
+CMakeFiles/main.dir/main.cpp.obj: ../Layer/Input.h
+CMakeFiles/main.dir/main.cpp.obj: ../Layer/layer.h
+CMakeFiles/main.dir/main.cpp.obj: ../Neural_network.h
+CMakeFiles/main.dir/main.cpp.obj: ../Node.h
 CMakeFiles/main.dir/main.cpp.obj: ../Storage.h
 CMakeFiles/main.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/main.dir/main.cpp.obj: ../test_minst.h
 
