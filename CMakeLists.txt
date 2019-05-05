@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(OOP)
 MESSAGE(STATUS "Project: SERVER")
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -march=native -Wno-reorder")
 
 add_executable(main main.cpp Node.h
         Operator_1/operator_1.cpp Operator_1/operator_1.h

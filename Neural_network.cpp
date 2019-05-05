@@ -103,6 +103,7 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
         learn_rate *= 0.9;
         std::cout << "epoch::" << time << " " << "accuracy:" << cnt_correct/InputData.size() << std::endl;
         save(time, G);
+        std::cout<<"back"<<std::endl;
     }
 }
 
@@ -133,7 +134,7 @@ void Neural_network::test(const std::vector<std::vector<double>> &InputData, con
 void Neural_network::save(int cnt, MyGraph& G)
 {
     char file[100];
-    sprintf(file, "epoch:%d, time = %d.txt", cnt, clock());
+    sprintf(file, "epoch%d_time=%d.txt", cnt, clock());
     freopen(file, "w", stdout);
     std::cout<<cnt<<std::endl;
     for(int i = 1; i < seq.size(); i++)
@@ -151,6 +152,8 @@ void Neural_network::save(int cnt, MyGraph& G)
         }std::cout<<std::endl;
     }
     fclose(stdout);
+    freopen("/dev/tty","w",stdout);
+    std::cout<<"about to back"<<std::endl;
 }
 
 int Neural_network::load(std::string filename, MyGraph& G)
