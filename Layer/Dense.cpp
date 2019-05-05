@@ -25,10 +25,11 @@
 #include "../Operator_2/mymul.h"
 #include "../Operator_2/myminus.h"
 #include <string>
-#define RD ((float)(rand()%101)/100)+EPS
 // 初始化的参数是否需要传进来，这里写的是0~1随机变量
 void Dense::build(MyGraph& G)
 {
+    #define RD ((float)(rand()%101)/20/in_num)+EPS// //
+
     for(int j=0;j<out_num;j++)
     {
         Node* newNode;
@@ -79,5 +80,6 @@ void Dense::build(MyGraph& G)
         int id_outj = G.str_to_int(name_outj);
 
         out_vec.push_back(id_outj);
+
     }
 }

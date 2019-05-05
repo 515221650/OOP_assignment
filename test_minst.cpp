@@ -61,7 +61,7 @@ void read_Data(string filename, vector<vector<double>>& data)
             {
                 unsigned char tmp = 0;
                 file.read((char*)&tmp, sizeof(tmp));
-                tp.push_back((double)tmp);
+                tp.push_back((double)tmp/256);
             }
         }
         data.push_back(tp);
@@ -79,7 +79,7 @@ void test_MINST()
     Neural_network* MyNet = new Neural_network();
     MyGraph* G = new MyGraph();
     MyNet->add_Input(784, *G);
-    MyNet->add_Dense(100, *G);
+    MyNet->add_Dense(10, *G);
     MyNet->add_Dense(10, *G);
     MyNet->train(train_data, train_labels, *G, 1000);
     return ;

@@ -36,7 +36,7 @@ public:
 
     void add_der(float x){der += x;return ;}
     void add_val(float x){val+=x;}
-    void add_dersum(float x){der += x;}
+    void add_dersum(float x){dersum += x;}
 };
 
 #endif //BIGHOMEWORK_NODE_H

@@ -22,10 +22,11 @@ void Neural_network::add_Dense(int num, MyGraph &G)
 
 void Neural_network::train(const std::vector<std::vector<double>> &InputData, const std::vector<double> &TargetData, MyGraph &G, int epoch, int batchsize)
 {
-    double learn_rate = 0.3;int out_num = seq[seq.size() - 1]->get_size();
+    double learn_rate = 3;int out_num = seq[seq.size() - 1]->get_size();
     for(int time = 1; time <= epoch; time++)
     {
         double cnt_correct = 0.0;
+        double cnt2 = 0.0;
         for(int num = 0; num < InputData.size(); num++)
         {
             std::vector<double>labels(out_num);
@@ -51,17 +52,21 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
                 }
             }
 
-            if(id == TargetData[num])cnt_correct += 1.0;
+            if(id == TargetData[num])
+            {
+                cnt_correct += 1.0;
+                cnt2 += 1.0;
+            }
 
             for (int i = 0; i < out_num; i++)
             {
                 int pos = output(i);
-                G.DerVec.clear();
                 G.erase_der();
                 Node *OutputNode = G.NodeInfoVec[pos].NodePos;
                 OutputNode->rev_der(1);
-                reverse(G.DerVec.begin(), G.DerVec.end());
-                for (auto j: G.DerVec) {
+                int sz_info = G.NodeInfoVec.size();
+                for (int j=sz_info-1;j>=0;j--)
+                {
                     G.NodeInfoVec[j].NodePos->Derivate(G);
                 }
                 double delta = G.NodeInfoVec[pos].NodePos->Val() - labels[i];
@@ -81,8 +86,15 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
                         Node *nown = G.NodeInfoVec[j].NodePos;
                         nown->add_val(-nown->DerSum() * learn_rate / batchsize);
                     }
+                    for (auto j: nowd->B)
+                    {
+                        Node * nown = G.NodeInfoVec[j].NodePos;
+                        nown->add_val(-nown->DerSum() * learn_rate / batchsize);
+                    }
                 }
                 for (auto i: G.NodeInfoVec)i.NodePos->rev_dersum(0);
+               // std::cout << "nownum::" << num << " " << "accuracy:" << cnt2/batchsize<< std::endl;
+                cnt2 = 0;
             }
 
         }
