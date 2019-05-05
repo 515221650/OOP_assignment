@@ -19,6 +19,9 @@ public:
     void add_Dense(int num, MyGraph& G);
     void train(const std::vector<std::vector<double>> & InputData, const std::vector<double> & TargetData, MyGraph& G, int epoch = 100, int batchsize = 128);
     void test(const std::vector<std::vector<double>> & InputData, const std::vector<double> & TargetData, MyGraph& G);
+    void save(int cnt, MyGraph& G);
+
+    int load(std::string filename, MyGraph& G);
 };
 
 

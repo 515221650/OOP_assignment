@@ -44,6 +44,7 @@ public:
 
     void erase_mark();                             // init mark
     void erase_der();                              // init der
+    void clear_DerVec();                          // delete DerVec
     void empty_placeholder_rev(){PlaceholderRev.clear();}
 
     ~MyGraph();

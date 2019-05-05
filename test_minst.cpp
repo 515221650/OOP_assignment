@@ -81,6 +81,8 @@ void test_MINST()
     MyNet->add_Input(784, *G);
     MyNet->add_Dense(10, *G);
     MyNet->add_Dense(10, *G);
-    MyNet->train(train_data, train_labels, *G, 1000);
+    MyNet->train(train_data, train_labels, *G, 10);
+    MyNet->test(train_data, train_labels, *G);
+
     return ;
 }

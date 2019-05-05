@@ -104,10 +104,17 @@ void MyGraph::erase_mark()
 {
     for(auto& i : NodeInfoVec)i.vis = false;
 }
+
 void MyGraph::erase_der()
 {
     for(auto& i :NodeInfoVec)i.NodePos ->rev_der(0);
 }
+
+void MyGraph::clear_DerVec()
+{
+    DerVec.clear();
+}
+
 MyGraph::~MyGraph()
 {
     int total = NodeInfoVec.size();

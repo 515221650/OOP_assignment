@@ -12,5 +12,6 @@ int main()
     //i_love_compute.graph_compute();//compute
 
     test_MINST();
+
     return 0;
 }

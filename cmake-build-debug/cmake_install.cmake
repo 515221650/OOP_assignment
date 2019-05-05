@@ -1,4 +1,4 @@
-# Install script for directory: D:/hwy/bighomework/0504/OOP_assignment
+# Install script for directory: C:/Users/yzy/Desktop/OOP/OOP_assignment-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/hwy/bighomework/0504/OOP_assignment/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/yzy/Desktop/OOP/OOP_assignment-master/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

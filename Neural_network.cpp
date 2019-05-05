@@ -5,6 +5,7 @@
 #include "Neural_network.h"
 #include <algorithm>
 #include <iostream>
+#include <ctime>
 #define INF 1E9
 int Neural_network::output(int j)
 {
@@ -45,6 +46,7 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
                 int pos = output(i);
                 Node *OutputNode = G.NodeInfoVec[pos].NodePos;
                 OutputNode->Compt(G, pos);
+                G.clear_DerVec();
                 if(OutputNode->Val() > mx)
                 {
                     mx = OutputNode->Val();
@@ -93,12 +95,14 @@ void Neural_network::train(const std::vector<std::vector<double>> &InputData, co
                     }
                 }
                 for (auto i: G.NodeInfoVec)i.NodePos->rev_dersum(0);
-               // std::cout << "nownum::" << num << " " << "accuracy:" << cnt2/batchsize<< std::endl;
+                std::cout << "nownum::" << num << " " << "accuracy:" << cnt2/batchsize<< std::endl;
                 cnt2 = 0;
             }
 
         }
+        learn_rate *= 0.9;
         std::cout << "epoch::" << time << " " << "accuracy:" << cnt_correct/InputData.size() << std::endl;
+        save(time, G);
     }
 }
 
@@ -124,4 +128,51 @@ void Neural_network::test(const std::vector<std::vector<double>> &InputData, con
         if(id == TargetData[num])cnt_correct += 1.0;
     }
     std::cout << "accuracy:" << cnt_correct/InputData.size() << std::endl;
+}
+
+void Neural_network::save(int cnt, MyGraph& G)
+{
+    char file[100];
+    sprintf(file, "epoch:%d, time = %d.txt", cnt, clock());
+    freopen(file, "w", stdout);
+    std::cout<<cnt<<std::endl;
+    for(int i = 1; i < seq.size(); i++)
+    {
+        auto nowd = dynamic_cast<Dense *>(seq[i]);
+        for(auto j : nowd->W)
+        {
+            Node *nown = G.NodeInfoVec[j].NodePos;
+            std::cout<<nown->Val()<<' ';
+        }std::cout<<std::endl;
+        for(auto j : nowd->B)
+        {
+            Node *nown = G.NodeInfoVec[j].NodePos;
+            std::cout<<nown->Val()<<' ';
+        }std::cout<<std::endl;
+    }
+    fclose(stdout);
+}
+
+int Neural_network::load(std::string filename, MyGraph& G)
+{
+    freopen(filename.c_str(), "r", stdin);
+    int cnt; std::cin>>cnt;
+    for(int i = 1; i < seq.size(); i++)
+    {
+        auto nowd = dynamic_cast<Dense *>(seq[i]);
+        for(auto j : nowd->W)
+        {
+            Node *nown = G.NodeInfoVec[j].NodePos;
+            float tmp;std::cin>>tmp;
+            nown->rev_val(tmp);
+        }
+        for(auto j : nowd->B)
+        {
+            Node *nown = G.NodeInfoVec[j].NodePos;
+            float tmp;std::cin>>tmp;
+            nown->rev_val(tmp);
+        }
+    }
+    fclose(stdin);
+    return cnt;
 }
