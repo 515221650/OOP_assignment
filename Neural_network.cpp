@@ -152,7 +152,7 @@ void Neural_network::save(int cnt, MyGraph& G)
         }std::cout<<std::endl;
     }
     fclose(stdout);
-    freopen("/dev/tty","w",stdout);
+    freopen("CON","w",stdout);
     std::cout<<"about to back"<<std::endl;
 }
 
