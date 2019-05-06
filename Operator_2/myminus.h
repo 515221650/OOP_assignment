@@ -12,6 +12,8 @@ public:
     MyMinus(std::string &s, int x,int y);
     virtual int Calc(MyGraph &v);
     virtual int Derivate(MyGraph &v);
+
+    virtual ~MyMinus(){};
 };
 
 

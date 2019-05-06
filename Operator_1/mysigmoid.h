@@ -11,6 +11,8 @@ public:
     MySigmoid(std::string &s, int x);
     virtual int Calc(MyGraph &v);
     virtual int Derivate(MyGraph& g);
+
+    virtual ~MySigmoid(){}
 };
 
 #endif //OOP_MYSIGMOID_H

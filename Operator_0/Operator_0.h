@@ -13,6 +13,8 @@ public:
     virtual int Compt(MyGraph &g, int x);
     virtual int Calc(MyGraph &g) = 0;
     virtual int Derivate(MyGraph& g){return 0;}
+
+    virtual ~Operator_0(){};
 };
 
 

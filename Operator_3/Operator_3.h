@@ -15,6 +15,8 @@ public:
     virtual int Calc(MyGraph &g) = 0;
     virtual int Derivate(MyGraph& g) = 0;
     Operator_3(std::string& s, int x, int y, int z);
+
+    virtual ~Operator_3(){};
 };
 
 #endif //BIGHOMEWORK_OPERATOR_3_H

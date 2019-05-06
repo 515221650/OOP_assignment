@@ -14,6 +14,7 @@ public:
     virtual int Calc(MyGraph &v);
     virtual int Derivate(MyGraph &v);
 
+    virtual ~MyMul(){}
 };
 
 #endif //OOP_MYMUL_H

@@ -11,6 +11,8 @@ class MyPlaceholder : public Operator_0{
 public:
     MyPlaceholder(std::string& name);
     virtual int Calc(MyGraph& v);
+
+    virtual ~MyPlaceholder(){}
 };
 
 

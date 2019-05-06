@@ -11,6 +11,8 @@ class MyVar : public Operator_0{
 public:
     virtual int Calc(MyGraph& a);
     MyVar(std::string& name, float x);
+
+    virtual ~MyVar(){}
 };
 
 #endif //BIGHOMEWORK_MYVAR_H

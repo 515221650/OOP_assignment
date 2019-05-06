@@ -3,6 +3,8 @@
 //
 #include "test_minst.h"
 
+//the function to read data from MINST, mainly copied from the Internet
+
 int read_int(int i)
 {
     unsigned char ch1, ch2, ch3, ch4;
@@ -68,21 +70,20 @@ void read_Data(string filename, vector<vector<double>>& data)
     }
 }
 
-void test_MINST()
-{
-    vector<vector<double>>train_data, test_data;
-    vector<double>train_labels, test_labels;
+void test_MINST() {
+    vector<vector<double>> train_data, test_data;
+    vector<double> train_labels, test_labels;
     read_Data("t10k-images.idx3-ubyte", test_data);
     read_Label("t10k-labels.idx1-ubyte", test_labels);
     read_Data("train-images.idx3-ubyte", train_data);
     read_Label("train-labels.idx1-ubyte", train_labels);
-    Neural_network* MyNet = new Neural_network();
-    MyGraph* G = new MyGraph();
+    Neural_network *MyNet = new Neural_network();
+    MyGraph *G = new MyGraph();
     MyNet->add_Input(784, *G);
     MyNet->add_Dense(10, *G);
     MyNet->add_Dense(10, *G);
     MyNet->train(train_data, train_labels, *G, 10);
     MyNet->test(train_data, train_labels, *G);
 
-    return ;
+    return;
 }

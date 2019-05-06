@@ -11,6 +11,8 @@ public:
     MyTanh(std::string &s, int x);
     virtual int Calc(MyGraph &v);
     virtual int Derivate(MyGraph& g);
+
+    virtual ~MyTanh(){}
 };
 
 

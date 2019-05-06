@@ -8,6 +8,7 @@
 #include <fstream>
 using namespace std;
 
+//the function to read data from MINST, mainly copied from the Internet
 int read_int(int i);
 void read_Label(string filename, vector<double>& labels);
 void read_Data(string filename, vector<vector<double>>& data);

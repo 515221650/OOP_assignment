@@ -15,9 +15,9 @@ class MyGraph{
 private:
     struct NodeInfo{
         Node* NodePos;
-        bool vis;
+        bool vis;   //to mark if this node has been visited in former computation;
     };
-    std::vector<int> DerVec;
+    std::vector<int> DerVec;                       // used for derivative
     std::vector<NodeInfo> NodeInfoVec ;            // set of nodes
     std::map <std::string, int> StrToIntMap ;      // name to id
     std::map <std::string, float > PlaceholderRev; // name to value about placeholder
@@ -35,16 +35,16 @@ public:
     void graph_compute(); // compute answer
 
     void push_der(int x); // push the node which was needed to the vector when derivate
-    void insert_node(Node*, std::string);
+    void insert_node(Node*, std::string); //insert the node into NodeInfoVec & StrToIntMap
     void insert_placeholder_rev(std::string &str, float x){PlaceholderRev[str] = x;}  //name to value
 
-    void Mark(int x){NodeInfoVec[x].vis=1;}        //whether the node has been visited when computing
-    void change_var(int id, float x);
-    void change_var(std::string &name, float x);
+    void Mark(int x){NodeInfoVec[x].vis=1;}        // whether the node has been visited when computing
+    void change_var(int id, float x);              // change the value of var with a certain id in NodeInfoVec
+    void change_var(std::string &name, float x);   // change the value of var with a certain name
 
     void erase_mark();                             // init mark
     void erase_der();                              // init der
-    void clear_DerVec();                          // delete DerVec
+    void clear_DerVec();                           // delete DerVec
     void empty_placeholder_rev(){PlaceholderRev.clear();}
 
     ~MyGraph();

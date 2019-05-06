@@ -14,14 +14,14 @@ void MyGraph::graph_compute()
     int q;
     std::cin>>q;
     std::cin.get();
-    std::vector<float> myresult;
+    std::vector<float> myresult;    //save the result of each eval
     while(q--)
     {
         std::string line;
         getline(std::cin, line);
         std::stringstream is(line);
         std::string tmps;
-        is>>tmps;
+        is>>tmps;   //cin the first word
         std::string aim, aim2; float x;
         if(tmps == "DERIVATIVE")
         {
@@ -31,25 +31,29 @@ void MyGraph::graph_compute()
             std::string ParaName;
             is>>aim>>aim2;
             if(!(is>>ParaNum)) ParaNum = 0;
-            while(ParaNum--)
+            while(ParaNum--)    //cin parameters
             {
                 is>>ParaName>>x;
-                insert_placeholder_rev(ParaName, x);
+                insert_placeholder_rev(ParaName, x);    //to save the value and mark that the placeholder is not missed
             }
             int aim_num = str_to_int(aim);
-            Node* ans_node = NodeInfoVec[aim_num].NodePos;
-            int ans = ans_node->Compt(*this, aim_num);
+            Node* ans_node = NodeInfoVec[aim_num].NodePos;  //pointer to our aim node
+            int ans = ans_node->Compt(*this, aim_num);  //ans: the status of computation; 0 means no error
             if(!ans)
             {
                 erase_der();
-                ans_node->rev_der(1);
-                reverse(DerVec.begin(),DerVec.end());
-                int DerStatus = 0;
+                ans_node->rev_der(1);   //in der, we record the deravative of aiming node to current node 目标节点对当前节点的导数，目标节点的der初始化为1
+                reverse(DerVec.begin(),DerVec.end());   //DerVec is created in Compt, which indicate what nodes are related with aim node;
+                int DerStatus = 0;  //record the status of derivative; 0 means no errors
                 for(auto i : DerVec)
-                    if(DerStatus = NodeInfoVec[i].NodePos->Derivate(*this)) break;
-                if(DerStatus)
                 {
-                    std::cout<<"Underivable"<<std::endl;
+                    DerStatus = NodeInfoVec[i].NodePos->Derivate(*this);
+                    if(DerStatus) break;
+                }
+
+                if(DerStatus)   //have errors
+                {
+                    std::cout<<"ERROR: Underivable"<<std::endl;
                     myresult.push_back(0);
                 }
                 else
@@ -64,7 +68,7 @@ void MyGraph::graph_compute()
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
                 if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
-                myresult.push_back(0.0);//???
+                myresult.push_back(0.0);
             }
             DerVec.clear();
         }
@@ -76,17 +80,17 @@ void MyGraph::graph_compute()
             is>>aim;
             if(!(is>>ParaNum)) ParaNum = 0;
 
-            while(ParaNum--)
+            while(ParaNum--)    //cin the parameters
             {
                 std::string ParaName;
                 is>>ParaName>>x;
                 insert_placeholder_rev(ParaName, x);
             }
 
-            int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim));
+            int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim));    //record the status of computation ; 0 means no errors
             if(!ans)
             {
-                float res = NodeInfoVec[str_to_int(aim)].NodePos->Val();//把g[aim]改了
+                float res = NodeInfoVec[str_to_int(aim)].NodePos->Val();
                 std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
                 myresult.push_back(res);
             }
@@ -95,7 +99,7 @@ void MyGraph::graph_compute()
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
                 if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
-                myresult.push_back(0.0);//???
+                myresult.push_back(0.0);
             }
             DerVec.clear();
         }
@@ -103,7 +107,7 @@ void MyGraph::graph_compute()
         {
             is>>aim>>x;
             change_var(aim, x);
-            myresult.push_back(0.0);//这也算一次操作...
+            myresult.push_back(0.0);
         }
         else if(tmps == "SETANSWER")
         {

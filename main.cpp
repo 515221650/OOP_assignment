@@ -7,12 +7,13 @@
 
 int main()
 {
-    std::srand(std::time(0));
+    //if you want to use the fundamental function, please comment out the last two sentence;
+    //if you want to test the neural network, comment out the other three instead;
     MyGraph i_love_compute;
-    //i_love_compute.create_root();//const or var or placeholder
-    //i_love_compute.create_tree();//others
+    //i_love_compute.create_root();//set const or var or placeholder
+    //i_love_compute.create_tree();//set others
     //i_love_compute.graph_compute();//compute
-
+    std::srand(std::time(0));
     test_MINST();
 
     return 0;

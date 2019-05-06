@@ -15,7 +15,7 @@ public:
     {
         build(G);
     }
-    virtual void change_input(const std::vector<double> &input, MyGraph &G);
+    virtual void change_input(const std::vector<double> &input, MyGraph &G);    //change the node's val in Input Layer (namely input the data of images)
 };
 
 

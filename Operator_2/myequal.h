@@ -11,6 +11,8 @@ public:
     MyEqual(std::string &s, int x,int y);
     virtual int Calc(MyGraph &v);
     virtual int Derivate(MyGraph &v);
+
+    virtual ~MyEqual(){}
 };
 
 

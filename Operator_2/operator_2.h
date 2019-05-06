@@ -17,6 +17,8 @@ public:
     virtual int Calc(MyGraph &v) = 0;
     virtual int Derivate(MyGraph& g) = 0;
     virtual int Compt(MyGraph& g, int x);
+
+    virtual ~Operator_2(){};
 };
 
 #endif //OOP_OPERATOR_2_H

@@ -11,7 +11,7 @@
 #define MG (*this)
 
 
-std::pair<bool,float> MyGraph::GetPH(const std::string &str)
+std::pair<bool,float> MyGraph::GetPH(const std::string &str)    // find the placeholder and its status
 {
     auto t = PlaceholderRev.find(str);
     if(t != PlaceholderRev.end())return MK(1, t->second);
@@ -19,7 +19,7 @@ std::pair<bool,float> MyGraph::GetPH(const std::string &str)
 }
 
 
-void MyGraph::create_root()
+void MyGraph::create_root()     //create const or var or placeholder
 {
     int n = 0;
     std::cin>>n;
@@ -36,7 +36,7 @@ void MyGraph::create_root()
 
 typedef void (*fun1) (std::string&, MyGraph&);
 typedef void (*fun2) (std::string&, std::string&, MyGraph&);
-void MyGraph::create_tree()
+void MyGraph::create_tree()     //create others
 {
 
     std::map <std::string, fun1> ScanfMap1 = {
