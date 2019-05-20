@@ -1,5 +1,5 @@
 //
-// Created by hwy on 2019/5/4.
+// Created by player1 on 2019/5/4.
 //
 #include "test_minst.h"
 
@@ -77,11 +77,13 @@ void test_MINST() {
     read_Label("t10k-labels.idx1-ubyte", test_labels);
     read_Data("train-images.idx3-ubyte", train_data);
     read_Label("train-labels.idx1-ubyte", train_labels);
+
     Neural_network *MyNet = new Neural_network();
     MyGraph *G = new MyGraph();
     MyNet->add_Input(784, *G);
     MyNet->add_Dense(10, *G);
     MyNet->add_Dense(10, *G);
+    //MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
     MyNet->train(train_data, train_labels, *G, 10);
     MyNet->test(train_data, train_labels, *G);
 

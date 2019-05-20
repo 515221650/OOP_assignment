@@ -1,5 +1,5 @@
 //
-// Created by HWY on 2019/3/30.
+// Created by player1 on 2019/3/30.
 //
 #include "CreateFunc.h"
 #include "Storage.h"
@@ -46,7 +46,10 @@ void MyGraph::create_tree()     //create others
             {"TANH", create_tanh},
             {"SIGMOID", create_sigmoid},
             {"PRINT", create_print},
-            {"COND", create_cond}
+            {"COND", create_cond},
+            {"ASSERT", create_assert},
+            {"BIND", create_bind},
+            {"ASSIGN", create_assign}
     };//match the func
 
     std::map <std::string, fun2> ScanfMap2 = {
@@ -95,9 +98,19 @@ void MyGraph::change_var(std::string &name, float x)
 {
     NodeInfoVec[str_to_int(name)].NodePos->rev_val(x);
 }
+
 void MyGraph::change_var(int id, float x)
 {
     NodeInfoVec[id].NodePos->rev_val(x);
+}
+
+void MyGraph::assign_change()
+{
+    for(auto pir : ChangeVar)
+    {
+        change_var(pir.first, pir.second);
+    }
+    ChangeVar.clear();
 }
 
 void MyGraph::erase_mark()

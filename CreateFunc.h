@@ -1,5 +1,5 @@
 //
-// Created by WLY on 2019/4/1.
+// Created by player1 on 2019/4/1.
 //
 
 #ifndef BIGHOMEWORK_CREATEFUNC_H
@@ -16,6 +16,7 @@ void create_exp(std::string& name, MyGraph& g);
 void create_tanh(std::string& name, MyGraph& g);
 void create_sigmoid(std::string& name, MyGraph& g);
 void create_print(std::string& name, MyGraph& g);
+void create_assert(std::string& name, MyGraph& g);
 void create_plus(std::string& name, std::string& x, MyGraph& g);
 void create_minus(std::string& name, std::string& x, MyGraph& g);
 void create_mul(std::string& name, std::string& x, MyGraph& g);
@@ -25,6 +26,8 @@ void create_less(std::string& name, std::string& x, MyGraph& g);
 void create_greaterequal(std::string& name, std::string& x, MyGraph& g);
 void create_lessequal(std::string& name, std::string& x, MyGraph& g);
 void create_equal(std::string& name, std::string& x, MyGraph& g);
+void create_bind(std::string& name, MyGraph& g);
+void create_assign(std::string& name, MyGraph& g);
 void create_cond(std::string& name, MyGraph& g);
 
 #endif //BIGHOMEWORK_CREATEFUNC_H

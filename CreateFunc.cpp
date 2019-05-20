@@ -1,5 +1,5 @@
 //
-// Created by hwy on 2019/4/1.
+// Created by player1 on 2019/4/1.
 //
 #include <iostream>
 #include <string>
@@ -13,6 +13,7 @@
 #include "Operator_1/myprint.h"
 #include "Operator_1/mysigmoid.h"
 #include "Operator_1/mysin.h"
+#include "Operator_1/myassert.h"
 #include "Operator_1/mytanh.h"
 #include "Operator_2/mydiv.h"
 #include "Operator_2/myequal.h"
@@ -23,6 +24,8 @@
 #include "Operator_2/myplus.h"
 #include "Operator_2/mymul.h"
 #include "Operator_2/myminus.h"
+#include "Operator_2/mybind.h"
+#include "Operator_2/myassign.h"
 
 //operator_0
 
@@ -102,6 +105,15 @@ void create_print(std::string& name, MyGraph& g)
     int IntPara = g.str_to_int(StrPara);
     MyPrint* NewNode = new MyPrint(name, IntPara);
     g.insert_node(NewNode, name);
+}
+
+void create_assert(std::string& name, MyGraph& g)
+{
+    std::string StrPara;
+    std::cin>>StrPara;
+    int IntPara = g.str_to_int(StrPara);
+    MyAssert* NewConst = new MyAssert(name, IntPara);
+    g.insert_node(NewConst, name);
 }
 
 //operator_2
@@ -202,6 +214,34 @@ void create_equal(std::string& name, std::string& x, MyGraph& g)
     int IntPara2 = g.str_to_int(StrPara);
 
     MyEqual* NewNode = new MyEqual(name, IntPara1, IntPara2);
+    g.insert_node(NewNode, name);
+}
+
+void create_bind(std::string& name, MyGraph& g)
+{
+    std::string StrPara[2];
+    int IntPara[2];
+    for(int i=0;i<2;i++)
+    {
+        std::cin>>StrPara[i];
+        IntPara[i] = g.str_to_int(StrPara[i]);
+    }
+
+    MyBind* NewNode = new MyBind(name, IntPara[0], IntPara[1]);
+    g.insert_node(NewNode, name);
+}
+
+void create_assign(std::string& name, MyGraph& g)
+{
+    std::string StrPara[2];
+    int IntPara[2];
+    for(int i=0;i<2;i++)
+    {
+        std::cin>>StrPara[i];
+        IntPara[i] = g.str_to_int(StrPara[i]);
+    }
+
+    MyAssign* NewNode = new MyAssign(name, IntPara[0], IntPara[1]);
     g.insert_node(NewNode, name);
 }
 

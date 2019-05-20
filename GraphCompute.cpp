@@ -1,5 +1,5 @@
 //
-// Created by hwy on 2019/4/1.
+// Created by player1 on 2019/4/1.
 //
 #include <iostream>
 #include <vector>
@@ -68,6 +68,7 @@ void MyGraph::graph_compute()
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
                 if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
+                if(ans == 4) std::cout << "ERROR: Assertion failed" << std::endl;
                 myresult.push_back(0.0);
             }
             DerVec.clear();
@@ -99,9 +100,11 @@ void MyGraph::graph_compute()
                 if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
                 if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
                 if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
+                if(ans == 4) std::cout << "ERROR: Assertion failed" << std::endl;
                 myresult.push_back(0.0);
             }
             DerVec.clear();
+            assign_change();
         }
         else if(tmps == "SETCONSTANT")
         {

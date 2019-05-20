@@ -1,5 +1,5 @@
 //
-// Created by yzy on 2019/4/1.
+// Created by player0 on 2019/4/1.
 //
 
 #ifndef OOP_MYEQUAL_H

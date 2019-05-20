@@ -1,5 +1,5 @@
 //
-// Created by yzy on 2019/3/31.
+// Created by player0 on 2019/3/31.
 //
 
 #ifndef OOP_MYSIGMOID_H
