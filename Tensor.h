@@ -7,18 +7,22 @@
 
 #include <vector>
 #include <cstdarg>
+#include "Matrix.h"
 
 using std::vector;
 class Tensor {
 private:
     int dim;
-    vector<int>size;
-    vector<double >val;
+    vector<int> size; // 前两维是matrix的
+    vector<Matrix> val;
+    void add_dim(int sz) {size.push_back(sz); dim++;}
 public:
-    Tensor operator() (int a,...);
-    Tensor operator+ (Tensor& b);
-    Tensor operator* (Tensor& b);
-    Tensor operator- (Tensor& b);
+    Tensor();
+    Tensor(std::initializer_list<int> szlist);//Tensor(5)是5*5还是1*5? 对dim==1的特判//默认填充0
+    Tensor operator() (std::initializer_list<int> arglist);
+    Tensor operator+ (const Tensor& b) const;
+    Tensor operator* (const Tensor& b) const;
+    Tensor operator- (const Tensor& b) const;
 };
 
 

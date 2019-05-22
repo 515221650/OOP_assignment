@@ -47,10 +47,10 @@ RM = "D:\CLion\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\hwy\bighomework\2\0520
+CMAKE_SOURCE_DIR = D:\hwy\bighomework\2\0520\OOP_assignment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\hwy\bighomework\2\0520\cmake-build-debug
+CMAKE_BINARY_DIR = D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -256,6 +256,33 @@ Layer/layer.s: Layer/layer.cpp.s
 Layer/layer.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/layer.cpp.s
 .PHONY : Layer/layer.cpp.s
+
+Matrix.obj: Matrix.cpp.obj
+
+.PHONY : Matrix.obj
+
+# target to build an object file
+Matrix.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Matrix.cpp.obj
+.PHONY : Matrix.cpp.obj
+
+Matrix.i: Matrix.cpp.i
+
+.PHONY : Matrix.i
+
+# target to preprocess a source file
+Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Matrix.cpp.i
+.PHONY : Matrix.cpp.i
+
+Matrix.s: Matrix.cpp.s
+
+.PHONY : Matrix.s
+
+# target to generate assembly for a file
+Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Matrix.cpp.s
+.PHONY : Matrix.cpp.s
 
 Neural_network.obj: Neural_network.cpp.obj
 
@@ -1118,6 +1145,9 @@ help:
 	@echo ... Layer/layer.obj
 	@echo ... Layer/layer.i
 	@echo ... Layer/layer.s
+	@echo ... Matrix.obj
+	@echo ... Matrix.i
+	@echo ... Matrix.s
 	@echo ... Neural_network.obj
 	@echo ... Neural_network.i
 	@echo ... Neural_network.s

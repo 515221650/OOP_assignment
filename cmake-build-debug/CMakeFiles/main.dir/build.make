@@ -42,10 +42,10 @@ RM = "D:\CLion\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\hwy\bighomework\2\0520
+CMAKE_SOURCE_DIR = D:\hwy\bighomework\2\0520\OOP_assignment
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\hwy\bighomework\2\0520\cmake-build-debug
+CMAKE_BINARY_DIR = D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -58,471 +58,484 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/main.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\main.cpp.obj -c D:\hwy\bighomework\2\0520\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\main.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\main.cpp > CMakeFiles\main.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\main.cpp > CMakeFiles\main.dir\main.cpp.i
 
 CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\main.cpp -o CMakeFiles\main.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\main.cpp -o CMakeFiles\main.dir\main.cpp.s
 
 CMakeFiles/main.dir/Operator_1/operator_1.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/operator_1.cpp.obj: ../Operator_1/operator_1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/Operator_1/operator_1.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\operator_1.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\operator_1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/Operator_1/operator_1.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\operator_1.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\operator_1.cpp
 
 CMakeFiles/main.dir/Operator_1/operator_1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/operator_1.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\operator_1.cpp > CMakeFiles\main.dir\Operator_1\operator_1.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\operator_1.cpp > CMakeFiles\main.dir\Operator_1\operator_1.cpp.i
 
 CMakeFiles/main.dir/Operator_1/operator_1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/operator_1.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\operator_1.cpp -o CMakeFiles\main.dir\Operator_1\operator_1.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\operator_1.cpp -o CMakeFiles\main.dir\Operator_1\operator_1.cpp.s
 
 CMakeFiles/main.dir/Operator_2/operator_2.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/operator_2.cpp.obj: ../Operator_2/operator_2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/Operator_2/operator_2.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\operator_2.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\operator_2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/Operator_2/operator_2.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\operator_2.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\operator_2.cpp
 
 CMakeFiles/main.dir/Operator_2/operator_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/operator_2.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\operator_2.cpp > CMakeFiles\main.dir\Operator_2\operator_2.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\operator_2.cpp > CMakeFiles\main.dir\Operator_2\operator_2.cpp.i
 
 CMakeFiles/main.dir/Operator_2/operator_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/operator_2.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\operator_2.cpp -o CMakeFiles\main.dir\Operator_2\operator_2.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\operator_2.cpp -o CMakeFiles\main.dir\Operator_2\operator_2.cpp.s
 
 CMakeFiles/main.dir/Operator_3/Operator_3.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_3/Operator_3.cpp.obj: ../Operator_3/Operator_3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/Operator_3/Operator_3.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_3\Operator_3.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_3\Operator_3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/Operator_3/Operator_3.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_3\Operator_3.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_3\Operator_3.cpp
 
 CMakeFiles/main.dir/Operator_3/Operator_3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_3/Operator_3.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_3\Operator_3.cpp > CMakeFiles\main.dir\Operator_3\Operator_3.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_3\Operator_3.cpp > CMakeFiles\main.dir\Operator_3\Operator_3.cpp.i
 
 CMakeFiles/main.dir/Operator_3/Operator_3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_3/Operator_3.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_3\Operator_3.cpp -o CMakeFiles\main.dir\Operator_3\Operator_3.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_3\Operator_3.cpp -o CMakeFiles\main.dir\Operator_3\Operator_3.cpp.s
 
 CMakeFiles/main.dir/Operator_0/Operator_0.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_0/Operator_0.cpp.obj: ../Operator_0/Operator_0.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/Operator_0/Operator_0.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\Operator_0.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_0\Operator_0.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/Operator_0/Operator_0.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\Operator_0.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\Operator_0.cpp
 
 CMakeFiles/main.dir/Operator_0/Operator_0.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_0/Operator_0.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_0\Operator_0.cpp > CMakeFiles\main.dir\Operator_0\Operator_0.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\Operator_0.cpp > CMakeFiles\main.dir\Operator_0\Operator_0.cpp.i
 
 CMakeFiles/main.dir/Operator_0/Operator_0.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_0/Operator_0.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_0\Operator_0.cpp -o CMakeFiles\main.dir\Operator_0\Operator_0.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\Operator_0.cpp -o CMakeFiles\main.dir\Operator_0\Operator_0.cpp.s
 
 CMakeFiles/main.dir/Operator_2/myplus.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myplus.cpp.obj: ../Operator_2/myplus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/Operator_2/myplus.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myplus.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\myplus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/Operator_2/myplus.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myplus.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myplus.cpp
 
 CMakeFiles/main.dir/Operator_2/myplus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/myplus.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\myplus.cpp > CMakeFiles\main.dir\Operator_2\myplus.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myplus.cpp > CMakeFiles\main.dir\Operator_2\myplus.cpp.i
 
 CMakeFiles/main.dir/Operator_2/myplus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/myplus.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\myplus.cpp -o CMakeFiles\main.dir\Operator_2\myplus.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myplus.cpp -o CMakeFiles\main.dir\Operator_2\myplus.cpp.s
 
 CMakeFiles/main.dir/Operator_2/myminus.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myminus.cpp.obj: ../Operator_2/myminus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/Operator_2/myminus.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myminus.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\myminus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/Operator_2/myminus.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myminus.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myminus.cpp
 
 CMakeFiles/main.dir/Operator_2/myminus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/myminus.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\myminus.cpp > CMakeFiles\main.dir\Operator_2\myminus.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myminus.cpp > CMakeFiles\main.dir\Operator_2\myminus.cpp.i
 
 CMakeFiles/main.dir/Operator_2/myminus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/myminus.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\myminus.cpp -o CMakeFiles\main.dir\Operator_2\myminus.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myminus.cpp -o CMakeFiles\main.dir\Operator_2\myminus.cpp.s
 
 CMakeFiles/main.dir/Operator_2/mymul.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mymul.cpp.obj: ../Operator_2/mymul.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/Operator_2/mymul.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mymul.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\mymul.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/Operator_2/mymul.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mymul.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mymul.cpp
 
 CMakeFiles/main.dir/Operator_2/mymul.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/mymul.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\mymul.cpp > CMakeFiles\main.dir\Operator_2\mymul.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mymul.cpp > CMakeFiles\main.dir\Operator_2\mymul.cpp.i
 
 CMakeFiles/main.dir/Operator_2/mymul.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/mymul.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\mymul.cpp -o CMakeFiles\main.dir\Operator_2\mymul.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mymul.cpp -o CMakeFiles\main.dir\Operator_2\mymul.cpp.s
 
 CMakeFiles/main.dir/Operator_2/mydiv.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mydiv.cpp.obj: ../Operator_2/mydiv.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/Operator_2/mydiv.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mydiv.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\mydiv.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/Operator_2/mydiv.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mydiv.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mydiv.cpp
 
 CMakeFiles/main.dir/Operator_2/mydiv.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/mydiv.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\mydiv.cpp > CMakeFiles\main.dir\Operator_2\mydiv.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mydiv.cpp > CMakeFiles\main.dir\Operator_2\mydiv.cpp.i
 
 CMakeFiles/main.dir/Operator_2/mydiv.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/mydiv.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\mydiv.cpp -o CMakeFiles\main.dir\Operator_2\mydiv.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mydiv.cpp -o CMakeFiles\main.dir\Operator_2\mydiv.cpp.s
 
 CMakeFiles/main.dir/Operator_1/mysin.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/mysin.cpp.obj: ../Operator_1/mysin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/Operator_1/mysin.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mysin.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\mysin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/Operator_1/mysin.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mysin.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mysin.cpp
 
 CMakeFiles/main.dir/Operator_1/mysin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/mysin.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\mysin.cpp > CMakeFiles\main.dir\Operator_1\mysin.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mysin.cpp > CMakeFiles\main.dir\Operator_1\mysin.cpp.i
 
 CMakeFiles/main.dir/Operator_1/mysin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/mysin.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\mysin.cpp -o CMakeFiles\main.dir\Operator_1\mysin.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mysin.cpp -o CMakeFiles\main.dir\Operator_1\mysin.cpp.s
 
 CMakeFiles/main.dir/Operator_1/mylog.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/mylog.cpp.obj: ../Operator_1/mylog.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/Operator_1/mylog.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mylog.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\mylog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/Operator_1/mylog.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mylog.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mylog.cpp
 
 CMakeFiles/main.dir/Operator_1/mylog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/mylog.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\mylog.cpp > CMakeFiles\main.dir\Operator_1\mylog.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mylog.cpp > CMakeFiles\main.dir\Operator_1\mylog.cpp.i
 
 CMakeFiles/main.dir/Operator_1/mylog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/mylog.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\mylog.cpp -o CMakeFiles\main.dir\Operator_1\mylog.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mylog.cpp -o CMakeFiles\main.dir\Operator_1\mylog.cpp.s
 
 CMakeFiles/main.dir/Operator_1/myexp.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/myexp.cpp.obj: ../Operator_1/myexp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/Operator_1/myexp.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myexp.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\myexp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/main.dir/Operator_1/myexp.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myexp.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myexp.cpp
 
 CMakeFiles/main.dir/Operator_1/myexp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/myexp.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\myexp.cpp > CMakeFiles\main.dir\Operator_1\myexp.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myexp.cpp > CMakeFiles\main.dir\Operator_1\myexp.cpp.i
 
 CMakeFiles/main.dir/Operator_1/myexp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/myexp.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\myexp.cpp -o CMakeFiles\main.dir\Operator_1\myexp.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myexp.cpp -o CMakeFiles\main.dir\Operator_1\myexp.cpp.s
 
 CMakeFiles/main.dir/Operator_1/mytanh.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/mytanh.cpp.obj: ../Operator_1/mytanh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/Operator_1/mytanh.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mytanh.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\mytanh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/main.dir/Operator_1/mytanh.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mytanh.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mytanh.cpp
 
 CMakeFiles/main.dir/Operator_1/mytanh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/mytanh.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\mytanh.cpp > CMakeFiles\main.dir\Operator_1\mytanh.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mytanh.cpp > CMakeFiles\main.dir\Operator_1\mytanh.cpp.i
 
 CMakeFiles/main.dir/Operator_1/mytanh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/mytanh.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\mytanh.cpp -o CMakeFiles\main.dir\Operator_1\mytanh.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mytanh.cpp -o CMakeFiles\main.dir\Operator_1\mytanh.cpp.s
 
 CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.obj: ../Operator_1/mysigmoid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mysigmoid.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\mysigmoid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mysigmoid.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mysigmoid.cpp
 
 CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\mysigmoid.cpp > CMakeFiles\main.dir\Operator_1\mysigmoid.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mysigmoid.cpp > CMakeFiles\main.dir\Operator_1\mysigmoid.cpp.i
 
 CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/mysigmoid.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\mysigmoid.cpp -o CMakeFiles\main.dir\Operator_1\mysigmoid.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\mysigmoid.cpp -o CMakeFiles\main.dir\Operator_1\mysigmoid.cpp.s
 
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj: ../Operator_0/MyConst.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\MyConst.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_0\MyConst.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/main.dir/Operator_0/MyConst.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\MyConst.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyConst.cpp
 
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_0/MyConst.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_0\MyConst.cpp > CMakeFiles\main.dir\Operator_0\MyConst.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyConst.cpp > CMakeFiles\main.dir\Operator_0\MyConst.cpp.i
 
 CMakeFiles/main.dir/Operator_0/MyConst.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_0/MyConst.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_0\MyConst.cpp -o CMakeFiles\main.dir\Operator_0\MyConst.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyConst.cpp -o CMakeFiles\main.dir\Operator_0\MyConst.cpp.s
 
 CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.obj: ../Operator_0/MyPlaceholder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\MyPlaceholder.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_0\MyPlaceholder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\MyPlaceholder.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyPlaceholder.cpp
 
 CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_0\MyPlaceholder.cpp > CMakeFiles\main.dir\Operator_0\MyPlaceholder.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyPlaceholder.cpp > CMakeFiles\main.dir\Operator_0\MyPlaceholder.cpp.i
 
 CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_0/MyPlaceholder.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_0\MyPlaceholder.cpp -o CMakeFiles\main.dir\Operator_0\MyPlaceholder.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyPlaceholder.cpp -o CMakeFiles\main.dir\Operator_0\MyPlaceholder.cpp.s
 
 CMakeFiles/main.dir/Operator_0/MyVar.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_0/MyVar.cpp.obj: ../Operator_0/MyVar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/main.dir/Operator_0/MyVar.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\MyVar.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_0\MyVar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/main.dir/Operator_0/MyVar.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_0\MyVar.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyVar.cpp
 
 CMakeFiles/main.dir/Operator_0/MyVar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_0/MyVar.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_0\MyVar.cpp > CMakeFiles\main.dir\Operator_0\MyVar.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyVar.cpp > CMakeFiles\main.dir\Operator_0\MyVar.cpp.i
 
 CMakeFiles/main.dir/Operator_0/MyVar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_0/MyVar.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_0\MyVar.cpp -o CMakeFiles\main.dir\Operator_0\MyVar.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_0\MyVar.cpp -o CMakeFiles\main.dir\Operator_0\MyVar.cpp.s
 
 CMakeFiles/main.dir/Operator_2/mygreater.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mygreater.cpp.obj: ../Operator_2/mygreater.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/main.dir/Operator_2/mygreater.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mygreater.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\mygreater.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/main.dir/Operator_2/mygreater.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mygreater.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mygreater.cpp
 
 CMakeFiles/main.dir/Operator_2/mygreater.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/mygreater.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\mygreater.cpp > CMakeFiles\main.dir\Operator_2\mygreater.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mygreater.cpp > CMakeFiles\main.dir\Operator_2\mygreater.cpp.i
 
 CMakeFiles/main.dir/Operator_2/mygreater.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/mygreater.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\mygreater.cpp -o CMakeFiles\main.dir\Operator_2\mygreater.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mygreater.cpp -o CMakeFiles\main.dir\Operator_2\mygreater.cpp.s
 
 CMakeFiles/main.dir/Operator_2/myless.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myless.cpp.obj: ../Operator_2/myless.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/main.dir/Operator_2/myless.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myless.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\myless.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/main.dir/Operator_2/myless.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myless.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myless.cpp
 
 CMakeFiles/main.dir/Operator_2/myless.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/myless.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\myless.cpp > CMakeFiles\main.dir\Operator_2\myless.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myless.cpp > CMakeFiles\main.dir\Operator_2\myless.cpp.i
 
 CMakeFiles/main.dir/Operator_2/myless.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/myless.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\myless.cpp -o CMakeFiles\main.dir\Operator_2\myless.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myless.cpp -o CMakeFiles\main.dir\Operator_2\myless.cpp.s
 
 CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.obj: ../Operator_2/mygreaterequal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mygreaterequal.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\mygreaterequal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mygreaterequal.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mygreaterequal.cpp
 
 CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\mygreaterequal.cpp > CMakeFiles\main.dir\Operator_2\mygreaterequal.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mygreaterequal.cpp > CMakeFiles\main.dir\Operator_2\mygreaterequal.cpp.i
 
 CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/mygreaterequal.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\mygreaterequal.cpp -o CMakeFiles\main.dir\Operator_2\mygreaterequal.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mygreaterequal.cpp -o CMakeFiles\main.dir\Operator_2\mygreaterequal.cpp.s
 
 CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj: ../Operator_2/mylessequal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mylessequal.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\mylessequal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mylessequal.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mylessequal.cpp
 
 CMakeFiles/main.dir/Operator_2/mylessequal.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/mylessequal.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\mylessequal.cpp > CMakeFiles\main.dir\Operator_2\mylessequal.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mylessequal.cpp > CMakeFiles\main.dir\Operator_2\mylessequal.cpp.i
 
 CMakeFiles/main.dir/Operator_2/mylessequal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/mylessequal.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\mylessequal.cpp -o CMakeFiles\main.dir\Operator_2\mylessequal.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mylessequal.cpp -o CMakeFiles\main.dir\Operator_2\mylessequal.cpp.s
 
 CMakeFiles/main.dir/Operator_2/myequal.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myequal.cpp.obj: ../Operator_2/myequal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/main.dir/Operator_2/myequal.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myequal.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\myequal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/main.dir/Operator_2/myequal.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myequal.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myequal.cpp
 
 CMakeFiles/main.dir/Operator_2/myequal.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/myequal.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\myequal.cpp > CMakeFiles\main.dir\Operator_2\myequal.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myequal.cpp > CMakeFiles\main.dir\Operator_2\myequal.cpp.i
 
 CMakeFiles/main.dir/Operator_2/myequal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/myequal.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\myequal.cpp -o CMakeFiles\main.dir\Operator_2\myequal.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myequal.cpp -o CMakeFiles\main.dir\Operator_2\myequal.cpp.s
 
 CMakeFiles/main.dir/Operator_1/myprint.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/myprint.cpp.obj: ../Operator_1/myprint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/main.dir/Operator_1/myprint.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myprint.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\myprint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/main.dir/Operator_1/myprint.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myprint.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myprint.cpp
 
 CMakeFiles/main.dir/Operator_1/myprint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/myprint.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\myprint.cpp > CMakeFiles\main.dir\Operator_1\myprint.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myprint.cpp > CMakeFiles\main.dir\Operator_1\myprint.cpp.i
 
 CMakeFiles/main.dir/Operator_1/myprint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/myprint.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\myprint.cpp -o CMakeFiles\main.dir\Operator_1\myprint.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myprint.cpp -o CMakeFiles\main.dir\Operator_1\myprint.cpp.s
 
 CMakeFiles/main.dir/Operator_3/MyCond.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_3/MyCond.cpp.obj: ../Operator_3/MyCond.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/main.dir/Operator_3/MyCond.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_3\MyCond.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_3\MyCond.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/main.dir/Operator_3/MyCond.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_3\MyCond.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_3\MyCond.cpp
 
 CMakeFiles/main.dir/Operator_3/MyCond.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_3/MyCond.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_3\MyCond.cpp > CMakeFiles\main.dir\Operator_3\MyCond.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_3\MyCond.cpp > CMakeFiles\main.dir\Operator_3\MyCond.cpp.i
 
 CMakeFiles/main.dir/Operator_3/MyCond.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_3/MyCond.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_3\MyCond.cpp -o CMakeFiles\main.dir\Operator_3\MyCond.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_3\MyCond.cpp -o CMakeFiles\main.dir\Operator_3\MyCond.cpp.s
 
 CMakeFiles/main.dir/Storage.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Storage.cpp.obj: ../Storage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/main.dir/Storage.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Storage.cpp.obj -c D:\hwy\bighomework\2\0520\Storage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/main.dir/Storage.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Storage.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Storage.cpp
 
 CMakeFiles/main.dir/Storage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Storage.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Storage.cpp > CMakeFiles\main.dir\Storage.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Storage.cpp > CMakeFiles\main.dir\Storage.cpp.i
 
 CMakeFiles/main.dir/Storage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Storage.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Storage.cpp -o CMakeFiles\main.dir\Storage.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Storage.cpp -o CMakeFiles\main.dir\Storage.cpp.s
 
 CMakeFiles/main.dir/CreateFunc.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/CreateFunc.cpp.obj: ../CreateFunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/main.dir/CreateFunc.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\CreateFunc.cpp.obj -c D:\hwy\bighomework\2\0520\CreateFunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/main.dir/CreateFunc.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\CreateFunc.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\CreateFunc.cpp
 
 CMakeFiles/main.dir/CreateFunc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/CreateFunc.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\CreateFunc.cpp > CMakeFiles\main.dir\CreateFunc.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\CreateFunc.cpp > CMakeFiles\main.dir\CreateFunc.cpp.i
 
 CMakeFiles/main.dir/CreateFunc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/CreateFunc.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\CreateFunc.cpp -o CMakeFiles\main.dir\CreateFunc.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\CreateFunc.cpp -o CMakeFiles\main.dir\CreateFunc.cpp.s
 
 CMakeFiles/main.dir/GraphCompute.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/GraphCompute.cpp.obj: ../GraphCompute.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/main.dir/GraphCompute.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\GraphCompute.cpp.obj -c D:\hwy\bighomework\2\0520\GraphCompute.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/main.dir/GraphCompute.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\GraphCompute.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\GraphCompute.cpp
 
 CMakeFiles/main.dir/GraphCompute.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/GraphCompute.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\GraphCompute.cpp > CMakeFiles\main.dir\GraphCompute.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\GraphCompute.cpp > CMakeFiles\main.dir\GraphCompute.cpp.i
 
 CMakeFiles/main.dir/GraphCompute.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/GraphCompute.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\GraphCompute.cpp -o CMakeFiles\main.dir\GraphCompute.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\GraphCompute.cpp -o CMakeFiles\main.dir\GraphCompute.cpp.s
 
 CMakeFiles/main.dir/Layer/layer.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Layer/layer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/main.dir/Layer/layer.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\layer.cpp.obj -c D:\hwy\bighomework\2\0520\Layer\layer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/main.dir/Layer/layer.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\layer.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Layer\layer.cpp
 
 CMakeFiles/main.dir/Layer/layer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Layer/layer.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Layer\layer.cpp > CMakeFiles\main.dir\Layer\layer.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Layer\layer.cpp > CMakeFiles\main.dir\Layer\layer.cpp.i
 
 CMakeFiles/main.dir/Layer/layer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Layer/layer.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Layer\layer.cpp -o CMakeFiles\main.dir\Layer\layer.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Layer\layer.cpp -o CMakeFiles\main.dir\Layer\layer.cpp.s
 
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Layer/Dense.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/Layer/Dense.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\Dense.cpp.obj -c D:\hwy\bighomework\2\0520\Layer\Dense.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/Layer/Dense.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\Dense.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Layer\Dense.cpp
 
 CMakeFiles/main.dir/Layer/Dense.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Layer/Dense.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Layer\Dense.cpp > CMakeFiles\main.dir\Layer\Dense.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Layer\Dense.cpp > CMakeFiles\main.dir\Layer\Dense.cpp.i
 
 CMakeFiles/main.dir/Layer/Dense.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Layer/Dense.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Layer\Dense.cpp -o CMakeFiles\main.dir\Layer\Dense.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Layer\Dense.cpp -o CMakeFiles\main.dir\Layer\Dense.cpp.s
 
 CMakeFiles/main.dir/Layer/Input.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/Input.cpp.obj: ../Layer/Input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/Layer/Input.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\Input.cpp.obj -c D:\hwy\bighomework\2\0520\Layer\Input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/Layer/Input.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\Input.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Layer\Input.cpp
 
 CMakeFiles/main.dir/Layer/Input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Layer/Input.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Layer\Input.cpp > CMakeFiles\main.dir\Layer\Input.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Layer\Input.cpp > CMakeFiles\main.dir\Layer\Input.cpp.i
 
 CMakeFiles/main.dir/Layer/Input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Layer/Input.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Layer\Input.cpp -o CMakeFiles\main.dir\Layer\Input.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Layer\Input.cpp -o CMakeFiles\main.dir\Layer\Input.cpp.s
 
 CMakeFiles/main.dir/Neural_network.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Neural_network.cpp.obj: ../Neural_network.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/main.dir/Neural_network.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Neural_network.cpp.obj -c D:\hwy\bighomework\2\0520\Neural_network.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/main.dir/Neural_network.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Neural_network.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Neural_network.cpp
 
 CMakeFiles/main.dir/Neural_network.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Neural_network.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Neural_network.cpp > CMakeFiles\main.dir\Neural_network.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Neural_network.cpp > CMakeFiles\main.dir\Neural_network.cpp.i
 
 CMakeFiles/main.dir/Neural_network.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Neural_network.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Neural_network.cpp -o CMakeFiles\main.dir\Neural_network.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Neural_network.cpp -o CMakeFiles\main.dir\Neural_network.cpp.s
 
 CMakeFiles/main.dir/test_minst.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/test_minst.cpp.obj: ../test_minst.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/main.dir/test_minst.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\test_minst.cpp.obj -c D:\hwy\bighomework\2\0520\test_minst.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/main.dir/test_minst.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\test_minst.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\test_minst.cpp
 
 CMakeFiles/main.dir/test_minst.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/test_minst.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\test_minst.cpp > CMakeFiles\main.dir\test_minst.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\test_minst.cpp > CMakeFiles\main.dir\test_minst.cpp.i
 
 CMakeFiles/main.dir/test_minst.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/test_minst.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\test_minst.cpp -o CMakeFiles\main.dir\test_minst.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\test_minst.cpp -o CMakeFiles\main.dir\test_minst.cpp.s
 
 CMakeFiles/main.dir/Operator_1/myassert.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/myassert.cpp.obj: ../Operator_1/myassert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/main.dir/Operator_1/myassert.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myassert.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_1\myassert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/main.dir/Operator_1/myassert.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myassert.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myassert.cpp
 
 CMakeFiles/main.dir/Operator_1/myassert.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/myassert.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_1\myassert.cpp > CMakeFiles\main.dir\Operator_1\myassert.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myassert.cpp > CMakeFiles\main.dir\Operator_1\myassert.cpp.i
 
 CMakeFiles/main.dir/Operator_1/myassert.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/myassert.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_1\myassert.cpp -o CMakeFiles\main.dir\Operator_1\myassert.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_1\myassert.cpp -o CMakeFiles\main.dir\Operator_1\myassert.cpp.s
 
 CMakeFiles/main.dir/Operator_2/mybind.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mybind.cpp.obj: ../Operator_2/mybind.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/main.dir/Operator_2/mybind.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mybind.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\mybind.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/main.dir/Operator_2/mybind.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mybind.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mybind.cpp
 
 CMakeFiles/main.dir/Operator_2/mybind.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/mybind.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\mybind.cpp > CMakeFiles\main.dir\Operator_2\mybind.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mybind.cpp > CMakeFiles\main.dir\Operator_2\mybind.cpp.i
 
 CMakeFiles/main.dir/Operator_2/mybind.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/mybind.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\mybind.cpp -o CMakeFiles\main.dir\Operator_2\mybind.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\mybind.cpp -o CMakeFiles\main.dir\Operator_2\mybind.cpp.s
 
 CMakeFiles/main.dir/Operator_2/myassign.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myassign.cpp.obj: ../Operator_2/myassign.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/main.dir/Operator_2/myassign.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myassign.cpp.obj -c D:\hwy\bighomework\2\0520\Operator_2\myassign.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/main.dir/Operator_2/myassign.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myassign.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myassign.cpp
 
 CMakeFiles/main.dir/Operator_2/myassign.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_2/myassign.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Operator_2\myassign.cpp > CMakeFiles\main.dir\Operator_2\myassign.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myassign.cpp > CMakeFiles\main.dir\Operator_2\myassign.cpp.i
 
 CMakeFiles/main.dir/Operator_2/myassign.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_2/myassign.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Operator_2\myassign.cpp -o CMakeFiles\main.dir\Operator_2\myassign.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Operator_2\myassign.cpp -o CMakeFiles\main.dir\Operator_2\myassign.cpp.s
 
 CMakeFiles/main.dir/Tensor.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Tensor.cpp.obj: ../Tensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/main.dir/Tensor.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Tensor.cpp.obj -c D:\hwy\bighomework\2\0520\Tensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/main.dir/Tensor.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Tensor.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Tensor.cpp
 
 CMakeFiles/main.dir/Tensor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Tensor.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\Tensor.cpp > CMakeFiles\main.dir\Tensor.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Tensor.cpp > CMakeFiles\main.dir\Tensor.cpp.i
 
 CMakeFiles/main.dir/Tensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Tensor.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\Tensor.cpp -o CMakeFiles\main.dir\Tensor.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Tensor.cpp -o CMakeFiles\main.dir\Tensor.cpp.s
+
+CMakeFiles/main.dir/Matrix.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Matrix.cpp.obj: ../Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/main.dir/Matrix.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Matrix.cpp.obj -c D:\hwy\bighomework\2\0520\OOP_assignment\Matrix.cpp
+
+CMakeFiles/main.dir/Matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Matrix.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\0520\OOP_assignment\Matrix.cpp > CMakeFiles\main.dir\Matrix.cpp.i
+
+CMakeFiles/main.dir/Matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Matrix.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\0520\OOP_assignment\Matrix.cpp -o CMakeFiles\main.dir\Matrix.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -561,7 +574,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/Operator_1/myassert.cpp.obj" \
 "CMakeFiles/main.dir/Operator_2/mybind.cpp.obj" \
 "CMakeFiles/main.dir/Operator_2/myassign.cpp.obj" \
-"CMakeFiles/main.dir/Tensor.cpp.obj"
+"CMakeFiles/main.dir/Tensor.cpp.obj" \
+"CMakeFiles/main.dir/Matrix.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -602,11 +616,12 @@ main.exe: CMakeFiles/main.dir/Operator_1/myassert.cpp.obj
 main.exe: CMakeFiles/main.dir/Operator_2/mybind.cpp.obj
 main.exe: CMakeFiles/main.dir/Operator_2/myassign.cpp.obj
 main.exe: CMakeFiles/main.dir/Tensor.cpp.obj
+main.exe: CMakeFiles/main.dir/Matrix.cpp.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: CMakeFiles/main.dir/linklibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking CXX executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -619,6 +634,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\hwy\bighomework\2\0520 D:\hwy\bighomework\2\0520 D:\hwy\bighomework\2\0520\cmake-build-debug D:\hwy\bighomework\2\0520\cmake-build-debug D:\hwy\bighomework\2\0520\cmake-build-debug\CMakeFiles\main.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\hwy\bighomework\2\0520\OOP_assignment D:\hwy\bighomework\2\0520\OOP_assignment D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug D:\hwy\bighomework\2\0520\OOP_assignment\cmake-build-debug\CMakeFiles\main.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 
