@@ -115,9 +115,6 @@
 		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/Matrix.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/MatrixCal.h">
-			<Option target="main"/>
-		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/Neural_network.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -302,6 +299,9 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/test_minst.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/tscpt.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/CMakeLists.txt">

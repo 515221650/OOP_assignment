@@ -13,12 +13,12 @@ class Matrix{
 private:
     int col; //从0开始编号
     int row;
-    std::vector<double> data;
+    std::vector<double> mval;
 protected:
     Matrix();
     Matrix(int row, int col):col(col), row(row){}
-    Matrix(int row, int col, int val): col(col), row(row), data(col*row, val){}
-    auto operator[] (const int a) {return data.begin()+a*col;} //用obj[][]访问
+    Matrix(int row, int col, int val): col(col), row(row), mval(col*row, val){}
+    auto operator[] (const int a) {return mval.begin()+a*col;} //用obj[][]访问
     Matrix operator * (const Matrix & obj2) const;
     Matrix operator + (const Matrix & obj2) const;
     Matrix operator - (const Matrix & obj2) const;
@@ -27,7 +27,7 @@ protected:
     Matrix & operator *=(const Matrix & obj2);
     int get_col(){return col;}
     int get_row(){return row;}
-    double get_data(int aimrow, int aimcol){return data[aimrow*col+aimcol];}
+    double get_mval(int aimrow, int aimcol){return mval[aimrow*col+aimcol];}
 public:
     friend class Tensor;
 

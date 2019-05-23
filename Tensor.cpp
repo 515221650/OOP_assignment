@@ -10,14 +10,19 @@ double Tensor::operator() (std::initializer_list<int> arglist)
     //if(listsz != dim) //错误判断
 
     int tmpnum = 1;
-    int tmprank = 0;
+    int tmprank = 0;//for循环后为矩阵在val中的下标
     int tmpdim = dim-1;
-    for(auto a = arglist.end()-1; tmpdim>1; a--, tmpdim--)
+    for(auto a = arglist.end()-3; tmpdim>=0; a--, tmpdim--)
     {
-        tmprank += arglist[tmpdim]*tmpnum;
+        tmprank += (*a)*tmpnum;
         tmpnum *= size[tmpdim];
     }
-    return val[tmprank].get_data(arglist[0], arglist[1]);
+    return val[tmprank].get_mval(*(arglist.end()-2), *(arglist.end()-1));
+}
+
+Tensor Tensor::operator() (std::initializer_list<std::pair<int,int> > arglist)
+{
+
 }
 
 Tensor Tensor::operator+(const Tensor &b) const
@@ -40,9 +45,9 @@ Tensor Tensor::operator*(const Tensor &b) const
 {
     // if() 维数不符合
     Tensor tmp;
-    tmp.add_dim(size[0]);
-    tmp.add_dim(b.size[1]);
-    for(int i=2; i<=dim; i++) tmp.add_dim(size[i]);
+    for(int i=0; i<=dim-3; i++) tmp.add_dim(size[i]);
+    tmp.add_dim(size[dim-2]);
+    tmp.add_dim(b.size[dim-1]);
     for(int i=0; i<val.size(); i++)  tmp.val.push_back(val[i]*b.val[i]);
     return tmp;
 }

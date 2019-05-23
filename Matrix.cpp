@@ -8,7 +8,7 @@ Matrix Matrix::operator + (const Matrix& obj2) const//判断不符合相加要�
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
-        res.data.push_back(data[i] + obj2.data[i]);
+        res.mval.push_back(mval[i] + obj2.mval[i]);
     }
     return res;
 }
@@ -18,7 +18,7 @@ Matrix Matrix::operator - (const Matrix& obj2) const//判断不符合相加要�
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
-        res.data.push_back(data[i] - obj2.data[i]);
+        res.mval.push_back(mval[i] - obj2.mval[i]);
     }
     return res;
 }
@@ -33,9 +33,9 @@ Matrix Matrix::operator*(const Matrix &obj2) const
             double sum = 0;
             for(int k=0; k<col; k++)
             {
-                sum += data[i*col+k]*obj2.data[k*obj2.col+j];
+                sum += mval[i*col+k]*obj2.mval[k*obj2.col+j];
             }
-            res.data.push_back(sum);
+            res.mval.push_back(sum);
         }
     }
     return res;
