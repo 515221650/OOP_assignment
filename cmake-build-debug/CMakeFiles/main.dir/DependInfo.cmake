@@ -41,6 +41,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/hwy/bighomework/2/0520/OOP_assignment/Tensor.cpp" "D:/hwy/bighomework/2/0520/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Tensor.cpp.obj"
   "D:/hwy/bighomework/2/0520/OOP_assignment/main.cpp" "D:/hwy/bighomework/2/0520/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/main.cpp.obj"
   "D:/hwy/bighomework/2/0520/OOP_assignment/test_minst.cpp" "D:/hwy/bighomework/2/0520/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/test_minst.cpp.obj"
+  "D:/hwy/bighomework/2/0520/OOP_assignment/ts.cpp" "D:/hwy/bighomework/2/0520/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/ts.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

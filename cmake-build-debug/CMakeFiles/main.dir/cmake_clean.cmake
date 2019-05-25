@@ -36,6 +36,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Operator_2/myassign.cpp.obj"
   "CMakeFiles/main.dir/Tensor.cpp.obj"
   "CMakeFiles/main.dir/Matrix.cpp.obj"
+  "CMakeFiles/main.dir/ts.cpp.obj"
   "main.pdb"
   "main.exe"
   "main.exe.manifest"

@@ -301,7 +301,10 @@
 		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/test_minst.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/tscpt.h">
+		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/ts.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/ts.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/0520/OOP_assignment/CMakeLists.txt">

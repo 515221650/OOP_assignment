@@ -1121,6 +1121,33 @@ test_minst.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/test_minst.cpp.s
 .PHONY : test_minst.cpp.s
 
+ts.obj: ts.cpp.obj
+
+.PHONY : ts.obj
+
+# target to build an object file
+ts.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ts.cpp.obj
+.PHONY : ts.cpp.obj
+
+ts.i: ts.cpp.i
+
+.PHONY : ts.i
+
+# target to preprocess a source file
+ts.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ts.cpp.i
+.PHONY : ts.cpp.i
+
+ts.s: ts.cpp.s
+
+.PHONY : ts.s
+
+# target to generate assembly for a file
+ts.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/ts.cpp.s
+.PHONY : ts.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -1241,6 +1268,9 @@ help:
 	@echo ... test_minst.obj
 	@echo ... test_minst.i
 	@echo ... test_minst.s
+	@echo ... ts.obj
+	@echo ... ts.i
+	@echo ... ts.s
 .PHONY : help
 
 

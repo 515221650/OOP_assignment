@@ -35,4 +35,4 @@ add_executable(main main.cpp Node.h
         Layer/Dense.cpp Layer/Dense.h
         Layer/Input.cpp Layer/Input.h
         Neural_network.cpp Neural_network.h
-        test_minst.h test_minst.cpp Operator_1/myassert.cpp Operator_1/myassert.h Operator_2/mybind.cpp Operator_2/mybind.h Operator_2/myassign.cpp Operator_2/myassign.h Tensor.cpp Tensor.h Matrix.h Matrix.cpp tscpt.h)
+        test_minst.h test_minst.cpp Operator_1/myassert.cpp Operator_1/myassert.h Operator_2/mybind.cpp Operator_2/mybind.h Operator_2/myassign.cpp Operator_2/myassign.h Tensor.cpp Tensor.h Matrix.h Matrix.cpp ts.h ts.cpp)

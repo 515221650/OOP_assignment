@@ -52,7 +52,7 @@ Tensor Tensor::operator*(const Tensor &b) const
     return tmp;
 }
 
-Tensor::Tensor(std::initializer_list<int> szlist)
+Tensor::Tensor(std::initializer_list<int> szlist, int mval)
 {
     dim = 0;
     int valnum = 1;
@@ -62,7 +62,55 @@ Tensor::Tensor(std::initializer_list<int> szlist)
         dim++;
         if(dim>2) valnum*=a;
     }
-    if(dim == 1) size.push_back(1);
-    val.resize(valnum, Matrix(size[0], size[1], 0));
+    if(dim == 1)
+    {
+        size.push_back(1);
+        dim++;
+    }
+    val.resize(valnum, Matrix(size[dim-2], size[dim-1], val));
+}
 
+Tensor::Tensor(vector<int> szlist, int mval)
+{
+    dim = 0;
+    int valnum = 1;
+    for(auto & a: szlist)
+    {
+        size.push_back(a);
+        dim++;
+        if(dim>2) valnum*=a;
+    }
+    if(dim == 1)
+    {
+        size.push_back(1);
+        dim++;
+    }
+    val.resize(valnum, Matrix(size[dim-2], size[dim-1], mval));
+}//这个和上面一个可以用模板合并吗?
+
+Tensor& Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持reshape(-1)
+{
+    vector<int> tmpsz;//把szlist转成vector，方便处理
+    int specialdim = -1;//赋成-1的那一维
+    int k = 0;
+    int mul = 1;
+    for(auto a: szlist)
+    {
+        tmpsz.push_back(a);
+        if(a==-1) specialdim = k;
+        else mul *= a; //除了赋成-1那一维，其余所有维的size的乘积
+        k++;
+    }
+    bool fail = 0;
+    if((specialdim == -1) && (mul != val.size())) fail = 1;
+    if((specialdim!=-1))
+    {
+        if(val.size()%mul != 0) fail = 1;
+        else tmpsz[specialdim] = val.size()/mul;
+    }
+    size.swap(tmpsz);
+
+    //to be continued... have difficulties with vector<int> val
+
+    return (*this);
 }
