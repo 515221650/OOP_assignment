@@ -88,7 +88,7 @@ namespace ts
 
     Matrix concat(const Matrix & a, const Matrix & b, const int catdim)//catdim只能是0/1
     {
-        if((concat!=0 && concat!=1) || a.get_size(1-catdim) != b.get_size(1-catdim))//mismatch
+        if((catdim!=0 && catdim!=1) || a.get_size(1-catdim) != b.get_size(1-catdim))//mismatch
         {
             Matrix::set_error(5);//5...
             return a;//???
