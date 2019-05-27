@@ -10,7 +10,7 @@
 class MyVar : public Operator_0{
 public:
     virtual int Calc(MyGraph& a);
-    MyVar(std::string& name, float x);
+    MyVar(std::string& name, Tensor x);
 
     virtual ~MyVar(){}
 };

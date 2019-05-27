@@ -11,7 +11,7 @@
 #define MG (*this)
 
 
-std::pair<bool,float> MyGraph::GetPH(const std::string &str)    // find the placeholder and its status
+std::pair<bool,Tensor> MyGraph::GetPH(const std::string &str)    // find the placeholder and its status
 {
     auto t = PlaceholderRev.find(str);
     if(t != PlaceholderRev.end())return MK(1, t->second);
@@ -49,7 +49,8 @@ void MyGraph::create_tree()     //create others
             {"COND", create_cond},
             {"ASSERT", create_assert},
             {"BIND", create_bind},
-            {"ASSIGN", create_assign}
+            {"ASSIGN", create_assign},
+            {"GRAD", create_grad}
     };//match the func
 
     std::map <std::string, fun2> ScanfMap2 = {
@@ -61,7 +62,8 @@ void MyGraph::create_tree()     //create others
             {"<", create_less},
             {">=", create_greaterequal},
             {"<=", create_lessequal},
-            {"==", create_equal}
+            {"==", create_equal},
+            {"AT", create_at}
     };// match the operator node build func
 
     std::string MyScanf[4]; //input string
@@ -94,12 +96,12 @@ void MyGraph::insert_node(Node* NewNode, std::string name)
     StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
 }
 
-void MyGraph::change_var(std::string &name, float x)
+void MyGraph::change_var(std::string &name, Tensor x)
 {
     NodeInfoVec[str_to_int(name)].NodePos->rev_val(x);
 }
 
-void MyGraph::change_var(int id, float x)
+void MyGraph::change_var(int id, Tensor x)
 {
     NodeInfoVec[id].NodePos->rev_val(x);
 }

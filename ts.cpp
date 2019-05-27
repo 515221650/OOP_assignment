@@ -4,26 +4,47 @@
 #include "ts.h"
 #include "Node.h"
 #include "Matrix.h"
-
+#include "Tensor.h"
 namespace ts
 {
+    Matrix trans(const Matrix & ob)
+    {
+        Matrix res(ob.row, ob.col);
+        for(int i=0;i<ob.row;i++)
+        {
+            for(int j=0;j<ob.col;j++)
+            {
+                res.change_mval(i, j, ob.get_mval(j, i));
+            }
+        }
+        return res;
+    }
+
+    Matrix point_mul(const Matrix & A, const Matrix & B)
+    {
+        Matrix res = A;
+        for(int i=0;i<B.get_size();i++)
+            res.change_mval(i, res.get_mval(i)*B.get_mval(i));
+        return res;
+    }
+
     Matrix sin(const Matrix & ob)
     {
         Matrix res = ob;
-        for(auto a: res.mval) a = sinf(a);
+        for(auto &a: res.mval) a = sinf(a);
         return res;
     }
 
     Matrix exp(const Matrix & ob)
     {
         Matrix res = ob;
-        for(auto a: res.mval) a = expf(a);
+        for(auto &a: res.mval) a = expf(a);
         return res;
     }
     Matrix log(const Matrix & ob)
     {
         Matrix res = ob;
-        for(auto a: res.mval)
+        for(auto &a: res.mval)
         {
             if(a <= EPS)
             {
@@ -37,32 +58,32 @@ namespace ts
     Matrix sigmoid(const Matrix & ob)
     {
         Matrix res = ob;
-        for(auto a: res.mval) a = 1.0/(1+expf(a));
+        for(auto &a: res.mval) a = 1.0/(1+expf(a));
         return res;
     }
     Matrix tanh(const Matrix & ob)
     {
         Matrix res = ob;
-        for(auto a: res.mval) a = tanhf(a);
+        for(auto &a: res.mval) a = tanhf(a);
         return res;
     }
 
     Tensor sin(const Tensor & ob)
     {
         Tensor res = ob;
-        for(auto a: res.val) a = sin(a);
+        for(auto &a: res.val) a = sin(a);
         return res;
     }
     Tensor exp(const Tensor & ob)
     {
         Tensor res = ob;
-        for(auto a: res.val) a = exp(a);
+        for(auto &a: res.val) a = exp(a);
         return res;
     }
     Tensor log(const Tensor & ob)
     {
         Tensor res = ob;
-        for(auto a: res.val)
+        for(auto &a: res.val)
         {
             a = log(a);
             if(Matrix::get_error()!=0)
@@ -73,19 +94,34 @@ namespace ts
         }
         return res;
     }
-    Tensor sigmoid(const Tensor &)
+    Tensor sigmoid(const Tensor &ob)
     {
         Tensor res = ob;
-        for(auto a: res.val) a = sigmoid(a);
+        for(auto &a: res.val) a = sigmoid(a);
         return res;
     }
-    Tensor tanh(const Tensor &)
+    Tensor tanh(const Tensor &ob)
     {
         Tensor res = ob;
-        for(auto a: res.val) a = tanh(a);
+        for(auto &a: res.val) a = tanh(a);
         return res;
     }
-
+    Tensor trans(const Tensor &ob)
+    {
+        Tensor res = ob;
+        for(auto &a: res.val)
+        {
+            a = trans(a);
+        }
+        return res;
+    }
+    Tensor point_mul(const Tensor & A, const Tensor & B)
+    {
+        Tensor res = A;
+        int len = A.val.size();
+        for(int i = 0; i <len; i++) res.val[i] = point_mul(res.val[i], B.val[i]);
+        return res;
+    }
     Matrix concat(const Matrix & a, const Matrix & b, const int catdim)//catdim只能是0/1
     {
         if((catdim!=0 && catdim!=1) || a.get_size(1-catdim) != b.get_size(1-catdim))//mismatch
@@ -97,8 +133,8 @@ namespace ts
         {
             Matrix res(a.get_row()+b.get_row(), a.get_col());
             int asz = a.get_size(), bsz = b.get_size();
-            for(int i=0; i<asz; i++) res.change_mval(i, a.get_mval(i);)
-            for(int i=0; i<bsz; i++) res.change_mval(i+asz, b.get_mval(i);)
+            for(int i=0; i<asz; i++) res.change_mval(i, a.get_mval(i));
+            for(int i=0; i<bsz; i++) res.change_mval(i+asz, b.get_mval(i));
             return res;
         }
         if(catdim == 1)
@@ -136,7 +172,7 @@ namespace ts
         for(int i=0; i<dima; i++)
         {
             if(i!=catdim) tmpsize.push_back(a.get_size(i));
-            else tmpsize.push_back(a.get_size(i)+b.get_size(i);)
+            else tmpsize.push_back(a.get_size(i)+b.get_size(i));
         }
         Tensor res(tmpsize);
 
@@ -153,8 +189,8 @@ namespace ts
             times *= a.get_size(catdim) + b.get_size(catdim);
             for(int k=0; k<times; k++)
             {
-                for(int i=0; i<abatch; i++) res.change_val(k*(abatch+bbatch)+i, a.get_val(k*abatch+i);)
-                for(int i=0; i<bbatch; i++) res.change_val(k*(abatch+bbatch)+abatch+i, b.get_val(k*bbatch+i);)
+                for(int i=0; i<abatch; i++) res.change_val(k*(abatch+bbatch)+i, a.get_val(k*abatch+i));
+                for(int i=0; i<bbatch; i++) res.change_val(k*(abatch+bbatch)+abatch+i, b.get_val(k*bbatch+i));
             }
         }
         else //需要用到Matrix的concat

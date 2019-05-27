@@ -6,7 +6,7 @@
 MyTanh::MyTanh(std::string &s, int x): Operator_1(s, x){}
 
 int MyTanh::Calc(MyGraph &v) {
-    val = tanhf(v[num].NodePos->Val());
+    val = ts::tanh(v[num].NodePos->Val());
     return 0;
 }
 

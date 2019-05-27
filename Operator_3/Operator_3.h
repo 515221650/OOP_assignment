@@ -6,6 +6,7 @@
 #define BIGHOMEWORK_OPERATOR_3_H
 #include<string>
 #include "../Node.h"
+#include "../ts.h"
 
 class Operator_3: public Node{
 protected:

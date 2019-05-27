@@ -6,6 +6,7 @@
 #define OOP_OPERATOR_1_H
 
 #include "../Node.h"
+#include "../ts.h"
 #include <cmath>
 class Operator_1:public Node{
 protected:

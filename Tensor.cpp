@@ -4,6 +4,14 @@
 
 #include "Tensor.h"
 
+std::ostream& operator << (std::ostream& out, Tensor &x)
+{
+    for(auto i: x.val)
+    {
+
+    }
+}
+
 double Tensor::operator() (std::initializer_list<int> arglist)
 {
     int listsz = arglist.size();
@@ -41,6 +49,14 @@ Tensor Tensor::operator-(const Tensor &b) const
     return tmp;
 }
 
+Tensor Tensor::operator-() const
+{
+    Tensor tmp = (*this);
+    int len = val.size();
+    for(int i=0;i<len;i++)tmp.val[i]=-tmp.val[i];
+    return tmp;
+}
+
 Tensor Tensor::operator*(const Tensor &b) const
 {
     // if() 维数不符合
@@ -67,7 +83,7 @@ Tensor::Tensor(std::initializer_list<int> szlist, int mval)
         size.push_back(1);
         dim++;
     }
-    val.resize(valnum, Matrix(size[dim-2], size[dim-1], val));
+    val.resize(valnum, Matrix(size[dim-2], size[dim-1], mval));
 }
 
 Tensor::Tensor(vector<int> szlist, int mval)

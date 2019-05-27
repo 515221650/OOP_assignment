@@ -26,6 +26,8 @@
 #include "Operator_2/myminus.h"
 #include "Operator_2/mybind.h"
 #include "Operator_2/myassign.h"
+#include "Operator_2/myat.h"
+#include "Operator_1/mygrad.h"
 
 //operator_0
 
@@ -113,6 +115,15 @@ void create_assert(std::string& name, MyGraph& g)
     std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MyAssert* NewConst = new MyAssert(name, IntPara);
+    g.insert_node(NewConst, name);
+}
+
+void create_grad(std::string& name, MyGraph& g)
+{
+    std::string StrPara;
+    std::cin>>StrPara;
+    int IntPara = g.str_to_int(StrPara);
+    MyGrad* NewConst = new MyGrad(name, IntPara);
     g.insert_node(NewConst, name);
 }
 
@@ -242,6 +253,17 @@ void create_assign(std::string& name, MyGraph& g)
     }
 
     MyAssign* NewNode = new MyAssign(name, IntPara[0], IntPara[1]);
+    g.insert_node(NewNode, name);
+}
+
+void create_at(std::string& name, std::string& x, MyGraph& g)
+{
+    std::string StrPara;
+    std::cin>>StrPara;
+    int IntPara1 = g.str_to_int(x);
+    int IntPara2 = g.str_to_int(StrPara);
+
+    MyAt* NewNode = new MyAt(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
 }
 

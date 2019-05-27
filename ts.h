@@ -15,17 +15,21 @@ namespace ts
     Matrix log(const Matrix &);
     Matrix sigmoid(const Matrix &);
     Matrix tanh(const Matrix &);
+    Matrix point_mul(const Matrix &, const Matrix &);
 
     Matrix concat(const Matrix & a, const Matrix & b, const int catdim);
+    Matrix trans(const Matrix &);
 
     Tensor sin(const Tensor &);
     Tensor exp(const Tensor &);
     Tensor log(const Tensor &);
     Tensor sigmoid(const Tensor &);
     Tensor tanh(const Tensor &);
+    Tensor point_mul(const Tensor &, const Tensor &);
+
 
     Tensor concat(const Tensor & a, const Tensor & b, const int catdim);
-
+    Tensor trans(const Tensor &);
 }
 
 #endif //OOP_TS_H

@@ -6,7 +6,7 @@
 #define OOP_OPERATOR_2_H
 
 #include "../Node.h"
-
+#include "../ts.h"
 class Operator_2:public Node{
 protected:
     int num1,num2;

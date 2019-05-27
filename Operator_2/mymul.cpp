@@ -11,7 +11,7 @@ int MyMul::Calc(MyGraph &v) {
     return 0;
 }
 int MyMul::Derivate(MyGraph &v) {
-    v[num1].NodePos->add_der(v[num2].NodePos->Val()*der);
-    v[num2].NodePos->add_der(v[num1].NodePos->Val()*der);
+    v[num1].NodePos->add_der(der*ts::trans(v[num2].NodePos->Val()));
+    v[num2].NodePos->add_der(der*ts::trans(v[num1].NodePos->Val()));
     return 0;
 }

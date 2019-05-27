@@ -9,7 +9,7 @@
 class MyConst : public Operator_0{
 public:
     virtual int Calc(MyGraph& g);
-    MyConst(std::string& name, float x);
+    MyConst(std::string& name, Tensor x);
 
     virtual ~MyConst(){}
 };

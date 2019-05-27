@@ -14,7 +14,7 @@ void MyGraph::graph_compute()
     int q;
     std::cin>>q;
     std::cin.get();
-    std::vector<float> myresult;    //save the result of each eval
+    std::vector<Tensor> myresult;    //save the result of each eval
     while(q--)
     {
         std::string line;
@@ -43,7 +43,7 @@ void MyGraph::graph_compute()
             {
                 erase_der();
                 ans_node->rev_der(1);   //in der, we record the deravative of aiming node to current node 目标节点对当前节点的导数，目标节点的der初始化为1
-                reverse(DerVec.begin(),DerVec.end());   //DerVec is created in Compt, which indicate what nodes are related with aim node;
+                reverse(DerVec.begin(), DerVec.end());   //DerVec is created in Compt, which indicate what nodes are related with aim node;
                 int DerStatus = 0;  //record the status of derivative; 0 means no errors
                 for(auto i : DerVec)
                 {
@@ -58,7 +58,7 @@ void MyGraph::graph_compute()
                 }
                 else
                 {
-                    float res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
+                    Tensor res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
                     std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
                     myresult.push_back(res);
                 }
@@ -91,7 +91,7 @@ void MyGraph::graph_compute()
             int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim));    //record the status of computation ; 0 means no errors
             if(!ans)
             {
-                float res = NodeInfoVec[str_to_int(aim)].NodePos->Val();
+                Tensor res = NodeInfoVec[str_to_int(aim)].NodePos->Val();
                 std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
                 myresult.push_back(res);
             }
