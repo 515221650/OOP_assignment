@@ -6,6 +6,7 @@
 #define OOP_MYASSERT_H
 
 #include "Operator_1.h"
+
 class MyAssert : public Operator_1{
 public:
     MyAssert(std::string &s, int x);

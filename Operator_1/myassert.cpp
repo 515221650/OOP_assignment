@@ -3,12 +3,13 @@
 //
 
 #include "myassert.h"
+#include "../Scalar.h"
 
 
 MyAssert::MyAssert(std::string &s, int x) : Operator_1(s, x){}
 
 int MyAssert::Calc(MyGraph &v) {
-    if(v[num].NodePos->Val() < -EPS)return 4;
+    if(Scalar(v[num].NodePos->Val()).get_val() < -EPS) return 4;
     val = 0;
     return 0;
 }

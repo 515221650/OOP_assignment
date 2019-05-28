@@ -35,9 +35,9 @@ public:
     void rev_der(Tensor x){der = x;return ;}
     void rev_dersum(Tensor x){dersum = x;}
 
-    void add_der(Tensor x){der += x;return ;}
-    void add_val(Tensor x){val+=x;}
-    void add_dersum(Tensor x){dersum += x;}
+    void add_der(Tensor x){der = der + x;return ;}
+    void add_val(Tensor x){val = val + x;}
+    void add_dersum(Tensor x){dersum = dersum + x;}
 
     virtual ~Node(){};
 };

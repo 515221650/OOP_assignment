@@ -9,195 +9,85 @@ namespace ts
 {
     Matrix trans(const Matrix & ob)
     {
-        Matrix res(ob.row, ob.col);
-        for(int i=0;i<ob.row;i++)
-        {
-            for(int j=0;j<ob.col;j++)
-            {
-                res.change_mval(i, j, ob.get_mval(j, i));
-            }
-        }
-        return res;
+        return ob.trans();
     }
 
     Matrix point_mul(const Matrix & A, const Matrix & B)
     {
-        Matrix res = A;
-        for(int i=0;i<B.get_size();i++)
-            res.change_mval(i, res.get_mval(i)*B.get_mval(i));
-        return res;
+        return A.point_mul(B);
     }
 
     Matrix sin(const Matrix & ob)
     {
-        Matrix res = ob;
-        for(auto &a: res.mval) a = sinf(a);
-        return res;
+        return ob.sin();
     }
 
     Matrix exp(const Matrix & ob)
     {
-        Matrix res = ob;
-        for(auto &a: res.mval) a = expf(a);
-        return res;
+        return ob.exp();
     }
+
     Matrix log(const Matrix & ob)
     {
-        Matrix res = ob;
-        for(auto &a: res.mval)
-        {
-            if(a <= EPS)
-            {
-                Matrix::set_error(2);
-                return ob;
-            }
-            a = logf(a);
-        }
-        return res;
+        return ob.log();
     }
     Matrix sigmoid(const Matrix & ob)
     {
-        Matrix res = ob;
-        for(auto &a: res.mval) a = 1.0/(1+expf(a));
-        return res;
+        return ob.sigmoid();
     }
     Matrix tanh(const Matrix & ob)
     {
-        Matrix res = ob;
-        for(auto &a: res.mval) a = tanhf(a);
-        return res;
+        return ob.tanh();
+    }
+
+    Matrix abs(const Matrix & ob)
+    {
+        return ob.abs();
+    }
+
+    Matrix concat(const Matrix & a, const Matrix & b, const int catdim)//catdim只能是0/1
+    {
+        return a.concat(b,catdim);
     }
 
     Tensor sin(const Tensor & ob)
     {
-        Tensor res = ob;
-        for(auto &a: res.val) a = sin(a);
-        return res;
+        return ob.sin();
     }
+
     Tensor exp(const Tensor & ob)
     {
-        Tensor res = ob;
-        for(auto &a: res.val) a = exp(a);
-        return res;
+        return ob.exp();
     }
     Tensor log(const Tensor & ob)
     {
-        Tensor res = ob;
-        for(auto &a: res.val)
-        {
-            a = log(a);
-            if(Matrix::get_error()!=0)
-            {
-                Tensor::set_error(Matrix::get_error());
-                return ob;
-            }
-        }
-        return res;
+        return ob.log();
     }
     Tensor sigmoid(const Tensor &ob)
     {
-        Tensor res = ob;
-        for(auto &a: res.val) a = sigmoid(a);
-        return res;
+        return ob.sigmoid();
     }
     Tensor tanh(const Tensor &ob)
     {
-        Tensor res = ob;
-        for(auto &a: res.val) a = tanh(a);
-        return res;
+        return ob.tanh();
     }
+
+    Tensor abs(const Tensor &ob)
+    {
+        return ob.abs();
+    }
+
     Tensor trans(const Tensor &ob)
     {
-        Tensor res = ob;
-        for(auto &a: res.val)
-        {
-            a = trans(a);
-        }
-        return res;
+        return ob.trans();
     }
     Tensor point_mul(const Tensor & A, const Tensor & B)
     {
-        Tensor res = A;
-        int len = A.val.size();
-        for(int i = 0; i <len; i++) res.val[i] = point_mul(res.val[i], B.val[i]);
-        return res;
-    }
-    Matrix concat(const Matrix & a, const Matrix & b, const int catdim)//catdim只能是0/1
-    {
-        if((catdim!=0 && catdim!=1) || a.get_size(1-catdim) != b.get_size(1-catdim))//mismatch
-        {
-            Matrix::set_error(5);//5...
-            return a;//???
-        }
-        if(catdim == 0)
-        {
-            Matrix res(a.get_row()+b.get_row(), a.get_col());
-            int asz = a.get_size(), bsz = b.get_size();
-            for(int i=0; i<asz; i++) res.change_mval(i, a.get_mval(i));
-            for(int i=0; i<bsz; i++) res.change_mval(i+asz, b.get_mval(i));
-            return res;
-        }
-        if(catdim == 1)
-        {
-            Matrix res(a.get_row(), a.get_col()+b.get_col());
-            int acol = a.get_col(), bcol = b.get_col();
-            for(int i=0; i<a.get_row(); i++)
-            {
-                for(int k=0; k<acol; k++) res.change_mval(i, k, a.get_mval(i, k));
-                for(int k=0; k<bcol; k++) res.change_mval(i, k+acol, b.get_mval(i, k));
-            }
-            return res;
-        }
+        return A.point_mul(B);
     }
 
     Tensor concat(const Tensor & a, const Tensor & b, const int catdim)//catdim:连接的那一维,从0开始
     {
-        int dima = a.get_dim();
-        int dimb = b.get_dim();
-        if(dima!=dimb)
-        {
-            Tensor::set_error(5);//5...
-            return a;//return what?
-        }
-        for(int i=0; i<dima; i++)
-        {
-            if((a.get_size(i)!=b.get_size(i)) && i!=catdim)
-            {
-                Tensor::set_error(5);//5...
-                return a;//return what?
-            }
-        }
-
-        std::vector<int> tmpsize;
-        for(int i=0; i<dima; i++)
-        {
-            if(i!=catdim) tmpsize.push_back(a.get_size(i));
-            else tmpsize.push_back(a.get_size(i)+b.get_size(i));
-        }
-        Tensor res(tmpsize);
-
-        if(catdim < dima-2)
-        {
-            int abatch = 1, bbatch = 1;
-            int times = 0;//交替复制进去 交替的次数
-            for(int i=catdim+1; i<dima-2; i++)
-            {
-                abatch *= a.get_size(i);
-                bbatch *= b.get_size(i);
-            }
-            for(int i=0; i<catdim; i++) times *= a.get_size(i);
-            times *= a.get_size(catdim) + b.get_size(catdim);
-            for(int k=0; k<times; k++)
-            {
-                for(int i=0; i<abatch; i++) res.change_val(k*(abatch+bbatch)+i, a.get_val(k*abatch+i));
-                for(int i=0; i<bbatch; i++) res.change_val(k*(abatch+bbatch)+abatch+i, b.get_val(k*bbatch+i));
-            }
-        }
-        else //需要用到Matrix的concat
-        {
-            int times = res.get_val().size();
-            for(int i=0; i<times; i++) res.change_val(i, concat(a.get_val(i), b.get_val(i), catdim-(dima-2)));
-        }
-        return res;
+        return a.concat(b,catdim);
     }
 }

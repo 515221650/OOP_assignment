@@ -9,6 +9,8 @@
 #include <cstdarg>
 #include "Matrix.h"
 #include <iostream>
+
+class Scalar;
 using std::vector;
 class Tensor {
 private:
@@ -28,17 +30,27 @@ public:
     Tensor operator* (const Tensor& b) const;
     Tensor operator- (const Tensor& b) const;
     Tensor operator- () const;
+    Tensor operator/ (const Tensor& b) const;
+    Tensor operator> (const Tensor& b) const;
+    Tensor operator< (const Tensor& b) const;
+    Tensor operator>= (const Tensor& b) const;
+    Tensor operator<= (const Tensor& b) const;
+
    // Tensor& reshape(std::initializer_list<int> szlist);
     static int get_error(){return error;}
-    friend Tensor ts::trans(const Tensor&);
-    friend Tensor ts::point_mul(const Tensor&, const Tensor&);
-    friend Tensor ts::sin(const Tensor&);
-    friend Tensor ts::exp(const Tensor&);
-    friend Tensor ts::log(const Tensor&);
-    friend Tensor ts::sigmoid(const Tensor&);
-    friend Tensor ts::tanh(const Tensor&);
-    friend Tensor ts::concat(const Tensor & a, const Tensor & b, const int catdim);
+
+    Tensor trans() const ;
+    Tensor sin() const;
+    Tensor exp() const;
+    Tensor log() const;
+    Tensor sigmoid() const;
+    Tensor tanh() const;
+    Tensor concat(const Tensor & b, const int catdim) const;
+    Tensor point_mul(const Tensor&) const;
+    Tensor abs() const;
+
     friend std::ostream& operator << (std::ostream& out, Tensor &x);
+    friend Scalar;
 
     int Size(){return val.size()*size[dim-1]*size[dim-2];}
     int get_dim() const {return dim;}
@@ -46,7 +58,7 @@ public:
     const int get_size(int i) const {return size[i];}//返回指定维度的size
     const Matrix & get_val(int i) const {return val[i];}
     const vector<Matrix> & get_val() const {return val;}
-    void change_val(int i, const Matrix & a) const {val[i] = a;}//越界报错？
+    void change_val(int i, const Matrix & a) {val[i] = a;}//越界报错？
 
 };
 std::ostream& operator << (std::ostream& out, Tensor &x);

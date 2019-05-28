@@ -57,6 +57,66 @@ Tensor Tensor::operator-() const
     return tmp;
 }
 
+Tensor Tensor::operator/ (const Tensor& b) const
+{
+    Tensor tmp = (*this);
+    int len = val.size();
+    for(int i=0;i<len;i++)
+    {
+        tmp.val[i]=tmp.val[i]/b.val[i];
+        /*if()
+        {
+
+        }*///error
+    }
+    return tmp;
+}
+
+Tensor Tensor::operator> (const Tensor& b) const
+{
+    Tensor tmp = (*this);
+    int len = val.size();
+    for(int i=0;i<len;i++)
+    {
+        tmp.val[i]=tmp.val[i]>b.val[i];
+    }
+    return tmp;
+}
+
+Tensor Tensor::operator< (const Tensor& b) const
+{
+    Tensor tmp = (*this);
+    int len = val.size();
+    for(int i=0;i<len;i++)
+    {
+        tmp.val[i]=tmp.val[i]<b.val[i];
+    }
+    return tmp;
+}
+
+Tensor Tensor::operator>= (const Tensor& b) const
+{
+    Tensor tmp = (*this);
+    int len = val.size();
+    for(int i=0;i<len;i++)
+    {
+        tmp.val[i]=tmp.val[i]>=b.val[i];
+    }
+    return tmp;
+}
+
+Tensor Tensor::operator<= (const Tensor& b) const
+{
+    Tensor tmp = (*this);
+    int len = val.size();
+    for(int i=0;i<len;i++)
+    {
+        tmp.val[i]=tmp.val[i]<=b.val[i];
+    }
+    return tmp;
+}
+
+
 Tensor Tensor::operator*(const Tensor &b) const
 {
     // if() 维数不符合
@@ -129,4 +189,121 @@ Tensor& Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持re
     //to be continued... have difficulties with vector<int> val
 
     return (*this);
+}
+
+Tensor Tensor::trans() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val)
+    {
+        a = ts::trans(a);
+    }
+    return res;
+}
+
+Tensor Tensor::sin() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val) a = ts::sin(a);
+    return res;
+}
+
+Tensor Tensor::exp() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val) a = ts::exp(a);
+    return res;
+}
+
+Tensor Tensor::log() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val)
+    {
+        a = ts::log(a);
+        if(Matrix::get_error()!=0)
+        {
+            Tensor::set_error(Matrix::get_error());
+            return *this;
+        }
+    }
+    return res;
+}
+Tensor Tensor::sigmoid() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val) a = ts::sigmoid(a);
+    return res;
+}
+Tensor Tensor::tanh() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val) a = ts::tanh(a);
+    return res;
+}
+
+Tensor Tensor::concat(const Tensor & b, const int catdim) const
+{
+    int dima = this->get_dim();
+    int dimb = b.get_dim();
+    if(dima!=dimb)
+    {
+        Tensor::set_error(5);//5...
+        return *this;//return what?
+    }
+    for(int i=0; i<dima; i++)
+    {
+        if((this->get_size(i)!=b.get_size(i)) && i!=catdim)
+        {
+            Tensor::set_error(5);//5...
+            return *this;//return what?
+        }
+    }
+
+    std::vector<int> tmpsize;
+    for(int i=0; i<dima; i++)
+    {
+        if(i!=catdim) tmpsize.push_back(this->get_size(i));
+        else tmpsize.push_back(this->get_size(i)+b.get_size(i));
+    }
+    Tensor res(tmpsize);
+
+    if(catdim < dima-2)
+    {
+        int abatch = 1, bbatch = 1;
+        int times = 0;//交替复制进去 交替的次数
+        for(int i=catdim+1; i<dima-2; i++)
+        {
+            abatch *= this->get_size(i);
+            bbatch *= b.get_size(i);
+        }
+        for(int i=0; i<catdim; i++) times *= this->get_size(i);
+        times *= this->get_size(catdim) + b.get_size(catdim);
+        for(int k=0; k<times; k++)
+        {
+            for(int i=0; i<abatch; i++) res.change_val(k*(abatch+bbatch)+i, this->get_val(k*abatch+i));
+            for(int i=0; i<bbatch; i++) res.change_val(k*(abatch+bbatch)+abatch+i, b.get_val(k*bbatch+i));
+        }
+    }
+    else //需要用到Matrix的concat
+    {
+        int times = res.get_val().size();
+        for(int i=0; i<times; i++) res.change_val(i, ts::concat(this->get_val(i), b.get_val(i), catdim-(dima-2)));
+    }
+    return res;
+}
+
+Tensor Tensor::point_mul(const Tensor& b) const
+{
+    Tensor res = *this;
+    int len = this->val.size();
+    for(int i = 0; i <len; i++) res.val[i] = ts::point_mul(res.val[i], b.val[i]);
+    return res;
+}
+
+Tensor Tensor::abs() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val) a = ts::abs(a);
+    return res;
 }

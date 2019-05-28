@@ -39,6 +39,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/ts.cpp.obj"
   "CMakeFiles/main.dir/Operator_1/mygrad.cpp.obj"
   "CMakeFiles/main.dir/Operator_2/myat.cpp.obj"
+  "CMakeFiles/main.dir/Scalar.cpp.obj"
   "main.pdb"
   "main.exe"
   "main.exe.manifest"
