@@ -10,6 +10,44 @@
 #define MK std::make_pair
 #define MG (*this)
 
+MyGraph::MyGraph()
+{
+    Session* tmp = new Session();
+    Session_name["init"] = tmp;
+    now_session = tmp;
+}
+
+void MyGraph::change_session(std::string &str)
+{
+    now_session = Session_name[str];
+}
+
+MyGraph::Session* MyGraph::add_session(const std::string &str)
+{
+    if(Session_name.find(str) == Session_name.end())
+    {
+        Session* tmp = new Session(*Session_name["init"]);
+        Session_name[str] = tmp;
+    }
+    else
+    {
+        puts("Session exist!");
+    }
+}
+
+void MyGraph::erase_session(std::string &str)
+{
+    if(Session_name.find(str) != Session_name.end())
+    {
+        delete Session_name[str];
+        Session_name.erase(str);
+    }
+}
+
+Tensor MyGraph::GetVR(std::string &str)
+{
+    return now_session->get(str);
+}
 
 std::pair<bool,Tensor> MyGraph::GetPH(const std::string &str)    // find the placeholder and its status
 {
@@ -31,7 +69,7 @@ void MyGraph::create_root()     //create const or var or placeholder
         if(tmpscanf[1]=="C") create_const(tmpscanf[0], MG);
         if(tmpscanf[1]=="V") create_var(tmpscanf[0], MG);
     }
-
+    now_session = add_session(std::string("default"));
 }
 
 typedef void (*fun1) (std::string&, MyGraph&);
@@ -94,16 +132,17 @@ void MyGraph::insert_node(Node* NewNode, std::string name)
     NodeInfoVec.push_back({NewNode, 0});
     if(StrToIntMap.find(name)!=StrToIntMap.end()) StrToIntMap.erase(name);
     StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
+    IntToStr.push_back(name);
 }
 
 void MyGraph::change_var(std::string &name, Tensor x)
 {
-    NodeInfoVec[str_to_int(name)].NodePos->rev_val(x);
+    now_session->change(name, x);
 }
 
 void MyGraph::change_var(int id, Tensor x)
 {
-    NodeInfoVec[id].NodePos->rev_val(x);
+    now_session->change(IntToStr[id], x);
 }
 
 void MyGraph::assign_change()
@@ -134,4 +173,5 @@ MyGraph::~MyGraph()
 {
     int total = NodeInfoVec.size();
     for(int i=0;i<total;i++) delete NodeInfoVec[i].NodePos;
+    for(auto i: Session_name)delete i.second;
 }

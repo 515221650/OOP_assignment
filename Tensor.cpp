@@ -164,7 +164,7 @@ Tensor::Tensor(vector<int> szlist, int mval)
     val.resize(valnum, Matrix(size[dim-2], size[dim-1], mval));
 }//这个和上面一个可以用模板合并吗?
 
-Tensor& Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持reshape(-1)
+void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持reshape(-1)
 {
     vector<int> tmpsz;//把szlist转成vector，方便处理
     int specialdim = -1;//赋成-1的那一维
@@ -184,11 +184,45 @@ Tensor& Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持re
         if(val.size()%mul != 0) fail = 1;
         else tmpsz[specialdim] = val.size()/mul;
     }
-    size.swap(tmpsz);
+    if(fail)
+    {
+        std::terminate();
+    }
 
+    if(tmpsz.size() == 1)
+    {
+        tmpsz.push_back(tmpsz[0]);
+        tmpsz[0] = 1;
+    }
+
+
+    size.swap(tmpsz);
+    dim = size.size();
+    std::vector<double> tmp;
+    for(auto& i : val)
+    {
+        for(auto j : i.mval)
+        {
+            tmp.push_back(j);
+        }
+    }
+    val.clear();
+
+
+    int col = size.back(), row = size[size.size()-2] ;
+    int new_size = Size()/(row*col);
+
+    for(int i = 0; i < new_size; i++)
+    {
+        Matrix matrix(row, col, 0);
+        for(int j = 0; j < row*col; j++)
+        {
+            matrix.change_mval(j, tmp[i*(row*col)+j]);
+        }
+        val.push_back(matrix);
+    }
     //to be continued... have difficulties with vector<int> val
 
-    return (*this);
 }
 
 Tensor Tensor::trans() const

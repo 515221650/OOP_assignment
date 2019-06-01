@@ -36,7 +36,7 @@ public:
     Tensor operator>= (const Tensor& b) const;
     Tensor operator<= (const Tensor& b) const;
 
-   // Tensor& reshape(std::initializer_list<int> szlist);
+    void reshape(std::initializer_list<int> szlist);
     static int get_error(){return error;}
 
     Tensor trans() const ;
@@ -48,6 +48,9 @@ public:
     Tensor concat(const Tensor & b, const int catdim) const;
     Tensor point_mul(const Tensor&) const;
     Tensor abs() const;
+
+    friend std::pair<Tensor, Tensor> ts::broadcast(Tensor, Tensor);
+    friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
 
     friend std::ostream& operator << (std::ostream& out, Tensor &x);
     friend Scalar;

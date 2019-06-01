@@ -39,7 +39,7 @@ void create_placeholder(std::string& name, MyGraph& g)
 
 void create_const(std::string& name, MyGraph& g)
 {
-    float val;
+    double val;
     std::cin>>val;
     MyConst* NewConst = new MyConst(name, val);
     g.insert_node(NewConst, name);
@@ -47,10 +47,11 @@ void create_const(std::string& name, MyGraph& g)
 
 void create_var(std::string& name, MyGraph& g)
 {
-    float val;
+    double val;
     std::cin>>val;
-    MyVar* NewVar = new MyVar(name, val);
+    MyVar* NewVar = new MyVar(name);
     g.insert_node(NewVar, name);
+    g.change_var(name, val);
 }
 
 // operator_1

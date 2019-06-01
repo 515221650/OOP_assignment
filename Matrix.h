@@ -56,6 +56,8 @@ public: //这样好吗...
     static int get_error(){return error;}
     friend class Tensor;
     friend class Scalar;
+    friend void ts::broadcast(int now_dim, Matrix &new_A, const Matrix &A, int pos);
+    friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
 };
 
 #endif //OOP_MATRIX_H

@@ -90,4 +90,129 @@ namespace ts
     {
         return a.concat(b,catdim);
     }
+
+    Tensor max_T(const Tensor & A, const Tensor & B)
+    {
+        return point_mul((A>=B), A) + point_mul((B>A), B);
+    }
+
+
+    bool need_broadcast(const Tensor &A, const Tensor &B)
+    {
+        int dimA = A.get_dim(), dimB = B.get_dim();
+        int maxdim = std::max(dimA, dimB);
+        bool flag = 0;
+        for(int i = 0; i < maxdim; i ++)
+        {
+            int sizeA, sizeB;
+
+            if(dimA > i)sizeA = A.get_size(dimA - i - 1);
+            else sizeA = 1;
+            if(dimB > i)sizeB = B.get_size(dimB - i - 1);
+            else sizeB = 1;
+
+            if(sizeA != sizeB)
+            {
+                if (sizeA > 1 && sizeB > 1)
+                {
+                    std::terminate();
+                }
+                flag = 1;
+            }
+        }
+        return flag;
+    }
+
+    void broadcast(int now_dim, Matrix &new_A,const Matrix &A, int pos)
+    {
+        int pos2 = new_A.mval.size(), sz = A.get_size(now_dim) , new_sz = new_A.get_size(now_dim), alpha = 1;
+        if(now_dim != 1)alpha = A.get_size(now_dim+1);
+        if (sz != new_sz)
+        {
+            broadcast(now_dim+1, new_A, A, pos*alpha);
+            int pos3 = new_A.mval.size();
+            for(int i = 1; i < new_sz; i++)
+            {
+                for(int j = pos2; j < pos3; j++)
+                {
+                    new_A.mval.push_back(new_A.mval[j]);
+                }
+            }
+        }
+        else
+        {
+            for(int i=0;i<sz;i++)
+            {
+                broadcast(now_dim+1, new_A, A, (pos+i)*alpha);
+            }
+        }
+    }
+
+    void broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos) //now中的size已经是正确的了
+    {
+        if(now_dim == A.dim - 2)
+        {
+            Matrix new_mt;new_mt.mval.clear();
+            broadcast(0, new_mt, A.val[pos], 0);
+            new_A.val.push_back(new_mt);
+            return ;
+        }
+
+
+        int pos2 = new_A.val.size(), sz = A.get_size(now_dim) , new_sz = new_A.get_size(now_dim), alpha = 1;
+        if(now_dim != A.dim-3)alpha = A.get_size(now_dim+1);
+        if (sz != new_sz)
+        {
+            broadcast(now_dim+1, new_A, A, pos*alpha);
+            int pos3 = new_A.val.size();
+            for(int i = 1; i < new_sz; i++)
+            {
+                for(int j = pos2; j < pos3; j++)
+                {
+                    new_A.val.push_back(new_A.val[j]);
+                }
+            }
+        }
+        else
+        {
+            for(int i=0;i<sz;i++)
+            {
+                broadcast(now_dim+1, new_A, A, (pos+i)*alpha);
+            }
+        }
+    }
+
+    std::pair<Tensor, Tensor>broadcast(Tensor A, Tensor B)
+    {
+        int dimA = A.get_dim(), dimB = B.get_dim();
+        int maxdim = std::max(dimA, dimB);
+        if(dimA<maxdim)
+        {
+            A.dim = maxdim;
+            std::vector<int>sz;
+            for(int i=0;i<maxdim-dimA;i++)sz.push_back(1);
+            for(auto i : A.size)sz.push_back(i);
+            A.size.swap(sz);
+        }
+        if(dimB<maxdim)
+        {
+            B.dim = maxdim;
+            std::vector<int>sz;
+            for(int i=0;i<maxdim-dimA;i++)sz.push_back(1);
+            for(auto i : A.size)sz.push_back(i);
+            A.size.swap(sz);
+        }
+
+        std::vector<int>new_size;
+        for(int i = 0; i < maxdim; i ++)
+        {
+            new_size.push_back(std::max(A.get_size(i), B.get_size(i)));
+        }
+
+        Tensor new_A;
+        new_A.val.clear();
+        new_A.dim = maxdim;
+        new_A.size = new_size;
+        broadcast(0, new_A, A, 0);
+    }
 }

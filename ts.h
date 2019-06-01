@@ -5,6 +5,8 @@
 #ifndef OOP_TS_H
 #define OOP_TS_H
 
+#include<utility>
+#include<vector>
 class Tensor;
 class Matrix;
 
@@ -22,6 +24,7 @@ namespace ts
     Matrix concat(const Matrix & a, const Matrix & b, const int catdim);
     Matrix trans(const Matrix &);
 
+    Tensor max_T(const Tensor &, const Tensor &);
     Tensor sin(const Tensor &);
     Tensor cos(const Tensor &);
     Tensor exp(const Tensor &);
@@ -34,6 +37,10 @@ namespace ts
 
     Tensor concat(const Tensor & a, const Tensor & b, const int catdim);
     Tensor trans(const Tensor &);
+    bool need_broadcast(const Tensor &, const Tensor &);
+    void broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
+    void broadcast(int now_dim, Matrix &new_A, const Matrix &A, int pos);
+    std::pair<Tensor, Tensor>broadcast(Tensor A, Tensor B);
 }
 
 #endif //OOP_TS_H
