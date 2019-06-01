@@ -51,7 +51,9 @@ public: //这样好吗...
     double get_mval(int p) const {return mval[p];}
     double get_mval(int aimrow, int aimcol) const {return mval[aimrow*col+aimcol];}
     void change_mval(int r, int c, double val){mval[r*col+c] = val;}
+    void add_mval(int r, int c, double val){mval[r*col+c] += val};
     void change_mval(int p, double val) {mval[p] = val;}
+    void randn();
 
     static int get_error(){return error;}
     friend class Tensor;

@@ -96,6 +96,12 @@ namespace ts
         return point_mul((A>=B), A) + point_mul((B>A), B);
     }
 
+    Tensor randn(std::initializer_list<int> szlist)
+    {
+        Tensor tmp(szlist);
+        tmp.randn();
+        return tmp;
+    }
 
     bool need_broadcast(const Tensor &A, const Tensor &B)
     {
@@ -214,5 +220,13 @@ namespace ts
         new_A.dim = maxdim;
         new_A.size = new_size;
         broadcast(0, new_A, A, 0);
+
+        Tensor new_B;
+        new_B.val.clear();
+        new_B.dim = maxdim;
+        new_B.size = new_size;
+        broadcast(0, new_B, B, 0);
+
+        return std::make_pair(A,B);
     }
 }

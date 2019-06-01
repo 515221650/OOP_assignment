@@ -176,6 +176,33 @@ GraphCompute.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/GraphCompute.cpp.s
 .PHONY : GraphCompute.cpp.s
 
+Layer/Conv.obj: Layer/Conv.cpp.obj
+
+.PHONY : Layer/Conv.obj
+
+# target to build an object file
+Layer/Conv.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Conv.cpp.obj
+.PHONY : Layer/Conv.cpp.obj
+
+Layer/Conv.i: Layer/Conv.cpp.i
+
+.PHONY : Layer/Conv.i
+
+# target to preprocess a source file
+Layer/Conv.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Conv.cpp.i
+.PHONY : Layer/Conv.cpp.i
+
+Layer/Conv.s: Layer/Conv.cpp.s
+
+.PHONY : Layer/Conv.s
+
+# target to generate assembly for a file
+Layer/Conv.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Conv.cpp.s
+.PHONY : Layer/Conv.cpp.s
+
 Layer/Dense.obj: Layer/Dense.cpp.obj
 
 .PHONY : Layer/Dense.obj
@@ -283,6 +310,33 @@ Layer/layer.s: Layer/layer.cpp.s
 Layer/layer.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/layer.cpp.s
 .PHONY : Layer/layer.cpp.s
+
+Layer/maxpool.obj: Layer/maxpool.cpp.obj
+
+.PHONY : Layer/maxpool.obj
+
+# target to build an object file
+Layer/maxpool.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/maxpool.cpp.obj
+.PHONY : Layer/maxpool.cpp.obj
+
+Layer/maxpool.i: Layer/maxpool.cpp.i
+
+.PHONY : Layer/maxpool.i
+
+# target to preprocess a source file
+Layer/maxpool.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/maxpool.cpp.i
+.PHONY : Layer/maxpool.cpp.i
+
+Layer/maxpool.s: Layer/maxpool.cpp.s
+
+.PHONY : Layer/maxpool.s
+
+# target to generate assembly for a file
+Layer/maxpool.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/maxpool.cpp.s
+.PHONY : Layer/maxpool.cpp.s
 
 Matrix.obj: Matrix.cpp.obj
 
@@ -796,6 +850,33 @@ Operator_2/mybind.s: Operator_2/mybind.cpp.s
 Operator_2/mybind.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/mybind.cpp.s
 .PHONY : Operator_2/mybind.cpp.s
+
+Operator_2/myconv.obj: Operator_2/myconv.cpp.obj
+
+.PHONY : Operator_2/myconv.obj
+
+# target to build an object file
+Operator_2/myconv.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/myconv.cpp.obj
+.PHONY : Operator_2/myconv.cpp.obj
+
+Operator_2/myconv.i: Operator_2/myconv.cpp.i
+
+.PHONY : Operator_2/myconv.i
+
+# target to preprocess a source file
+Operator_2/myconv.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/myconv.cpp.i
+.PHONY : Operator_2/myconv.cpp.i
+
+Operator_2/myconv.s: Operator_2/myconv.cpp.s
+
+.PHONY : Operator_2/myconv.s
+
+# target to generate assembly for a file
+Operator_2/myconv.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/myconv.cpp.s
+.PHONY : Operator_2/myconv.cpp.s
 
 Operator_2/mydiv.obj: Operator_2/mydiv.cpp.obj
 
@@ -1325,6 +1406,9 @@ help:
 	@echo ... GraphCompute.obj
 	@echo ... GraphCompute.i
 	@echo ... GraphCompute.s
+	@echo ... Layer/Conv.obj
+	@echo ... Layer/Conv.i
+	@echo ... Layer/Conv.s
 	@echo ... Layer/Dense.obj
 	@echo ... Layer/Dense.i
 	@echo ... Layer/Dense.s
@@ -1337,6 +1421,9 @@ help:
 	@echo ... Layer/layer.obj
 	@echo ... Layer/layer.i
 	@echo ... Layer/layer.s
+	@echo ... Layer/maxpool.obj
+	@echo ... Layer/maxpool.i
+	@echo ... Layer/maxpool.s
 	@echo ... Matrix.obj
 	@echo ... Matrix.i
 	@echo ... Matrix.s
@@ -1394,6 +1481,9 @@ help:
 	@echo ... Operator_2/mybind.obj
 	@echo ... Operator_2/mybind.i
 	@echo ... Operator_2/mybind.s
+	@echo ... Operator_2/myconv.obj
+	@echo ... Operator_2/myconv.i
+	@echo ... Operator_2/myconv.s
 	@echo ... Operator_2/mydiv.obj
 	@echo ... Operator_2/mydiv.i
 	@echo ... Operator_2/mydiv.s

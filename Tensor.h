@@ -51,10 +51,10 @@ public:
 
     friend std::pair<Tensor, Tensor> ts::broadcast(Tensor, Tensor);
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
-
     friend std::ostream& operator << (std::ostream& out, Tensor &x);
     friend Scalar;
 
+    void randn();
     int Size(){return val.size()*size[dim-1]*size[dim-2];}
     int get_dim() const {return dim;}
     const vector<int> & get_size() const {return size;}
@@ -62,6 +62,7 @@ public:
     const Matrix & get_val(int i) const {return val[i];}
     const vector<Matrix> & get_val() const {return val;}
     void change_val(int i, const Matrix & a) {val[i] = a;}//越界报错？
+    void add_val(int i, const Matrix & a){val[i] += a;}
 
 };
 std::ostream& operator << (std::ostream& out, Tensor &x);

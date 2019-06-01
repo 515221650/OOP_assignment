@@ -5,9 +5,17 @@
 #ifndef OOP_MYCONV_H
 #define OOP_MYCONV_H
 
+#include "operator_2.h"
 
-class myconv {
+class MyConv : public Operator_2{
+private:
+    int padding, stride;
+public:
+    MyConv(std::string &s, int x,int y, int _padding = 0, int _stride = 1);
+    virtual int Calc(MyGraph &v);
+    virtual int Derivate(MyGraph &v);
 
+    virtual ~MyConv(){}
 };
 
 

@@ -341,3 +341,11 @@ Tensor Tensor::abs() const
     for(auto &a: res.val) a = ts::abs(a);
     return res;
 }
+
+void Tensor::randn()
+{
+    for(auto& i : val)
+    {
+        i.randn();
+    }
+}

@@ -35,4 +35,4 @@ add_executable(main main.cpp Node.h
         Layer/Dense.cpp Layer/Dense.h
         Layer/Input.cpp Layer/Input.h
         Neural_network.cpp Neural_network.h
-        test_minst.h test_minst.cpp Operator_1/myassert.cpp Operator_1/myassert.h Operator_2/mybind.cpp Operator_2/mybind.h Operator_2/myassign.cpp Operator_2/myassign.h Tensor.cpp Tensor.h Matrix.h Matrix.cpp ts.h ts.cpp Operator_1/mygrad.cpp Operator_1/mygrad.h Operator_2/myat.cpp Operator_2/myat.h Scalar.h Scalar.cpp SessionRelated.h Layer/activationfunc.h Layer/activationfunc.cpp Operator_1/myrelu.h Operator_1/myrelu.cpp Utils/Data.h Utils/Data.cpp)
+        test_minst.h test_minst.cpp Operator_1/myassert.cpp Operator_1/myassert.h Operator_2/mybind.cpp Operator_2/mybind.h Operator_2/myassign.cpp Operator_2/myassign.h Tensor.cpp Tensor.h Matrix.h Matrix.cpp ts.h ts.cpp Operator_1/mygrad.cpp Operator_1/mygrad.h Operator_2/myat.cpp Operator_2/myat.h Scalar.h Scalar.cpp SessionRelated.h Layer/activationfunc.h Layer/activationfunc.cpp Operator_1/myrelu.h Operator_1/myrelu.cpp Utils/Data.h Utils/Data.cpp Layer/Conv.cpp Layer/Conv.h Operator_2/myconv.cpp Operator_2/myconv.h Layer/maxpool.cpp Layer/maxpool.h)
