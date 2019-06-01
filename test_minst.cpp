@@ -78,8 +78,8 @@ void test_MINST() {
     read_Data("train-images.idx3-ubyte", train_data);
     read_Label("train-labels.idx1-ubyte", train_labels);
 
-    Neural_network *MyNet = new Neural_network();
-    MyGraph *G = new MyGraph();
+    auto *MyNet = new Neural_network();
+    auto *G = new MyGraph();
     MyNet->add_Input(784, *G);
     MyNet->add_Dense(10, *G);
     MyNet->add_Dense(10, *G);

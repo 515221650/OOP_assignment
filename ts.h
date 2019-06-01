@@ -34,6 +34,8 @@ namespace ts
 
     Tensor concat(const Tensor & a, const Tensor & b, const int catdim);
     Tensor trans(const Tensor &);
+
+    int get_max_pos_2d(Tensor& a);//二维的tensor里面 最大值的位置
 }
 
 #endif //OOP_TS_H

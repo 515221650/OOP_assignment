@@ -90,4 +90,21 @@ namespace ts
     {
         return a.concat(b,catdim);
     }
+
+    int get_max_pos_2d(Tensor& a)
+    {
+        int tensorsize = a.get_size(0) * a.get_size(1);//两维的
+        int maxpos = 0;
+        double maxv = a.get_val(0).get_mval(0);
+        for(int i=0; i<tensorsize; i++)
+        {
+            double v = a.get_val(0).get_mval(i);
+            if(v > maxv)
+            {
+                maxv = v;
+                maxpos = i;
+            }
+        }
+        return maxpos;
+    }
 }

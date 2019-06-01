@@ -230,6 +230,60 @@ Layer/Input.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Input.cpp.s
 .PHONY : Layer/Input.cpp.s
 
+Layer/Output.obj: Layer/Output.cpp.obj
+
+.PHONY : Layer/Output.obj
+
+# target to build an object file
+Layer/Output.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Output.cpp.obj
+.PHONY : Layer/Output.cpp.obj
+
+Layer/Output.i: Layer/Output.cpp.i
+
+.PHONY : Layer/Output.i
+
+# target to preprocess a source file
+Layer/Output.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Output.cpp.i
+.PHONY : Layer/Output.cpp.i
+
+Layer/Output.s: Layer/Output.cpp.s
+
+.PHONY : Layer/Output.s
+
+# target to generate assembly for a file
+Layer/Output.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Output.cpp.s
+.PHONY : Layer/Output.cpp.s
+
+Layer/Target.obj: Layer/Target.cpp.obj
+
+.PHONY : Layer/Target.obj
+
+# target to build an object file
+Layer/Target.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Target.cpp.obj
+.PHONY : Layer/Target.cpp.obj
+
+Layer/Target.i: Layer/Target.cpp.i
+
+.PHONY : Layer/Target.i
+
+# target to preprocess a source file
+Layer/Target.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Target.cpp.i
+.PHONY : Layer/Target.cpp.i
+
+Layer/Target.s: Layer/Target.cpp.s
+
+.PHONY : Layer/Target.s
+
+# target to generate assembly for a file
+Layer/Target.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Target.cpp.s
+.PHONY : Layer/Target.cpp.s
+
 Layer/activationfunc.obj: Layer/activationfunc.cpp.obj
 
 .PHONY : Layer/activationfunc.obj
@@ -256,6 +310,33 @@ Layer/activationfunc.s: Layer/activationfunc.cpp.s
 Layer/activationfunc.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/activationfunc.cpp.s
 .PHONY : Layer/activationfunc.cpp.s
+
+Layer/criterion.obj: Layer/criterion.cpp.obj
+
+.PHONY : Layer/criterion.obj
+
+# target to build an object file
+Layer/criterion.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/criterion.cpp.obj
+.PHONY : Layer/criterion.cpp.obj
+
+Layer/criterion.i: Layer/criterion.cpp.i
+
+.PHONY : Layer/criterion.i
+
+# target to preprocess a source file
+Layer/criterion.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/criterion.cpp.i
+.PHONY : Layer/criterion.cpp.i
+
+Layer/criterion.s: Layer/criterion.cpp.s
+
+.PHONY : Layer/criterion.s
+
+# target to generate assembly for a file
+Layer/criterion.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/criterion.cpp.s
+.PHONY : Layer/criterion.cpp.s
 
 Layer/layer.obj: Layer/layer.cpp.obj
 
@@ -797,6 +878,33 @@ Operator_2/mybind.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/mybind.cpp.s
 .PHONY : Operator_2/mybind.cpp.s
 
+Operator_2/mycriterion.obj: Operator_2/mycriterion.cpp.obj
+
+.PHONY : Operator_2/mycriterion.obj
+
+# target to build an object file
+Operator_2/mycriterion.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/mycriterion.cpp.obj
+.PHONY : Operator_2/mycriterion.cpp.obj
+
+Operator_2/mycriterion.i: Operator_2/mycriterion.cpp.i
+
+.PHONY : Operator_2/mycriterion.i
+
+# target to preprocess a source file
+Operator_2/mycriterion.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/mycriterion.cpp.i
+.PHONY : Operator_2/mycriterion.cpp.i
+
+Operator_2/mycriterion.s: Operator_2/mycriterion.cpp.s
+
+.PHONY : Operator_2/mycriterion.s
+
+# target to generate assembly for a file
+Operator_2/mycriterion.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_2/mycriterion.cpp.s
+.PHONY : Operator_2/mycriterion.cpp.s
+
 Operator_2/mydiv.obj: Operator_2/mydiv.cpp.obj
 
 .PHONY : Operator_2/mydiv.obj
@@ -1331,9 +1439,18 @@ help:
 	@echo ... Layer/Input.obj
 	@echo ... Layer/Input.i
 	@echo ... Layer/Input.s
+	@echo ... Layer/Output.obj
+	@echo ... Layer/Output.i
+	@echo ... Layer/Output.s
+	@echo ... Layer/Target.obj
+	@echo ... Layer/Target.i
+	@echo ... Layer/Target.s
 	@echo ... Layer/activationfunc.obj
 	@echo ... Layer/activationfunc.i
 	@echo ... Layer/activationfunc.s
+	@echo ... Layer/criterion.obj
+	@echo ... Layer/criterion.i
+	@echo ... Layer/criterion.s
 	@echo ... Layer/layer.obj
 	@echo ... Layer/layer.i
 	@echo ... Layer/layer.s
@@ -1394,6 +1511,9 @@ help:
 	@echo ... Operator_2/mybind.obj
 	@echo ... Operator_2/mybind.i
 	@echo ... Operator_2/mybind.s
+	@echo ... Operator_2/mycriterion.obj
+	@echo ... Operator_2/mycriterion.i
+	@echo ... Operator_2/mycriterion.s
 	@echo ... Operator_2/mydiv.obj
 	@echo ... Operator_2/mydiv.i
 	@echo ... Operator_2/mydiv.s

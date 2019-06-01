@@ -33,19 +33,19 @@ void Dense::build(MyGraph& G)
     Node* newNode;
     std::string w_name;
     //命名
-    newNode = new MyVar(w_name, Tensor({out_num, in_num}));
+    newNode = new MyVar(w_name, Tensor({in_num, out_num}));
     G.insert_node(newNode, w_name);
     W = G.str_to_int(w_name);
 
     std::string ans_w_name;
     //命名
-    newNode = new MyMul(ans_w_name, pre_layer.output(), W);
+    newNode = new MyMul(ans_w_name, W, pre_layer.output());
     G.insert_node(newNode, ans_w_name);
     int pre_add = G.str_to_int(ans_w_name);
 
     std::string b_name;
     //
-    newNode = new MyVar(b_name, Tensor({out_num, 1}));
+    newNode = new MyVar(b_name, Tensor({1, out_num}));
     G.insert_node(newNode, b_name);
     B = G.str_to_int(b_name);
 

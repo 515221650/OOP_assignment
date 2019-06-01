@@ -22,16 +22,16 @@ public:
 class MINSTDataset : public Dataset{
 public:
     explicit MINSTDataset(std::vector<Tensor> & data): Dataset(data){};
-    virtual Tensor &  get_item(){return data[now++];}
+    virtual Tensor &  get_item();
 };
 
-class Dataloader {
+class Dataloader { //如果有余数，用多出来的那部分
 private:
     int BatchSize;
     Dataset* dataset;
 public:
     Dataloader(Dataset& dataset, int bs): dataset(&dataset), BatchSize(bs){}
-    std::vector<Tensor> get_data();
+    bool get_data(std::vector<Tensor>& bdata);
 };
 
 #endif //OOP_DATASET_H
