@@ -91,6 +91,7 @@ namespace ts
         return a.concat(b,catdim);
     }
 
+
     Tensor max_T(const Tensor & A, const Tensor & B)
     {
         return point_mul((A>=B), A) + point_mul((B>A), B);
@@ -182,30 +183,26 @@ namespace ts
         }
     }
 
-    std::pair<Tensor, Tensor>broadcast(Tensor A, Tensor B)
-    {
+    std::pair<Tensor, Tensor>broadcast(Tensor A, Tensor B) {
         int dimA = A.get_dim(), dimB = B.get_dim();
         int maxdim = std::max(dimA, dimB);
-        if(dimA<maxdim)
-        {
+        if (dimA < maxdim) {
             A.dim = maxdim;
-            std::vector<int>sz;
-            for(int i=0;i<maxdim-dimA;i++)sz.push_back(1);
-            for(auto i : A.size)sz.push_back(i);
+            std::vector<int> sz;
+            for (int i = 0; i < maxdim - dimA; i++)sz.push_back(1);
+            for (auto i : A.size)sz.push_back(i);
             A.size.swap(sz);
         }
-        if(dimB<maxdim)
-        {
+        if (dimB < maxdim) {
             B.dim = maxdim;
-            std::vector<int>sz;
-            for(int i=0;i<maxdim-dimA;i++)sz.push_back(1);
-            for(auto i : A.size)sz.push_back(i);
+            std::vector<int> sz;
+            for (int i = 0; i < maxdim - dimA; i++)sz.push_back(1);
+            for (auto i : A.size)sz.push_back(i);
             A.size.swap(sz);
         }
 
-        std::vector<int>new_size;
-        for(int i = 0; i < maxdim; i ++)
-        {
+        std::vector<int> new_size;
+        for (int i = 0; i < maxdim; i++) {
             new_size.push_back(std::max(A.get_size(i), B.get_size(i)));
         }
 
@@ -214,5 +211,22 @@ namespace ts
         new_A.dim = maxdim;
         new_A.size = new_size;
         broadcast(0, new_A, A, 0);
+    }
+
+    int get_max_pos_2d(Tensor& a)
+    {
+        int tensorsize = a.get_size(0) * a.get_size(1);//两维的
+        int maxpos = 0;
+        double maxv = a.get_val(0).get_mval(0);
+        for(int i=0; i<tensorsize; i++)
+        {
+            double v = a.get_val(0).get_mval(i);
+            if(v > maxv)
+            {
+                maxv = v;
+                maxpos = i;
+            }
+        }
+        return maxpos;
     }
 }

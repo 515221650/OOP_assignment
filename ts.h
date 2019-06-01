@@ -37,10 +37,13 @@ namespace ts
 
     Tensor concat(const Tensor & a, const Tensor & b, const int catdim);
     Tensor trans(const Tensor &);
+
     bool need_broadcast(const Tensor &, const Tensor &);
     void broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
     void broadcast(int now_dim, Matrix &new_A, const Matrix &A, int pos);
     std::pair<Tensor, Tensor>broadcast(Tensor A, Tensor B);
+
+    int get_max_pos_2d(Tensor& a);//二维的tensor里面 最大值的位置
 }
 
 #endif //OOP_TS_H

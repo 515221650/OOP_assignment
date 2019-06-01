@@ -43,6 +43,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Layer/activationfunc.cpp.obj"
   "CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj"
   "CMakeFiles/main.dir/Utils/Data.cpp.obj"
+  "CMakeFiles/main.dir/Operator_2/mycriterion.cpp.obj"
+  "CMakeFiles/main.dir/Layer/criterion.cpp.obj"
   "main.pdb"
   "main.exe"
   "main.exe.manifest"

@@ -9,23 +9,31 @@
 #include "Layer/Dense.h"
 #include "Layer/Input.h"
 #include "Layer/activationfunc.h"
+#include "Layer/criterion.h"
+#include "Utils/Data.h"
+
 
 class Neural_network {
 private:
     std::vector<Layer*> seq;
-
+    Layer* tar;
+    Layer* cri;
 public:
-    Neural_network() {}
-    int output();
+    Neural_network() = default;
+    int outputpos();
+    int cripos();
     void add_Input(int num, MyGraph& G);
     void add_Dense(int num, MyGraph& G);
     void add_ReLU(MyGraph& G);
     void add_Sigmoid(MyGraph& G);
+    void add_MSELoss(MyGraph& G);
+    void add_target(int num, MyGraph& G);
 
-    void train(const std::vector<Tensor> & InputData, const std::vector<double> & TargetData, MyGraph& G, int epoch = 100, int batchsize = 128);
 
-    void save(int cnt, MyGraph& G); //save learning data to .txt
-    int load(std::string filename, MyGraph& G); //load learning data from .txt
+    void train(Dataloader InputLoader, Dataloader TargetLoader, MyGraph &G, bool need_accu, int epoch = 100);
+
+   // void save(int cnt, MyGraph& G); //save learning data to .txt
+   // int load(std::string filename, MyGraph& G); //load learning data from .txt
 };
 
 /*class Neural_network {

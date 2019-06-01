@@ -9,6 +9,7 @@ void Input::build(MyGraph &G, int num)
 {
     std::string name;
     //这里命名
+
     Node* newNode = new MyVar(name);
     G.insert_node(newNode, name);
     G.change_var(name, Tensor({num,1}));

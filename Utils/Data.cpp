@@ -3,12 +3,27 @@
 //
 #include "Data.h"
 
-std::vector<Tensor> Dataloader::get_data()
+Tensor& MINSTDataset::get_item()
 {
-    vector<Tensor> loader;
+    if(now == len-1)
+    {
+        now = 0;
+        throw 1;
+    }
+
+}
+
+bool Dataloader::get_data(std::vector<Tensor> &  bdata)
+{
     for(int i=0; i<BatchSize; i++)
     {
-        loader.push_back(dataset->get_item());
+        try{
+            bdata.push_back(dataset->get_item());
+        }
+        catch(int)
+        {
+            return false;
+        }
     }
-    return loader;
+    return true;
 }
