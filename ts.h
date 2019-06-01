@@ -34,7 +34,7 @@ namespace ts
     Tensor abs(const Tensor &);
     Tensor point_mul(const Tensor &, const Tensor &);
 
-
+    Tensor randn(std::initializer_list<int> szlist = {1, 1});
     Tensor concat(const Tensor & a, const Tensor & b, const int catdim);
     Tensor trans(const Tensor &);
 

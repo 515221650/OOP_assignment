@@ -265,3 +265,11 @@ Matrix Matrix::concat( const Matrix & b, const int catdim) const
         return res;
     }
 }
+
+void Matrix::randn()
+{
+    for(double& i : mval)
+    {
+        i = ((rand()/100-50)/50);
+    }
+}
