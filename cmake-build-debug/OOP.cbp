@@ -103,6 +103,12 @@
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Layer/Input.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Layer/activationfunc.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Layer/activationfunc.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Layer/layer.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -176,6 +182,12 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Operator_1/myprint.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Operator_1/myrelu.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Operator_1/myrelu.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Operator_1/mysigmoid.cpp">
@@ -298,6 +310,9 @@
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Scalar.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/SessionRelated.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Storage.cpp">
 			<Option target="main"/>
 		</Unit>
@@ -308,6 +323,12 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Tensor.h">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Utils/Data.cpp">
+			<Option target="main"/>
+		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Utils/Data.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/main.cpp">

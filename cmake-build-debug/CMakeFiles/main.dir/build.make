@@ -589,6 +589,45 @@ CMakeFiles/main.dir/Scalar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Scalar.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\OOP_assignment\Scalar.cpp -o CMakeFiles\main.dir\Scalar.cpp.s
 
+CMakeFiles/main.dir/Layer/activationfunc.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Layer/activationfunc.cpp.obj: ../Layer/activationfunc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/main.dir/Layer/activationfunc.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\activationfunc.cpp.obj -c D:\hwy\bighomework\2\OOP_assignment\Layer\activationfunc.cpp
+
+CMakeFiles/main.dir/Layer/activationfunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Layer/activationfunc.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\OOP_assignment\Layer\activationfunc.cpp > CMakeFiles\main.dir\Layer\activationfunc.cpp.i
+
+CMakeFiles/main.dir/Layer/activationfunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Layer/activationfunc.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\OOP_assignment\Layer\activationfunc.cpp -o CMakeFiles\main.dir\Layer\activationfunc.cpp.s
+
+CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj: ../Operator_1/myrelu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myrelu.cpp.obj -c D:\hwy\bighomework\2\OOP_assignment\Operator_1\myrelu.cpp
+
+CMakeFiles/main.dir/Operator_1/myrelu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Operator_1/myrelu.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\OOP_assignment\Operator_1\myrelu.cpp > CMakeFiles\main.dir\Operator_1\myrelu.cpp.i
+
+CMakeFiles/main.dir/Operator_1/myrelu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Operator_1/myrelu.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\OOP_assignment\Operator_1\myrelu.cpp -o CMakeFiles\main.dir\Operator_1\myrelu.cpp.s
+
+CMakeFiles/main.dir/Utils/Data.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Utils/Data.cpp.obj: ../Utils/Data.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/main.dir/Utils/Data.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Utils\Data.cpp.obj -c D:\hwy\bighomework\2\OOP_assignment\Utils\Data.cpp
+
+CMakeFiles/main.dir/Utils/Data.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Utils/Data.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\OOP_assignment\Utils\Data.cpp > CMakeFiles\main.dir\Utils\Data.cpp.i
+
+CMakeFiles/main.dir/Utils/Data.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Utils/Data.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\OOP_assignment\Utils\Data.cpp -o CMakeFiles\main.dir\Utils\Data.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.obj" \
@@ -631,7 +670,10 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/ts.cpp.obj" \
 "CMakeFiles/main.dir/Operator_1/mygrad.cpp.obj" \
 "CMakeFiles/main.dir/Operator_2/myat.cpp.obj" \
-"CMakeFiles/main.dir/Scalar.cpp.obj"
+"CMakeFiles/main.dir/Scalar.cpp.obj" \
+"CMakeFiles/main.dir/Layer/activationfunc.cpp.obj" \
+"CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj" \
+"CMakeFiles/main.dir/Utils/Data.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -677,11 +719,14 @@ main.exe: CMakeFiles/main.dir/ts.cpp.obj
 main.exe: CMakeFiles/main.dir/Operator_1/mygrad.cpp.obj
 main.exe: CMakeFiles/main.dir/Operator_2/myat.cpp.obj
 main.exe: CMakeFiles/main.dir/Scalar.cpp.obj
+main.exe: CMakeFiles/main.dir/Layer/activationfunc.cpp.obj
+main.exe: CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj
+main.exe: CMakeFiles/main.dir/Utils/Data.cpp.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: CMakeFiles/main.dir/linklibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
