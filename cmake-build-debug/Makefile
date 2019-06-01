@@ -230,6 +230,33 @@ Layer/Input.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/Input.cpp.s
 .PHONY : Layer/Input.cpp.s
 
+Layer/activationfunc.obj: Layer/activationfunc.cpp.obj
+
+.PHONY : Layer/activationfunc.obj
+
+# target to build an object file
+Layer/activationfunc.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/activationfunc.cpp.obj
+.PHONY : Layer/activationfunc.cpp.obj
+
+Layer/activationfunc.i: Layer/activationfunc.cpp.i
+
+.PHONY : Layer/activationfunc.i
+
+# target to preprocess a source file
+Layer/activationfunc.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/activationfunc.cpp.i
+.PHONY : Layer/activationfunc.cpp.i
+
+Layer/activationfunc.s: Layer/activationfunc.cpp.s
+
+.PHONY : Layer/activationfunc.s
+
+# target to generate assembly for a file
+Layer/activationfunc.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/activationfunc.cpp.s
+.PHONY : Layer/activationfunc.cpp.s
+
 Layer/layer.obj: Layer/layer.cpp.obj
 
 .PHONY : Layer/layer.obj
@@ -553,6 +580,33 @@ Operator_1/myprint.s: Operator_1/myprint.cpp.s
 Operator_1/myprint.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_1/myprint.cpp.s
 .PHONY : Operator_1/myprint.cpp.s
+
+Operator_1/myrelu.obj: Operator_1/myrelu.cpp.obj
+
+.PHONY : Operator_1/myrelu.obj
+
+# target to build an object file
+Operator_1/myrelu.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj
+.PHONY : Operator_1/myrelu.cpp.obj
+
+Operator_1/myrelu.i: Operator_1/myrelu.cpp.i
+
+.PHONY : Operator_1/myrelu.i
+
+# target to preprocess a source file
+Operator_1/myrelu.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_1/myrelu.cpp.i
+.PHONY : Operator_1/myrelu.cpp.i
+
+Operator_1/myrelu.s: Operator_1/myrelu.cpp.s
+
+.PHONY : Operator_1/myrelu.s
+
+# target to generate assembly for a file
+Operator_1/myrelu.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Operator_1/myrelu.cpp.s
+.PHONY : Operator_1/myrelu.cpp.s
 
 Operator_1/mysigmoid.obj: Operator_1/mysigmoid.cpp.obj
 
@@ -1148,6 +1202,33 @@ Tensor.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Tensor.cpp.s
 .PHONY : Tensor.cpp.s
 
+Utils/Data.obj: Utils/Data.cpp.obj
+
+.PHONY : Utils/Data.obj
+
+# target to build an object file
+Utils/Data.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Utils/Data.cpp.obj
+.PHONY : Utils/Data.cpp.obj
+
+Utils/Data.i: Utils/Data.cpp.i
+
+.PHONY : Utils/Data.i
+
+# target to preprocess a source file
+Utils/Data.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Utils/Data.cpp.i
+.PHONY : Utils/Data.cpp.i
+
+Utils/Data.s: Utils/Data.cpp.s
+
+.PHONY : Utils/Data.s
+
+# target to generate assembly for a file
+Utils/Data.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Utils/Data.cpp.s
+.PHONY : Utils/Data.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -1250,6 +1331,9 @@ help:
 	@echo ... Layer/Input.obj
 	@echo ... Layer/Input.i
 	@echo ... Layer/Input.s
+	@echo ... Layer/activationfunc.obj
+	@echo ... Layer/activationfunc.i
+	@echo ... Layer/activationfunc.s
 	@echo ... Layer/layer.obj
 	@echo ... Layer/layer.i
 	@echo ... Layer/layer.s
@@ -1286,6 +1370,9 @@ help:
 	@echo ... Operator_1/myprint.obj
 	@echo ... Operator_1/myprint.i
 	@echo ... Operator_1/myprint.s
+	@echo ... Operator_1/myrelu.obj
+	@echo ... Operator_1/myrelu.i
+	@echo ... Operator_1/myrelu.s
 	@echo ... Operator_1/mysigmoid.obj
 	@echo ... Operator_1/mysigmoid.i
 	@echo ... Operator_1/mysigmoid.s
@@ -1352,6 +1439,9 @@ help:
 	@echo ... Tensor.obj
 	@echo ... Tensor.i
 	@echo ... Tensor.s
+	@echo ... Utils/Data.obj
+	@echo ... Utils/Data.i
+	@echo ... Utils/Data.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

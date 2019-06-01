@@ -26,7 +26,37 @@
 #include "../Operator_2/myminus.h"
 #include <string>
 // 初始化的参数是否需要传进来，这里写的是 0 ~ 5/in_num 随机变量
+
 void Dense::build(MyGraph& G)
+{
+    //RD
+    Node* newNode;
+    std::string w_name;
+    //命名
+    newNode = new MyVar(w_name, Tensor({out_num, in_num}));
+    G.insert_node(newNode, w_name);
+    W = G.str_to_int(w_name);
+
+    std::string ans_w_name;
+    //命名
+    newNode = new MyMul(ans_w_name, pre_layer.output(), W);
+    G.insert_node(newNode, ans_w_name);
+    int pre_add = G.str_to_int(ans_w_name);
+
+    std::string b_name;
+    //
+    newNode = new MyVar(b_name, Tensor({out_num, 1}));
+    G.insert_node(newNode, b_name);
+    B = G.str_to_int(b_name);
+
+    std::string pre_out_name;
+    //
+    newNode = new MyPlus(pre_out_name, pre_add, B);
+    G.insert_node(newNode, b_name);
+    out_pos = G.str_to_int(pre_out_name);
+}
+
+/*void Dense::build(MyGraph& G)
 {
     #define RD ((float)(rand()%101)/20/in_num)+EPS
 
@@ -89,4 +119,4 @@ void Dense::build(MyGraph& G)
         out_vec.push_back(id_outj);
 
     }
-}
+}*/
