@@ -38,37 +38,37 @@ void MyGraph::graph_compute()
             }
             int aim_num = str_to_int(aim);
             Node* ans_node = NodeInfoVec[aim_num].NodePos;  //pointer to our aim node
-            int ans = ans_node->Compt(*this, aim_num);  //ans: the status of computation; 0 means no error
-            if(!ans)
+            try
             {
-                erase_der();
-                ans_node->rev_der(1);   //in der, we record the deravative of aiming node to current node 目标节点对当前节点的导数，目标节点的der初始化为1
-                reverse(DerVec.begin(), DerVec.end());   //DerVec is created in Compt, which indicate what nodes are related with aim node;
-                int DerStatus = 0;  //record the status of derivative; 0 means no errors
-                for(auto i : DerVec)
+                int ans = ans_node->Compt(*this, aim_num);  //ans: the status of computation; 0 means no error
+                if(!ans)
                 {
-                    DerStatus = NodeInfoVec[i].NodePos->Derivate(*this);
-                    if(DerStatus) break;
-                }
+                    erase_der();
+                    ans_node->rev_der(1);   //in der, we record the deravative of aiming node to current node 目标节点对当前节点的导数，目标节点的der初始化为1
+                    reverse(DerVec.begin(), DerVec.end());   //DerVec is created in Compt, which indicate what nodes are related with aim node;
+                    int DerStatus = 0;  //record the status of derivative; 0 means no errors
+                    for(auto i : DerVec)
+                    {
+                        DerStatus = NodeInfoVec[i].NodePos->Derivate(*this);
+                        if(DerStatus) break;
+                    }
 
-                if(DerStatus)   //have errors
-                {
-                    std::cout<<"ERROR: Underivable"<<std::endl;
-                    myresult.push_back(0);
-                }
-                else
-                {
-                    Tensor res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
-                    std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
-                    myresult.push_back(res);
+                    if(DerStatus)   //have errors
+                    {
+                        std::cout<<"ERROR: Underivable"<<std::endl;
+                        myresult.push_back(0);
+                    }
+                    else
+                    {
+                        Tensor res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
+                        std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
+                        myresult.push_back(res);
+                    }
                 }
             }
-            else
+            catch(std::range_error ERROR)
             {
-                if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
-                if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
-                if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
-                if(ans == 4) std::cout << "ERROR: Assertion failed" << std::endl;
+                std::cerr<<ERROR<<std::endl;
                 myresult.push_back(0.0);
             }
             DerVec.clear();
@@ -88,19 +88,19 @@ void MyGraph::graph_compute()
                 insert_placeholder_rev(ParaName, x);
             }
 
-            int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim));    //record the status of computation ; 0 means no errors
-            if(!ans)
+            try
             {
-                Tensor res = NodeInfoVec[str_to_int(aim)].NodePos->Val();
-                std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
-                myresult.push_back(res);
+                int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim));    //record the status of computation ; 0 means no errors
+                if(!ans)
+                {
+                    Tensor res = NodeInfoVec[str_to_int(aim)].NodePos->Val();
+                    std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
+                    myresult.push_back(res);
+                }
             }
-            else
+            catch(range_error ERROR)
             {
-                if(ans == 1) std::cout << "ERROR: Division by zero" << std::endl;
-                if(ans == 2) std::cout << "ERROR: LOG operator's input must be positive" << std::endl;
-                if(ans == 3) std::cout << "ERROR: Placeholder missing" << std::endl;
-                if(ans == 4) std::cout << "ERROR: Assertion failed" << std::endl;
+                std::cerr<<ERROR<<std::endl;
                 myresult.push_back(0.0);
             }
             DerVec.clear();

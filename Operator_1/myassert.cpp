@@ -9,7 +9,10 @@
 MyAssert::MyAssert(std::string &s, int x) : Operator_1(s, x){}
 
 int MyAssert::Calc(MyGraph &v) {
-    if(Scalar(v[num].NodePos->Val()).get_val() < -EPS) return 4;
+    if(Scalar(v[num].NodePos->Val()).get_val() < -EPS)
+    {
+        throw std::range_error("ERROR: Assertion failed");
+    }
     val = 0;
     return 0;
 }

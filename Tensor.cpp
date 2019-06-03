@@ -4,6 +4,21 @@
 
 #include "Tensor.h"
 
+bool Tensor::check_shape(const Tensor & obj2) const
+{
+    bool flag = 0;
+    if(get_dim() != obj2.get_dim())flag = 1;
+    for(int i = 0; i < dim; i++)
+    {
+        if(val[i] != obj2.val[i])flag = 1;
+    }
+    if(flag)
+    {
+        throw range_error("Tensor's shape doesn't match");
+    }
+}
+
+
 std::ostream& operator << (std::ostream& out, Tensor &x)
 {
     for(auto i: x.val)
@@ -35,6 +50,7 @@ Tensor Tensor::operator() (std::initializer_list<std::pair<int,int> > arglist)
 
 Tensor Tensor::operator+(const Tensor &b) const
 {
+    check_shape(b);
     Tensor tmp = (*this);
     int len = val.size();
     for(int i=0;i<len;i++)tmp.val[i] += b.val[i];
@@ -43,6 +59,7 @@ Tensor Tensor::operator+(const Tensor &b) const
 
 Tensor Tensor::operator-(const Tensor &b) const
 {
+    check_shape(b);
     Tensor tmp = (*this);
     int len = val.size();
     for(int i=0;i<len;i++)tmp.val[i]-=b.val[i];
@@ -59,21 +76,19 @@ Tensor Tensor::operator-() const
 
 Tensor Tensor::operator/ (const Tensor& b) const
 {
+    check_shape(b);
     Tensor tmp = (*this);
     int len = val.size();
     for(int i=0;i<len;i++)
     {
         tmp.val[i]=tmp.val[i]/b.val[i];
-        /*if()
-        {
-
-        }*///error
     }
     return tmp;
 }
 
 Tensor Tensor::operator> (const Tensor& b) const
 {
+    check_shape(b);
     Tensor tmp = (*this);
     int len = val.size();
     for(int i=0;i<len;i++)
@@ -85,6 +100,7 @@ Tensor Tensor::operator> (const Tensor& b) const
 
 Tensor Tensor::operator< (const Tensor& b) const
 {
+    check_shape(b);
     Tensor tmp = (*this);
     int len = val.size();
     for(int i=0;i<len;i++)
@@ -96,6 +112,7 @@ Tensor Tensor::operator< (const Tensor& b) const
 
 Tensor Tensor::operator>= (const Tensor& b) const
 {
+    check_shape(b);
     Tensor tmp = (*this);
     int len = val.size();
     for(int i=0;i<len;i++)
@@ -107,6 +124,7 @@ Tensor Tensor::operator>= (const Tensor& b) const
 
 Tensor Tensor::operator<= (const Tensor& b) const
 {
+    check_shape(b);
     Tensor tmp = (*this);
     int len = val.size();
     for(int i=0;i<len;i++)
@@ -119,7 +137,7 @@ Tensor Tensor::operator<= (const Tensor& b) const
 
 Tensor Tensor::operator*(const Tensor &b) const
 {
-    // if() 维数不符合
+    check_shape(b);
     Tensor tmp;
     for(int i=0; i<=dim-3; i++) tmp.add_dim(size[i]);
     tmp.add_dim(size[dim-2]);
@@ -186,7 +204,7 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
     }
     if(fail)
     {
-        std::terminate();
+        throw std::range_error("Tensor's shape doesn't match while reshaping");
     }
 
     if(tmpsz.size() == 1)
@@ -255,11 +273,6 @@ Tensor Tensor::log() const
     for(auto &a: res.val)
     {
         a = ts::log(a);
-        if(Matrix::get_error()!=0)
-        {
-            Tensor::set_error(Matrix::get_error());
-            return *this;
-        }
     }
     return res;
 }
@@ -282,15 +295,13 @@ Tensor Tensor::concat(const Tensor & b, const int catdim) const
     int dimb = b.get_dim();
     if(dima!=dimb)
     {
-        Tensor::set_error(5);//5...
-        return *this;//return what?
+        throw range_error("Tensor's shape doesn't match while concating");
     }
     for(int i=0; i<dima; i++)
     {
         if((this->get_size(i)!=b.get_size(i)) && i!=catdim)
         {
-            Tensor::set_error(5);//5...
-            return *this;//return what?
+            throw range_error("Tensor's shape doesn't match while concating");
         }
     }
 
@@ -329,6 +340,7 @@ Tensor Tensor::concat(const Tensor & b, const int catdim) const
 
 Tensor Tensor::point_mul(const Tensor& b) const
 {
+    check_shape(b);
     Tensor res = *this;
     int len = this->val.size();
     for(int i = 0; i <len; i++) res.val[i] = ts::point_mul(res.val[i], b.val[i]);

@@ -7,8 +7,10 @@
 
 #include <iostream>
 #include <cmath>
+#include <stdexcept>
 #include "Tensor.h"
 #include "Storage.h"
+
 #define EPS 1E-8
 
 class Node{

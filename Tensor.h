@@ -55,6 +55,7 @@ public:
     friend Scalar;
 
     void randn();
+    bool check_shape(const Tensor& B) const;
     int Size(){return val.size()*size[dim-1]*size[dim-2];}
     int get_dim() const {return dim;}
     const vector<int> & get_size() const {return size;}

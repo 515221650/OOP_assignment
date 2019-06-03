@@ -5,8 +5,18 @@
 #include <cmath>
 #include "Node.h"
 
+bool Matrix::check_shape(const Matrix & obj2) const
+{
+    if(row != obj2.row || col != obj2.col)
+    {
+        throw std::range_error("Tensor's shape doesn't match");
+    }
+    return 1;
+}
+
 Matrix Matrix::operator + (const Matrix& obj2) const//判断不符合相加要求？
 {
+    check_shape(obj2);
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
@@ -17,6 +27,8 @@ Matrix Matrix::operator + (const Matrix& obj2) const//判断不符合相加要�
 
 Matrix Matrix::operator - (const Matrix& obj2) const//判断不符合相加要求？
 {
+
+    check_shape(obj2);
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
@@ -25,7 +37,7 @@ Matrix Matrix::operator - (const Matrix& obj2) const//判断不符合相加要�
     return res;
 }
 
-Matrix Matrix::operator - () const//判断不符合相加要求？
+Matrix Matrix::operator - () const
 {
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
@@ -37,14 +49,14 @@ Matrix Matrix::operator - () const//判断不符合相加要求？
 
 Matrix Matrix::operator / (const Matrix & obj2) const
 {
+
+    check_shape(obj2);
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
         if(abs(obj2.mval[i]<EPS))
         {
-            //
-            //
-            return *this;
+            throw std::range_error("ERROR: Division by zero");
         }
         res.mval.push_back(mval[i]/obj2.mval[i]);
     }
@@ -53,6 +65,7 @@ Matrix Matrix::operator / (const Matrix & obj2) const
 
 Matrix Matrix::operator > (const Matrix& obj2) const//判断不符合相加要求？
 {
+    check_shape(obj2);
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
@@ -63,6 +76,7 @@ Matrix Matrix::operator > (const Matrix& obj2) const//判断不符合相加要�
 
 Matrix Matrix::operator < (const Matrix& obj2) const//判断不符合相加要求？
 {
+    check_shape(obj2);
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
@@ -73,6 +87,7 @@ Matrix Matrix::operator < (const Matrix& obj2) const//判断不符合相加要�
 
 Matrix Matrix::operator >= (const Matrix& obj2) const//判断不符合相加要求？
 {
+    check_shape(obj2);
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
@@ -83,6 +98,7 @@ Matrix Matrix::operator >= (const Matrix& obj2) const//判断不符合相加要�
 
 Matrix Matrix::operator <= (const Matrix& obj2) const//判断不符合相加要求？
 {
+    check_shape(obj2);
     Matrix res(row, col);
     for(int i=0; i<row*col; i++)
     {
@@ -91,8 +107,12 @@ Matrix Matrix::operator <= (const Matrix& obj2) const//判断不符合相加要�
     return res;
 }
 
-/*Matrix Matrix::operator*(const Matrix &obj2) const
+Matrix Matrix::operator*(const Matrix &obj2) const
 {
+    if(col != obj2.row)
+    {
+        throw range_error("Tensor's shape doesn't match while matmuling");
+    }
     Matrix res(row, obj2.col);
     for(int i=0; i<row; i++)
     {
@@ -107,10 +127,12 @@ Matrix Matrix::operator <= (const Matrix& obj2) const//判断不符合相加要�
         }
     }
     return res;
-}*///should be matmul
+}
 
+/*
 Matrix Matrix::operator*(const Matrix &obj2) const  //dot mul
 {
+    check_shape(obj2);
     Matrix res(row, col);
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
@@ -118,7 +140,7 @@ Matrix Matrix::operator*(const Matrix &obj2) const  //dot mul
         }
     }
     return res;
-}
+}*/
 
 
 
@@ -201,8 +223,7 @@ Matrix Matrix::log() const
     {
         if(a <= EPS)
         {
-            Matrix::set_error(2);
-            return *this;
+            throw range_error("ERROR: LOG operator's input must be positive");
         }
         a = ::log(a);
     }
@@ -232,6 +253,7 @@ Matrix Matrix::abs() const
 
 Matrix Matrix::point_mul(const Matrix & B) const
 {
+    check_shape(B);
     Matrix res = *this;
     for(int i=0;i<B.get_size();i++)
         res.change_mval(i, res.get_mval(i)*B.get_mval(i));
@@ -242,8 +264,7 @@ Matrix Matrix::concat( const Matrix & b, const int catdim) const
 {
     if((catdim!=0 && catdim!=1) || this->get_size(1-catdim) != b.get_size(1-catdim))//mismatch
     {
-        Matrix::set_error(5);//5...
-        return *this;//???
+        throw range_error("Tensor's shape doesn't match while concating");
     }
     if(catdim == 0)
     {

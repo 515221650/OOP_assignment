@@ -9,7 +9,10 @@ MyPlaceholder::MyPlaceholder(std::string &name):Operator_0(name) {}
 int MyPlaceholder::Calc(MyGraph& g)
 {
     auto tmp = g.GetPH(this->name);
-    if(!tmp.first) return 3;
+    if(!tmp.first)
+    {
+        throw std::range_error("ERROR: Placeholder missing");
+    }
     val = tmp.second;
     return 0;
 }

@@ -1,3 +1,0 @@
-D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir
-D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -44,6 +44,7 @@ public: //这样好吗...
     Matrix abs() const;
     Matrix point_mul(const Matrix &) const;
     Matrix concat(const Matrix & b, const int catdim) const;
+    bool check_shape(const Matrix & obj2) const;
     int get_size() const {return row*col;}
     int get_size(int i) const {if(i==0) return row; if(i==1) return col;}
     int get_col() const {return col;}
