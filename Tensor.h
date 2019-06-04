@@ -18,8 +18,8 @@ private:
     vector<int> size; // 后两维是matrix的
     vector<Matrix> val;
     void add_dim(int sz) {size.push_back(sz); dim++;}
-    static int error;
-    static void set_error(int i) {error = i;}
+//    static int error;
+//    static void set_error(int i) {error = i;}
 public:
     Tensor(double x):Tensor({1,1},x){}
     Tensor(std::initializer_list<int> szlist = {1, 1}, int mval = 0);//Tensor(5)是5*5还是1*5? 对dim==1的特判//默认填充0
@@ -35,11 +35,15 @@ public:
     Tensor operator< (const Tensor& b) const;
     Tensor operator>= (const Tensor& b) const;
     Tensor operator<= (const Tensor& b) const;
+    Tensor & operator +=(const Tensor & obj2);
+    Tensor & operator -=(const Tensor & obj2);
+    Tensor & operator *=(const Tensor & obj2);
 
     void reshape(std::initializer_list<int> szlist);
-    static int get_error(){return error;}
+//    static int get_error(){return error;}
 
     Tensor trans() const ;
+    Tensor cos() const;
     Tensor sin() const;
     Tensor exp() const;
     Tensor log() const;
@@ -64,7 +68,7 @@ public:
     const vector<Matrix> & get_val() const {return val;}
     void change_val(int i, const Matrix & a) {val[i] = a;}//越界报错？
     void add_val(int i, const Matrix & a){val[i] += a;}
-
+    void clear(){dim = 0;size.clear();val.clear();}
 };
 std::ostream& operator << (std::ostream& out, Tensor &x);
 

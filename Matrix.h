@@ -16,8 +16,8 @@ private:
     int col; //从0开始编号
     int row;
     std::vector<double> mval;
-    static int error;//需要初始化！！！
-    static void set_error(int i){error = i;}
+//    static int error;//需要初始化！！！
+//    static void set_error(int i){error = i;}
 public: //这样好吗...
     explicit Matrix(int row = 1, int col = 1, int val = 0): col(col), row(row), mval(col*row, val){}
     auto operator[] (const int a) const {return mval.begin()+a*col;} //用obj[][]访问
@@ -52,11 +52,11 @@ public: //这样好吗...
     double get_mval(int p) const {return mval[p];}
     double get_mval(int aimrow, int aimcol) const {return mval[aimrow*col+aimcol];}
     void change_mval(int r, int c, double val){mval[r*col+c] = val;}
-    void add_mval(int r, int c, double val){mval[r*col+c] += val};
+    void add_mval(int r, int c, double val){mval[r*col+c] += val;}
     void change_mval(int p, double val) {mval[p] = val;}
     void randn();
 
-    static int get_error(){return error;}
+//    static int get_error(){return error;}
     friend class Tensor;
     friend class Scalar;
     friend void ts::broadcast(int now_dim, Matrix &new_A, const Matrix &A, int pos);

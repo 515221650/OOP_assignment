@@ -3,6 +3,7 @@
 //
 
 #include "Tensor.h"
+#include <stdexcept>
 
 bool Tensor::check_shape(const Tensor & obj2) const
 {
@@ -10,11 +11,11 @@ bool Tensor::check_shape(const Tensor & obj2) const
     if(get_dim() != obj2.get_dim())flag = 1;
     for(int i = 0; i < dim; i++)
     {
-        if(val[i] != obj2.val[i])flag = 1;
+        if(size[i] != obj2.size[i])flag = 1;
     }
     if(flag)
     {
-        throw range_error("Tensor's shape doesn't match");
+        throw std::range_error("Tensor's shape doesn't match");
     }
 }
 
@@ -138,12 +139,31 @@ Tensor Tensor::operator<= (const Tensor& b) const
 Tensor Tensor::operator*(const Tensor &b) const
 {
     check_shape(b);
-    Tensor tmp;
+    Tensor tmp;tmp.clear();
+
     for(int i=0; i<=dim-3; i++) tmp.add_dim(size[i]);
     tmp.add_dim(size[dim-2]);
     tmp.add_dim(b.size[dim-1]);
     for(int i=0; i<val.size(); i++)  tmp.val.push_back(val[i]*b.val[i]);
     return tmp;
+}
+
+Tensor & Tensor::operator +=(const Tensor& obj2)
+{
+    *this = *this + obj2;
+    return *this;
+}
+
+Tensor & Tensor::operator -=(const Tensor& obj2)
+{
+    *this = *this - obj2;
+    return *this;
+}
+
+Tensor & Tensor::operator *=(const Tensor& obj2)
+{
+    *this = *this * obj2;
+    return *this;
 }
 
 Tensor::Tensor(std::initializer_list<int> szlist, int mval)
@@ -154,14 +174,14 @@ Tensor::Tensor(std::initializer_list<int> szlist, int mval)
     {
         size.push_back(a);
         dim++;
-        if(dim>2) valnum*=a;
+        valnum*=a;
     }
     if(dim == 1)
     {
         size.push_back(1);
         dim++;
     }
-    val.resize(valnum, Matrix(size[dim-2], size[dim-1], mval));
+    val.resize(valnum/(size[dim-1]*size[dim-2]), Matrix(size[dim-2], size[dim-1], mval));
 }
 
 Tensor::Tensor(vector<int> szlist, int mval)
@@ -196,11 +216,13 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
         k++;
     }
     bool fail = 0;
-    if((specialdim == -1) && (mul != val.size())) fail = 1;
-    if((specialdim!=-1))
+
+    if((specialdim == -1) && (mul != Size())) fail = 1;
+    if(specialdim!=-1)
     {
-        if(val.size()%mul != 0) fail = 1;
-        else tmpsz[specialdim] = val.size()/mul;
+        if(Size()%mul != 0) fail = 1;
+        else tmpsz[specialdim] = Size()/mul;
+
     }
     if(fail)
     {
@@ -216,6 +238,8 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
 
     size.swap(tmpsz);
     dim = size.size();
+
+
     std::vector<double> tmp;
     for(auto& i : val)
     {
@@ -224,11 +248,10 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
             tmp.push_back(j);
         }
     }
+
+    int col = size.back(), row = size[size.size()-2];
+    int new_size = tmp.size()/(row*col);
     val.clear();
-
-
-    int col = size.back(), row = size[size.size()-2] ;
-    int new_size = Size()/(row*col);
 
     for(int i = 0; i < new_size; i++)
     {
@@ -239,7 +262,6 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
         }
         val.push_back(matrix);
     }
-    //to be continued... have difficulties with vector<int> val
 
 }
 
@@ -250,6 +272,13 @@ Tensor Tensor::trans() const
     {
         a = ts::trans(a);
     }
+    return res;
+}
+
+Tensor Tensor::cos() const
+{
+    Tensor res = *this;
+    for(auto &a: res.val) a = ts::cos(a);
     return res;
 }
 
@@ -295,13 +324,13 @@ Tensor Tensor::concat(const Tensor & b, const int catdim) const
     int dimb = b.get_dim();
     if(dima!=dimb)
     {
-        throw range_error("Tensor's shape doesn't match while concating");
+        throw std::range_error("Tensor's shape doesn't match while concating");
     }
     for(int i=0; i<dima; i++)
     {
         if((this->get_size(i)!=b.get_size(i)) && i!=catdim)
         {
-            throw range_error("Tensor's shape doesn't match while concating");
+            throw std::range_error("Tensor's shape doesn't match while concating");
         }
     }
 

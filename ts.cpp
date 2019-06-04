@@ -2,7 +2,6 @@
 // Created by hwy on 2019/5/24.
 //
 #include "ts.h"
-#include "Node.h"
 #include "Matrix.h"
 #include "Tensor.h"
 namespace ts
@@ -15,6 +14,11 @@ namespace ts
     Matrix point_mul(const Matrix & A, const Matrix & B)
     {
         return A.point_mul(B);
+    }
+
+    Matrix cos(const Matrix & ob)
+    {
+        return ob.cos();
     }
 
     Matrix sin(const Matrix & ob)
