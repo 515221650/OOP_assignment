@@ -271,10 +271,21 @@ Matrix Matrix::point_mul(const Matrix & B) const
 
 Matrix Matrix::concat( const Matrix & b, const int catdim) const
 {
-    if((catdim!=0 && catdim!=1) || this->get_size(1-catdim) != b.get_size(1-catdim))//mismatch
+    if((catdim!=0 && catdim!=1) || (this->get_size(1-catdim) != b.get_size(1-catdim)))//mismatch
     {
         throw std::range_error("Tensor's shape doesn't match while concating");
     }
+    /*if((catdim!=0 && catdim!=1))//mismatch
+    {
+        std::cout<<"catdim"<<catdim<<std::endl;
+        throw std::range_error("Tensor's shape doesn't match while concating");
+    }
+    if(this->get_size(1-catdim) != b.get_size(1-catdim))//mismatch
+    {
+        std::cout<<"size"<<this->get_size(1-catdim)<<std::endl<<b.get_size(1-catdim)<<std::endl;
+        throw std::range_error("Tensor's shape doesn't match while concating");
+    }*/
+
     if(catdim == 0)
     {
         Matrix res(this->get_row()+b.get_row(), this->get_col());

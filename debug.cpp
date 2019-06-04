@@ -20,7 +20,8 @@ void print(Tensor y)
 	for(int k = 0; k < t; k++)
 	{
 //		cout<<k<<endl;
-		auto x = y.get_val(k);
+		Matrix x = y.get_val(k);
+
 		for(int i = 0; i < x.get_row(); i++)
 		{
 			for(int j = 0; j < x.get_col(); j++)
@@ -71,15 +72,24 @@ int main()
 //	c.reshape({3,-1});print(c);
 //	c.reshape({4,-1});print(c);
 
-	Tensor a({2,3,4},1),b({2,3,4},2);
-	a.randn();b.randn();
+	Tensor a({5,1,4},1),b({5,3,1},2);
+	//a.randn();b.randn();
 	print(a);
-	Tensor c = a + b;
-	print(c);
-	c.reshape({2,-1});
-	print(c);
-	c.reshape({3,4,2});
-	print(c);
+	print(b);
+	Tensor c = ts::broadcast(a,b).first;
+    print(c);
+    //print(ts::broadcast(a,b).second);
+    /*print(a.get_val(1).get_size(1));
+    print(a.get_val(1).get_size(0));
+    print(b.get_val(1).get_size(1));
+    print(b.get_val(1).get_size(0));*/
+
+    //Tensor c = a.concat(b,0);
+	//print(c);
+   // Tensor c = a.concat(b,1);
+	//print(c);
+   // Tensor c = a.concat(b,2);
+	//print(c);
 	return 0;
 } 
 // g++ -o debug.exe  Tensor.cpp debug.cpp Matrix.cpp ts.cpp -std=c++14 -O2 

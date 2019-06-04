@@ -126,7 +126,8 @@ namespace ts
             {
                 if (sizeA > 1 && sizeB > 1)
                 {
-                    std::terminate();
+                    //std::terminate();
+                    throw std::range_error("can't broadcast");
                 }
                 flag = 1;
             }
@@ -136,6 +137,12 @@ namespace ts
 
     void broadcast(int now_dim, Matrix &new_A,const Matrix &A, int pos)
     {
+        if(now_dim > 1)
+        {
+            new_A.mval.push_back(A.mval[pos]);
+            return;
+        }
+
         int pos2 = new_A.mval.size(), sz = A.get_size(now_dim) , new_sz = new_A.get_size(now_dim), alpha = 1;
         if(now_dim != 1)alpha = A.get_size(now_dim+1);
         if (sz != new_sz)
@@ -163,12 +170,11 @@ namespace ts
     {
         if(now_dim == A.dim - 2)
         {
-            Matrix new_mt;new_mt.mval.clear();
+            Matrix new_mt(new_A.get_size(A.dim-2), new_A.get_size(A.dim-1));new_mt.mval.clear();
             broadcast(0, new_mt, A.val[pos], 0);
             new_A.val.push_back(new_mt);
             return ;
         }
-
 
         int pos2 = new_A.val.size(), sz = A.get_size(now_dim) , new_sz = new_A.get_size(now_dim), alpha = 1;
         if(now_dim != A.dim-3)alpha = A.get_size(now_dim+1);
@@ -228,7 +234,7 @@ namespace ts
         new_B.size = new_size;
         broadcast(0, new_B, B, 0);
 
-        return std::make_pair(A,B);
+        return std::make_pair(new_A,new_B);
     }
 
     int get_max_pos_2d(Tensor& a)

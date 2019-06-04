@@ -178,7 +178,8 @@ Tensor::Tensor(std::initializer_list<int> szlist, int mval)
     }
     if(dim == 1)
     {
-        size.push_back(1);
+        size.push_back(size[0]);
+        size[0] = 1;
         dim++;
     }
     val.resize(valnum/(size[dim-1]*size[dim-2]), Matrix(size[dim-2], size[dim-1], mval));
@@ -187,18 +188,18 @@ Tensor::Tensor(std::initializer_list<int> szlist, int mval)
 Tensor::Tensor(vector<int> szlist, int mval)
 {
     dim = 0;
-    int valnum = 1;
     for(auto & a: szlist)
     {
         size.push_back(a);
         dim++;
-        if(dim>2) valnum*=a;
     }
     if(dim == 1)
     {
         size.push_back(1);
         dim++;
     }
+    int valnum = 1;
+    for(int i=0; i<size.size()-2; i++) valnum *= size[i];
     val.resize(valnum, Matrix(size[dim-2], size[dim-1], mval));
 }//这个和上面一个可以用模板合并吗?
 
@@ -345,14 +346,13 @@ Tensor Tensor::concat(const Tensor & b, const int catdim) const
     if(catdim < dima-2)
     {
         int abatch = 1, bbatch = 1;
-        int times = 0;//交替复制进去 交替的次数
-        for(int i=catdim+1; i<dima-2; i++)
+        int times = 1;//交替复制进去 交替的次数
+        for(int i=catdim; i<dima-2; i++)
         {
             abatch *= this->get_size(i);
             bbatch *= b.get_size(i);
         }
         for(int i=0; i<catdim; i++) times *= this->get_size(i);
-        times *= this->get_size(catdim) + b.get_size(catdim);
         for(int k=0; k<times; k++)
         {
             for(int i=0; i<abatch; i++) res.change_val(k*(abatch+bbatch)+i, this->get_val(k*abatch+i));
@@ -362,7 +362,10 @@ Tensor Tensor::concat(const Tensor & b, const int catdim) const
     else //需要用到Matrix的concat
     {
         int times = res.get_val().size();
-        for(int i=0; i<times; i++) res.change_val(i, ts::concat(this->get_val(i), b.get_val(i), catdim-(dima-2)));
+        for(int i=0; i<times; i++)
+        {
+            res.change_val(i, ts::concat(this->get_val(i), b.get_val(i), catdim-(dima-2)));
+        }
     }
     return res;
 }
