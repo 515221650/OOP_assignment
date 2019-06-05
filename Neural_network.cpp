@@ -52,22 +52,32 @@ void Neural_network::add_Sigmoid(MyGraph &G)
     seq.push_back(new Sigmoid(*tmp, G));
 }
 
-
-
-void Neural_network::train(Dataloader InputLoader, Dataloader TargetLoader, MyGraph &G, bool need_accu, int epoch) // batchsize放到dataloaderl里
+void Neural_network::add_conv(int _in, int _out, MyGraph &G, int _kernel, bool _bias, int _stride, int _padding)
 {
-    double learn_rate = 3;
-    int out_num = seq[seq.size() - 1]->get_size();  // the number of outputs
+    Layer* tmp = seq.back();
+    seq.push_back(new Conv(_in, _out, *tmp, G, _kernel, _bias, _stride, _padding));
+}
+
+void Neural_network::add_maxpool(int _in, int _out, MyGraph &G)
+{
+    Layer* tmp = seq.back();
+    seq.push_back(new MaxPool(_in, _out, *tmp, G));
+}
+
+
+void Neural_network::train(Dataloader& InputLoader, Dataloader& TargetLoader, MyGraph &G, bool need_accu, int epoch, double learn_rate) // batchsize放到dataloaderl里
+{
     for(int time = 1; time <= epoch; time++)
     {
         double cnt_correct = 0.0;
+        double sum_loss = 0.0;
         //double cnt2 = 0.0; //used if you want to see the process more details
         std::vector<Tensor> InputData;
         std::vector<Tensor> TargetData;
-        int batchsize = TargetData.size();
         //要把target变成（0，0，0，1，0，0，0，0，0，0，）的形式
         while(InputLoader.get_data(InputData) && TargetLoader.get_data(TargetData)) //warning : each loop may take fairly long time
         {
+            //int batchsize = TargetData.size();
             for(int num=0; num<InputData.size(); num++)
             {
 
@@ -83,7 +93,7 @@ void Neural_network::train(Dataloader InputLoader, Dataloader TargetLoader, MyGr
                 //double mx = -INF; int id = 0;
 
                 Node *OutputNode = G.NodeInfoVec[outputpos()].NodePos;
-                Node *CriNode = G.NodeInfoVec[cripos()].NodePos;
+                Node *CriNode = G.NodeInfoVec[cripos()].NodePos; //criterion
                 CriNode->Compt(G, cripos());
                 Tensor outputval = OutputNode->Val();
 
@@ -97,6 +107,7 @@ void Neural_network::train(Dataloader InputLoader, Dataloader TargetLoader, MyGr
                         //cnt2 += 1.0;
                     }
                 }
+                sum_loss += Scalar(CriNode->Val()).get_val();
 
                 //evaluation function: sigma((outputvalue-standard_outputvalue)^2)
 
@@ -117,16 +128,56 @@ void Neural_network::train(Dataloader InputLoader, Dataloader TargetLoader, MyGr
                 nown = G.NodeInfoVec[nowd->B].NodePos;
                 nown->add_val(-nown->DerSum() * learn_rate / InputData.size());
             }
-            for (auto i: seq) G.NodeInfoVec[seq[i]->output()].NodePos->rev_dersum(0);
+            for (auto i: seq) G.NodeInfoVec[i->output()].NodePos->rev_dersum(0);
             //std::cout << "nownum:" << num << " " << "accuracy:" << cnt2/batchsize<< std::endl;
             //cnt2 = 0;
 
         }
         learn_rate *= 0.9;
-        std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/InputData.size() << std::endl;
+        if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/InputData.size() << std::endl;
+        std::cout << "epoch:" << time << " " << "loss:" << sum_loss/InputData.size() << std::endl;
+
         //save(time, G);
     }
 }
+
+
+void Neural_network::test(Dataloader& InputLoader, Dataloader& TargetLoader, MyGraph &G, bool need_accu) //test
+{
+    double cnt_correct = 0.0;
+    double loss_sum = 0.0;
+    std::vector<Tensor> InputData;
+    std::vector<Tensor> TargetData;
+    int testsize = 0;
+    while(InputLoader.get_data(InputData) && TargetLoader.get_data(TargetData))
+    {
+        testsize += InputData.size();
+        for(int num=0; num<InputData.size(); num++)
+        {
+            seq[0]->change_input(InputData[num], G);
+            G.erase_mark();
+            Node *OutputNode = G.NodeInfoVec[outputpos()].NodePos;
+            Node *CriNode = G.NodeInfoVec[cripos()].NodePos; //criterion
+            CriNode->Compt(G, cripos());
+            Tensor outputval = OutputNode->Val();
+
+            if(need_accu)   //check if the answer is correct
+            {
+                int outputmax = ts::get_max_pos_2d(outputval);
+                int targetmax = ts::get_max_pos_2d(TargetData[num]);
+                if(outputmax == targetmax)
+                {
+                    cnt_correct += 1.0;
+                    //cnt2 += 1.0;
+                }
+            }
+            loss_sum += Scalar(CriNode->Val()).get_val();
+        }
+    }
+    if (need_accu) std::cout << "accuracy:" << cnt_correct/testsize << std::endl;
+    std::cout << "loss:" << loss_sum/testsize << std::endl;
+}
+
 
 /*#define INF 1E9
 int Neural_network::output(int j)

@@ -11,7 +11,7 @@ class MaxPool : public Layer{
 private:
     Layer* pre_layer;
 public:
-    MaxPool(int _in, int _out, Layer* pre, MyGraph& G):
+    MaxPool(int _in, int _out, Layer& pre, MyGraph& G):
 
 };
 
