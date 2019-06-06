@@ -7,29 +7,29 @@
 #include "Storage.h"
 
 // the function creating node
-void create_placeholder(std::string& name, MyGraph& g);
-void create_const(std::string& name, MyGraph& g);
-void create_var(std::string& name, MyGraph& g);
-void create_sin(std::string& name, MyGraph& g);
-void create_log(std::string& name, MyGraph& g);
-void create_exp(std::string& name, MyGraph& g);
-void create_tanh(std::string& name, MyGraph& g);
-void create_sigmoid(std::string& name, MyGraph& g);
-void create_grad(std::string& name, MyGraph& g);
-void create_print(std::string& name, MyGraph& g);
-void create_assert(std::string& name, MyGraph& g);
-void create_plus(std::string& name, std::string& x, MyGraph& g);
-void create_minus(std::string& name, std::string& x, MyGraph& g);
-void create_mul(std::string& name, std::string& x, MyGraph& g);
-void create_div(std::string& name, std::string& x, MyGraph& g);
-void create_greater(std::string& name, std::string& x, MyGraph& g);
-void create_less(std::string& name, std::string& x, MyGraph& g);
-void create_greaterequal(std::string& name, std::string& x, MyGraph& g);
-void create_lessequal(std::string& name, std::string& x, MyGraph& g);
-void create_equal(std::string& name, std::string& x, MyGraph& g);
-void create_at(std::string& name, std::string& x, MyGraph& g);
-void create_bind(std::string& name, MyGraph& g);
-void create_assign(std::string& name, MyGraph& g);
-void create_cond(std::string& name, MyGraph& g);
+int create_placeholder(std::string& name, MyGraph& g);
+int create_const(std::string& name, MyGraph& g, double val);
+int create_var(std::string& name, MyGraph& g, double val);
+int create_sin(std::string StrPara, MyGraph& g, std::string& name);
+int create_log(std::string StrPara, MyGraph& g, std::string& name);
+int create_exp(std::string StrPara, MyGraph& g, std::string& name);
+int create_tanh(std::string StrPara, MyGraph& g, std::string& name);
+int create_sigmoid(std::string StrPara, MyGraph& g, std::string& name);
+int create_grad(std::string StrPara, MyGraph& g, std::string& name);
+int create_print(std::string StrPara, MyGraph& g, std::string& name);
+int create_assert(std::string StrPara, MyGraph& g, std::string& name);
+int create_plus(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_minus(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_mul(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_div(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_greater(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_less(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_greaterequal(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_lessequal(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_equal(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_at(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_bind(std::string StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_assign(std::string StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
+int create_cond(std::string& StrPara1, std::string& StrPara2, std::string& StrPara3, MyGraph& g, std::string& name);
 
 #endif //BIGHOMEWORK_CREATEFUNC_H

@@ -66,8 +66,18 @@ void MyGraph::create_root()     //create const or var or placeholder
     {
         std::cin>>tmpscanf[0]>>tmpscanf[1];
         if(tmpscanf[1]=="P") create_placeholder(tmpscanf[0], MG);
-        if(tmpscanf[1]=="C") create_const(tmpscanf[0], MG);
-        if(tmpscanf[1]=="V") create_var(tmpscanf[0], MG);
+        if(tmpscanf[1]=="C")
+        {
+            double val;
+            std::cin>>val;
+            create_const(tmpscanf[0], MG, val);
+        }
+        if(tmpscanf[1]=="V")
+        {
+            double val;
+            std::cin>>val;
+            create_var(tmpscanf[0], MG, val);
+        }
     }
     now_session = add_session(std::string("default"));
 }
@@ -76,48 +86,101 @@ typedef void (*fun1) (std::string&, MyGraph&);
 typedef void (*fun2) (std::string&, std::string&, MyGraph&);
 void MyGraph::create_tree()     //create others
 {
+#define MP std::make_pair
 
-    std::map <std::string, fun1> ScanfMap1 = {
-            {"SIN", create_sin},
-            {"LOG", create_log},
-            {"EXP", create_exp},
-            {"TANH", create_tanh},
-            {"SIGMOID", create_sigmoid},
-            {"PRINT", create_print},
-            {"COND", create_cond},
-            {"ASSERT", create_assert},
-            {"BIND", create_bind},
-            {"ASSIGN", create_assign},
-            {"GRAD", create_grad}
-    };//match the func
+    std::map<std::string, int> op1 = {
+            MP(std::string("SIN"),1),
+            MP(std::string("LOG"),2),
+            MP(std::string("EXP"),3),
+            MP(std::string("TANH"),4),
+            MP(std::string("SIGMOID"),5),
+            MP(std::string("PRINT"),6),
+            MP(std::string("ASSERT"),7),
+            MP(std::string("GRAD"),8)
+    };
 
-    std::map <std::string, fun2> ScanfMap2 = {
-            {"+", create_plus},
-            {"-", create_minus},
-            {"*", create_mul},
-            {"/", create_div},
-            {">", create_greater},
-            {"<", create_less},
-            {">=", create_greaterequal},
-            {"<=", create_lessequal},
-            {"==", create_equal},
-            {"AT", create_at}
-    };// match the operator node build func
+    std::map<std::string, int> op2 = {
+            MP(std::string("BIND"),1),
+            MP(std::string("ASSIGN"),2)
+    };
 
-    std::string MyScanf[4]; //input string
+    std::map<std::string, int> op3 = {
+            MP(std::string("COND"),1)
+    };
+
+    std::map<std::string, int> op4 = {
+            MP(std::string("+"),1),
+            MP(std::string("-"),2),
+            MP(std::string("*"),3),
+            MP(std::string("/"),4),
+            MP(std::string(">"),5),
+            MP(std::string("<"),6),
+            MP(std::string(">="),7),
+            MP(std::string("<="),8),
+            MP(std::string("=="),9),
+            MP(std::string("AT"),10)
+    };
+
+
+    std::string MyScanf[7]; //input string
     int m = 0;
     std::cin>>m;    //number of inputs
     while(m--)
     {
         std::cin>>MyScanf[0]>>MyScanf[1]>>MyScanf[2];//name & "=" & first word
-        if(ScanfMap1.find(MyScanf[2]) == ScanfMap1.end())
+        if(op1.find(MyScanf[2])!=op1.end())
         {
             std::cin>>MyScanf[3];
-            ScanfMap2[MyScanf[3]](MyScanf[0], MyScanf[2], MG);//怎么写...
+            switch(op1[MyScanf[2]])
+            {
+                case 1 : create_sin(MyScanf[3], MG, MyScanf[0]);
+                case 2 : create_log(MyScanf[3], MG, MyScanf[0]);
+                case 3 : create_exp(MyScanf[3], MG, MyScanf[0]);
+                case 4 : create_tanh(MyScanf[3], MG, MyScanf[0]);
+                case 5 : create_sigmoid(MyScanf[3], MG, MyScanf[0]);
+                case 6 : create_print(MyScanf[3], MG, MyScanf[0]);
+                case 7 : create_assert(MyScanf[3], MG, MyScanf[0]);
+                case 8 : create_grad(MyScanf[3], MG, MyScanf[0]);
+            }
+        }
+        else if(op2.find(MyScanf[2])!=op1.end())
+        {
+            std::cin>>MyScanf[3]>>MyScanf[4];
+            switch(op2[MyScanf[2]])
+            {
+                case 1 : create_bind(MyScanf[3], MyScanf[4], MG, MyScanf[0]);
+                case 2 : create_assign(MyScanf[3], MyScanf[4], MG, MyScanf[0]);
+            }
+        }
+        else if(op3.find(MyScanf[2])!=op1.end())
+        {
+            std::cin>>MyScanf[3]>>MyScanf[4]>>MyScanf[5];
+            switch(op3[MyScanf[2]])
+            {
+                case 1 : create_cond(MyScanf[3], MyScanf[4], MyScanf[5], MG, MyScanf[0]);
+            }
         }
         else
         {
-            ScanfMap1[MyScanf[2]](MyScanf[0], MG);
+            std::cin>>MyScanf[3]>>MyScanf[4];//operator&Para2
+            if(op4.find(MyScanf[3])!=op4.end()))
+            {
+                switch(op4[MyScanf[3]])
+                {
+                    case 1: create_plus(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 2: create_minus(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 3: create_mul(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 4: create_div(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 5: create_greater(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 6: create_less(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 7: create_greaterequal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 8: create_lessequal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 9: create_equal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 10: create_at(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+
+                }
+            }
+
         }
     }
 }

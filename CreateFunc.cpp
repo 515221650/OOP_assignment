@@ -31,233 +31,232 @@
 
 //operator_0
 
-void create_placeholder(std::string& name, MyGraph& g)
+int create_placeholder(std::string& name, MyGraph& g)
 {
     MyPlaceholder* NewPlaceHolder = new MyPlaceholder(name);
     g.insert_node(NewPlaceHolder, name);
+
+    return g.str_to_int(name);
 }
 
-void create_const(std::string& name, MyGraph& g)
+int create_const(std::string& name, MyGraph& g, double val)
 {
-    double val;
-    std::cin>>val;
     MyConst* NewConst = new MyConst(name, val);
     g.insert_node(NewConst, name);
+
+    return g.str_to_int(name);
 }
 
-void create_var(std::string& name, MyGraph& g)
+int create_var(std::string& name, MyGraph& g, double val)
 {
-    double val;
-    std::cin>>val;
     MyVar* NewVar = new MyVar(name);
     g.insert_node(NewVar, name);
     g.change_var(name, val);
+
+    return g.str_to_int(name);
 }
 
 // operator_1
 
-void create_sin(std::string& name, MyGraph& g)
+int create_sin(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MySin* NewNode = new MySin(name, IntPara);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_log(std::string& name, MyGraph& g)
+int create_log(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MyLog* NewNode = new MyLog(name, IntPara);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_exp(std::string& name, MyGraph& g)
+int create_exp(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MyExp* NewNode = new MyExp(name, IntPara);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_tanh(std::string& name, MyGraph& g)
+int create_tanh(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MyTanh* NewNode = new MyTanh(name, IntPara);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_sigmoid(std::string& name, MyGraph& g)
+int create_sigmoid(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MySigmoid* NewNode = new MySigmoid(name, IntPara);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_print(std::string& name, MyGraph& g)
+int create_print(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MyPrint* NewNode = new MyPrint(name, IntPara);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_assert(std::string& name, MyGraph& g)
+int create_assert(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MyAssert* NewConst = new MyAssert(name, IntPara);
     g.insert_node(NewConst, name);
+
+    return g.str_to_int(name);
 }
 
-void create_grad(std::string& name, MyGraph& g)
+int create_grad(std::string StrPara, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
     int IntPara = g.str_to_int(StrPara);
     MyGrad* NewConst = new MyGrad(name, IntPara);
     g.insert_node(NewConst, name);
+
+    return g.str_to_int(name);
 }
 
 //operator_2
 
-void create_plus(std::string& name, std::string& x, MyGraph& g)
+int create_plus(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
+
     MyPlus* NewNode = new MyPlus(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_minus(std::string& name, std::string& x, MyGraph& g)
+int create_minus(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyMinus* NewNode = new MyMinus(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_mul(std::string& name, std::string& x, MyGraph& g)
+int create_mul(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyMul* NewNode = new MyMul(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_div(std::string& name, std::string& x, MyGraph& g)
+int create_div(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyDiv* NewNode = new MyDiv(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_greater(std::string& name, std::string& x, MyGraph& g)
+int create_greater(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyGreater* NewNode = new MyGreater(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_less(std::string& name, std::string& x, MyGraph& g)
+int create_less(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyLess* NewNode = new MyLess(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_greaterequal(std::string& name, std::string& x, MyGraph& g)
+int create_greaterequal(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyGreaterEqual* NewNode = new MyGreaterEqual(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_lessequal(std::string& name, std::string& x, MyGraph& g)
+int create_lessequal(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyLessEqual* NewNode = new MyLessEqual(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
 
-void create_equal(std::string& name, std::string& x, MyGraph& g)
+int create_equal(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyEqual* NewNode = new MyEqual(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_bind(std::string& name, MyGraph& g)
+int create_bind(std::string StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara[2];
     int IntPara[2];
-    for(int i=0;i<2;i++)
-    {
-        std::cin>>StrPara[i];
-        IntPara[i] = g.str_to_int(StrPara[i]);
-    }
+    IntPara[0] = g.str_to_int(StrPara1);
+    IntPara[1] = g.str_to_int(StrPara2);
 
     MyBind* NewNode = new MyBind(name, IntPara[0], IntPara[1]);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_assign(std::string& name, MyGraph& g)
+int create_assign(std::string StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara[2];
     int IntPara[2];
-    for(int i=0;i<2;i++)
-    {
-        std::cin>>StrPara[i];
-        IntPara[i] = g.str_to_int(StrPara[i]);
-    }
+    IntPara[0] = g.str_to_int(StrPara1);
+    IntPara[1] = g.str_to_int(StrPara2);
 
     MyAssign* NewNode = new MyAssign(name, IntPara[0], IntPara[1]);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
-void create_at(std::string& name, std::string& x, MyGraph& g)
+int create_at(std::string& name, std::string& x, MyGraph& g)
 {
     std::string StrPara;
     std::cin>>StrPara;
@@ -266,19 +265,21 @@ void create_at(std::string& name, std::string& x, MyGraph& g)
 
     MyAt* NewNode = new MyAt(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }
 
 //Operator_3
 
-void create_cond(std::string& name, MyGraph& g)
+int create_cond(std::string& StrPara1, std::string& StrPara2, std::string& StrPara3, MyGraph& g, std::string name)
 {
-    std::string StrPara[3];
     int IntPara[3];
-    for(int i=0;i<3;i++)
-    {
-        std::cin>>StrPara[i];
-        IntPara[i] = g.str_to_int(StrPara[i]);
-    }
+    IntPara[0] = g.str_to_int(StrPara1);
+    IntPara[1] = g.str_to_int(StrPara2);
+    IntPara[2] = g.str_to_int(StrPara3);
+
     MyCond* NewNode = new MyCond(name, IntPara[0], IntPara[1], IntPara[2]);
     g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
 }

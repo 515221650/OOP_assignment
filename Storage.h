@@ -8,7 +8,9 @@
 #include <map>
 #include <vector>
 #include <string>
+#include <algorithm>
 #include "Tensor.h"
+#include "CreateFunc.h"
 
 
 class Node;
