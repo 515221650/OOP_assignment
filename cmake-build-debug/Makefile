@@ -149,6 +149,33 @@ CreateFunc.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/CreateFunc.cpp.s
 .PHONY : CreateFunc.cpp.s
 
+Equation_solver.obj: Equation_solver.cpp.obj
+
+.PHONY : Equation_solver.obj
+
+# target to build an object file
+Equation_solver.cpp.obj:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Equation_solver.cpp.obj
+.PHONY : Equation_solver.cpp.obj
+
+Equation_solver.i: Equation_solver.cpp.i
+
+.PHONY : Equation_solver.i
+
+# target to preprocess a source file
+Equation_solver.cpp.i:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Equation_solver.cpp.i
+.PHONY : Equation_solver.cpp.i
+
+Equation_solver.s: Equation_solver.cpp.s
+
+.PHONY : Equation_solver.s
+
+# target to generate assembly for a file
+Equation_solver.cpp.s:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Equation_solver.cpp.s
+.PHONY : Equation_solver.cpp.s
+
 GraphCompute.obj: GraphCompute.cpp.obj
 
 .PHONY : GraphCompute.obj
@@ -1457,6 +1484,9 @@ help:
 	@echo ... CreateFunc.obj
 	@echo ... CreateFunc.i
 	@echo ... CreateFunc.s
+	@echo ... Equation_solver.obj
+	@echo ... Equation_solver.i
+	@echo ... Equation_solver.s
 	@echo ... GraphCompute.obj
 	@echo ... GraphCompute.i
 	@echo ... GraphCompute.s

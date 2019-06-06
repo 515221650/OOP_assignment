@@ -48,6 +48,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Layer/maxpool.cpp.obj"
   "CMakeFiles/main.dir/Operator_2/mycriterion.cpp.obj"
   "CMakeFiles/main.dir/Layer/criterion.cpp.obj"
+  "CMakeFiles/main.dir/Equation_solver.cpp.obj"
   "main.pdb"
   "main.exe"
   "main.exe.manifest"

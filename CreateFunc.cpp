@@ -283,3 +283,21 @@ int create_cond(std::string& StrPara1, std::string& StrPara2, std::string& StrPa
 
     return g.str_to_int(name);
 }
+
+int create_mul(int IntPara1, int IntPara2, MyGraph& g, std::string& name)
+{
+
+    MyMul* NewNode = new MyMul(name, IntPara1, IntPara2);
+    g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
+}
+
+int create_plus(int IntPara1, int IntPara2, MyGraph& g, std::string& name)
+{
+
+    auto NewNode = new MyPlus(name, IntPara1, IntPara2);
+    g.insert_node(NewNode, name);
+
+    return g.str_to_int(name);
+}

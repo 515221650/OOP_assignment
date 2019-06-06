@@ -232,9 +232,9 @@ void MyGraph::clear_DerVec()
     DerVec.clear();
 }
 
-void MyGraph::save(std::string& str)
+void MyGraph::save(const char* file)
 {
-    freopen(file, "w", stdout);
+    std::freopen(file, "w", stdout);
     for(auto it : &now_session)
     {
         auto val = it->second.get_val();
@@ -247,18 +247,18 @@ void MyGraph::save(std::string& str)
             }
         }
     }
-    std::cout<<endl;
+    std::cout<<std::endl;
     fclose(stdout);
     freopen("CON","w",stdout);  //for Windows
     //freopen("/dev/tty","w",stdout);   //for Linux
 }
 
-void MyGraph::load(std::string &file)
+void MyGraph::load(const char* file)
 {
-    freopen(file, "r", stdin);
-    for(auto it : &now_session)
+    std::freopen(file, "r", stdin);
+    for(auto it : *now_session)
     {
-        Tensor &tmp_T = it->second;
+        Tensor &tmp_T = it.second;
         for(auto& i : tmp_T.val)
         {
             for(auto& j : i.mval )

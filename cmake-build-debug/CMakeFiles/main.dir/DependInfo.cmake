@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/hwy/bighomework/2/OOP_assignment/CreateFunc.cpp" "D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/CreateFunc.cpp.obj"
+  "D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Equation_solver.cpp" "D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Equation_solver.cpp.obj"
   "D:/hwy/bighomework/2/OOP_assignment/GraphCompute.cpp" "D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/GraphCompute.cpp.obj"
   "D:/hwy/bighomework/2/OOP_assignment/Layer/Conv.cpp" "D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Layer/Conv.cpp.obj"
   "D:/hwy/bighomework/2/OOP_assignment/Layer/Dense.cpp" "D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Layer/Dense.cpp.obj"

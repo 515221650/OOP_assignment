@@ -32,4 +32,8 @@ int create_bind(std::string StrPara1, std::string StrPara2, MyGraph& g, std::str
 int create_assign(std::string StrPara1, std::string StrPara2, MyGraph& g, std::string& name);
 int create_cond(std::string& StrPara1, std::string& StrPara2, std::string& StrPara3, MyGraph& g, std::string& name);
 
+int create_mul(int Para1, int Para2, MyGraph& g, std::string& name);
+int create_plus(int Para1, int Para2, MyGraph& g, std::string& name);
+
+
 #endif //BIGHOMEWORK_CREATEFUNC_H
