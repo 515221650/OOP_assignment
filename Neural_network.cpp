@@ -179,6 +179,22 @@ void Neural_network::test(Dataloader& InputLoader, Dataloader& TargetLoader, MyG
 }
 
 
+void Neural_network::save(int cnt, MyGraph& G)  //save the val of each node
+{
+    char file[100];
+    sprintf(file, "epoch%d_time=%ld.txt", cnt, clock());
+    G.save(file);
+
+    //freopen("/dev/tty","w",stdout);   //for Linux
+}
+
+void Neural_network::load(std::string filename, MyGraph& G)  //load the data of each node( to continue the process)
+{
+    freopen(filename.c_str(), "r", stdin);
+    G.load(file);
+    return ;
+}
+
 /*#define INF 1E9
 int Neural_network::output(int j)
 {

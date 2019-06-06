@@ -169,6 +169,44 @@ void MyGraph::clear_DerVec()
     DerVec.clear();
 }
 
+void MyGraph::save(std::string& str)
+{
+    freopen(file, "w", stdout);
+    for(auto it : &now_session)
+    {
+        auto val = it->second.get_val();
+        for(auto &i : val)
+        {
+            auto mval = i.get_mval();
+            for(auto &j : mval)
+            {
+                std::cout<<' '<<j;
+            }
+        }
+    }
+    std::cout<<endl;
+    fclose(stdout);
+    freopen("CON","w",stdout);  //for Windows
+    //freopen("/dev/tty","w",stdout);   //for Linux
+}
+
+void MyGraph::load(std::string &file)
+{
+    freopen(file, "r", stdin);
+    for(auto it : &now_session)
+    {
+        Tensor &tmp_T = it->second;
+        for(auto& i : tmp_T.val)
+        {
+            for(auto& j : i.mval )
+            {
+                std::cin>>j;
+            }
+        }
+    }
+    fclose(stdin);
+}
+
 MyGraph::~MyGraph()
 {
     int total = NodeInfoVec.size();

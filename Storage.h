@@ -74,6 +74,8 @@ public:
     void clear_DerVec();                           // delete DerVec
     void empty_placeholder_rev(){PlaceholderRev.clear();}
 
+    void load(std::string &file);
+    void save(std::string &file);
     ~MyGraph();
 };
 #endif //BIGHOMEWORK_STORAGE_H

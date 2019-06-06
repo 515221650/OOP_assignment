@@ -38,7 +38,7 @@ public:
 
     void train(Dataloader& InputLoader, Dataloader& TargetLoader, MyGraph &G, bool need_accu, int epoch = 100, double learn_rate = 0.3);
     void test(Dataloader& InputLoader, Dataloader& TargetLoader, MyGraph &G, bool need_accu = 0);
-   // void save(int cnt, MyGraph& G); //save learning data to .txt
+    void save(int cnt, MyGraph& G); //save learning data to .txt
    // int load(std::string filename, MyGraph& G); //load learning data from .txt
 };
 

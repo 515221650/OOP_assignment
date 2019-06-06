@@ -10,6 +10,7 @@
 
 class Tensor;
 class Scalar;
+class MyGraph;
 
 class Matrix{
 private:
@@ -49,6 +50,7 @@ public://这样好吗...
     int get_size(int i) const {if(i==0) return row; if(i==1) return col;}
     int get_col() const {return col;}
     int get_row() const {return row;}
+    const vector<double> & get_mval() const {return mval;}
     double get_mval(int p) const {return mval[p];}
     double get_mval(int aimrow, int aimcol) const {return mval[aimrow*col+aimcol];}
     void change_mval(int r, int c, double val){mval[r*col+c] = val;}
@@ -61,6 +63,7 @@ public://这样好吗...
     friend class Scalar;
     friend void ts::broadcast(int now_dim, Matrix &new_A, const Matrix &A, int pos);
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
+    friend void MyGraph::load(std::string &file);
 };
 
 #endif //OOP_MATRIX_H
