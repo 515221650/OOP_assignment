@@ -4,15 +4,16 @@
 #include <iostream>
 #include "operator_2.h"
 
-int Operator_2::Compt(MyGraph& g, int x)
+int Operator_2::Compt(MyGraph& G, int x)
 {
     int status = 0;
-    if(!g[num1].vis) status = (g[num1].NodePos)->Compt(g, num1);
+    if(!G[num1].vis) status = (G[num1].NodePos)->Compt(G, num1);
     if(status) return status;
-    if(!g[num2].vis) status = (g[num2].NodePos)->Compt(g, num2);
+    if(!G[num2].vis) status = (G[num2].NodePos)->Compt(G, num2);
     if(status) return status;
-    status = Calc(g);
-    g.Mark(x);
-    g.push_der(x);
+
+    status = Calc(G);
+    G.Mark(x);
+    G.push_der(x);
     return status;
 }

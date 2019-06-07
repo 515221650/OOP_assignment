@@ -8,7 +8,9 @@
 MyEqual::MyEqual(std::string &s, int x = 0, int y = 0) :Operator_2(s, x, y){}
 
 int MyEqual::Calc(MyGraph &v) {
-    val = ts::abs(v[num1].NodePos->Val() - v[num2].NodePos->Val()) < Tensor(EPS);//NEED BROADCAST!
+    val = ts::abs(v[num1].NodePos->Val() - v[num2].NodePos->Val()) < Tensor(2*EPS);//NEED BROADCAST!
+
+
     return 0;
 }
 

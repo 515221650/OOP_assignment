@@ -23,7 +23,7 @@ private:
 //    static void set_error(int i) {error = i;}
 public:
     Tensor(double x):Tensor({1,1},x){}
-    Tensor(std::initializer_list<int> szlist = {1, 1}, int mval = 0);//Tensor(5)是5*5还是1*5? 对dim==1的特判//默认填充0
+    Tensor(std::initializer_list<int> szlist = {1, 1}, double mval = 0);//Tensor(5)是5*5还是1*5? 对dim==1的特判//默认填充0
     explicit Tensor(vector<int> szlist, int mval = 0);
     double operator() (std::initializer_list<int> arglist);
     Tensor operator() (std::initializer_list<std::pair<int,int> > arglist);

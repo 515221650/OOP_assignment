@@ -242,7 +242,7 @@ Matrix Matrix::log() const
 Matrix Matrix::sigmoid() const
 {
     Matrix res = *this;
-    for(auto &a: res.mval) a = 1.0/(1+::exp(a));
+    for(auto &a: res.mval) a = 1.0/(1.0+::exp(-a));
     return res;
 }
 

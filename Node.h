@@ -4,7 +4,7 @@
 
 #ifndef BIGHOMEWORK_NODE_H
 #define BIGHOMEWORK_NODE_H
-
+using namespace std;
 #include <iostream>
 #include <cmath>
 #include <stdexcept>

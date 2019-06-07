@@ -3,12 +3,13 @@
 //
 
 #include "myprint.h"
+#include "../Scalar.h"
 #include <iostream>
 #include <iomanip>
 MyPrint::MyPrint(std::string &s, int x): Operator_1(s, x){}
 
 int MyPrint::Calc(MyGraph &v) {
-//    std::cout<<"PRINT operator: "<<v[num].NodePos->Name()<<" = "<<std::fixed<<std::setprecision(4)<<v[num].NodePos->Val()<<std::endl;
+    std::cout<<"PRINT operator: "<<v[num].NodePos->Name()<<" = "<<std::fixed<<std::setprecision(4)<<Scalar(v[num].NodePos->Val()).get_val()<<std::endl;
     val = v[num].NodePos->Val();
     return 0;
 }

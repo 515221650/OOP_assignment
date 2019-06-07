@@ -137,50 +137,51 @@ void MyGraph::create_tree()     //create others
             std::cin>>MyScanf[3];
             switch(op1[MyScanf[2]])
             {
-                case 1 : create_sin(MyScanf[3], MG, MyScanf[0]);
-                case 2 : create_log(MyScanf[3], MG, MyScanf[0]);
-                case 3 : create_exp(MyScanf[3], MG, MyScanf[0]);
-                case 4 : create_tanh(MyScanf[3], MG, MyScanf[0]);
-                case 5 : create_sigmoid(MyScanf[3], MG, MyScanf[0]);
-                case 6 : create_print(MyScanf[3], MG, MyScanf[0]);
-                case 7 : create_assert(MyScanf[3], MG, MyScanf[0]);
-                case 8 : create_grad(MyScanf[3], MG, MyScanf[0]);
+                case 1 : create_sin(MyScanf[3], MG, MyScanf[0]);break;
+                case 2 : create_log(MyScanf[3], MG, MyScanf[0]);break;
+                case 3 : create_exp(MyScanf[3], MG, MyScanf[0]);break;
+                case 4 : create_tanh(MyScanf[3], MG, MyScanf[0]);break;
+                case 5 : create_sigmoid(MyScanf[3], MG, MyScanf[0]);break;
+                case 6 : create_print(MyScanf[3], MG, MyScanf[0]);break;
+                case 7 : create_assert(MyScanf[3], MG, MyScanf[0]);break;
+                case 8 : create_grad(MyScanf[3], MG, MyScanf[0]);break;
             }
         }
-        else if(op2.find(MyScanf[2])!=op1.end())
+        else if(op2.find(MyScanf[2])!=op2.end())
         {
             std::cin>>MyScanf[3]>>MyScanf[4];
             switch(op2[MyScanf[2]])
             {
-                case 1 : create_bind(MyScanf[3], MyScanf[4], MG, MyScanf[0]);
-                case 2 : create_assign(MyScanf[3], MyScanf[4], MG, MyScanf[0]);
+                case 1 : create_bind(MyScanf[3], MyScanf[4], MG, MyScanf[0]);break;
+                case 2 : create_assign(MyScanf[3], MyScanf[4], MG, MyScanf[0]);break;
             }
         }
-        else if(op3.find(MyScanf[2])!=op1.end())
+        else if(op3.find(MyScanf[2])!=op3.end())
         {
             std::cin>>MyScanf[3]>>MyScanf[4]>>MyScanf[5];
             switch(op3[MyScanf[2]])
             {
-                case 1 : create_cond(MyScanf[3], MyScanf[4], MyScanf[5], MG, MyScanf[0]);
+                case 1 : create_cond(MyScanf[3], MyScanf[4], MyScanf[5], MG, MyScanf[0]);break;
             }
         }
         else
         {
             std::cin>>MyScanf[3]>>MyScanf[4];//operator&Para2
+
             if(op4.find(MyScanf[3])!=op4.end())
             {
                 switch(op4[MyScanf[3]])
                 {
-                    case 1: create_plus(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 2: create_minus(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 3: create_mul(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 4: create_div(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 5: create_greater(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 6: create_less(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 7: create_greaterequal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 8: create_lessequal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 9: create_equal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
-                    case 10: create_at(MyScanf[2], MyScanf[4], MG, MyScanf[0]);
+                    case 1: create_plus(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 2: create_minus(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 3: create_mul(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 4: create_div(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 5: create_greater(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 6: create_less(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 7: create_greaterequal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 8: create_lessequal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 9: create_equal(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
+                    case 10: create_at(MyScanf[2], MyScanf[4], MG, MyScanf[0]);break;
 
                 }
             }

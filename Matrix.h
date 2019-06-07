@@ -20,7 +20,7 @@ private:
 //    static int error;//需要初始化！！！
 //    static void set_error(int i){error = i;}
 public://这样好吗...
-    explicit Matrix(int row = 1, int col = 1, int val = 0) : col(col), row(row), mval(col * row, val) {}
+    explicit Matrix(int row = 1, int col = 1, double val = 0) : col(col), row(row), mval(col * row, val) {}
 
     auto operator[](const int a) const { return mval.begin() + a * col; } //用obj[][]访问
     Matrix operator*(const Matrix &obj2) const;

@@ -107,7 +107,7 @@ Tensor Tensor::operator< (const Tensor& b) const
     int len = val.size();
     for(int i=0;i<len;i++)
     {
-        tmp.val[i]=tmp.val[i]<b.val[i];
+        tmp.val[i] = tmp.val[i] < b.val[i];
     }
     return tmp;
 }
@@ -167,7 +167,7 @@ Tensor & Tensor::operator *=(const Tensor& obj2)
     return *this;
 }
 
-Tensor::Tensor(std::initializer_list<int> szlist, int mval)
+Tensor::Tensor(std::initializer_list<int> szlist, double mval)
 {
     dim = 0;
     int valnum = 1;

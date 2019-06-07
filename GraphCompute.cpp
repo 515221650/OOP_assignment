@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <algorithm>
 #include <sstream>
+#include "Scalar.h"
 #include "Storage.h"
 #include "Operator_0/MyPlaceholder.h"
 
@@ -56,12 +57,12 @@ void MyGraph::graph_compute()
                     if(DerStatus)   //have errors
                     {
                         std::cout<<"ERROR: Underivable"<<std::endl;
-                        myresult.push_back(0);
+                        myresult.emplace_back(Tensor(0.0));
                     }
                     else
                     {
                         Tensor res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
-                        std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
+                        std::cout<<std::fixed<<std::setprecision(4)<<Scalar(res).get_val()<<std::endl;
                         myresult.push_back(res);
                     }
                 }
@@ -69,7 +70,7 @@ void MyGraph::graph_compute()
             catch(std::range_error ERROR)
             {
                 std::cerr<<ERROR.what()<<std::endl;
-                myresult.push_back(0.0);
+                myresult.emplace_back(Tensor(0.0));
             }
             DerVec.clear();
         }
@@ -79,6 +80,7 @@ void MyGraph::graph_compute()
             erase_mark();
             int ParaNum;
             is>>aim;
+
             if(!(is>>ParaNum)) ParaNum = 0;
 
             while(ParaNum--)    //cin the parameters
@@ -90,18 +92,15 @@ void MyGraph::graph_compute()
 
             try
             {
-                int ans = (NodeInfoVec[str_to_int(aim)].NodePos)->Compt(*this, str_to_int(aim));    //record the status of computation ; 0 means no errors
-                if(!ans)
-                {
-                    Tensor res = NodeInfoVec[str_to_int(aim)].NodePos->Val();
-                    std::cout<<std::fixed<<std::setprecision(4)<<res<<std::endl;
-                    myresult.push_back(res);
-                }
+                NodeInfoVec[str_to_int(aim)].NodePos->Compt(*this, str_to_int(aim));    //record the status of computation ; 0 means no errors
+                Tensor res = NodeInfoVec[str_to_int(aim)].NodePos->Val();
+                std::cout<<std::fixed<<std::setprecision(4)<<Scalar(res).get_val()<<std::endl;
+                myresult.push_back(res);
             }
             catch(std::range_error ERROR)
             {
-                std::cerr<< ERROR.what() <<std::endl;
-                myresult.push_back(0.0);
+                std::cout<< ERROR.what() <<std::endl;
+                myresult.emplace_back(Tensor(0.0));
             }
             DerVec.clear();
             assign_change();
@@ -110,14 +109,14 @@ void MyGraph::graph_compute()
         {
             is>>aim>>x;
             change_var(aim, x);
-            myresult.push_back(0.0);
+            myresult.emplace_back(Tensor(0.0));
         }
         else if(tmps == "SETANSWER")
         {
             int rank;
             is>>aim>>rank;
             change_var(aim, myresult[rank-1]);
-            myresult.push_back(0.0);
+            myresult.emplace_back(Tensor(0.0));
         }
 
     }

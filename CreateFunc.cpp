@@ -138,7 +138,6 @@ int create_plus(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::st
 
     MyPlus* NewNode = new MyPlus(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
-
     return g.str_to_int(name);
 }
 
@@ -259,7 +258,6 @@ int create_at(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::stri
 {
     int IntPara1 = g.str_to_int(StrPara1);
     int IntPara2 = g.str_to_int(StrPara2);
-
     MyAt* NewNode = new MyAt(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
 
