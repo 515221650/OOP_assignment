@@ -98,9 +98,9 @@ void MyGraph::graph_compute()
                     myresult.push_back(res);
                 }
             }
-            catch(range_error ERROR)
+            catch(std::range_error ERROR)
             {
-                std::cerr<<ERROR<<std::endl;
+                std::cerr<< ERROR.what() <<std::endl;
                 myresult.push_back(0.0);
             }
             DerVec.clear();

@@ -10,7 +10,6 @@
 #include <string>
 #include <algorithm>
 #include "Tensor.h"
-#include "CreateFunc.h"
 
 
 class Node;
@@ -75,6 +74,9 @@ public:
     void erase_der();                              // init der
     void clear_DerVec();                           // delete DerVec
     void empty_placeholder_rev(){PlaceholderRev.clear();}
+
+    void solve_equation();
+    int create_term(int xpos, int last_term_pos, int degree, double k);
 
     void load(const char* file);
     void save(const char* file);

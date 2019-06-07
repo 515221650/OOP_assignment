@@ -88,6 +88,9 @@
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/CreateFunc.h">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Equation_solver.cpp">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Equation_solver.h">
 			<Option target="main"/>
 		</Unit>
@@ -362,9 +365,6 @@
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Utils/Data.h">
-			<Option target="main"/>
-		</Unit>
-		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Equation_solver.cpp">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/main.cpp">

@@ -694,17 +694,17 @@ CMakeFiles/main.dir/Layer/criterion.cpp.s: cmake_force
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\OOP_assignment\Layer\criterion.cpp -o CMakeFiles\main.dir\Layer\criterion.cpp.s
 
 CMakeFiles/main.dir/Equation_solver.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Equation_solver.cpp.obj: Equation_solver.cpp
+CMakeFiles/main.dir/Equation_solver.cpp.obj: ../Equation_solver.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/main.dir/Equation_solver.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Equation_solver.cpp.obj -c D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\Equation_solver.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Equation_solver.cpp.obj -c D:\hwy\bighomework\2\OOP_assignment\Equation_solver.cpp
 
 CMakeFiles/main.dir/Equation_solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Equation_solver.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\Equation_solver.cpp > CMakeFiles\main.dir\Equation_solver.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\hwy\bighomework\2\OOP_assignment\Equation_solver.cpp > CMakeFiles\main.dir\Equation_solver.cpp.i
 
 CMakeFiles/main.dir/Equation_solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Equation_solver.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\OOP_assignment\cmake-build-debug\Equation_solver.cpp -o CMakeFiles\main.dir\Equation_solver.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\hwy\bighomework\2\OOP_assignment\Equation_solver.cpp -o CMakeFiles\main.dir\Equation_solver.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
