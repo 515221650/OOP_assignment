@@ -23,6 +23,9 @@ public://这样好吗...
     explicit Matrix(int row = 1, int col = 1, double val = 0) : col(col), row(row), mval(col * row, val) {}
 
     auto operator[](const int a) const { return mval.begin() + a * col; } //用obj[][]访问
+
+    Matrix operator() (std::pair<int, int> rowp, std::pair<int, int> colp) const;
+
     Matrix operator*(const Matrix &obj2) const;
 
     Matrix operator+(const Matrix &obj2) const;

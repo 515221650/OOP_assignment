@@ -12,11 +12,11 @@ private:
     Layer& pre_layer;
 public:
     friend Neural_network;
-    MaxPool(int _in, int _out, Layer& pre, MyGraph& G) : Layer(_in, _out), pre_layer(pre)
+    MaxPool(int _in, int _out, Layer& pre, MyGraph& G, int kernel_size = 2, int stride = 2) : Layer(_in, _out), pre_layer(pre)
     {
-        build(G);
+        build(kernel_size, stride, G);
     }
-    void build(MyGraph &G);
+    void build(int kernel_size, int stride, MyGraph &G);
 };
 
 

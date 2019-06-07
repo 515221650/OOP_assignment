@@ -22,11 +22,12 @@ private:
 //    static int error;
 //    static void set_error(int i) {error = i;}
 public:
-    Tensor(double x):Tensor({1,1},x){}
+    explicit Tensor(double x):Tensor({1,1},x){}
     Tensor(std::initializer_list<int> szlist = {1, 1}, double mval = 0);//Tensor(5)是5*5还是1*5? 对dim==1的特判//默认填充0
-    explicit Tensor(vector<int> szlist, int mval = 0);
+    explicit Tensor(vector<int> szlist, double mval = 0);
     double operator() (std::initializer_list<int> arglist);
     Tensor operator() (std::initializer_list<std::pair<int,int> > arglist);
+    void slice_helper(std::vector<int>& startp, std::vector<int>& endp, int now, int pos, Tensor& res);
     Tensor operator+ (const Tensor& b) const;
     Tensor operator* (const Tensor& b) const;
     Tensor operator- (const Tensor& b) const;
@@ -59,6 +60,7 @@ public:
     friend std::ostream& operator << (std::ostream& out, Tensor &x);
     friend class MyGraph;
     friend class Scalar;
+    friend void slice_helper(std::vector<int>& startp, std::vector<int>& endp, int now, int pos, Tensor& res);
 
     void randn();
     bool check_shape(const Tensor& B) const;

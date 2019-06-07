@@ -8,6 +8,7 @@ MyGrad::MyGrad(std::string &s, int x): Operator_1(s, x){}
 
 int MyGrad::Calc(MyGraph &v)
 {
+    DerVec.clear();
     v.erase_der();
     v[num].NodePos->rev_der(1);
     for(int i = num; i >= 0; i --)v[i].NodePos->Derivate(v);

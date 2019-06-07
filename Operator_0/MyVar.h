@@ -9,6 +9,7 @@
 
 class MyVar : public Operator_0{
 public:
+    const Tensor& Val(){return MyGraph::now_session->get(name);} //override var 保证不会重名
     virtual int Calc(MyGraph& a);
     MyVar(std::string& name);
 

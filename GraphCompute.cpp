@@ -24,7 +24,7 @@ void MyGraph::graph_compute()
         std::string tmps;
         is>>tmps;   //cin the first word
         std::string aim, aim2; float x;
-        if(tmps == "DERIVATIVE")
+       /* if(tmps == "DERIVATIVE")
         {
             empty_placeholder_rev();
             erase_mark();
@@ -64,7 +64,7 @@ void MyGraph::graph_compute()
                         Tensor res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
                         std::cout<<std::fixed<<std::setprecision(4)<<Scalar(res).get_val()<<std::endl;
                         myresult.push_back(res);
-                    }
+                   // }
                 }
             }
             catch(std::range_error ERROR)
@@ -74,7 +74,8 @@ void MyGraph::graph_compute()
             }
             DerVec.clear();
         }
-        else if(tmps == "EVAL")
+        else*/
+        if(tmps == "EVAL")
         {
             empty_placeholder_rev();
             erase_mark();
@@ -97,7 +98,7 @@ void MyGraph::graph_compute()
                 std::cout<<std::fixed<<std::setprecision(4)<<Scalar(res).get_val()<<std::endl;
                 myresult.push_back(res);
             }
-            catch(std::range_error ERROR)
+            catch(std::range_error& ERROR)
             {
                 std::cout<< ERROR.what() <<std::endl;
                 myresult.emplace_back(Tensor(0.0));

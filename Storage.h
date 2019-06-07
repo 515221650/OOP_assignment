@@ -14,6 +14,7 @@
 
 class Node;
 class Neural_network;
+class MyVar;
 class MyGraph{
 private:
     struct NodeInfo{
@@ -22,7 +23,7 @@ private:
     };
     struct Session : public std::map<std::string, Tensor>{
     public:
-        Tensor get(std::string& str)
+        const Tensor& get(const std::string& str)
         {
             return (*this)[str];
         }
@@ -44,6 +45,7 @@ private:
 public:
     friend class Node;
     friend class Neural_network;
+    friend class MyVar;
     NodeInfo& operator [](int i) { return NodeInfoVec[i];}    // id to node
     NodeInfo& operator [](std::string &str){ return NodeInfoVec[StrToIntMap[str]];} // name to node
     std::pair<bool,Tensor> GetPH(const std::string &str);   // find the placeholder and its status

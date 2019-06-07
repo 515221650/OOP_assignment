@@ -46,17 +46,22 @@ void MyGraph::solve_equation()
 
         for(int i=0; i<5; i++)
         {
-            //加和乘求导不会出问题
+            //加和乘求导不会出问题，没有写判断错误的东西
+            DerVec.clear();
+            erase_mark();
             NodeInfoVec[last_term_pos].NodePos->Compt(*this, last_term_pos);
             double res = Scalar(NodeInfoVec[last_term_pos].NodePos->Val()).get_val();
             if(fabs(res)<EPS) break;
             erase_der();
             NodeInfoVec[last_term_pos].NodePos->rev_der(Tensor(1));
             reverse(DerVec.begin(), DerVec.end());   //DerVec is created in Compt, which indicate what nodes are related with aim node;
-            for(auto i : DerVec)  NodeInfoVec[i].NodePos->Derivate(*this);
+            for(auto i : DerVec)
+            {
+                NodeInfoVec[i].NodePos->Derivate(*this);
+            }
             double derx = Scalar(NodeInfoVec[xpos].NodePos->Der()).get_val();
-            change_var(xpos, NodeInfoVec[xpos].NodePos->Val()-Tensor(res/derx));
-            std::cout  <<std::fixed<<std::setprecision(4) << Scalar(NodeInfoVec[xpos].NodePos->Val()).get_val() << std::endl;
+            std::cout<<std::fixed<<std::setprecision(4)<<Scalar(NodeInfoVec[xpos].NodePos->Val()).get_val()-res/derx<<std::endl;
+            change_var(xpos, NodeInfoVec[xpos].NodePos->Val() - Tensor(res/derx));
         }
     }
 }

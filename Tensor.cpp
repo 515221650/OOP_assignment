@@ -45,9 +45,39 @@ double Tensor::operator() (std::initializer_list<int> arglist)
     return val[tmprank].get_mval(*(arglist.end()-2), *(arglist.end()-1));
 }
 
+void Tensor::slice_helper(std::vector<int>& startp, std::vector<int>& endp, int now, int pos, Tensor& res)
+{
+    if(now == startp.size()-2)
+    {
+        res.val.push_back(this->get_val(pos)(std::make_pair(startp[now], endp[now]), std::make_pair(startp[now+1], endp[now+1]));
+        return;
+    }
+    for(int i=startp[now]; i<endp[now]; i++)
+    {
+        slice_helper(startp, endp, now+1, pos*size[now]+i);
+    }
+}
+
 Tensor Tensor::operator() (std::initializer_list<std::pair<int,int> > arglist)
 {
+    std::vector<int> startp;
+    std::vector<int> endp;
+    std::vector<int> deltap;
 
+    int tmp = 0;
+    for(auto a: arglist)
+    {
+        if(a.first>=a.second || a.first<0 || a.second >= size[tmp]) throw(std::range_error("invalid slice"));
+        startp.push_back(a.first);
+        endp.push_back(a.second);
+        deltap.push_back(a.second-a.first);
+        tmp++;
+    }
+
+    Tensor res(deltap);
+    res.val.clear();
+    slice_helper(startp, endp, 0, 0, res);
+    return res;
 }
 
 Tensor Tensor::operator+(const Tensor &b) const
@@ -186,7 +216,7 @@ Tensor::Tensor(std::initializer_list<int> szlist, double mval)
     val.resize(valnum/(size[dim-1]*size[dim-2]), Matrix(size[dim-2], size[dim-1], mval));
 }
 
-Tensor::Tensor(vector<int> szlist, int mval)
+Tensor::Tensor(vector<int> szlist, double mval)
 {
     dim = 0;
     for(auto & a: szlist)

@@ -15,6 +15,7 @@ int main()
     i_love_compute.graph_compute();//compute
     //std::srand(std::time(0));
     //test_MINST();
+    //i_love_compute.solve_equation();
 
     return 0;
 }

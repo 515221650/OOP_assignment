@@ -14,6 +14,20 @@ bool Matrix::check_shape(const Matrix & obj2) const
     return 1;
 }
 
+Matrix Matrix::operator() (std::pair<int, int> rowp, std::pair<int, int> colp) const
+{
+    auto res = Matrix(rowp.second-rowp.first, colp.second-colp.first);
+    for(int i=0; i<res.get_row(); i++)
+    {
+        for(int j=0; j<res.get_col(); j++)
+        {
+            res[i][j] = this->get_mval(i+rowp.first, j+colp.second);
+        }
+    }
+    return res;
+}
+
+
 Matrix Matrix::operator + (const Matrix& obj2) const//判断不符合相加要求？
 {
     check_shape(obj2);

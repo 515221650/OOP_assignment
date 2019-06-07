@@ -29,7 +29,7 @@ public:
     virtual int Compt(MyGraph& g, int x) = 0;  //compt the value in node (to get the value, use Compt first and Calc second)
 
     std::string Name() {return name;}
-    const Tensor& Val() {return val;}
+    const Tensor& Val() {return val;}//MyVar中override
     const Tensor& Der() {return der;}
     const Tensor& DerSum() {return dersum;}
 
