@@ -49,6 +49,7 @@ int MyConv::Calc(MyGraph &G)
         }
         val.change_val(q, new_T);
     }
+    return 0;
 }
 
 int MyConv::Derivate(MyGraph &G)
@@ -106,7 +107,7 @@ int MyConv::Derivate(MyGraph &G)
                         for(int t = std::min(0, padding-j*stride); t < max_t; t++)
                         {
                             tmp_ker.add_mval(l, t, input[i*stride+l-padding][j*stride+t-padding]);
-                            tmp_per.add_mval(i*stride+l-padding, j*stride+t-padding, kernel[l][t);
+                            tmp_per.add_mval(i*stride+l-padding, j*stride+t-padding, kernel[l][t]);
                         }
                     }
                     Dr_ker.change_val(q*high + k, tmp_ker);

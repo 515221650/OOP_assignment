@@ -3,3 +3,7 @@
 //
 
 #include "maxpool.h"
+void MaxPool::build(MyGraph &G)
+{
+
+};

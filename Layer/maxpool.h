@@ -9,10 +9,14 @@
 
 class MaxPool : public Layer{
 private:
-    Layer* pre_layer;
+    Layer& pre_layer;
 public:
-    MaxPool(int _in, int _out, Layer& pre, MyGraph& G):
-
+    friend Neural_network;
+    MaxPool(int _in, int _out, Layer& pre, MyGraph& G) : Layer(_in, _out), pre_layer(pre)
+    {
+        build(G);
+    }
+    void build(MyGraph &G);
 };
 
 

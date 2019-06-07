@@ -80,12 +80,12 @@ void test_MINST() {
 
     auto *MyNet = new Neural_network();
     auto *G = new MyGraph();
-    MyNet->add_Input(784, *G);
-    MyNet->add_Dense(10, *G);
-    MyNet->add_Dense(10, *G);
+//    MyNet->add_Input(784, *G);
+//    MyNet->add_Dense(10, *G);
+//    MyNet->add_Dense(10, *G);
     //MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
-    MyNet->train(train_data, train_labels, *G, 10);
-    MyNet->test(train_data, train_labels, *G);
+//    MyNet->train(train_data, train_labels, *G, 10);
+//    MyNet->test(train_data, train_labels, *G);
 
     return;
 }

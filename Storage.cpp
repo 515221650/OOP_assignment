@@ -7,8 +7,11 @@
 #include <iostream>
 #include <map>
 #include <queue>
+
 #define MK std::make_pair
 #define MG (*this)
+
+MyGraph::Session* MyGraph::now_session = nullptr ;
 
 MyGraph::MyGraph()
 {
@@ -33,6 +36,7 @@ MyGraph::Session* MyGraph::add_session(const std::string &str)
     {
         puts("Session exist!");
     }
+    return Session_name[str];
 }
 
 void MyGraph::erase_session(std::string &str)
@@ -163,7 +167,7 @@ void MyGraph::create_tree()     //create others
         else
         {
             std::cin>>MyScanf[3]>>MyScanf[4];//operator&Para2
-            if(op4.find(MyScanf[3])!=op4.end()))
+            if(op4.find(MyScanf[3])!=op4.end())
             {
                 switch(op4[MyScanf[3]])
                 {
@@ -232,12 +236,12 @@ void MyGraph::clear_DerVec()
     DerVec.clear();
 }
 
-void MyGraph::save(const char* file)
+void MyGraph::save(std::string file)
 {
-    std::freopen(file, "w", stdout);
-    for(auto it : &now_session)
+    std::freopen(file.data(), "w", stdout);
+    for(auto it : *now_session)
     {
-        auto val = it->second.get_val();
+        auto val = it.second.get_val();
         for(auto &i : val)
         {
             auto mval = i.get_mval();
@@ -253,9 +257,9 @@ void MyGraph::save(const char* file)
     //freopen("/dev/tty","w",stdout);   //for Linux
 }
 
-void MyGraph::load(const char* file)
+void MyGraph::load(std::string file)
 {
-    std::freopen(file, "r", stdin);
+    std::freopen(file.data(), "r", stdin);
     for(auto it : *now_session)
     {
         Tensor &tmp_T = it.second;

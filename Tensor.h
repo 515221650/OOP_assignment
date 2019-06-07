@@ -57,8 +57,8 @@ public:
     friend std::pair<Tensor, Tensor> ts::broadcast(Tensor, Tensor);
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
     friend std::ostream& operator << (std::ostream& out, Tensor &x);
-    friend void MyGraph::load(std::string &file);
-    friend Scalar;
+    friend class MyGraph;
+    friend class Scalar;
 
     void randn();
     bool check_shape(const Tensor& B) const;

@@ -12,7 +12,7 @@ public:
     virtual int Calc(MyGraph &v);
     virtual int Derivate(MyGraph &v);
 
-    virtual ~MyAt();
+    virtual ~MyAt(){};
 };
 
 

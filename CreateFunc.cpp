@@ -30,7 +30,6 @@
 #include "Operator_1/mygrad.h"
 
 //operator_0
-
 int create_placeholder(std::string& name, MyGraph& g)
 {
     MyPlaceholder* NewPlaceHolder = new MyPlaceholder(name);
@@ -256,12 +255,10 @@ int create_assign(std::string StrPara1, std::string StrPara2, MyGraph& g, std::s
     return g.str_to_int(name);
 }
 
-int create_at(std::string& name, std::string& x, MyGraph& g)
+int create_at(std::string& StrPara1, std::string StrPara2, MyGraph& g, std::string& name)
 {
-    std::string StrPara;
-    std::cin>>StrPara;
-    int IntPara1 = g.str_to_int(x);
-    int IntPara2 = g.str_to_int(StrPara);
+    int IntPara1 = g.str_to_int(StrPara1);
+    int IntPara2 = g.str_to_int(StrPara2);
 
     MyAt* NewNode = new MyAt(name, IntPara1, IntPara2);
     g.insert_node(NewNode, name);
@@ -271,7 +268,7 @@ int create_at(std::string& name, std::string& x, MyGraph& g)
 
 //Operator_3
 
-int create_cond(std::string& StrPara1, std::string& StrPara2, std::string& StrPara3, MyGraph& g, std::string name)
+int create_cond(std::string& StrPara1, std::string& StrPara2, std::string& StrPara3, MyGraph& g, std::string& name)
 {
     int IntPara[3];
     IntPara[0] = g.str_to_int(StrPara1);

@@ -13,6 +13,6 @@ int MyTanh::Calc(MyGraph &v) {
 }
 
 int MyTanh::Derivate(MyGraph& v){
-    v[num].NodePos-> add_der(4.0/(::ts::exp(-(Scalar(2)*v[num].NodePos->Val()))+::ts::exp(Scalar(2)*v[num].NodePos->Val())+2)*der);
+    v[num].NodePos->add_der(Tensor(4.0)/(::ts::exp(-(Scalar(2)*v[num].NodePos->Val()))+::ts::exp(Scalar(2)*v[num].NodePos->Val())+2)*der);
     return 0;
 }

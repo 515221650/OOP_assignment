@@ -188,11 +188,11 @@ void Neural_network::save(int cnt, MyGraph& G)  //save the val of each node
     //freopen("/dev/tty","w",stdout);   //for Linux
 }
 
-void Neural_network::load(std::string filename, MyGraph& G)  //load the data of each node( to continue the process)
+int Neural_network::load(std::string filename, MyGraph& G)  //load the data of each node( to continue the process)
 {
     freopen(filename.c_str(), "r", stdin);
-    G.load(file);
-    return ;
+    G.load(filename);
+    return 0;
 }
 
 /*#define INF 1E9

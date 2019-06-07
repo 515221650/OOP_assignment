@@ -78,8 +78,8 @@ public:
     void solve_equation();
     int create_term(int xpos, int last_term_pos, int degree, double k);
 
-    void load(const char* file);
-    void save(const char* file);
+    void load(std::string);
+    void save(std::string);
     ~MyGraph();
 };
 #endif //BIGHOMEWORK_STORAGE_H

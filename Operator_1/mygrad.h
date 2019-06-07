@@ -15,7 +15,7 @@ public:
     virtual int Calc(MyGraph &v);
     virtual int Derivate(MyGraph &g);
 
-    virtual ~MyGrad();
+    virtual ~MyGrad(){};
 };
 
 

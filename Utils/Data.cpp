@@ -1,6 +1,7 @@
 //
 // Created by hwy on 2019/6/1.
 //
+#include <stdexcept>
 #include "Data.h"
 
 Tensor& MINSTDataset::get_item()
@@ -8,7 +9,7 @@ Tensor& MINSTDataset::get_item()
     if(now == len-1)
     {
         now = 0;
-        throw 1;
+        throw std::range_error("exceed");
     }
 
 }

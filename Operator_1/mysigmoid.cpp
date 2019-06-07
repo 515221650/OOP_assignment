@@ -11,6 +11,6 @@ int MySigmoid::Calc(MyGraph &v) {
 }
 
 int MySigmoid::Derivate(MyGraph& v){
-    v[num].NodePos-> add_der((1.0/(1.0+ts::exp(-v[num].NodePos->Val()))/(1.0+ts::exp(v[num].NodePos->Val()))) * der);
+    v[num].NodePos-> add_der((Tensor(1.0)/(Tensor(1.0) + ts::exp(-v[num].NodePos->Val()))/(Tensor(1.0)+ts::exp(v[num].NodePos->Val()))) * der);
     return 0;
 }

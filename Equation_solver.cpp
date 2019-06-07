@@ -6,6 +6,7 @@
 #include "Storage.h"
 #include "Node.h"
 #include "Scalar.h"
+#include "CreateFunc.h"
 
 int MyGraph::create_term(int xpos, int last_term_pos, int degree, double k)//k是前面的系数
 {

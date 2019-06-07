@@ -68,7 +68,7 @@ void MyGraph::graph_compute()
             }
             catch(std::range_error ERROR)
             {
-                std::cerr<<ERROR<<std::endl;
+                std::cerr<<ERROR.what()<<std::endl;
                 myresult.push_back(0.0);
             }
             DerVec.clear();

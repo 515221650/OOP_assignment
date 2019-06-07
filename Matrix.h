@@ -11,7 +11,6 @@
 class Tensor;
 class Scalar;
 class MyGraph;
-void MyGraph::load(const char *file);
 
 class Matrix {
 private:
@@ -101,10 +100,11 @@ public://这样好吗...
 
     friend class Scalar;
 
+    friend class MyGraph;
+
     friend void ts::broadcast(int now_dim, Matrix &new_A, const Matrix &A, int pos);
 
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
 
-    friend void ::MyGraph::load(const char *file);
 };
 #endif //OOP_MATRIX_H

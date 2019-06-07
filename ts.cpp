@@ -1,6 +1,7 @@
 //
 // Created by hwy on 2019/5/24.
 //
+#include <stdexcept>
 #include "ts.h"
 #include "Matrix.h"
 #include "Tensor.h"
@@ -75,7 +76,10 @@ namespace ts
     {
         return ob.tanh();
     }
-
+    Tensor cos(const Tensor & ob)
+    {
+        return ob.cos();
+    }
     Tensor abs(const Tensor &ob)
     {
         return ob.abs();

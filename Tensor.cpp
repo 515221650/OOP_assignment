@@ -22,10 +22,11 @@ bool Tensor::check_shape(const Tensor & obj2) const
 
 std::ostream& operator << (std::ostream& out, Tensor &x)
 {
-    for(auto i: x.val)
-    {
-
-    }
+//    for(auto i: x.val)
+//    {
+//
+//    }
+    return out;
 }
 
 double Tensor::operator() (std::initializer_list<int> arglist)
