@@ -11,6 +11,7 @@ Tensor& MINSTDataset::get_item()
         now = 0;
         throw std::range_error("exceed");
     }
+//    now
 
 }
 
@@ -21,7 +22,7 @@ bool Dataloader::get_data(std::vector<Tensor> &  bdata)
         try{
             bdata.push_back(dataset->get_item());
         }
-        catch(int)
+        catch(std::range_error& ERROR)
         {
             return false;
         }

@@ -72,12 +72,13 @@ int main()
 //	c.reshape({3,-1});print(c);
 //	c.reshape({4,-1});print(c);
 
-	Tensor a({5,1,4},1),b({5,3,1},2);
+	Tensor a({5,3,4,2},1),b({5,3,1},2);
+	cout<<a<<endl;
 	//a.randn();b.randn();
-	print(a);
-	print(b);
-	Tensor c = ts::broadcast(a,b).first;
-    print(c);
+//	print(a);
+//	print(b);
+//	Tensor c = ts::broadcast(a,b).first;
+//    print(c);
     //print(ts::broadcast(a,b).second);
     /*print(a.get_val(1).get_size(1));
     print(a.get_val(1).get_size(0));

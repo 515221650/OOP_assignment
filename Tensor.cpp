@@ -22,10 +22,26 @@ bool Tensor::check_shape(const Tensor & obj2) const
 
 std::ostream& operator << (std::ostream& out, Tensor &x)
 {
-//    for(auto i: x.val)
-//    {
-//
-//    }
+    if(x.dim==2)out<<x.val[0];
+    else
+    {
+        for(int i = 0; i < x.size.size()-2; i++)out<<'[';
+        for(int i = 1; i <= x.val.size(); i++)
+        {
+            out<<x.val[i-1];
+            int tmp = 1;int flag = 0;
+            for(int j = x.size.size()-3; j >= 0 ; j--)
+            {
+                tmp *= x.size[j];
+                if(i%tmp == 0)out<<']',flag ++;
+            }
+            if(i!=x.val.size())
+            {
+                out<<',';
+                for(int j = 0;j < flag; j++)out<<'[';
+            }
+        }
+    }
     return out;
 }
 
@@ -49,12 +65,12 @@ void Tensor::slice_helper(std::vector<int>& startp, std::vector<int>& endp, int 
 {
     if(now == startp.size()-2)
     {
-        res.val.push_back(this->get_val(pos)(std::make_pair(startp[now], endp[now]), std::make_pair(startp[now+1], endp[now+1]));
+        res.val.push_back(this->get_val(pos)(std::make_pair(startp[now], endp[now]), std::make_pair(startp[now+1], endp[now+1])));
         return;
     }
     for(int i=startp[now]; i<endp[now]; i++)
     {
-        slice_helper(startp, endp, now+1, pos*size[now]+i);
+        slice_helper(startp, endp, now+1, pos*size[now+1]+i, res);
     }
 }
 
@@ -67,7 +83,7 @@ Tensor Tensor::operator() (std::initializer_list<std::pair<int,int> > arglist)
     int tmp = 0;
     for(auto a: arglist)
     {
-        if(a.first>=a.second || a.first<0 || a.second >= size[tmp]) throw(std::range_error("invalid slice"));
+        if(a.first>=a.second || a.first<0 || a.second > size[tmp]) throw(std::range_error("invalid slice"));
         startp.push_back(a.first);
         endp.push_back(a.second);
         deltap.push_back(a.second-a.first);

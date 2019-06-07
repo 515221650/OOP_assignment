@@ -6,6 +6,7 @@
 #define OOP_MATRIX_H
 
 #include<vector>
+#include<iostream>
 #include "ts.h"
 
 class Tensor;
@@ -109,5 +110,6 @@ public://这样好吗...
 
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
 
+    friend std::ostream& operator << (std::ostream& out, Matrix &x);
 };
 #endif //OOP_MATRIX_H

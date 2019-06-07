@@ -5,6 +5,23 @@
 #include <cmath>
 #include "Node.h"
 
+std::ostream& operator << (std::ostream& out, Matrix &x)
+{
+    cout<<'[';
+    for(int i = 0; i < x.row; i++)
+    {
+        out<<'[';
+        for(int j = 0; j < x.col; j++)
+        {
+            out<<x[i][j];
+            if(j!=x.col-1)out<<',';
+        }
+        out<<']';
+        if(i!=x.row-1)out<<',';
+    }cout<<']';
+    return out;
+}
+
 bool Matrix::check_shape(const Matrix & obj2) const
 {
     if(row != obj2.row || col != obj2.col)
@@ -21,7 +38,7 @@ Matrix Matrix::operator() (std::pair<int, int> rowp, std::pair<int, int> colp) c
     {
         for(int j=0; j<res.get_col(); j++)
         {
-            res[i][j] = this->get_mval(i+rowp.first, j+colp.second);
+            res.change_mval(i, j, get_mval(i+rowp.first, j+colp.first));
         }
     }
     return res;
