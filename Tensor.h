@@ -24,6 +24,7 @@ private:
 public:
     Tensor(double x):Tensor({1,1},x){}
     Tensor(std::initializer_list<int> szlist = {1, 1}, double mval = 0);//Tensor(5)是5*5还是1*5? 对dim==1的特判//默认填充0
+    explicit Tensor(vector<double> &vallist);
     explicit Tensor(vector<int> szlist, double mval = 0);
     double operator() (std::initializer_list<int> arglist);
     Tensor operator() (std::initializer_list<std::pair<int,int> > arglist);
@@ -57,7 +58,7 @@ public:
 
     friend std::pair<Tensor, Tensor> ts::broadcast(Tensor, Tensor);
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
-    friend std::ostream& operator << (std::ostream& out, Tensor &x);
+    friend std::ostream& operator << (std::ostream& out, const Tensor &x);
     friend class MyGraph;
     friend class Scalar;
     friend void slice_helper(std::vector<int>& startp, std::vector<int>& endp, int now, int pos, Tensor& res);
@@ -74,6 +75,6 @@ public:
     void add_val(int i, const Matrix & a){val[i] += a;}
     void clear(){dim = 0;size.clear();val.clear();}
 };
-std::ostream& operator << (std::ostream& out, Tensor &x);
+std::ostream& operator << (std::ostream& out, const Tensor &x);
 
 #endif //OOP_TENSOR_H

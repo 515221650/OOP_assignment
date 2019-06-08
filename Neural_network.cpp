@@ -113,7 +113,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
 
                 CriNode->rev_der(Tensor(1.0));
                 CriNode->Derivate(G);
-                for(int p = seq.size(); p>=0; p--)
+                for(int p = seq.size()-1; p>=0; p--)
                 {
                     G.NodeInfoVec[seq[p]->output()].NodePos->Derivate(G);
                     G.NodeInfoVec[seq[p]->output()].NodePos->add_dersum(G.NodeInfoVec[seq[p]->output()].NodePos->Der());

@@ -71,22 +71,36 @@ void read_Data(string filename, vector<vector<double>>& data)
 }
 
 void test_MINST() {
-    vector<vector<double>> train_data, test_data;
-    vector<double> train_labels, test_labels;
-    read_Data("t10k-images.idx3-ubyte", test_data);
-    read_Label("t10k-labels.idx1-ubyte", test_labels);
-    read_Data("train-images.idx3-ubyte", train_data);
-    read_Label("train-labels.idx1-ubyte", train_labels);
+    vector<vector<double>> train_data_v, test_data_v;
+    vector<double> train_labels_v, test_labels_v;
+    read_Data("t10k-images.idx3-ubyte", test_data_v);
+    read_Label("t10k-labels.idx1-ubyte", test_labels_v);
+    read_Data("train-images.idx3-ubyte", train_data_v);
+    read_Label("train-labels.idx1-ubyte", train_labels_v);
+    vector<Tensor>train_data, test_data;
+    for(int i = 0; i < test_data_v.size(); i++)train_data.push_back(Tensor(train_data_v[i]));
+    for(int i = 0; i < test_data_v.size(); i++)test_data.push_back(Tensor(test_data_v[i]));
+    vector<Tensor>train_labels, test_labels;
+    for(int i = 0; i < test_data_v.size(); i++)train_labels.push_back(Tensor(train_labels_v[i]));
+    for(int i = 0; i < test_data_v.size(); i++)test_labels.push_back(Tensor(test_labels_v[i]));
+
 
     auto *MyNet = new Neural_network();
     auto *G = new MyGraph();
+    MyNet->add_target(1, *G);
     MyNet->add_Input(784, *G);
     MyNet->add_Dense(10, *G);
+    MyNet->add_Sigmoid(*G);
     MyNet->add_Dense(10, *G);
+    MyNet->add_Sigmoid(*G);
+    MyNet->add_MSELoss(*G);
+    Dataset train_set(train_data, train_labels);
+    Dataset test_set(train_data, train_labels);
+    Dataloader Train(train_set, 64);
+    Dataloader Test(test_set, 64);
     //MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
-    Dataset
-    MyNet->train(train_data, train_labels, *G, 10);
-    MyNet->test(train_data, train_labels, *G);
+    MyNet->train(Train, *G, true,  10, 1);
+    MyNet->test(Test, *G, true);
 
     return;
 }

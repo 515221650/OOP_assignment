@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include "Data.h"
 
-std::tuple<const Tensor&, const Tensor&, bool> Dataset::get_item()
+std::tuple<Tensor,  Tensor, bool> Dataset::get_item()
 {
     bool nextstatus = 1;
     if(now == len-1)

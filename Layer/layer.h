@@ -6,6 +6,7 @@
 #define OOP_LAYER_H
 
 #include "../Node.h"
+#include "../CreateFunc.h"
 class Neural_network;
 
 class Layer {

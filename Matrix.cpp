@@ -5,7 +5,7 @@
 #include <cmath>
 #include "Node.h"
 
-std::ostream& operator << (std::ostream& out, Matrix &x)
+std::ostream& operator << (std::ostream& out, const Matrix &x)
 {
     cout<<'[';
     for(int i = 0; i < x.row; i++)

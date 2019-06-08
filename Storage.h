@@ -10,26 +10,25 @@
 #include <string>
 #include <algorithm>
 #include "Tensor.h"
-
+#include "Operator_0/MyVar.h"
 
 class Node;
 class Neural_network;
-class MyVar;
 class MyGraph{
 private:
     struct NodeInfo{
         Node* NodePos;
         bool vis;   //to mark if this node has been visited in former computation;
     };
-    struct Session : public std::map<std::string, Tensor>{
+    struct Session : public std::map<int, Tensor>{
     public:
-        const Tensor& get(const std::string& str)
+        const Tensor& get(int index)
         {
-            return (*this)[str];
+            return (*this)[index];
         }
-        void change(std::string& str, Tensor& x)
+        void change(int index, Tensor& x)
         {
-            (*this)[str] = x;
+            (*this)[index] = x;
         }
     };
 
@@ -42,14 +41,16 @@ private:
     std::vector<std::pair<int, Tensor> >ChangeVar;
     //std::vector<std::vector<float> > DerV;
     static Session* now_session;
+    int var_cnt;
 public:
     friend class Node;
     friend class Neural_network;
     friend class MyVar;
+
     NodeInfo& operator [](int i) { return NodeInfoVec[i];}    // id to node
     NodeInfo& operator [](std::string &str){ return NodeInfoVec[StrToIntMap[str]];} // name to node
     std::pair<bool,Tensor> GetPH(const std::string &str);   // find the placeholder and its status
-    Tensor GetVR(std::string &str);
+    Tensor GetVR(int _index);
     int str_to_int(std::string& str) { return StrToIntMap[str];} //id to name
 
     MyGraph();
@@ -60,6 +61,8 @@ public:
     Session* add_session(const std::string &str);
     void erase_session(std::string &str);
     void change_session(std::string &str);
+    int get_var_cnt(){return var_cnt;}
+    void add_var_cnt(){var_cnt++;}
     void push_assign(int x,Tensor y){ChangeVar.push_back(std::make_pair(x, y));}
     void push_der(int x); // push the node which was needed to the vector when derivate
     void insert_node(Node*, std::string); //insert the node into NodeInfoVec & StrToIntMap
@@ -68,9 +71,9 @@ public:
     void Mark(int x){NodeInfoVec[x].vis=1;}        // whether the node has been visited when computing
 
     void change_var(int id, Tensor x);              // change the value of var with a certain id in NodeInfoVec
-    void change_var(std::string &name, Tensor x);   // change the value of var with a certain name
 
     void assign_change();
+
 
     void erase_mark();                             // init mark
     void erase_der();                              // init der

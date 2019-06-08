@@ -7,7 +7,7 @@
 #include "Node.h"
 #include "Scalar.h"
 #include "CreateFunc.h"
-
+#include "Operator_0/MyVar.h"
 int MyGraph::create_term(int xpos, int last_term_pos, int degree, double k)//k是前面的系数
 {
     std::string name = std::to_string(degree);//名字没啥用
@@ -42,7 +42,7 @@ void MyGraph::solve_equation()
         //建好图了
         double answerx = 0.0;
         std::cin>>answerx;
-        change_var(xpos, answerx);
+        change_var(dynamic_cast<MyVar*>(NodeInfoVec[xpos].NodePos)->get_index(), answerx);
 
         for(int i=0; i<5; i++)
         {
@@ -61,7 +61,7 @@ void MyGraph::solve_equation()
             }
             double derx = Scalar(NodeInfoVec[xpos].NodePos->Der()).get_val();
             std::cout<<std::fixed<<std::setprecision(4)<<Scalar(NodeInfoVec[xpos].NodePos->Val()).get_val()-res/derx<<std::endl;
-            change_var(xpos, NodeInfoVec[xpos].NodePos->Val() - Tensor(res/derx));
+            change_var(dynamic_cast<MyVar*>(NodeInfoVec[xpos].NodePos)->get_index(), NodeInfoVec[xpos].NodePos->Val() - Tensor(res/derx));
         }
     }
 }

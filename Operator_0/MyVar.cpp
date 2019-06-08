@@ -3,12 +3,12 @@
 //
 #include "MyVar.h"
 
-MyVar::MyVar(std::string &name):Operator_0(name) {}
+MyVar::MyVar(std::string &name, int _index):Operator_0(name),index(_index) {}
 
 
 int MyVar::Calc(MyGraph& g)
 {
-    Tensor tmp = g.GetVR(this->name);
+    Tensor tmp = g.GetVR(index);
     val = tmp;
     return 0;
 }

@@ -21,6 +21,7 @@ private:
     std::vector<Layer*> seq;
     Layer* tar;
     Layer* cri;
+    std::vector<MyVar>parameter;
 public:
     Neural_network() = default;
     int outputpos();

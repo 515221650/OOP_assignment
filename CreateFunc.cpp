@@ -46,12 +46,12 @@ int create_const(std::string& name, MyGraph& g, double val)
     return g.str_to_int(name);
 }
 
-int create_var(std::string& name, MyGraph& g, double val)
+int create_var(std::string& name, MyGraph& g, Tensor val)
 {
-    MyVar* NewVar = new MyVar(name);
+    g.add_var_cnt();
+    MyVar* NewVar = new MyVar(name,g.get_var_cnt());
     g.insert_node(NewVar, name);
-    g.change_var(name, val);
-
+    g.change_var(g.get_var_cnt(), val);
     return g.str_to_int(name);
 }
 

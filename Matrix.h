@@ -110,6 +110,6 @@ public://这样好吗...
 
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
 
-    friend std::ostream& operator << (std::ostream& out, Matrix &x);
+    friend std::ostream& operator << (std::ostream& out, const Matrix &x);
 };
 #endif //OOP_MATRIX_H

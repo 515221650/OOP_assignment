@@ -4,7 +4,6 @@
 
 #ifndef BIGHOMEWORK_NODE_H
 #define BIGHOMEWORK_NODE_H
-using namespace std;
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
@@ -17,21 +16,19 @@ class Node{
 protected:
     Tensor val, der, dersum; //val: value  der: derivative  dersum: (used in Neural network) the sum of a certain group of derivatives
     std::string name;
-
     virtual int Calc(MyGraph& g) = 0; // calculate the value of the node (to get the value, use Compt first and Calc second)
 
 public:
-    Node(std::string &s, Tensor x = 0.0):name(s), val(x) {}
+    Node(std::string _name, Tensor x = 0.0): name(_name),val(x) {}
 
     friend class MyGraph;
 
     virtual int Derivate(MyGraph& g) = 0;      // derivate 求导
     virtual int Compt(MyGraph& g, int x) = 0;  //compt the value in node (to get the value, use Compt first and Calc second)
-
-    std::string Name() {return name;}
-    const Tensor& Val() {return val;}//MyVar中override
+    std::string Name(){return name;}
     const Tensor& Der() {return der;}
     const Tensor& DerSum() {return dersum;}
+    const Tensor& Val() {return val;}//MyVar中override
 
     void rev_val(Tensor x){val = x;return ;}
     void rev_der(Tensor x){der = x;return ;}

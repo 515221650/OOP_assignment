@@ -79,6 +79,8 @@ Scalar.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Scalar.h
 CreateFunc.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/CreateFunc.h
+Operator_0/MyVar.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/MyVar.h
 
 C:/Users/yzy/Desktop/OOP/OOP_assignment/GraphCompute.cpp
 iostream
@@ -97,6 +99,8 @@ Storage.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
 Operator_0/MyPlaceholder.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/MyPlaceholder.h
+Operator_0/MyVar.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/MyVar.h
 
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Conv.cpp
 Conv.h
@@ -247,6 +251,8 @@ C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
 ../Node.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Node.h
+../CreateFunc.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/CreateFunc.h
 
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/maxpool.cpp
 maxpool.h
@@ -628,10 +634,6 @@ C:/Users/yzy/Desktop/OOP/OOP_assignment/Node.h
 ../ts.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Scalar.cpp
-Scalar.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Scalar.h
-
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Scalar.h
 Tensor.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
@@ -663,12 +665,8 @@ algorithm
 -
 Tensor.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
-
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.cpp
-Tensor.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
-stdexcept
--
+Operator_0/MyVar.h
+C:/Users/yzy/Desktop/OOP/OOP_assignment/Operator_0/MyVar.h
 
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
 vector
@@ -680,14 +678,10 @@ C:/Users/yzy/Desktop/OOP/OOP_assignment/Matrix.h
 iostream
 -
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Utils/Data.cpp
-stdexcept
--
-Data.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Utils/Data.h
-
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Utils/Data.h
 vector
+-
+tuple
 -
 ../Tensor.h
 C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
@@ -721,16 +715,6 @@ vector
 -
 fstream
 -
-
-C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.cpp
-stdexcept
--
-ts.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.h
-Matrix.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Matrix.h
-Tensor.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
 
 C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.h
 utility

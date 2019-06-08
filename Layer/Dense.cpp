@@ -34,11 +34,8 @@ void Dense::build(MyGraph& G)
     std::string w_name;
     //命名
 
-    newNode = new MyVar(w_name);
-    G.insert_node(newNode, w_name);
-    G.change_var(w_name, Tensor({out_num, in_num}));
+    W = create_var(w_name, G, Tensor({out_num, in_num}));
 
-    W = G.str_to_int(w_name);
 
     std::string ans_w_name;
     //命名
@@ -49,11 +46,8 @@ void Dense::build(MyGraph& G)
     std::string b_name;
     //
 
-    newNode = new MyVar(b_name);
-    G.insert_node(newNode, b_name);
-    G.change_var(w_name, Tensor({out_num, 1}));
+    B = create_var(w_name, G, Tensor({out_num, 1}));
 
-    B = G.str_to_int(b_name);
 
     std::string pre_out_name;
     //

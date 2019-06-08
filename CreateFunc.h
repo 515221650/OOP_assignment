@@ -9,7 +9,7 @@
 // the function creating node
 int create_placeholder(std::string& name, MyGraph& g);
 int create_const(std::string& name, MyGraph& g, double val);
-int create_var(std::string& name, MyGraph& g, double val);
+int create_var(std::string& name, MyGraph& g, Tensor val);
 int create_sin(std::string StrPara, MyGraph& g, std::string& name);
 int create_log(std::string StrPara, MyGraph& g, std::string& name);
 int create_exp(std::string StrPara, MyGraph& g, std::string& name);

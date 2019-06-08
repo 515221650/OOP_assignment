@@ -20,7 +20,7 @@ bool Tensor::check_shape(const Tensor & obj2) const
 }
 
 
-std::ostream& operator << (std::ostream& out, Tensor &x)
+std::ostream& operator << (std::ostream& out,const Tensor &x)
 {
     if(x.dim==2)out<<x.val[0];
     else
@@ -230,6 +230,19 @@ Tensor::Tensor(std::initializer_list<int> szlist, double mval)
         dim++;
     }
     val.resize(valnum/(size[dim-1]*size[dim-2]), Matrix(size[dim-2], size[dim-1], mval));
+}
+
+Tensor::Tensor(vector<double>& vallist)
+{
+    int sz = vallist.size();
+    dim = 2;
+    size = {1, sz};
+    Matrix tmp(1, sz);
+    for(int i = 0; i < sz; i ++)
+    {
+        tmp.change_mval(i, vallist[i]);
+    }
+    val = {tmp};
 }
 
 Tensor::Tensor(vector<int> szlist, double mval)

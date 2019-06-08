@@ -48,9 +48,9 @@ void MyGraph::erase_session(std::string &str)
     }
 }
 
-Tensor MyGraph::GetVR(std::string &str)
+Tensor MyGraph::GetVR(int x)
 {
-    return now_session->get(str);
+    return now_session->get(x);
 }
 
 std::pair<bool,Tensor> MyGraph::GetPH(const std::string &str)    // find the placeholder and its status
@@ -203,14 +203,9 @@ void MyGraph::insert_node(Node* NewNode, std::string name)
     IntToStr.push_back(name);
 }
 
-void MyGraph::change_var(std::string &name, Tensor x)
+void MyGraph::change_var(int index, Tensor x)
 {
-    now_session->change(name, x);
-}
-
-void MyGraph::change_var(int id, Tensor x)
-{
-    now_session->change(IntToStr[id], x);
+    now_session->change(index, x);
 }
 
 void MyGraph::assign_change()

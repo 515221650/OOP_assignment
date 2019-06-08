@@ -18,7 +18,7 @@ protected:
 public:
     explicit Dataset(std::vector<Tensor> & in_data, std::vector<Tensor> & out_data):
         input_data(in_data), output_data(out_data), len(in_data.size()), now(0){}
-    virtual std::tuple<const Tensor&, const Tensor&, bool> get_item();
+    virtual std::tuple< Tensor,  Tensor, bool> get_item();
     int get_len(){return len;}
 };
 
