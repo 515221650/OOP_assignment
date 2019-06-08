@@ -21,9 +21,9 @@ private:
     std::vector<Layer*> seq;
     Layer* tar;
     Layer* cri;
-    std::vector<MyVar>parameter;
+    std::vector<int>parameter;
 public:
-    Neural_network() = default;
+    Neural_network(){};
     int outputpos();
     int cripos();
     void add_Input(int num, MyGraph& G);

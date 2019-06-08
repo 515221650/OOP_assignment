@@ -110,14 +110,14 @@ void MyGraph::graph_compute()
         else if(tmps == "SETCONSTANT")
         {
             is>>aim>>x;
-            change_var(dynamic_cast<MyVar*>((*this)[aim].NodePos)->get_index(), x);
+            change_var(StrToIntMap[aim], x);
             myresult.emplace_back(Tensor(0.0));
         }
         else if(tmps == "SETANSWER")
         {
             int rank;
             is>>aim>>rank;
-            change_var(dynamic_cast<MyVar*>((*this)[aim].NodePos)->get_index(), myresult[rank-1]);
+            change_var(StrToIntMap[aim], myresult[rank-1]);
             myresult.emplace_back(Tensor(0.0));
         }
 

@@ -48,10 +48,9 @@ int create_const(std::string& name, MyGraph& g, double val)
 
 int create_var(std::string& name, MyGraph& g, Tensor val)
 {
-    g.add_var_cnt();
-    MyVar* NewVar = new MyVar(name,g.get_var_cnt());
+    MyVar* NewVar = new MyVar(name, 0);//0是暂时的，后面可以改成默认值
     g.insert_node(NewVar, name);
-    g.change_var(g.get_var_cnt(), val);
+    g.change_var(NewVar->get_index(), val);
     return g.str_to_int(name);
 }
 

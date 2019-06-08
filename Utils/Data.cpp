@@ -4,13 +4,13 @@
 #include <stdexcept>
 #include "Data.h"
 
-std::tuple<Tensor,  Tensor, bool> Dataset::get_item()
+std::tuple<Tensor, Tensor, bool> Dataset::get_item()
 {
-    bool nextstatus = 1;
+    bool nextstatus = true;
     if(now == len-1)
     {
         now = 0;
-        nextstatus = 0;
+        nextstatus = false;
     }
     now++;
     return std::make_tuple(input_data[now], output_data[now], nextstatus);

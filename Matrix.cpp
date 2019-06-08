@@ -7,7 +7,7 @@
 
 std::ostream& operator << (std::ostream& out, const Matrix &x)
 {
-    cout<<'[';
+    std::cout<<'[';
     for(int i = 0; i < x.row; i++)
     {
         out<<'[';
@@ -18,7 +18,7 @@ std::ostream& operator << (std::ostream& out, const Matrix &x)
         }
         out<<']';
         if(i!=x.row-1)out<<',';
-    }cout<<']';
+    }std::cout<<']';
     return out;
 }
 

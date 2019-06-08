@@ -7,6 +7,7 @@
 #include <iostream>
 #include <map>
 #include <queue>
+#include "Operator_0/MyVar.h"
 
 #define MK std::make_pair
 #define MG (*this)
@@ -201,6 +202,15 @@ void MyGraph::insert_node(Node* NewNode, std::string name)
     if(StrToIntMap.find(name)!=StrToIntMap.end()) StrToIntMap.erase(name);
     StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
     IntToStr.push_back(name);
+}
+
+void MyGraph::insert_node(MyVar* NewNode, std::string name)
+{
+    NodeInfoVec.push_back({(Node*)(NewNode), 0});
+    if(StrToIntMap.find(name)!=StrToIntMap.end()) StrToIntMap.erase(name);
+    StrToIntMap.insert(std::pair<std::string, int>(name, NodeInfoVec.size()-1));
+    IntToStr.push_back(name);
+    NewNode->index = NodeInfoVec.size()-1;
 }
 
 void MyGraph::change_var(int index, Tensor x)

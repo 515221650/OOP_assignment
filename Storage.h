@@ -10,10 +10,12 @@
 #include <string>
 #include <algorithm>
 #include "Tensor.h"
-#include "Operator_0/MyVar.h"
+//#include "Operator_0/MyVar.h"
 
 class Node;
 class Neural_network;
+class MyVar;
+
 class MyGraph{
 private:
     struct NodeInfo{
@@ -41,7 +43,7 @@ private:
     std::vector<std::pair<int, Tensor> >ChangeVar;
     //std::vector<std::vector<float> > DerV;
     static Session* now_session;
-    int var_cnt;
+    //int var_cnt;
 public:
     friend class Node;
     friend class Neural_network;
@@ -61,11 +63,12 @@ public:
     Session* add_session(const std::string &str);
     void erase_session(std::string &str);
     void change_session(std::string &str);
-    int get_var_cnt(){return var_cnt;}
-    void add_var_cnt(){var_cnt++;}
+    //int get_var_cnt(){return var_cnt;}
+   // void add_var_cnt(){var_cnt++;}
     void push_assign(int x,Tensor y){ChangeVar.push_back(std::make_pair(x, y));}
     void push_der(int x); // push the node which was needed to the vector when derivate
     void insert_node(Node*, std::string); //insert the node into NodeInfoVec & StrToIntMap
+    void insert_node(MyVar*, std::string);
     void insert_placeholder_rev(std::string &str, Tensor x){PlaceholderRev[str] = x;}  //name to value
 
     void Mark(int x){NodeInfoVec[x].vis=1;}        // whether the node has been visited when computing

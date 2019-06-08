@@ -33,7 +33,7 @@ int MyMaxPool::Calc(MyGraph &G)
                 {
                     for(int y=ky*stride; y<ky*stride+kernel_size && y<col; y++)
                     {
-                        maxv = max(maxv, T.get_val(i).get_mval(x,y));
+                        maxv = fmax(maxv, T.get_val(i).get_mval(x,y));
                     }
                 }
                 new_M.change_mval(kx, ky, maxv);
@@ -77,5 +77,6 @@ int MyMaxPool::Derivate(MyGraph &G)
         res_T.change_val(i, res_M);
     }
     G[num].NodePos->add_der(res_T);
+    return 0;
 }
 
