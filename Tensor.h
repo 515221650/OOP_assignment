@@ -29,17 +29,17 @@ public:
     double operator() (std::initializer_list<int> arglist);
     Tensor operator() (std::initializer_list<std::pair<int,int> > arglist);
     void slice_helper(std::vector<int>& startp, std::vector<int>& endp, int now, int pos, Tensor& res);
-    Tensor operator+ (const Tensor& b) const;
-    Tensor operator* (const Tensor& b) const;
-    Tensor operator- (const Tensor& b) const;
+    Tensor operator+ (Tensor b) const;
+    Tensor operator* (Tensor b) const;
+    Tensor operator- (Tensor b) const;
     Tensor operator- () const;
-    Tensor operator/ (const Tensor& b) const;
-    Tensor operator> (const Tensor& b) const;
-    Tensor operator< (const Tensor& b) const;
-    Tensor operator>= (const Tensor& b) const;
-    Tensor operator<= (const Tensor& b) const;
-    Tensor & operator +=(const Tensor & obj2);
-    Tensor & operator -=(const Tensor & obj2);
+    Tensor operator/ (Tensor b) const;
+    Tensor operator> (Tensor b) const;
+    Tensor operator< (Tensor b) const;
+    Tensor operator>= (Tensor b) const;
+    Tensor operator<= (Tensor b) const;
+    Tensor & operator +=(const Tensor& obj2);
+    Tensor & operator -=(const Tensor&  obj2);
     Tensor & operator *=(const Tensor & obj2);
 
     void reshape(std::initializer_list<int> szlist);
@@ -53,7 +53,8 @@ public:
     Tensor sigmoid() const;
     Tensor tanh() const;
     Tensor concat(const Tensor & b, const int catdim) const;
-    Tensor point_mul(const Tensor&) const;
+    Tensor point_mul(Tensor) const;
+    Tensor mat_mul(const Tensor&) const;
     Tensor abs() const;
 
     friend std::pair<Tensor, Tensor> ts::broadcast(Tensor, Tensor);
@@ -61,7 +62,7 @@ public:
     friend std::ostream& operator << (std::ostream& out, const Tensor &x);
     friend class MyGraph;
     friend class Scalar;
-    friend void slice_helper(std::vector<int>& startp, std::vector<int>& endp, int now, int pos, Tensor& res);
+
 
     void randn();
     bool check_shape(const Tensor& B) const;

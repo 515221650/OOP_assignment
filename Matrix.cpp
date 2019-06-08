@@ -24,6 +24,7 @@ std::ostream& operator << (std::ostream& out, const Matrix &x)
 
 bool Matrix::check_shape(const Matrix & obj2) const
 {
+   // std::cout<<"row "<<row<<" "<<obj2.row<<" col "<<col<<" "<<obj2.col<<std::endl;
     if(row != obj2.row || col != obj2.col)
     {
         throw std::range_error("Tensor's shape doesn't match");
@@ -47,6 +48,7 @@ Matrix Matrix::operator() (std::pair<int, int> rowp, std::pair<int, int> colp) c
 
 Matrix Matrix::operator + (const Matrix& obj2) const//判断不符合相加要求？
 {
+   // std::cout<<"check +++"<<std::endl;
     check_shape(obj2);
     Matrix res(row, col);
     res.mval.clear();
@@ -146,43 +148,15 @@ Matrix Matrix::operator <= (const Matrix& obj2) const//判断不符合相加要�
     return res;
 }
 
-Matrix Matrix::operator*(const Matrix &obj2) const
+Matrix Matrix::operator*(const Matrix &B) const
 {
-    if(col != obj2.row)
-    {
-        throw std::range_error("Tensor's shape doesn't match while matmuling");
-    }
-    Matrix res(row, obj2.col);
-    res.mval.clear();
-    for(int i=0; i<row; i++)
-    {
-        for(int j=0; j<obj2.col; j++)
-        {
-            double sum = 0;
-            for(int k=0; k<col; k++)
-            {
-                sum += mval[i*col+k]*obj2.mval[k*obj2.col+j];
-            }
-            res.mval.push_back(sum);
-        }
-    }
+   // std::cout<<"check point_mul"<<std::endl;
+    check_shape(B);
+    Matrix res = *this;
+    for(int i=0;i<B.get_size();i++)
+        res.change_mval(i, res.get_mval(i)*B.get_mval(i));
     return res;
 }
-
-/*
-Matrix Matrix::operator*(const Matrix &obj2) const  //dot mul
-{
-    check_shape(obj2);
-    Matrix res(row, col);
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < col; j++) {
-            res.mval.push_back(mval[i*col+j] * obj2.mval[i*col+j]);
-        }
-    }
-    return res;
-}*/
-
-
 
 
 Matrix & Matrix::operator +=(const Matrix& obj2)
@@ -203,24 +177,6 @@ Matrix & Matrix::operator *=(const Matrix& obj2)
     return *this;
 }
 
-
-/*Matrix Matrix::MatMul(const Matrix &obj2) const
-{
-    Matrix res(row, obj2.col);
-    for(int i=0; i<row; i++)
-    {
-        for(int j=0; j<obj2.col; j++)
-        {
-            double sum = 0;
-            for(int k=0; k<col; k++)
-            {
-                sum += mval[i*col+k]*obj2.mval[k*obj2.col+j];
-            }
-            res.mval.push_back(sum);
-        }
-    }
-    return res;
-}*/
 
 Matrix Matrix::cos() const
 {
@@ -293,10 +249,34 @@ Matrix Matrix::abs() const
 
 Matrix Matrix::point_mul(const Matrix & B) const
 {
+    //std::cout<<"check point_mul"<<std::endl;
     check_shape(B);
     Matrix res = *this;
     for(int i=0;i<B.get_size();i++)
         res.change_mval(i, res.get_mval(i)*B.get_mval(i));
+    return res;
+}
+
+Matrix Matrix::mat_mul(const Matrix & obj2) const
+{
+    if(col != obj2.row)
+    {
+        throw std::range_error("Tensor's shape doesn't match while matmuling");
+    }
+    Matrix res(row, obj2.col);
+    res.mval.clear();
+    for(int i=0; i<row; i++)
+    {
+        for(int j=0; j<obj2.col; j++)
+        {
+            double sum = 0;
+            for(int k=0; k<col; k++)
+            {
+                sum += mval[i*col+k]*obj2.mval[k*obj2.col+j];
+            }
+            res.mval.push_back(sum);
+        }
+    }
     return res;
 }
 

@@ -119,8 +119,8 @@ CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/mygreater.h
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/mygreaterequal.h
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/myless.h
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/mylessequal.h
+CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/mymatmul.h
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/myminus.h
-CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/mymul.h
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/myplus.h
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_2/operator_2.h
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Operator_3/MyCond.h
@@ -451,6 +451,15 @@ CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj: ../Operator_2/operator_2.h
 CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj: ../Storage.h
 CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj: ../Tensor.h
 CMakeFiles/main.dir/Operator_2/mylessequal.cpp.obj: ../ts.h
+
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Matrix.h
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Node.h
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Operator_2/mymatmul.cpp
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Operator_2/mymatmul.h
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Operator_2/operator_2.h
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Storage.h
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Tensor.h
+CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../ts.h
 
 CMakeFiles/main.dir/Operator_2/myminus.cpp.obj: ../Matrix.h
 CMakeFiles/main.dir/Operator_2/myminus.cpp.obj: ../Node.h

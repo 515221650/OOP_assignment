@@ -70,6 +70,8 @@ public://这样好吗...
 
     Matrix point_mul(const Matrix &) const;
 
+    Matrix mat_mul(const Matrix &) const;
+
     Matrix concat(const Matrix &b, const int catdim) const;
 
     bool check_shape(const Matrix &obj2) const;

@@ -80,7 +80,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
             //int batchsize = TargetData.size();
             for(int num=0; num<InputData.size(); num++)
             {
-
+                std::cout<<"start"<<std::endl;
                 seq[0]->change_input(InputData[num], G);    //input the image's data
                 tar->change_input(TargetData[num], G);
 
@@ -95,6 +95,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 Node *OutputNode = G.NodeInfoVec[outputpos()].NodePos;
                 Node *CriNode = G.NodeInfoVec[cripos()].NodePos; //criterion
                 CriNode->Compt(G, cripos());
+                std::cout<<"cmpt end!"<<std::endl;
                 Tensor outputval = OutputNode->Val();
 
                 if(need_accu)   //check if the answer is correct
@@ -113,12 +114,15 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
 
                 CriNode->rev_der(Tensor(1.0));
                 CriNode->Derivate(G);
+                std::cout<<"start der"<<std::endl;
                 for(int p = seq.size()-1; p>=0; p--)
                 {
+                    std::cout<<"round x "<<std::endl;
                     G.NodeInfoVec[seq[p]->output()].NodePos->Derivate(G);
                     G.NodeInfoVec[seq[p]->output()].NodePos->add_dersum(G.NodeInfoVec[seq[p]->output()].NodePos->Der());
                 }
             }
+            std::cout<<"one loop over"<<std::endl;
             //gradient descent algorithm
             for (std::size_t i = 1; i < seq.size(); i++)
             {
@@ -131,6 +135,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
             for (auto i: seq) G.NodeInfoVec[i->output()].NodePos->rev_dersum(0);
             //std::cout << "nownum:" << num << " " << "accuracy:" << cnt2/batchsize<< std::endl;
             //cnt2 = 0;
+            std::cout<<"change statistics over"<<std::endl;
 
         }
         learn_rate *= 0.9;

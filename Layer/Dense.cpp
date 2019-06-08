@@ -22,10 +22,12 @@
 #include "../Operator_2/myless.h"
 #include "../Operator_2/mylessequal.h"
 #include "../Operator_2/myplus.h"
-#include "../Operator_2/mymul.h"
+#include "../Operator_2/mymatmul.h"
 #include "../Operator_2/myminus.h"
 #include <string>
 // 初始化的参数是否需要传进来，这里写的是 0 ~ 5/in_num 随机变量
+
+using namespace std;
 
 void Dense::build(MyGraph& G)
 {
@@ -34,19 +36,18 @@ void Dense::build(MyGraph& G)
     std::string w_name;
     //命名
 
-    W = create_var(w_name, G, Tensor({out_num, in_num}));
-
+    W = create_var(w_name, G, Tensor({in_num, out_num}));
 
     std::string ans_w_name;
     //命名
-    newNode = new MyMul(ans_w_name, W, pre_layer.output());
+    newNode = new MyMatMul(ans_w_name, pre_layer.output(), W);
     G.insert_node(newNode, ans_w_name);
     int pre_add = G.str_to_int(ans_w_name);
 
     std::string b_name;
     //
 
-    B = create_var(w_name, G, Tensor({out_num, 1}));
+    B = create_var(w_name, G, Tensor({1, out_num}));
 
 
     std::string pre_out_name;

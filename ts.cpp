@@ -17,6 +17,11 @@ namespace ts
         return A.point_mul(B);
     }
 
+    Matrix mat_mul(const Matrix & A, const Matrix & B)
+    {
+        return A.mat_mul(B);
+    }
+
     Matrix cos(const Matrix & ob)
     {
         return ob.cos();
@@ -256,5 +261,18 @@ namespace ts
             }
         }
         return maxpos;
+    }
+    bool check_shape(const Tensor & obj1, const Tensor & obj2)
+    {
+        bool flag = false;
+        if(obj1.get_dim() != obj2.get_dim()) flag = true;
+        for(int i = 0; i < obj1.get_dim(); i++)
+        {
+            if(obj1.get_size(i) != obj2.get_size(i)) flag = true;
+        }
+        if(flag)
+        {
+            throw std::range_error("Tensor's shape doesn't match");
+        }
     }
 }

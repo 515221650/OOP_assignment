@@ -3,21 +3,29 @@
 //
 
 #include "Tensor.h"
+#include "ts.h"
 #include <stdexcept>
 
 bool Tensor::check_shape(const Tensor & obj2) const
 {
     bool flag = 0;
-    if(get_dim() != obj2.get_dim())flag = 1;
+    if(get_dim() != obj2.get_dim()){
+        flag = 1;
+       // std::cout<<"dim!!"<<std::endl;
+        //std::cout<<get_dim()<<"  "<<obj2.get_dim()<<std::endl;
+    }
     for(int i = 0; i < dim; i++)
     {
         if(size[i] != obj2.size[i])flag = 1;
+       // std::cout<<"size!!!!"<<std::endl;
+       // std::cout<<size[i]<<"  "<<obj2.size[i]<<std::endl;
     }
     if(flag)
     {
         throw std::range_error("Tensor's shape doesn't match");
     }
 }
+
 
 
 std::ostream& operator << (std::ostream& out,const Tensor &x)
@@ -96,20 +104,35 @@ Tensor Tensor::operator() (std::initializer_list<std::pair<int,int> > arglist)
     return res;
 }
 
-Tensor Tensor::operator+(const Tensor &b) const
+Tensor Tensor::operator+(Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp = (*this);
-    int len = val.size();
+    //std::cout<<"now +++"<<std::endl;
+    Tensor tmp = *this;
+    if(ts::need_broadcast(tmp, b))
+    {
+        auto tmppair =  ts::broadcast(tmp, b);
+        tmp = tmppair.first;
+        b = tmppair.second;
+    }
+    ts::check_shape(tmp,b);
+    int len = b.val.size();
     for(int i=0;i<len;i++)tmp.val[i] += b.val[i];
     return tmp;
 }
 
-Tensor Tensor::operator-(const Tensor &b) const
+Tensor Tensor::operator-(Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp = (*this);
-    int len = val.size();
+    //std::cout<<"now---"<<std::endl;
+    Tensor tmp = *this;
+    if(ts::need_broadcast(tmp, b))
+    {
+        auto tmppair =  ts::broadcast(tmp, b);
+        tmp = tmppair.first;
+        b = tmppair.second;
+
+    }
+    ts::check_shape(tmp,b);
+    int len = b.val.size();
     for(int i=0;i<len;i++)tmp.val[i]-=b.val[i];
     return tmp;
 }
@@ -122,11 +145,18 @@ Tensor Tensor::operator-() const
     return tmp;
 }
 
-Tensor Tensor::operator/ (const Tensor& b) const
+Tensor Tensor::operator/ (Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp = (*this);
-    int len = val.size();
+    //std::cout<<"now///"<<std::endl;
+    Tensor tmp = *this;
+    if(ts::need_broadcast(tmp, b))
+    {
+        auto tmppair =  ts::broadcast(tmp, b);
+        tmp = tmppair.first;
+        b = tmppair.second;
+    }
+    ts::check_shape(tmp,b);
+    int len = b.val.size();
     for(int i=0;i<len;i++)
     {
         tmp.val[i]=tmp.val[i]/b.val[i];
@@ -134,11 +164,19 @@ Tensor Tensor::operator/ (const Tensor& b) const
     return tmp;
 }
 
-Tensor Tensor::operator> (const Tensor& b) const
+Tensor Tensor::operator> (Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp = (*this);
-    int len = val.size();
+    //std::cout<<"now>>>"<<std::endl;
+    Tensor tmp = *this;
+    if(ts::need_broadcast(tmp, b))
+    {
+        auto tmppair =  ts::broadcast(tmp, b);
+        tmp = tmppair.first;
+        b = tmppair.second;
+    }
+
+    ts::check_shape(tmp,b);
+    int len = b.val.size();
     for(int i=0;i<len;i++)
     {
         tmp.val[i]=tmp.val[i]>b.val[i];
@@ -146,11 +184,18 @@ Tensor Tensor::operator> (const Tensor& b) const
     return tmp;
 }
 
-Tensor Tensor::operator< (const Tensor& b) const
+Tensor Tensor::operator< (Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp = (*this);
-    int len = val.size();
+    //std::cout<<"now<<<"<<std::endl;
+    Tensor tmp = *this;
+    if(ts::need_broadcast(tmp, b))
+    {
+        auto tmppair =  ts::broadcast(tmp, b);
+        tmp = tmppair.first;
+        b = tmppair.second;
+    }
+    ts::check_shape(tmp,b);
+    int len = b.val.size();
     for(int i=0;i<len;i++)
     {
         tmp.val[i] = tmp.val[i] < b.val[i];
@@ -158,11 +203,18 @@ Tensor Tensor::operator< (const Tensor& b) const
     return tmp;
 }
 
-Tensor Tensor::operator>= (const Tensor& b) const
+Tensor Tensor::operator>= (Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp = (*this);
-    int len = val.size();
+    //std::cout<<"now>="<<std::endl;
+    Tensor tmp = *this;
+    if(ts::need_broadcast(tmp, b))
+    {
+        auto tmppair =  ts::broadcast(tmp, b);
+        tmp = tmppair.first;
+        b = tmppair.second;
+    }
+    ts::check_shape(tmp,b);
+    int len = b.val.size();
     for(int i=0;i<len;i++)
     {
         tmp.val[i]=tmp.val[i]>=b.val[i];
@@ -170,11 +222,18 @@ Tensor Tensor::operator>= (const Tensor& b) const
     return tmp;
 }
 
-Tensor Tensor::operator<= (const Tensor& b) const
+Tensor Tensor::operator<= (Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp = (*this);
-    int len = val.size();
+    //std::cout<<"now<="<<std::endl;
+    Tensor tmp = *this;
+    if(ts::need_broadcast(tmp, b))
+    {
+        auto tmppair =  ts::broadcast(tmp, b);
+        tmp = tmppair.first;
+        b = tmppair.second;
+    }
+    ts::check_shape(tmp,b);
+    int len = b.val.size();
     for(int i=0;i<len;i++)
     {
         tmp.val[i]=tmp.val[i]<=b.val[i];
@@ -183,16 +242,20 @@ Tensor Tensor::operator<= (const Tensor& b) const
 }
 
 
-Tensor Tensor::operator*(const Tensor &b) const
+Tensor Tensor::operator*(Tensor b) const
 {
-    check_shape(b);
-    Tensor tmp;tmp.clear();
-
-    for(int i=0; i<=dim-3; i++) tmp.add_dim(size[i]);
-    tmp.add_dim(size[dim-2]);
-    tmp.add_dim(b.size[dim-1]);
-    for(int i=0; i<val.size(); i++)  tmp.val.push_back(val[i]*b.val[i]);
-    return tmp;
+    //std::cout<<"now point_mul"<<std::endl;
+    Tensor res = *this;
+    if(ts::need_broadcast(res, b))
+    {
+        auto tmppair =  ts::broadcast(res, b);
+        res = tmppair.first;
+        b = tmppair.second;
+    }
+    ts::check_shape(res,b);
+    int len = b.val.size();
+    for(int i = 0; i <len; i++) res.val[i] = ts::point_mul(res.val[i], b.val[i]);
+    return res;
 }
 
 Tensor & Tensor::operator +=(const Tensor& obj2)
@@ -368,6 +431,7 @@ Tensor Tensor::log() const
 }
 Tensor Tensor::sigmoid() const
 {
+   //std::cout<<"sigmoid"<<std::endl;
     Tensor res = *this;
     for(auto &a: res.val) a = ts::sigmoid(a);
     return res;
@@ -430,13 +494,38 @@ Tensor Tensor::concat(const Tensor & b, const int catdim) const
     return res;
 }
 
-Tensor Tensor::point_mul(const Tensor& b) const
+Tensor Tensor::point_mul(Tensor b) const
 {
-    check_shape(b);
+   // std::cout<<"now point_mul"<<std::endl;
     Tensor res = *this;
-    int len = this->val.size();
+    if(ts::need_broadcast(res, b))
+    {
+        auto tmppair =  ts::broadcast(res, b);
+        res = tmppair.first;
+        b = tmppair.second;
+    }
+    ts::check_shape(res,b);
+    int len = b.val.size();
     for(int i = 0; i <len; i++) res.val[i] = ts::point_mul(res.val[i], b.val[i]);
     return res;
+}
+
+Tensor Tensor::mat_mul(const Tensor & b) const
+{
+    //std::cout<<"now matmul"<<std::endl;
+    if(size[dim-1]!=b.size[dim-2])
+    {
+        //std::cout<<"a "<<size[dim-2]<< " "<<size[dim-1]<<std::endl;
+        //std::cout<<"b "<<b.size[dim-2]<< " "<<b.size[dim-1]<<std::endl;
+        throw std::range_error("Tensor's shape doesn't match");
+    }
+    Tensor tmp;tmp.clear();
+
+    for(int i=0; i<=dim-3; i++) tmp.add_dim(size[i]);
+    tmp.add_dim(size[dim-2]);
+    tmp.add_dim(b.size[dim-1]);
+    for(int i=0; i<val.size(); i++)  tmp.val.push_back(val[i].mat_mul(b.val[i]));
+    return tmp;
 }
 
 Tensor Tensor::abs() const

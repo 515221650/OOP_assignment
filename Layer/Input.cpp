@@ -9,7 +9,7 @@ void Input::build(MyGraph &G, int num)
 {
     std::string name;
     //这里命名
-    out_pos = create_var(name, G, Tensor({num,1}));
+    out_pos = create_var(name, G, Tensor({1,num}));
 }
 
 void Input::change_input(const Tensor &input, MyGraph &G)

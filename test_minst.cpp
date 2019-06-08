@@ -87,7 +87,7 @@ void test_MINST() {
 
     auto *MyNet = new Neural_network();
     auto *G = new MyGraph();
-    MyNet->add_target(1, *G);
+    MyNet->add_target(10, *G);
     MyNet->add_Input(784, *G);
     MyNet->add_Dense(10, *G);
     MyNet->add_Sigmoid(*G);
@@ -101,6 +101,4 @@ void test_MINST() {
     //MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
     MyNet->train(Train, *G, true,  10, 1);
     MyNet->test(Test, *G, true);
-
-    return;
 }

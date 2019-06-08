@@ -20,6 +20,7 @@ namespace ts
     Matrix tanh(const Matrix &);
     Matrix abs(const Matrix &);
     Matrix point_mul(const Matrix &, const Matrix &);
+    Matrix mat_mul(const Matrix&, const Matrix & );
 
     Matrix concat(const Matrix & a, const Matrix & b, const int catdim);
     Matrix trans(const Matrix &);
@@ -44,6 +45,8 @@ namespace ts
     std::pair<Tensor, Tensor>broadcast(Tensor A, Tensor B);
 
     int get_max_pos_2d(Tensor& a);//二维的tensor里面 最大值的位置
+
+    bool check_shape(const Tensor & obj1, const Tensor & obj2);
 }
 
 #endif //OOP_TS_H
