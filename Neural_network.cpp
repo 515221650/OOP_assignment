@@ -22,12 +22,16 @@ int Neural_network::cripos()
 
 void Neural_network::add_Input(int num, MyGraph& G)
 {
-    seq.push_back(new Input(num, G));
+    auto ptr = new Input(num, G);
+    seq.push_back(ptr);
 }
 void Neural_network::add_Dense(int num, MyGraph &G)
 {
     Layer* tmp = seq.back();
-    seq.push_back(new Dense(tmp->get_size(), num, *tmp, G));
+    Dense* ptr = new Dense(tmp->get_size(), num, *tmp, G);
+    seq.push_back(ptr);
+    parameter.push_back(ptr->W);
+    parameter.push_back(ptr->B);
 }
 
 void Neural_network::add_target(int num, MyGraph &G)
@@ -55,7 +59,10 @@ void Neural_network::add_Sigmoid(MyGraph &G)
 void Neural_network::add_conv(int _in, int _out, MyGraph &G, int _kernel, bool _bias, int _stride, int _padding)
 {
     Layer* tmp = seq.back();
-    seq.push_back(new Conv(_in, _out, *tmp, G, _kernel, _bias, _stride, _padding));
+    Conv* ptr = new Conv(_in, _out, *tmp, G, _kernel, _bias, _stride, _padding);
+    seq.push_back(ptr);
+    parameter.push_back(ptr->K);
+    parameter.push_back(ptr->B);
 }
 
 void Neural_network::add_maxpool(int _in, int _out, MyGraph &G)
@@ -71,16 +78,18 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
     {
         double cnt_correct = 0.0;
         double sum_loss = 0.0;
-        //double cnt2 = 0.0; //used if you want to see the process more details
+        double cnt2 = 0.0; //used if you want to see the process more details
         std::vector<Tensor> InputData;
         std::vector<Tensor> TargetData;
         //要把target变成（0，0，0，1，0，0，0，0，0，0，）的形式
+        int Num = 0;
         while(DataLoader.get_data(InputData, TargetData)) //warning : each loop may take fairly long time
         {
             //int batchsize = TargetData.size();
+            Num++;cnt2=0;
             for(int num=0; num<InputData.size(); num++)
             {
-                std::cout<<"start"<<std::endl;
+//                std::cout<<"start"<<std::endl;
                 seq[0]->change_input(InputData[num], G);    //input the image's data
                 tar->change_input(TargetData[num], G);
 
@@ -95,17 +104,19 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 Node *OutputNode = G.NodeInfoVec[outputpos()].NodePos;
                 Node *CriNode = G.NodeInfoVec[cripos()].NodePos; //criterion
                 CriNode->Compt(G, cripos());
-                std::cout<<"cmpt end!"<<std::endl;
+//                std::cout<<"cmpt end!"<<std::endl;
                 Tensor outputval = OutputNode->Val();
 
                 if(need_accu)   //check if the answer is correct
                 {
+                    std::cout<<outputval<<std::endl;
+                    std::cout<<TargetData[num]<<std::endl;
                     int outputmax = ts::get_max_pos_2d(outputval);
                     int targetmax = ts::get_max_pos_2d(TargetData[num]);
                     if(outputmax == targetmax)
                     {
                         cnt_correct += 1.0;
-                        //cnt2 += 1.0;
+                        cnt2 += 1.0;
                     }
                 }
                 sum_loss += Scalar(CriNode->Val()).get_val();
@@ -114,29 +125,26 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
 
                 CriNode->rev_der(Tensor(1.0));
                 CriNode->Derivate(G);
-                std::cout<<"start der"<<std::endl;
+//                std::cout<<"start der"<<std::endl;
                 for(int p = seq.size()-1; p>=0; p--)
                 {
-                    std::cout<<"round x "<<std::endl;
+//                    std::cout<<"round x "<<std::endl;
                     G.NodeInfoVec[seq[p]->output()].NodePos->Derivate(G);
                     G.NodeInfoVec[seq[p]->output()].NodePos->add_dersum(G.NodeInfoVec[seq[p]->output()].NodePos->Der());
                 }
             }
-            std::cout<<"one loop over"<<std::endl;
+//            std::cout<<"one loop over"<<std::endl;
             //gradient descent algorithm
-            for (std::size_t i = 1; i < seq.size(); i++)
+            for(auto i : parameter)
             {
-                auto nowd = dynamic_cast<Dense *>(seq[i]);
-                Node *nown = G.NodeInfoVec[nowd->W].NodePos;
-                nown->add_val(-nown->DerSum() * learn_rate / InputData.size());
-                nown = G.NodeInfoVec[nowd->B].NodePos;
+                Node *nown = G[i].NodePos;
                 nown->add_val(-nown->DerSum() * learn_rate / InputData.size());
             }
             for (auto i: seq) G.NodeInfoVec[i->output()].NodePos->rev_dersum(0);
-            //std::cout << "nownum:" << num << " " << "accuracy:" << cnt2/batchsize<< std::endl;
+            std::cout << "nownum:" << Num << " " << "accuracy:" << (double)cnt2/64<< std::endl; //改成batchsize
             //cnt2 = 0;
-            std::cout<<"change statistics over"<<std::endl;
-
+//            std::cout<<"change statistics over"<<std::endl;
+            InputData.clear();TargetData.clear();
         }
         learn_rate *= 0.9;
         if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/InputData.size() << std::endl;
