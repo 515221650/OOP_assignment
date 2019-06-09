@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Input.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Layer/Input.cpp.obj"
   "C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/activationfunc.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Layer/activationfunc.cpp.obj"
   "C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/criterion.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Layer/criterion.cpp.obj"
-  "C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Layer/layer.cpp.obj"
   "C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/maxpool.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Layer/maxpool.cpp.obj"
   "C:/Users/yzy/Desktop/OOP/OOP_assignment/Matrix.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Matrix.cpp.obj"
   "C:/Users/yzy/Desktop/OOP/OOP_assignment/Neural_network.cpp" "C:/Users/yzy/Desktop/OOP/OOP_assignment/cmake-build-debug/CMakeFiles/main.dir/Neural_network.cpp.obj"

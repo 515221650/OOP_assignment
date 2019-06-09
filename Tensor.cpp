@@ -396,6 +396,7 @@ Tensor Tensor::trans() const
     {
         a = ts::trans(a);
     }
+    std::swap(res.size[dim-1], res.size[dim-2]);
     return res;
 }
 

@@ -71,7 +71,7 @@ void Neural_network::add_maxpool(int _in, int _out, MyGraph &G)
     seq.push_back(new MaxPool(_in, _out, *tmp, G));
 }
 
-
+using namespace std;
 void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, int epoch, double learn_rate) // batchsize放到dataloaderl里
 {
     for(int time = 1; time <= epoch; time++)
@@ -90,6 +90,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
             for(int num=0; num<InputData.size(); num++)
             {
 //                std::cout<<"start"<<std::endl;
+//                cout<<InputData[num]<<endl;
                 seq[0]->change_input(InputData[num], G);    //input the image's data
                 tar->change_input(TargetData[num], G);
 
@@ -109,8 +110,9 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
 
                 if(need_accu)   //check if the answer is correct
                 {
-                    std::cout<<outputval<<std::endl;
-                    std::cout<<TargetData[num]<<std::endl;
+//                    std::cout<<outputval<<std::endl;
+//                    if(num == InputData.size()-1)std::cout<<outputval<<std::endl;
+
                     int outputmax = ts::get_max_pos_2d(outputval);
                     int targetmax = ts::get_max_pos_2d(TargetData[num]);
                     if(outputmax == targetmax)
@@ -122,33 +124,41 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 sum_loss += Scalar(CriNode->Val()).get_val();
 
                 //evaluation function: sigma((outputvalue-standard_outputvalue)^2)
-
                 CriNode->rev_der(Tensor(1.0));
                 CriNode->Derivate(G);
 //                std::cout<<"start der"<<std::endl;
-                for(int p = seq.size()-1; p>=0; p--)
-                {
+//                for(int p = seq.size()-1; p>=0; p--)
+//                {
 //                    std::cout<<"round x "<<std::endl;
-                    G.NodeInfoVec[seq[p]->output()].NodePos->Derivate(G);
-                    G.NodeInfoVec[seq[p]->output()].NodePos->add_dersum(G.NodeInfoVec[seq[p]->output()].NodePos->Der());
+//                    G.NodeInfoVec[seq[p]->output()].NodePos->Derivate(G);
+//                    cout<<G.NodeInfoVec[seq[p]->output()].NodePos->Der()<<endl;
+//                    G.NodeInfoVec[seq[p]->output()].NodePos->add_dersum(G.NodeInfoVec[seq[p]->output()].NodePos->Der());
+//                }
+                for(int i = G.NodeInfoVec.size()-1; i >= 0; i--)
+                {
+//                    cout<<'i'<<i<<endl;
+                    G[i].NodePos->Derivate(G);
+//                    cout<<G.NodeInfoVec[i].NodePos->Der()<<endl;
+                    G[i].NodePos->add_dersum(G[i].NodePos->Der());
                 }
             }
-//            std::cout<<"one loop over"<<std::endl;
             //gradient descent algorithm
+            int c = 0;
             for(auto i : parameter)
             {
+                c++;
                 Node *nown = G[i].NodePos;
+//                cout<<c<<' '<<endl<<nown->DerSum()<<endl;
                 nown->add_val(-nown->DerSum() * learn_rate / InputData.size());
             }
-            for (auto i: seq) G.NodeInfoVec[i->output()].NodePos->rev_dersum(0);
-            std::cout << "nownum:" << Num << " " << "accuracy:" << (double)cnt2/64<< std::endl; //改成batchsize
-            //cnt2 = 0;
-//            std::cout<<"change statistics over"<<std::endl;
+//            while(1);
+            for (auto i : parameter) G[i].NodePos->rev_dersum(0);
+            std::cout << "nownum:" << Num << " " << "accuracy:" << (double)cnt2/InputData.size()<< std::endl; //改成batchsize
             InputData.clear();TargetData.clear();
         }
         learn_rate *= 0.9;
-        if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/InputData.size() << std::endl;
-        std::cout << "epoch:" << time << " " << "loss:" << sum_loss/InputData.size() << std::endl;
+        if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/(Num*InputData.size()) << std::endl;
+        std::cout << "epoch:" << time << " " << "loss:" << sum_loss/(Num*InputData.size()) << std::endl;
 
         //save(time, G);
     }

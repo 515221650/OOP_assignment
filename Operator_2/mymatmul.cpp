@@ -10,7 +10,16 @@ int MyMatMul::Calc(MyGraph &v) { //默认的mul应该是哪个？？
     return 0;
 }
 int MyMatMul::Derivate(MyGraph &v) {
-    v[num1].NodePos->add_der(der*ts::trans(v[num2].NodePos->Val()));
-    v[num2].NodePos->add_der(der*ts::trans(v[num1].NodePos->Val()));
+//    std::cout<<v[num1].NodePos->Val().size[0]<<' '<<v[num1].NodePos->Val().size[1]<<std::endl;
+//    std::cout<<v[num2].NodePos->Val().size[0]<<' '<<v[num2].NodePos->Val().size[1]<<std::endl;
+//    std::cout<<der.size[0]<<' '<<der.size[1]<<std::endl;
+
+    //    std::cout<<v[num1].NodePos->Val().get_size(0)<<' '<<std::cout<<v[num1].NodePos->Val().get_size(1)<<std::endl;
+    //    std::cout<<v[num2].NodePos->Val().get_size(0)<<' '<<std::cout<<v[num2].NodePos->Val().get_size(1)<<std::endl;
+    //    std::cout<<der.get_size(0)<<' '<<std::cout<<der.get_size(1)<<std::endl;
+//    while(1);
+    v[num1].NodePos->add_der(der.mat_mul(ts::trans(v[num2].NodePos->Val())));
+    v[num2].NodePos->add_der(ts::trans(v[num1].NodePos->Val()).mat_mul(der));
     return 0;
+
 }

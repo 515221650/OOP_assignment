@@ -26,7 +26,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/Storage.cpp.obj"
   "CMakeFiles/main.dir/CreateFunc.cpp.obj"
   "CMakeFiles/main.dir/GraphCompute.cpp.obj"
-  "CMakeFiles/main.dir/Layer/layer.cpp.obj"
   "CMakeFiles/main.dir/Layer/Dense.cpp.obj"
   "CMakeFiles/main.dir/Layer/Input.cpp.obj"
   "CMakeFiles/main.dir/Neural_network.cpp.obj"

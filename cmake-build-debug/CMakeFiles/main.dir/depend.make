@@ -167,15 +167,6 @@ CMakeFiles/main.dir/Layer/criterion.cpp.obj: ../Storage.h
 CMakeFiles/main.dir/Layer/criterion.cpp.obj: ../Tensor.h
 CMakeFiles/main.dir/Layer/criterion.cpp.obj: ../ts.h
 
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../CreateFunc.h
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Layer/layer.cpp
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Layer/layer.h
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Matrix.h
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Node.h
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Storage.h
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Tensor.h
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../ts.h
-
 CMakeFiles/main.dir/Layer/maxpool.cpp.obj: ../CreateFunc.h
 CMakeFiles/main.dir/Layer/maxpool.cpp.obj: ../Layer/layer.h
 CMakeFiles/main.dir/Layer/maxpool.cpp.obj: ../Layer/maxpool.cpp

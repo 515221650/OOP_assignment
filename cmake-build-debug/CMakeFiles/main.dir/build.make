@@ -407,22 +407,9 @@ CMakeFiles/main.dir/GraphCompute.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/GraphCompute.cpp.s"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yzy\Desktop\OOP\OOP_assignment\GraphCompute.cpp -o CMakeFiles\main.dir\GraphCompute.cpp.s
 
-CMakeFiles/main.dir/Layer/layer.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Layer/layer.cpp.obj: ../Layer/layer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/main.dir/Layer/layer.cpp.obj"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\layer.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\layer.cpp
-
-CMakeFiles/main.dir/Layer/layer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Layer/layer.cpp.i"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\layer.cpp > CMakeFiles\main.dir\Layer\layer.cpp.i
-
-CMakeFiles/main.dir/Layer/layer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Layer/layer.cpp.s"
-	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\layer.cpp -o CMakeFiles\main.dir\Layer\layer.cpp.s
-
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/Dense.cpp.obj: ../Layer/Dense.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/Layer/Dense.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/main.dir/Layer/Dense.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\Dense.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\Dense.cpp
 
 CMakeFiles/main.dir/Layer/Dense.cpp.i: cmake_force
@@ -435,7 +422,7 @@ CMakeFiles/main.dir/Layer/Dense.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Layer/Input.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/Input.cpp.obj: ../Layer/Input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/Layer/Input.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/main.dir/Layer/Input.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\Input.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\Input.cpp
 
 CMakeFiles/main.dir/Layer/Input.cpp.i: cmake_force
@@ -448,7 +435,7 @@ CMakeFiles/main.dir/Layer/Input.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Neural_network.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Neural_network.cpp.obj: ../Neural_network.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/main.dir/Neural_network.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/main.dir/Neural_network.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Neural_network.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Neural_network.cpp
 
 CMakeFiles/main.dir/Neural_network.cpp.i: cmake_force
@@ -461,7 +448,7 @@ CMakeFiles/main.dir/Neural_network.cpp.s: cmake_force
 
 CMakeFiles/main.dir/test_minst.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/test_minst.cpp.obj: ../test_minst.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/main.dir/test_minst.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/main.dir/test_minst.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\test_minst.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\test_minst.cpp
 
 CMakeFiles/main.dir/test_minst.cpp.i: cmake_force
@@ -474,7 +461,7 @@ CMakeFiles/main.dir/test_minst.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_1/myassert.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/myassert.cpp.obj: ../Operator_1/myassert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/main.dir/Operator_1/myassert.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/main.dir/Operator_1/myassert.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myassert.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_1\myassert.cpp
 
 CMakeFiles/main.dir/Operator_1/myassert.cpp.i: cmake_force
@@ -487,7 +474,7 @@ CMakeFiles/main.dir/Operator_1/myassert.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_2/mybind.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mybind.cpp.obj: ../Operator_2/mybind.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/main.dir/Operator_2/mybind.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/main.dir/Operator_2/mybind.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mybind.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_2\mybind.cpp
 
 CMakeFiles/main.dir/Operator_2/mybind.cpp.i: cmake_force
@@ -500,7 +487,7 @@ CMakeFiles/main.dir/Operator_2/mybind.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_2/myassign.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myassign.cpp.obj: ../Operator_2/myassign.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/main.dir/Operator_2/myassign.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/main.dir/Operator_2/myassign.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myassign.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_2\myassign.cpp
 
 CMakeFiles/main.dir/Operator_2/myassign.cpp.i: cmake_force
@@ -513,7 +500,7 @@ CMakeFiles/main.dir/Operator_2/myassign.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Tensor.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Tensor.cpp.obj: ../Tensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/main.dir/Tensor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/main.dir/Tensor.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Tensor.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Tensor.cpp
 
 CMakeFiles/main.dir/Tensor.cpp.i: cmake_force
@@ -526,7 +513,7 @@ CMakeFiles/main.dir/Tensor.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Matrix.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Matrix.cpp.obj: ../Matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/main.dir/Matrix.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/main.dir/Matrix.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Matrix.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Matrix.cpp
 
 CMakeFiles/main.dir/Matrix.cpp.i: cmake_force
@@ -539,7 +526,7 @@ CMakeFiles/main.dir/Matrix.cpp.s: cmake_force
 
 CMakeFiles/main.dir/ts.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ts.cpp.obj: ../ts.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/main.dir/ts.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/main.dir/ts.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\ts.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\ts.cpp
 
 CMakeFiles/main.dir/ts.cpp.i: cmake_force
@@ -552,7 +539,7 @@ CMakeFiles/main.dir/ts.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_1/mygrad.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/mygrad.cpp.obj: ../Operator_1/mygrad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/main.dir/Operator_1/mygrad.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/main.dir/Operator_1/mygrad.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mygrad.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_1\mygrad.cpp
 
 CMakeFiles/main.dir/Operator_1/mygrad.cpp.i: cmake_force
@@ -565,7 +552,7 @@ CMakeFiles/main.dir/Operator_1/mygrad.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_2/myat.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myat.cpp.obj: ../Operator_2/myat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/main.dir/Operator_2/myat.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/main.dir/Operator_2/myat.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myat.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_2\myat.cpp
 
 CMakeFiles/main.dir/Operator_2/myat.cpp.i: cmake_force
@@ -578,7 +565,7 @@ CMakeFiles/main.dir/Operator_2/myat.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Scalar.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Scalar.cpp.obj: ../Scalar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/main.dir/Scalar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/main.dir/Scalar.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Scalar.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Scalar.cpp
 
 CMakeFiles/main.dir/Scalar.cpp.i: cmake_force
@@ -591,7 +578,7 @@ CMakeFiles/main.dir/Scalar.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Layer/activationfunc.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/activationfunc.cpp.obj: ../Layer/activationfunc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/main.dir/Layer/activationfunc.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/main.dir/Layer/activationfunc.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\activationfunc.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\activationfunc.cpp
 
 CMakeFiles/main.dir/Layer/activationfunc.cpp.i: cmake_force
@@ -604,7 +591,7 @@ CMakeFiles/main.dir/Layer/activationfunc.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj: ../Operator_1/myrelu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/main.dir/Operator_1/myrelu.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\myrelu.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_1\myrelu.cpp
 
 CMakeFiles/main.dir/Operator_1/myrelu.cpp.i: cmake_force
@@ -617,7 +604,7 @@ CMakeFiles/main.dir/Operator_1/myrelu.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Utils/Data.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Utils/Data.cpp.obj: ../Utils/Data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/main.dir/Utils/Data.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/main.dir/Utils/Data.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Utils\Data.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Utils\Data.cpp
 
 CMakeFiles/main.dir/Utils/Data.cpp.i: cmake_force
@@ -630,7 +617,7 @@ CMakeFiles/main.dir/Utils/Data.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Layer/Conv.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/Conv.cpp.obj: ../Layer/Conv.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/main.dir/Layer/Conv.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/main.dir/Layer/Conv.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\Conv.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\Conv.cpp
 
 CMakeFiles/main.dir/Layer/Conv.cpp.i: cmake_force
@@ -643,7 +630,7 @@ CMakeFiles/main.dir/Layer/Conv.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_2/myconv.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/myconv.cpp.obj: ../Operator_2/myconv.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/main.dir/Operator_2/myconv.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/main.dir/Operator_2/myconv.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\myconv.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_2\myconv.cpp
 
 CMakeFiles/main.dir/Operator_2/myconv.cpp.i: cmake_force
@@ -656,7 +643,7 @@ CMakeFiles/main.dir/Operator_2/myconv.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Layer/maxpool.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/maxpool.cpp.obj: ../Layer/maxpool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/main.dir/Layer/maxpool.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/main.dir/Layer/maxpool.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\maxpool.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\maxpool.cpp
 
 CMakeFiles/main.dir/Layer/maxpool.cpp.i: cmake_force
@@ -669,7 +656,7 @@ CMakeFiles/main.dir/Layer/maxpool.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_2/mycriterion.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mycriterion.cpp.obj: ../Operator_2/mycriterion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/main.dir/Operator_2/mycriterion.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/main.dir/Operator_2/mycriterion.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mycriterion.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_2\mycriterion.cpp
 
 CMakeFiles/main.dir/Operator_2/mycriterion.cpp.i: cmake_force
@@ -682,7 +669,7 @@ CMakeFiles/main.dir/Operator_2/mycriterion.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Layer/criterion.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Layer/criterion.cpp.obj: ../Layer/criterion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/main.dir/Layer/criterion.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/main.dir/Layer/criterion.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Layer\criterion.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Layer\criterion.cpp
 
 CMakeFiles/main.dir/Layer/criterion.cpp.i: cmake_force
@@ -695,7 +682,7 @@ CMakeFiles/main.dir/Layer/criterion.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Equation_solver.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Equation_solver.cpp.obj: ../Equation_solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/main.dir/Equation_solver.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/main.dir/Equation_solver.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Equation_solver.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Equation_solver.cpp
 
 CMakeFiles/main.dir/Equation_solver.cpp.i: cmake_force
@@ -708,7 +695,7 @@ CMakeFiles/main.dir/Equation_solver.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_1/mymaxpool.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_1/mymaxpool.cpp.obj: ../Operator_1/mymaxpool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/main.dir/Operator_1/mymaxpool.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/main.dir/Operator_1/mymaxpool.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_1\mymaxpool.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_1\mymaxpool.cpp
 
 CMakeFiles/main.dir/Operator_1/mymaxpool.cpp.i: cmake_force
@@ -721,7 +708,7 @@ CMakeFiles/main.dir/Operator_1/mymaxpool.cpp.s: cmake_force
 
 CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj: ../Operator_2/mymatmul.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/main.dir/Operator_2/mymatmul.cpp.obj"
 	C:\PROGRA~2\Dev-Cpp\MinGW64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\main.dir\Operator_2\mymatmul.cpp.obj -c C:\Users\yzy\Desktop\OOP\OOP_assignment\Operator_2\mymatmul.cpp
 
 CMakeFiles/main.dir/Operator_2/mymatmul.cpp.i: cmake_force
@@ -761,7 +748,6 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/Storage.cpp.obj" \
 "CMakeFiles/main.dir/CreateFunc.cpp.obj" \
 "CMakeFiles/main.dir/GraphCompute.cpp.obj" \
-"CMakeFiles/main.dir/Layer/layer.cpp.obj" \
 "CMakeFiles/main.dir/Layer/Dense.cpp.obj" \
 "CMakeFiles/main.dir/Layer/Input.cpp.obj" \
 "CMakeFiles/main.dir/Neural_network.cpp.obj" \
@@ -817,7 +803,6 @@ main.exe: CMakeFiles/main.dir/Operator_3/MyCond.cpp.obj
 main.exe: CMakeFiles/main.dir/Storage.cpp.obj
 main.exe: CMakeFiles/main.dir/CreateFunc.cpp.obj
 main.exe: CMakeFiles/main.dir/GraphCompute.cpp.obj
-main.exe: CMakeFiles/main.dir/Layer/layer.cpp.obj
 main.exe: CMakeFiles/main.dir/Layer/Dense.cpp.obj
 main.exe: CMakeFiles/main.dir/Layer/Input.cpp.obj
 main.exe: CMakeFiles/main.dir/Neural_network.cpp.obj
@@ -846,7 +831,7 @@ main.exe: CMakeFiles/main.dir/build.make
 main.exe: CMakeFiles/main.dir/linklibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\yzy\Desktop\OOP\OOP_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Linking CXX executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -167,15 +167,6 @@ CMakeFiles/main.dir/Layer/criterion.cpp.obj
  C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.h
-CMakeFiles/main.dir/Layer/layer.cpp.obj
- C:/Users/yzy/Desktop/OOP/OOP_assignment/CreateFunc.h
- C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.cpp
- C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
- C:/Users/yzy/Desktop/OOP/OOP_assignment/Matrix.h
- C:/Users/yzy/Desktop/OOP/OOP_assignment/Node.h
- C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
- C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
- C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.h
 CMakeFiles/main.dir/Layer/maxpool.cpp.obj
  C:/Users/yzy/Desktop/OOP/OOP_assignment/CreateFunc.h
  C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h

@@ -338,33 +338,6 @@ Layer/criterion.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/criterion.cpp.s
 .PHONY : Layer/criterion.cpp.s
 
-Layer/layer.obj: Layer/layer.cpp.obj
-
-.PHONY : Layer/layer.obj
-
-# target to build an object file
-Layer/layer.cpp.obj:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/layer.cpp.obj
-.PHONY : Layer/layer.cpp.obj
-
-Layer/layer.i: Layer/layer.cpp.i
-
-.PHONY : Layer/layer.i
-
-# target to preprocess a source file
-Layer/layer.cpp.i:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/layer.cpp.i
-.PHONY : Layer/layer.cpp.i
-
-Layer/layer.s: Layer/layer.cpp.s
-
-.PHONY : Layer/layer.s
-
-# target to generate assembly for a file
-Layer/layer.cpp.s:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/Layer/layer.cpp.s
-.PHONY : Layer/layer.cpp.s
-
 Layer/maxpool.obj: Layer/maxpool.cpp.obj
 
 .PHONY : Layer/maxpool.obj
@@ -1559,9 +1532,6 @@ help:
 	@echo ... Layer/criterion.obj
 	@echo ... Layer/criterion.i
 	@echo ... Layer/criterion.s
-	@echo ... Layer/layer.obj
-	@echo ... Layer/layer.i
-	@echo ... Layer/layer.s
 	@echo ... Layer/maxpool.obj
 	@echo ... Layer/maxpool.i
 	@echo ... Layer/maxpool.s

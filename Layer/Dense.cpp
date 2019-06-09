@@ -35,8 +35,7 @@ void Dense::build(MyGraph& G)
     Node* newNode;
     std::string w_name;
     //命名
-
-    W = create_var(w_name, G, Tensor({in_num, out_num}));
+    W = create_var(w_name, G, ts::randn({in_num, out_num}));
 
     std::string ans_w_name;
     //命名
@@ -46,8 +45,7 @@ void Dense::build(MyGraph& G)
 
     std::string b_name;
     //
-
-    B = create_var(w_name, G, Tensor({1, out_num}));
+    B = create_var(w_name, G, ts::randn({1, out_num}));
 
 
     std::string pre_out_name;

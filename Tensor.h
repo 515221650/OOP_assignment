@@ -12,6 +12,7 @@
 
 class Scalar;
 class MyGraph;
+//class MyMatMul;
 using std::vector;
 class Tensor {
 private:
@@ -60,10 +61,9 @@ public:
     friend std::pair<Tensor, Tensor> ts::broadcast(Tensor, Tensor);
     friend void ts::broadcast(int now_dim, Tensor &new_A, const Tensor &A, int pos);
     friend std::ostream& operator << (std::ostream& out, const Tensor &x);
-    friend class MyGraph;
-    friend class Scalar;
-
-
+    friend MyGraph;
+    friend Scalar;
+//    friend MyMatMul;
     void randn();
     bool check_shape(const Tensor& B) const;
     int Size(){return val.size()*size[dim-1]*size[dim-2];}

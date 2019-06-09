@@ -187,10 +187,11 @@ Matrix Matrix::cos() const
 
 Matrix Matrix::trans() const
 {
-    Matrix res(this->row, this->col);
-    for(int i=0;i<this->row;i++)
+    Matrix res(this->col, this->row);
+
+    for(int i=0;i<this->col;i++)
     {
-        for(int j=0;j<this->col;j++)
+        for(int j=0;j<this->row;j++)
         {
             res.change_mval(i, j, this->get_mval(j, i));
         }
@@ -322,6 +323,6 @@ void Matrix::randn()
 {
     for(double& i : mval)
     {
-        i = ((double)rand()/100-50)/50;
+        i = (rand()%100-50)/(double)50;
     }
 }
