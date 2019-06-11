@@ -76,6 +76,12 @@ void MyGraph::graph_compute()
             DerVec.clear();
         }
         else*/
+        if(tmps == "SESSION")
+        {
+            is>>aim;
+            change_session(aim);
+            is>>tmps;
+        }
         if(tmps == "EVAL")
         {
             empty_placeholder_rev();
@@ -120,7 +126,16 @@ void MyGraph::graph_compute()
             change_var(StrToIntMap[aim], myresult[rank-1]);
             myresult.emplace_back(Tensor(0.0));
         }
-
+        else if(tmps == "NEWSESSION")
+        {
+            is>>aim;
+            add_session(aim);
+        }
+        else if(tmps == "DELETESESSION")
+        {
+            is>>aim;
+            erase_session(aim);
+        }
     }
 }
 

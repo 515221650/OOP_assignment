@@ -23,7 +23,12 @@ MyGraph::MyGraph()
 
 void MyGraph::change_session(std::string &str)
 {
-    now_session = Session_name[str];
+    if(Session_name.find(str) == Session_name.end())
+    {
+        std::cout<<"Session doesn't exist, change to default session"<<std::endl;
+        now_session = Session_name["init"];
+    }
+    else now_session = Session_name[str];
 }
 
 MyGraph::Session* MyGraph::add_session(const std::string &str)

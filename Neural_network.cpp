@@ -174,10 +174,9 @@ void Neural_network::test(Dataloader& DataLoader, MyGraph &G, bool need_accu) //
                 if(outputmax == targetmax)
                 {
                     cnt_correct += 1.0;
-                    //cnt2 += 1.0;
                 }
             }
-           // loss_sum += Scalar(CriNode->Val()).get_val();
+            loss_sum += Scalar(CriNode->Val()).get_val();
         }
     }
     if (need_accu) std::cout << "accuracy:" << cnt_correct/testsize << std::endl;
