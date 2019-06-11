@@ -136,7 +136,6 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
             }
             for (auto i : parameter) G[i].NodePos->rev_dersum(0);
             std::cout << "nownum:" << Num << " " << "accuracy:" << (double)cnt2/InputData.size()<< std::endl; //改成batchsize
-            InputData.clear();TargetData.clear();
         }
         learn_rate *= 0.9;
         if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/totalsize << std::endl;
@@ -178,7 +177,7 @@ void Neural_network::test(Dataloader& DataLoader, MyGraph &G, bool need_accu) //
                     //cnt2 += 1.0;
                 }
             }
-            loss_sum += Scalar(CriNode->Val()).get_val();
+           // loss_sum += Scalar(CriNode->Val()).get_val();
         }
     }
     if (need_accu) std::cout << "accuracy:" << cnt_correct/testsize << std::endl;

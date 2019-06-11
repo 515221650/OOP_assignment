@@ -106,7 +106,7 @@ void test_MINST() {
     MyNet->add_Sigmoid(*G);
     MyNet->add_MSELoss(*G);
     Dataset train_set(train_data, train_labels);
-    Dataset test_set(train_data, train_labels);
+    Dataset test_set(test_data, test_labels);
     Dataloader Train(train_set, 128);
     Dataloader Test(test_set, 128);
     //MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能

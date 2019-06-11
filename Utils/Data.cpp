@@ -18,6 +18,8 @@ std::tuple<Tensor, Tensor, bool> Dataset::get_item()
 
 bool Dataloader::get_data(std::vector<Tensor>& in_data, std::vector<Tensor>& out_data)
 {
+    in_data.clear();
+    out_data.clear();
     for(int i=0; i<BatchSize; i++)
     {
         auto newitem = dataset->get_item();
