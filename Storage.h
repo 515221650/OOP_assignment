@@ -28,7 +28,7 @@ private:
         {
             return (*this)[index];
         }
-        void change(int index, Tensor& x)
+        void change(int index, Tensor x)
         {
             (*this)[index] = x;
         }
@@ -41,6 +41,7 @@ private:
     std::map <std::string, int> StrToIntMap ;      // name to id
     std::map <std::string, Tensor > PlaceholderRev; // name to value about placeholder
     std::vector<std::pair<int, Tensor> >ChangeVar;
+
     //std::vector<std::vector<float> > DerV;
     static Session* now_session;
     //int var_cnt;
@@ -74,6 +75,7 @@ public:
     void Mark(int x){NodeInfoVec[x].vis=1;}        // whether the node has been visited when computing
 
     void change_var(int id, Tensor x);              // change the value of var with a certain id in NodeInfoVec
+    void add_var(int id, Tensor);
 
     void assign_change();
 

@@ -72,8 +72,56 @@ int main()
 //	c.reshape({3,-1});print(c);
 //	c.reshape({4,-1});print(c);
 
-	Tensor a({5,3,4,2},1),b({5,3,1},2);
-	cout<<a<<endl;
+    /*Matrix ma = Matrix(3,4,2);
+    ma.change_mval(0,2,5);
+    ma.change_mval(0,1,8);
+    ma.change_mval(1,0,4);
+    ma.change_mval(1,3,9) ;
+    ma.change_mval(2,2,5) ;
+
+    Matrix mb = Matrix(3,4,2);
+    mb.change_mval(0,1,7);
+    mb.change_mval(0,3,3);
+    mb.change_mval(1,1,1);
+    mb.change_mval(1,2,6) ;
+    mb.change_mval(2,0,3) ;*/
+
+
+   /* Tensor a({3,4,4},1),b({3,4,2},2);*/
+	/*a.change_val(1,ma);
+	a.change_val(2,ma-Matrix(3,4,1));
+	a.change_val(0,mb);*/
+
+//    Tensor a = ts::randn({4,3,2});
+//    std::cout << a << std::endl;
+//
+//    a.reshape({2,3,-1});
+//    std::cout << a << std::endl;
+
+    Tensor a = ts::randn({4,2,3});
+    std::cout << a << std::endl;
+
+    Tensor b = a({{1,3}, {0,2}, {0,2}});
+    std::cout << b << std::endl;
+
+
+
+
+   // std::cout << b << std::endl;
+    //std::cout << ts::concat(a, b, 2) << std::endl;
+
+    /*std::cout << a << std::endl;
+    std::cout << b << std::endl;
+    std::cout << a+b << std::endl;*/
+
+
+
+
+	//std::cout << a << std::endl;
+    //std::cout << b << std::endl;
+    //std::cout << a+b << std::endl;
+
+
 	//a.randn();b.randn();
 //	print(a);
 //	print(b);

@@ -25,6 +25,7 @@ public:
 
     virtual int Derivate(MyGraph& g) = 0;      // derivate 求导
     virtual int Compt(MyGraph& g, int x) = 0;  //compt the value in node (to get the value, use Compt first and Calc second)
+
     std::string Name(){return name;}
     const Tensor& Der() {return der;}
     const Tensor& DerSum() {return dersum;}

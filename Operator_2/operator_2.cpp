@@ -17,3 +17,14 @@ int Operator_2::Compt(MyGraph& G, int x)
     G.push_der(x);
     return status;
 }
+
+
+//void Operator_2::Compt(MyGraph& G, int x)
+//{
+//    if(!G[num1].vis) (G[num1].NodePos)->Compt(G, num1);
+//    if(!G[num2].vis) (G[num2].NodePos)->Compt(G, num2);
+//
+//    G.Mark(x);
+//    G.push_der(x);
+//}
+

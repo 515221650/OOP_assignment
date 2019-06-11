@@ -98,11 +98,11 @@ void test_MINST() {
 
     auto *MyNet = new Neural_network();
     auto *G = new MyGraph();
-    MyNet->add_target(10, *G);  //0
-    MyNet->add_Input(784, *G);  //1
-    MyNet->add_Dense(10, *G);   //2 3(matmul) 4 5
-    MyNet->add_Sigmoid(*G);     // 6
-    MyNet->add_Dense(10, *G);   // 7 8 9 10
+    MyNet->add_target(10, *G);
+    MyNet->add_Input(784, *G);
+    MyNet->add_Dense(10, *G);
+    MyNet->add_Sigmoid(*G);
+    MyNet->add_Dense(10, *G);
     MyNet->add_Sigmoid(*G);
     MyNet->add_MSELoss(*G);
     Dataset train_set(train_data, train_labels);
@@ -110,6 +110,6 @@ void test_MINST() {
     Dataloader Train(train_set, 128);
     Dataloader Test(test_set, 128);
     //MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
-    MyNet->train(Train, *G, true,  10, 1);
+    MyNet->train(Train, *G, true,  30, 0.5);
     MyNet->test(Test, *G, true);
 }

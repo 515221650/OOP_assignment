@@ -6,55 +6,55 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/CreateFunc.h
+D:/hwy/bighomework/2/OOP_assignment/CreateFunc.h
 Storage.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
+D:/hwy/bighomework/2/OOP_assignment/Storage.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Conv.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/Conv.h
 layer.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/layer.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Dense.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/Dense.h
 layer.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/layer.h
 vector
 -
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Input.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/Input.h
 layer.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/layer.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/activationfunc.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/activationfunc.h
 layer.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/layer.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/criterion.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/criterion.h
 layer.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/layer.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/layer.h
 ../Node.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Node.h
+D:/hwy/bighomework/2/OOP_assignment/Node.h
 ../CreateFunc.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/CreateFunc.h
+D:/hwy/bighomework/2/OOP_assignment/CreateFunc.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/maxpool.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/maxpool.h
 layer.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/layer.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/layer.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Matrix.h
+D:/hwy/bighomework/2/OOP_assignment/Matrix.h
 vector
 -
 iostream
 -
 ts.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.h
+D:/hwy/bighomework/2/OOP_assignment/ts.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Neural_network.cpp
+D:/hwy/bighomework/2/OOP_assignment/Neural_network.cpp
 Neural_network.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Neural_network.h
+D:/hwy/bighomework/2/OOP_assignment/Neural_network.h
 Utils/Data.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Utils/Data.h
+D:/hwy/bighomework/2/OOP_assignment/Utils/Data.h
 algorithm
 -
 iostream
@@ -62,27 +62,27 @@ iostream
 ctime
 -
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Neural_network.h
+D:/hwy/bighomework/2/OOP_assignment/Neural_network.h
 Storage.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
+D:/hwy/bighomework/2/OOP_assignment/Storage.h
 Layer/Dense.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Dense.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/Dense.h
 Layer/Input.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Input.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/Input.h
 Layer/activationfunc.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/activationfunc.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/activationfunc.h
 Layer/criterion.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/criterion.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/criterion.h
 Layer/Conv.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/Conv.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/Conv.h
 Layer/maxpool.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Layer/maxpool.h
+D:/hwy/bighomework/2/OOP_assignment/Layer/maxpool.h
 Utils/Data.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Utils/Data.h
+D:/hwy/bighomework/2/OOP_assignment/Utils/Data.h
 Scalar.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Scalar.h
+D:/hwy/bighomework/2/OOP_assignment/Scalar.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Node.h
+D:/hwy/bighomework/2/OOP_assignment/Node.h
 iostream
 -
 cmath
@@ -90,15 +90,15 @@ cmath
 stdexcept
 -
 Tensor.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
+D:/hwy/bighomework/2/OOP_assignment/Tensor.h
 Storage.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
+D:/hwy/bighomework/2/OOP_assignment/Storage.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Scalar.h
+D:/hwy/bighomework/2/OOP_assignment/Scalar.h
 Tensor.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
+D:/hwy/bighomework/2/OOP_assignment/Tensor.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Storage.h
+D:/hwy/bighomework/2/OOP_assignment/Storage.h
 iostream
 -
 map
@@ -110,27 +110,39 @@ string
 algorithm
 -
 Tensor.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
+D:/hwy/bighomework/2/OOP_assignment/Tensor.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
+D:/hwy/bighomework/2/OOP_assignment/Tensor.h
 vector
 -
 cstdarg
 -
 Matrix.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Matrix.h
+D:/hwy/bighomework/2/OOP_assignment/Matrix.h
 iostream
 -
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Utils/Data.h
+D:/hwy/bighomework/2/OOP_assignment/Utils/Data.h
 vector
 -
 tuple
 -
 ../Tensor.h
-C:/Users/yzy/Desktop/OOP/OOP_assignment/Tensor.h
+D:/hwy/bighomework/2/OOP_assignment/Tensor.h
 
-C:/Users/yzy/Desktop/OOP/OOP_assignment/ts.h
+D:/hwy/bighomework/2/OOP_assignment/test_minst.cpp
+test_minst.h
+D:/hwy/bighomework/2/OOP_assignment/test_minst.h
+
+D:/hwy/bighomework/2/OOP_assignment/test_minst.h
+Neural_network.h
+D:/hwy/bighomework/2/OOP_assignment/Neural_network.h
+vector
+-
+fstream
+-
+
+D:/hwy/bighomework/2/OOP_assignment/ts.h
 utility
 -
 vector

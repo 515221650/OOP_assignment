@@ -216,6 +216,12 @@ void MyGraph::insert_node(MyVar* NewNode, std::string name)
 void MyGraph::change_var(int index, Tensor x)
 {
     now_session->change(index, x);
+    NodeInfoVec[index].NodePos->rev_der(x);
+}
+
+void MyGraph::add_var(int id, Tensor x)
+{
+    now_session->change(id, GetVR(id)+x);
 }
 
 void MyGraph::assign_change()

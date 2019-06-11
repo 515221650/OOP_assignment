@@ -81,16 +81,15 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
         double cnt2 = 0.0; //used if you want to see the process more details
         std::vector<Tensor> InputData;
         std::vector<Tensor> TargetData;
-        //要把target变成（0，0，0，1，0，0，0，0，0，0，）的形式
+        int totalsize = 0;
         int Num = 0;
         while(DataLoader.get_data(InputData, TargetData)) //warning : each loop may take fairly long time
         {
-            //int batchsize = TargetData.size();
-            Num++;cnt2=0;
+            totalsize += InputData.size();
+            Num++;
+            cnt2=0;
             for(int num=0; num<InputData.size(); num++)
             {
-//                std::cout<<"start"<<std::endl;
-//                cout<<InputData[num]<<endl;
                 seq[0]->change_input(InputData[num], G);    //input the image's data
                 tar->change_input(TargetData[num], G);
 
@@ -100,19 +99,14 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 }
 
                 G.erase_mark();
-                //double mx = -INF; int id = 0;
 
                 Node *OutputNode = G.NodeInfoVec[outputpos()].NodePos;
                 Node *CriNode = G.NodeInfoVec[cripos()].NodePos; //criterion
                 CriNode->Compt(G, cripos());
-//                std::cout<<"cmpt end!"<<std::endl;
                 Tensor outputval = OutputNode->Val();
 
                 if(need_accu)   //check if the answer is correct
                 {
-//                    std::cout<<outputval<<std::endl;
-//                    if(num == InputData.size()-1)std::cout<<outputval<<std::endl;
-
                     int outputmax = ts::get_max_pos_2d(outputval);
                     int targetmax = ts::get_max_pos_2d(TargetData[num]);
                     if(outputmax == targetmax)
@@ -126,19 +120,10 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 //evaluation function: sigma((outputvalue-standard_outputvalue)^2)
                 CriNode->rev_der(Tensor(1.0));
                 CriNode->Derivate(G);
-//                std::cout<<"start der"<<std::endl;
-//                for(int p = seq.size()-1; p>=0; p--)
-//                {
-//                    std::cout<<"round x "<<std::endl;
-//                    G.NodeInfoVec[seq[p]->output()].NodePos->Derivate(G);
-//                    cout<<G.NodeInfoVec[seq[p]->output()].NodePos->Der()<<endl;
-//                    G.NodeInfoVec[seq[p]->output()].NodePos->add_dersum(G.NodeInfoVec[seq[p]->output()].NodePos->Der());
-//                }
+
                 for(int i = G.NodeInfoVec.size()-1; i >= 0; i--)
                 {
-//                    cout<<'i'<<i<<endl;
                     G[i].NodePos->Derivate(G);
-//                    cout<<G.NodeInfoVec[i].NodePos->Der()<<endl;
                     G[i].NodePos->add_dersum(G[i].NodePos->Der());
                 }
             }
@@ -147,17 +132,14 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
             for(auto i : parameter)
             {
                 c++;
-                Node *nown = G[i].NodePos;
-//                cout<<c<<' '<<endl<<nown->DerSum()<<endl;
-                nown->add_val(-nown->DerSum() * learn_rate / InputData.size());
+                G.add_var(i, -G[i].NodePos->DerSum() * learn_rate / InputData.size());
             }
-//            while(1);
             for (auto i : parameter) G[i].NodePos->rev_dersum(0);
             std::cout << "nownum:" << Num << " " << "accuracy:" << (double)cnt2/InputData.size()<< std::endl; //改成batchsize
             InputData.clear();TargetData.clear();
         }
         learn_rate *= 0.9;
-        if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/(Num*InputData.size()) << std::endl;
+        if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/totalsize << std::endl;
         std::cout << "epoch:" << time << " " << "loss:" << sum_loss/(Num*InputData.size()) << std::endl;
 
         //save(time, G);
@@ -178,6 +160,8 @@ void Neural_network::test(Dataloader& DataLoader, MyGraph &G, bool need_accu) //
         for(int num=0; num<InputData.size(); num++)
         {
             seq[0]->change_input(InputData[num], G);
+            tar->change_input(TargetData[num], G);
+
             G.erase_mark();
             Node *OutputNode = G.NodeInfoVec[outputpos()].NodePos;
             Node *CriNode = G.NodeInfoVec[cripos()].NodePos; //criterion

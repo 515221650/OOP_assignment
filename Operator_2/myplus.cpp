@@ -14,3 +14,7 @@ int MyPlus::Derivate(MyGraph &v) {
     v[num2].NodePos->add_der(der);
     return 0;
 }
+
+//void MyPlus::Calc(MyGraph &v) {
+//    val = v[num1].NodePos->Val() + v[num2].NodePos->Val();
+//}

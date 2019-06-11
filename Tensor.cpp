@@ -45,10 +45,11 @@ std::ostream& operator << (std::ostream& out,const Tensor &x)
             }
             if(i!=x.val.size())
             {
-                out<<',';
+                out<<','<<std::endl;
                 for(int j = 0;j < flag; j++)out<<'[';
             }
         }
+        std::cout<<std::endl;
     }
     return out;
 }
@@ -513,11 +514,8 @@ Tensor Tensor::point_mul(Tensor b) const
 
 Tensor Tensor::mat_mul(const Tensor & b) const
 {
-    //std::cout<<"now matmul"<<std::endl;
     if(size[dim-1]!=b.size[dim-2])
     {
-        //std::cout<<"a "<<size[dim-2]<< " "<<size[dim-1]<<std::endl;
-        //std::cout<<"b "<<b.size[dim-2]<< " "<<b.size[dim-1]<<std::endl;
         throw std::range_error("Tensor's shape doesn't match");
     }
     Tensor tmp;tmp.clear();

@@ -20,8 +20,7 @@ private:
     vector<int> size; // 后两维是matrix的
     vector<Matrix> val;
     void add_dim(int sz) {size.push_back(sz); dim++;}
-//    static int error;
-//    static void set_error(int i) {error = i;}
+
 public:
     Tensor(double x):Tensor({1,1},x){}
     Tensor(std::initializer_list<int> szlist = {1, 1}, double mval = 0);//Tensor(5)是5*5还是1*5? 对dim==1的特判//默认填充0
