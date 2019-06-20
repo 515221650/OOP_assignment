@@ -5,7 +5,7 @@
 #ifndef OOP_MYASSIGN_H
 #define OOP_MYASSIGN_H
 
-#include "Operator_2.h"
+#include "operator_2.h"
 
 class MyAssign : public Operator_2{
 public:

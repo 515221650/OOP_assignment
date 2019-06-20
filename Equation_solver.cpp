@@ -60,9 +60,10 @@ void MyGraph::solve_equation()
                 NodeInfoVec[i].NodePos->Derivate(*this);
             }
             double derx = Scalar(NodeInfoVec[xpos].NodePos->Der()).get_val();
-            std::cout<<std::fixed<<std::setprecision(4)<<Scalar(NodeInfoVec[xpos].NodePos->Val()).get_val()-res/derx<<std::endl;
+            std::cout<<std::fixed<<std::setprecision(4)<<Scalar(NodeInfoVec[xpos].NodePos->Val()).get_val()-res/derx<<" ";
             change_var(xpos, NodeInfoVec[xpos].NodePos->Val() - Tensor(res/derx));
         }
+        std::cout<<std::endl;
     }
 }
 

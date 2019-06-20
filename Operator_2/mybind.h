@@ -5,7 +5,7 @@
 #ifndef OOP_MYBIND_H
 #define OOP_MYBIND_H
 
-#include "Operator_2.h"
+#include "operator_2.h"
 
 class MyBind : public Operator_2{
 public:

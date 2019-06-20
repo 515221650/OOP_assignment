@@ -10,7 +10,7 @@
 #include "Tensor.h"
 #include "Storage.h"
 
-#define EPS 1E-8
+#define EPS 1E-20
 
 class Node{
 protected:
