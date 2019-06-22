@@ -342,10 +342,10 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
     }
     bool fail = 0;
 
-    if((specialdim == -1) && (mul != Size())) fail = 1, std::cout<<"first case"<<mul<<" "<<Size()<<std::endl;
+    if((specialdim == -1) && (mul != Size())) fail = 1;
     if(specialdim!=-1)
     {
-        if(Size()%mul != 0) fail = 1, std::cout<<"second case"<<std::endl;
+        if(Size()%mul != 0) fail = 1;
         else tmpsz[specialdim] = Size()/mul;
 
     }
