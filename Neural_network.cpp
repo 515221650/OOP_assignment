@@ -31,7 +31,9 @@ void Neural_network::add_Dense(int num, MyGraph &G)
     Dense* ptr = new Dense(tmp->get_size(), num, *tmp, G);
     seq.push_back(ptr);
     parameter.push_back(ptr->W);
+    std::cout<<"dense w"<<ptr->W<<std::endl;
     parameter.push_back(ptr->B);
+    std::cout<<"dense B"<<ptr->B<<std::endl;
 }
 
 void Neural_network::add_target(int num, MyGraph &G)
@@ -62,13 +64,20 @@ void Neural_network::add_conv(int _in, int _out, MyGraph &G, int _kernel, bool _
     Conv* ptr = new Conv(_in, _out, *tmp, G, _kernel, _bias, _stride, _padding);
     seq.push_back(ptr);
     parameter.push_back(ptr->K);
-    parameter.push_back(ptr->B);
+    std::cout<<"conv K"<<ptr->K<<std::endl;
+    //parameter.push_back(ptr->B); //没有B
 }
 
 void Neural_network::add_maxpool(int _in, int _out, MyGraph &G)
 {
     Layer* tmp = seq.back();
     seq.push_back(new MaxPool(_in, _out, *tmp, G));
+}
+
+void Neural_network::add_Reshape(int _in, int _out, MyGraph& G, std::initializer_list<int> beforesize, std::initializer_list<int> aftersize)
+{
+    Layer* tmp = seq.back();
+    seq.push_back(new Reshape(*tmp, G, _in, _out, beforesize, aftersize));
 }
 
 using namespace std;
@@ -119,7 +128,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
 
                 //evaluation function: sigma((outputvalue-standard_outputvalue)^2)
                 CriNode->rev_der(Tensor(1.0));
-                CriNode->Derivate(G);
+                //CriNode->Derivate(G);//感觉应该是不用的...先留着了万一我zz了...
 
                 for(int i = G.NodeInfoVec.size()-1; i >= 0; i--)
                 {
@@ -134,7 +143,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 c++;
                 G.add_var(i, -G[i].NodePos->DerSum() * learn_rate / InputData.size());
             }
-            for (auto i : parameter) G[i].NodePos->rev_dersum(0);
+            for (auto i : G.NodeInfoVec) i.NodePos->rev_dersum(0);
             std::cout << "nownum:" << Num << " " << "accuracy:" << (double)cnt2/InputData.size()<< std::endl; //改成batchsize
         }
         learn_rate *= 0.9;
@@ -189,7 +198,6 @@ void Neural_network::save(int cnt, MyGraph& G)  //save the val of each node
     char file[100];
     sprintf(file, "epoch%d_time=%ld.txt", cnt, clock());
     G.save(file);
-    //freopen("/dev/tty","w",stdout);   //for Linux
 }
 
 int Neural_network::load(std::string filename, MyGraph& G)  //load the data of each node( to continue the process)

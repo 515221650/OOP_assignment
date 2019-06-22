@@ -61,7 +61,7 @@ double Tensor::operator() (std::initializer_list<int> arglist)
 
     int tmpnum = 1;
     int tmprank = 0;//for循环后为矩阵在val中的下标
-    int tmpdim = dim-1;
+    int tmpdim = dim-3;
     for(auto a = arglist.end()-3; tmpdim>=0; a--, tmpdim--)
     {
         tmprank += (*a)*tmpnum;
@@ -148,7 +148,7 @@ Tensor Tensor::operator-() const
 
 Tensor Tensor::operator/ (Tensor b) const
 {
-    //std::cout<<"now///"<<std::endl;
+//    std::cout<<"now///"<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
@@ -245,7 +245,7 @@ Tensor Tensor::operator<= (Tensor b) const
 
 Tensor Tensor::operator*(Tensor b) const
 {
-    //std::cout<<"now point_mul"<<std::endl;
+//    std::cout<<"now point_mul"<<std::endl;
     Tensor res = *this;
     if(ts::need_broadcast(res, b))
     {
@@ -342,10 +342,10 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
     }
     bool fail = 0;
 
-    if((specialdim == -1) && (mul != Size())) fail = 1;
+    if((specialdim == -1) && (mul != Size())) fail = 1, std::cout<<"first case"<<mul<<" "<<Size()<<std::endl;
     if(specialdim!=-1)
     {
-        if(Size()%mul != 0) fail = 1;
+        if(Size()%mul != 0) fail = 1, std::cout<<"second case"<<std::endl;
         else tmpsz[specialdim] = Size()/mul;
 
     }
@@ -498,7 +498,6 @@ Tensor Tensor::concat(const Tensor & b, const int catdim) const
 
 Tensor Tensor::point_mul(Tensor b) const
 {
-   // std::cout<<"now point_mul"<<std::endl;
     Tensor res = *this;
     if(ts::need_broadcast(res, b))
     {

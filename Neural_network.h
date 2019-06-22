@@ -12,6 +12,7 @@
 #include "Layer/criterion.h"
 #include "Layer/Conv.h"
 #include "Layer/maxpool.h"
+#include "Layer/Reshape.h"
 #include "Utils/Data.h"
 #include "Scalar.h"
 
@@ -34,6 +35,7 @@ public:
     void add_target(int num, MyGraph& G);
     void add_conv(int _in, int _out, MyGraph& G, int _kernel = 3, bool _bias= false, int _stride=1, int _padding=0);
     void add_maxpool(int _in, int _out, MyGraph& G);
+    void add_Reshape(int _in, int _out, MyGraph& G, std::initializer_list<int> beforesize, std::initializer_list<int> aftersize);
 
 
 

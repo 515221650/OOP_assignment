@@ -4,7 +4,7 @@ MESSAGE(STATUS "Project: SERVER")
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -march=native -Wno-reorder")
 
-#[[add_executable(main1 main1.cpp Node.h
+add_executable(main4 main4.cpp Node.h
         Operator_1/operator_1.cpp Operator_1/operator_1.h
         Operator_2/operator_2.cpp Operator_2/operator_2.h
         Operator_3/Operator_3.cpp Operator_3/Operator_3.h
@@ -58,7 +58,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -march=native -Wno-reorder")
         Layer/criterion.h Layer/criterion.cpp
         Equation_solver.cpp
         Operator_1/mymaxpool.h Operator_1/mymaxpool.cpp
-        Operator_2/mymatmul.cpp Operator_2/mymatmul.h)]]
+        Operator_2/mymatmul.cpp Operator_2/mymatmul.h Layer/Reshape.h Reshape.cpp
+        Operator_1/myreshape.cpp Operator_1/myreshape.h Layer/Reshape.cpp)
 
 add_executable(main1 main1.cpp Node.h
         Operator_1/operator_1.cpp Operator_1/operator_1.h
@@ -96,7 +97,8 @@ add_executable(main1 main1.cpp Node.h
         Operator_1/mygrad.cpp Operator_1/mygrad.h
         Operator_2/myat.cpp Operator_2/myat.h
         Scalar.h Scalar.cpp
-        Operator_2/mymatmul.cpp Operator_2/mymatmul.h)
+        Operator_2/mymatmul.cpp Operator_2/mymatmul.h
+        Operator_1/myreshape.cpp Operator_1/myreshape.h)
 
 
 add_executable(main2 main1.cpp Node.h
@@ -135,7 +137,8 @@ add_executable(main2 main1.cpp Node.h
         Operator_1/mygrad.cpp Operator_1/mygrad.h
         Operator_2/myat.cpp Operator_2/myat.h
         Scalar.h Scalar.cpp
-        Operator_2/mymatmul.cpp Operator_2/mymatmul.h)
+        Operator_2/mymatmul.cpp Operator_2/mymatmul.h
+        Operator_1/myreshape.cpp Operator_1/myreshape.h)
 
 add_executable(main3 main3.cpp Node.h
         Equation_solver.cpp
@@ -174,4 +177,5 @@ add_executable(main3 main3.cpp Node.h
         Operator_1/mygrad.cpp Operator_1/mygrad.h
         Operator_2/myat.cpp Operator_2/myat.h
         Scalar.h Scalar.cpp
-        Operator_2/mymatmul.cpp Operator_2/mymatmul.h)
+        Operator_2/mymatmul.cpp Operator_2/mymatmul.h
+        Operator_1/myreshape.cpp Operator_1/myreshape.h)

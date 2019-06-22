@@ -13,6 +13,7 @@ int read_int(int i);
 void read_Label(string filename, vector<double>& labels);
 void read_Data(string filename, vector<vector<double>>& data);
 
-void test_MINST();
+void test_MNIST();
+void test_Conv();
 
 #endif //BIGHOMEWORK_TEST_MINST_H

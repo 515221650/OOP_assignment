@@ -38,7 +38,7 @@ int MyConv::Calc(MyGraph &G)
                     for(int l = std::max(0, padding-i*stride); l < max_l; l++)
                     {
                         int max_t = std::min(ker_size, col+padding-j*stride);
-                        for(int t = std::min(0, padding-j*stride); t < max_t; t++)
+                        for(int t = std::max(0, padding-j*stride); t < max_t; t++)
                         {
                             sum += kernel[l][t] * input [i*stride+l-padding][j*stride+t-padding];
                         }
@@ -61,6 +61,7 @@ int MyConv::Derivate(MyGraph &G)
     int ker_size = (T2.get_size(2));
     int new_row = (row - ker_size + 2*padding) / stride + 1;
     int new_col = (col - ker_size + 2*padding) / stride + 1;
+
 //    for(int q = 0; q < T2.get_size(0); q++)
 //    {
 //        const Matrix & output = T3.get_val(q);
@@ -104,13 +105,13 @@ int MyConv::Derivate(MyGraph &G)
                     for(int l = std::max(0, padding-i*stride); l < max_l; l++)
                     {
                         int max_t = std::min(ker_size, col+padding-j*stride);
-                        for(int t = std::min(0, padding-j*stride); t < max_t; t++)
+                        for(int t = std::max(0, padding-j*stride); t < max_t; t++)
                         {
-                            tmp_ker.add_mval(l, t, input[i*stride+l-padding][j*stride+t-padding]);
-                            tmp_per.add_mval(i*stride+l-padding, j*stride+t-padding, kernel[l][t]);
+                            tmp_ker.add_mval(l, t, input[i*stride+l-padding][j*stride+t-padding]*sum);
+                            tmp_per.add_mval(i*stride+l-padding, j*stride+t-padding, kernel[l][t]*sum);
                         }
                     }
-                    Dr_ker.change_val(q*high + k, tmp_ker);
+                    Dr_ker.add_val(q*high + k, tmp_ker);
                     Dr_per.add_val(k, tmp_per);
                 }
             }
@@ -118,4 +119,5 @@ int MyConv::Derivate(MyGraph &G)
     }
     G[num2].NodePos->add_der(Dr_ker);
     G[num1].NodePos->add_der(Dr_per);
+    return 0;
 }

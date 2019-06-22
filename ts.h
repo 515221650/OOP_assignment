@@ -25,7 +25,7 @@ namespace ts
     Matrix concat(const Matrix & a, const Matrix & b, const int catdim);
     Matrix trans(const Matrix &);
 
-    Tensor max_T(const Tensor &, const Tensor &);
+    Tensor max_T(Tensor, Tensor);
     Tensor sin(const Tensor &);
     Tensor cos(const Tensor &);
     Tensor exp(const Tensor &);

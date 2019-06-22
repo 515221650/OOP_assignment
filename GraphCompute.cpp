@@ -25,57 +25,6 @@ void MyGraph::graph_compute()
         std::string tmps;
         is>>tmps;   //cin the first word
         std::string aim, aim2; float x;
-       /* if(tmps == "DERIVATIVE")
-        {
-            empty_placeholder_rev();
-            erase_mark();
-            int ParaNum;
-            std::string ParaName;
-            is>>aim>>aim2;
-            if(!(is>>ParaNum)) ParaNum = 0;
-            while(ParaNum--)    //cin parameters
-            {
-                is>>ParaName>>x;
-                insert_placeholder_rev(ParaName, x);    //to save the value and mark that the placeholder is not missed
-            }
-            int aim_num = str_to_int(aim);
-            Node* ans_node = NodeInfoVec[aim_num].NodePos;  //pointer to our aim node
-            try
-            {
-                int ans = ans_node->Compt(*this, aim_num);  //ans: the status of computation; 0 means no error
-                if(!ans)
-                {
-                    erase_der();
-                    ans_node->rev_der(1);   //in der, we record the deravative of aiming node to current node 目标节点对当前节点的导数，目标节点的der初始化为1
-                    reverse(DerVec.begin(), DerVec.end());   //DerVec is created in Compt, which indicate what nodes are related with aim node;
-                    int DerStatus = 0;  //record the status of derivative; 0 means no errors
-                    for(auto i : DerVec)
-                    {
-                        DerStatus = NodeInfoVec[i].NodePos->Derivate(*this);
-                        if(DerStatus) break;
-                    }
-
-                    if(DerStatus)   //have errors
-                    {
-                        std::cout<<"ERROR: Underivable"<<std::endl;
-                        myresult.emplace_back(Tensor(0.0));
-                    }
-                    else
-                    {
-                        Tensor res =  NodeInfoVec[str_to_int(aim2)].NodePos->Der();
-                        std::cout<<std::fixed<<std::setprecision(4)<<Scalar(res).get_val()<<std::endl;
-                        myresult.push_back(res);
-                   // }
-                }
-            }
-            catch(std::range_error ERROR)
-            {
-                std::cerr<<ERROR.what()<<std::endl;
-                myresult.emplace_back(Tensor(0.0));
-            }
-            DerVec.clear();
-        }
-        else*/
         if(tmps == "SESSION")
         {
             is>>aim;

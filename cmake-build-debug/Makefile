@@ -110,6 +110,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named main4
+
+# Build rule for target.
+main4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 main4
+.PHONY : main4
+
+# fast build rule for target.
+main4/fast:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/build
+.PHONY : main4/fast
+
+#=============================================================================
 # Target rules for targets named main1
 
 # Build rule for target.
@@ -154,6 +167,7 @@ CreateFunc.obj: CreateFunc.cpp.obj
 
 # target to build an object file
 CreateFunc.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/CreateFunc.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/CreateFunc.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/CreateFunc.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/CreateFunc.cpp.obj
@@ -165,6 +179,7 @@ CreateFunc.i: CreateFunc.cpp.i
 
 # target to preprocess a source file
 CreateFunc.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/CreateFunc.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/CreateFunc.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/CreateFunc.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/CreateFunc.cpp.i
@@ -176,6 +191,7 @@ CreateFunc.s: CreateFunc.cpp.s
 
 # target to generate assembly for a file
 CreateFunc.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/CreateFunc.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/CreateFunc.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/CreateFunc.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/CreateFunc.cpp.s
@@ -187,6 +203,7 @@ Equation_solver.obj: Equation_solver.cpp.obj
 
 # target to build an object file
 Equation_solver.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Equation_solver.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Equation_solver.cpp.obj
 .PHONY : Equation_solver.cpp.obj
 
@@ -196,6 +213,7 @@ Equation_solver.i: Equation_solver.cpp.i
 
 # target to preprocess a source file
 Equation_solver.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Equation_solver.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Equation_solver.cpp.i
 .PHONY : Equation_solver.cpp.i
 
@@ -205,6 +223,7 @@ Equation_solver.s: Equation_solver.cpp.s
 
 # target to generate assembly for a file
 Equation_solver.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Equation_solver.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Equation_solver.cpp.s
 .PHONY : Equation_solver.cpp.s
 
@@ -214,6 +233,7 @@ GraphCompute.obj: GraphCompute.cpp.obj
 
 # target to build an object file
 GraphCompute.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/GraphCompute.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/GraphCompute.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/GraphCompute.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/GraphCompute.cpp.obj
@@ -225,6 +245,7 @@ GraphCompute.i: GraphCompute.cpp.i
 
 # target to preprocess a source file
 GraphCompute.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/GraphCompute.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/GraphCompute.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/GraphCompute.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/GraphCompute.cpp.i
@@ -236,10 +257,200 @@ GraphCompute.s: GraphCompute.cpp.s
 
 # target to generate assembly for a file
 GraphCompute.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/GraphCompute.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/GraphCompute.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/GraphCompute.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/GraphCompute.cpp.s
 .PHONY : GraphCompute.cpp.s
+
+Layer/Conv.obj: Layer/Conv.cpp.obj
+
+.PHONY : Layer/Conv.obj
+
+# target to build an object file
+Layer/Conv.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Conv.cpp.obj
+.PHONY : Layer/Conv.cpp.obj
+
+Layer/Conv.i: Layer/Conv.cpp.i
+
+.PHONY : Layer/Conv.i
+
+# target to preprocess a source file
+Layer/Conv.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Conv.cpp.i
+.PHONY : Layer/Conv.cpp.i
+
+Layer/Conv.s: Layer/Conv.cpp.s
+
+.PHONY : Layer/Conv.s
+
+# target to generate assembly for a file
+Layer/Conv.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Conv.cpp.s
+.PHONY : Layer/Conv.cpp.s
+
+Layer/Dense.obj: Layer/Dense.cpp.obj
+
+.PHONY : Layer/Dense.obj
+
+# target to build an object file
+Layer/Dense.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Dense.cpp.obj
+.PHONY : Layer/Dense.cpp.obj
+
+Layer/Dense.i: Layer/Dense.cpp.i
+
+.PHONY : Layer/Dense.i
+
+# target to preprocess a source file
+Layer/Dense.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Dense.cpp.i
+.PHONY : Layer/Dense.cpp.i
+
+Layer/Dense.s: Layer/Dense.cpp.s
+
+.PHONY : Layer/Dense.s
+
+# target to generate assembly for a file
+Layer/Dense.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Dense.cpp.s
+.PHONY : Layer/Dense.cpp.s
+
+Layer/Input.obj: Layer/Input.cpp.obj
+
+.PHONY : Layer/Input.obj
+
+# target to build an object file
+Layer/Input.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Input.cpp.obj
+.PHONY : Layer/Input.cpp.obj
+
+Layer/Input.i: Layer/Input.cpp.i
+
+.PHONY : Layer/Input.i
+
+# target to preprocess a source file
+Layer/Input.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Input.cpp.i
+.PHONY : Layer/Input.cpp.i
+
+Layer/Input.s: Layer/Input.cpp.s
+
+.PHONY : Layer/Input.s
+
+# target to generate assembly for a file
+Layer/Input.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Input.cpp.s
+.PHONY : Layer/Input.cpp.s
+
+Layer/Reshape.obj: Layer/Reshape.cpp.obj
+
+.PHONY : Layer/Reshape.obj
+
+# target to build an object file
+Layer/Reshape.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Reshape.cpp.obj
+.PHONY : Layer/Reshape.cpp.obj
+
+Layer/Reshape.i: Layer/Reshape.cpp.i
+
+.PHONY : Layer/Reshape.i
+
+# target to preprocess a source file
+Layer/Reshape.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Reshape.cpp.i
+.PHONY : Layer/Reshape.cpp.i
+
+Layer/Reshape.s: Layer/Reshape.cpp.s
+
+.PHONY : Layer/Reshape.s
+
+# target to generate assembly for a file
+Layer/Reshape.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/Reshape.cpp.s
+.PHONY : Layer/Reshape.cpp.s
+
+Layer/activationfunc.obj: Layer/activationfunc.cpp.obj
+
+.PHONY : Layer/activationfunc.obj
+
+# target to build an object file
+Layer/activationfunc.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/activationfunc.cpp.obj
+.PHONY : Layer/activationfunc.cpp.obj
+
+Layer/activationfunc.i: Layer/activationfunc.cpp.i
+
+.PHONY : Layer/activationfunc.i
+
+# target to preprocess a source file
+Layer/activationfunc.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/activationfunc.cpp.i
+.PHONY : Layer/activationfunc.cpp.i
+
+Layer/activationfunc.s: Layer/activationfunc.cpp.s
+
+.PHONY : Layer/activationfunc.s
+
+# target to generate assembly for a file
+Layer/activationfunc.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/activationfunc.cpp.s
+.PHONY : Layer/activationfunc.cpp.s
+
+Layer/criterion.obj: Layer/criterion.cpp.obj
+
+.PHONY : Layer/criterion.obj
+
+# target to build an object file
+Layer/criterion.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/criterion.cpp.obj
+.PHONY : Layer/criterion.cpp.obj
+
+Layer/criterion.i: Layer/criterion.cpp.i
+
+.PHONY : Layer/criterion.i
+
+# target to preprocess a source file
+Layer/criterion.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/criterion.cpp.i
+.PHONY : Layer/criterion.cpp.i
+
+Layer/criterion.s: Layer/criterion.cpp.s
+
+.PHONY : Layer/criterion.s
+
+# target to generate assembly for a file
+Layer/criterion.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/criterion.cpp.s
+.PHONY : Layer/criterion.cpp.s
+
+Layer/maxpool.obj: Layer/maxpool.cpp.obj
+
+.PHONY : Layer/maxpool.obj
+
+# target to build an object file
+Layer/maxpool.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/maxpool.cpp.obj
+.PHONY : Layer/maxpool.cpp.obj
+
+Layer/maxpool.i: Layer/maxpool.cpp.i
+
+.PHONY : Layer/maxpool.i
+
+# target to preprocess a source file
+Layer/maxpool.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/maxpool.cpp.i
+.PHONY : Layer/maxpool.cpp.i
+
+Layer/maxpool.s: Layer/maxpool.cpp.s
+
+.PHONY : Layer/maxpool.s
+
+# target to generate assembly for a file
+Layer/maxpool.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Layer/maxpool.cpp.s
+.PHONY : Layer/maxpool.cpp.s
 
 Matrix.obj: Matrix.cpp.obj
 
@@ -247,6 +458,7 @@ Matrix.obj: Matrix.cpp.obj
 
 # target to build an object file
 Matrix.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Matrix.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Matrix.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Matrix.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Matrix.cpp.obj
@@ -258,6 +470,7 @@ Matrix.i: Matrix.cpp.i
 
 # target to preprocess a source file
 Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Matrix.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Matrix.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Matrix.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Matrix.cpp.i
@@ -269,10 +482,38 @@ Matrix.s: Matrix.cpp.s
 
 # target to generate assembly for a file
 Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Matrix.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Matrix.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Matrix.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Matrix.cpp.s
 .PHONY : Matrix.cpp.s
+
+Neural_network.obj: Neural_network.cpp.obj
+
+.PHONY : Neural_network.obj
+
+# target to build an object file
+Neural_network.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Neural_network.cpp.obj
+.PHONY : Neural_network.cpp.obj
+
+Neural_network.i: Neural_network.cpp.i
+
+.PHONY : Neural_network.i
+
+# target to preprocess a source file
+Neural_network.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Neural_network.cpp.i
+.PHONY : Neural_network.cpp.i
+
+Neural_network.s: Neural_network.cpp.s
+
+.PHONY : Neural_network.s
+
+# target to generate assembly for a file
+Neural_network.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Neural_network.cpp.s
+.PHONY : Neural_network.cpp.s
 
 Operator_0/MyConst.obj: Operator_0/MyConst.cpp.obj
 
@@ -280,6 +521,7 @@ Operator_0/MyConst.obj: Operator_0/MyConst.cpp.obj
 
 # target to build an object file
 Operator_0/MyConst.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyConst.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyConst.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyConst.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyConst.cpp.obj
@@ -291,6 +533,7 @@ Operator_0/MyConst.i: Operator_0/MyConst.cpp.i
 
 # target to preprocess a source file
 Operator_0/MyConst.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyConst.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyConst.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyConst.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyConst.cpp.i
@@ -302,6 +545,7 @@ Operator_0/MyConst.s: Operator_0/MyConst.cpp.s
 
 # target to generate assembly for a file
 Operator_0/MyConst.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyConst.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyConst.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyConst.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyConst.cpp.s
@@ -313,6 +557,7 @@ Operator_0/MyPlaceholder.obj: Operator_0/MyPlaceholder.cpp.obj
 
 # target to build an object file
 Operator_0/MyPlaceholder.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyPlaceholder.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyPlaceholder.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyPlaceholder.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyPlaceholder.cpp.obj
@@ -324,6 +569,7 @@ Operator_0/MyPlaceholder.i: Operator_0/MyPlaceholder.cpp.i
 
 # target to preprocess a source file
 Operator_0/MyPlaceholder.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyPlaceholder.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyPlaceholder.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyPlaceholder.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyPlaceholder.cpp.i
@@ -335,6 +581,7 @@ Operator_0/MyPlaceholder.s: Operator_0/MyPlaceholder.cpp.s
 
 # target to generate assembly for a file
 Operator_0/MyPlaceholder.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyPlaceholder.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyPlaceholder.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyPlaceholder.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyPlaceholder.cpp.s
@@ -346,6 +593,7 @@ Operator_0/MyVar.obj: Operator_0/MyVar.cpp.obj
 
 # target to build an object file
 Operator_0/MyVar.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyVar.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyVar.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyVar.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyVar.cpp.obj
@@ -357,6 +605,7 @@ Operator_0/MyVar.i: Operator_0/MyVar.cpp.i
 
 # target to preprocess a source file
 Operator_0/MyVar.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyVar.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyVar.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyVar.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyVar.cpp.i
@@ -368,6 +617,7 @@ Operator_0/MyVar.s: Operator_0/MyVar.cpp.s
 
 # target to generate assembly for a file
 Operator_0/MyVar.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/MyVar.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/MyVar.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/MyVar.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/MyVar.cpp.s
@@ -379,6 +629,7 @@ Operator_0/Operator_0.obj: Operator_0/Operator_0.cpp.obj
 
 # target to build an object file
 Operator_0/Operator_0.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/Operator_0.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/Operator_0.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/Operator_0.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/Operator_0.cpp.obj
@@ -390,6 +641,7 @@ Operator_0/Operator_0.i: Operator_0/Operator_0.cpp.i
 
 # target to preprocess a source file
 Operator_0/Operator_0.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/Operator_0.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/Operator_0.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/Operator_0.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/Operator_0.cpp.i
@@ -401,6 +653,7 @@ Operator_0/Operator_0.s: Operator_0/Operator_0.cpp.s
 
 # target to generate assembly for a file
 Operator_0/Operator_0.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_0/Operator_0.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_0/Operator_0.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_0/Operator_0.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_0/Operator_0.cpp.s
@@ -412,6 +665,7 @@ Operator_1/myassert.obj: Operator_1/myassert.cpp.obj
 
 # target to build an object file
 Operator_1/myassert.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myassert.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myassert.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myassert.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myassert.cpp.obj
@@ -423,6 +677,7 @@ Operator_1/myassert.i: Operator_1/myassert.cpp.i
 
 # target to preprocess a source file
 Operator_1/myassert.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myassert.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myassert.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myassert.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myassert.cpp.i
@@ -434,6 +689,7 @@ Operator_1/myassert.s: Operator_1/myassert.cpp.s
 
 # target to generate assembly for a file
 Operator_1/myassert.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myassert.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myassert.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myassert.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myassert.cpp.s
@@ -445,6 +701,7 @@ Operator_1/myexp.obj: Operator_1/myexp.cpp.obj
 
 # target to build an object file
 Operator_1/myexp.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myexp.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myexp.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myexp.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myexp.cpp.obj
@@ -456,6 +713,7 @@ Operator_1/myexp.i: Operator_1/myexp.cpp.i
 
 # target to preprocess a source file
 Operator_1/myexp.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myexp.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myexp.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myexp.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myexp.cpp.i
@@ -467,6 +725,7 @@ Operator_1/myexp.s: Operator_1/myexp.cpp.s
 
 # target to generate assembly for a file
 Operator_1/myexp.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myexp.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myexp.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myexp.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myexp.cpp.s
@@ -478,6 +737,7 @@ Operator_1/mygrad.obj: Operator_1/mygrad.cpp.obj
 
 # target to build an object file
 Operator_1/mygrad.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mygrad.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mygrad.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mygrad.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mygrad.cpp.obj
@@ -489,6 +749,7 @@ Operator_1/mygrad.i: Operator_1/mygrad.cpp.i
 
 # target to preprocess a source file
 Operator_1/mygrad.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mygrad.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mygrad.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mygrad.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mygrad.cpp.i
@@ -500,6 +761,7 @@ Operator_1/mygrad.s: Operator_1/mygrad.cpp.s
 
 # target to generate assembly for a file
 Operator_1/mygrad.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mygrad.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mygrad.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mygrad.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mygrad.cpp.s
@@ -511,6 +773,7 @@ Operator_1/mylog.obj: Operator_1/mylog.cpp.obj
 
 # target to build an object file
 Operator_1/mylog.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mylog.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mylog.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mylog.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mylog.cpp.obj
@@ -522,6 +785,7 @@ Operator_1/mylog.i: Operator_1/mylog.cpp.i
 
 # target to preprocess a source file
 Operator_1/mylog.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mylog.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mylog.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mylog.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mylog.cpp.i
@@ -533,10 +797,38 @@ Operator_1/mylog.s: Operator_1/mylog.cpp.s
 
 # target to generate assembly for a file
 Operator_1/mylog.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mylog.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mylog.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mylog.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mylog.cpp.s
 .PHONY : Operator_1/mylog.cpp.s
+
+Operator_1/mymaxpool.obj: Operator_1/mymaxpool.cpp.obj
+
+.PHONY : Operator_1/mymaxpool.obj
+
+# target to build an object file
+Operator_1/mymaxpool.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mymaxpool.cpp.obj
+.PHONY : Operator_1/mymaxpool.cpp.obj
+
+Operator_1/mymaxpool.i: Operator_1/mymaxpool.cpp.i
+
+.PHONY : Operator_1/mymaxpool.i
+
+# target to preprocess a source file
+Operator_1/mymaxpool.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mymaxpool.cpp.i
+.PHONY : Operator_1/mymaxpool.cpp.i
+
+Operator_1/mymaxpool.s: Operator_1/mymaxpool.cpp.s
+
+.PHONY : Operator_1/mymaxpool.s
+
+# target to generate assembly for a file
+Operator_1/mymaxpool.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mymaxpool.cpp.s
+.PHONY : Operator_1/mymaxpool.cpp.s
 
 Operator_1/myprint.obj: Operator_1/myprint.cpp.obj
 
@@ -544,6 +836,7 @@ Operator_1/myprint.obj: Operator_1/myprint.cpp.obj
 
 # target to build an object file
 Operator_1/myprint.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myprint.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myprint.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myprint.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myprint.cpp.obj
@@ -555,6 +848,7 @@ Operator_1/myprint.i: Operator_1/myprint.cpp.i
 
 # target to preprocess a source file
 Operator_1/myprint.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myprint.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myprint.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myprint.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myprint.cpp.i
@@ -566,10 +860,74 @@ Operator_1/myprint.s: Operator_1/myprint.cpp.s
 
 # target to generate assembly for a file
 Operator_1/myprint.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myprint.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myprint.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myprint.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myprint.cpp.s
 .PHONY : Operator_1/myprint.cpp.s
+
+Operator_1/myrelu.obj: Operator_1/myrelu.cpp.obj
+
+.PHONY : Operator_1/myrelu.obj
+
+# target to build an object file
+Operator_1/myrelu.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myrelu.cpp.obj
+.PHONY : Operator_1/myrelu.cpp.obj
+
+Operator_1/myrelu.i: Operator_1/myrelu.cpp.i
+
+.PHONY : Operator_1/myrelu.i
+
+# target to preprocess a source file
+Operator_1/myrelu.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myrelu.cpp.i
+.PHONY : Operator_1/myrelu.cpp.i
+
+Operator_1/myrelu.s: Operator_1/myrelu.cpp.s
+
+.PHONY : Operator_1/myrelu.s
+
+# target to generate assembly for a file
+Operator_1/myrelu.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myrelu.cpp.s
+.PHONY : Operator_1/myrelu.cpp.s
+
+Operator_1/myreshape.obj: Operator_1/myreshape.cpp.obj
+
+.PHONY : Operator_1/myreshape.obj
+
+# target to build an object file
+Operator_1/myreshape.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myreshape.cpp.obj
+	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myreshape.cpp.obj
+	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myreshape.cpp.obj
+	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myreshape.cpp.obj
+.PHONY : Operator_1/myreshape.cpp.obj
+
+Operator_1/myreshape.i: Operator_1/myreshape.cpp.i
+
+.PHONY : Operator_1/myreshape.i
+
+# target to preprocess a source file
+Operator_1/myreshape.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myreshape.cpp.i
+	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myreshape.cpp.i
+	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myreshape.cpp.i
+	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myreshape.cpp.i
+.PHONY : Operator_1/myreshape.cpp.i
+
+Operator_1/myreshape.s: Operator_1/myreshape.cpp.s
+
+.PHONY : Operator_1/myreshape.s
+
+# target to generate assembly for a file
+Operator_1/myreshape.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/myreshape.cpp.s
+	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/myreshape.cpp.s
+	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/myreshape.cpp.s
+	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/myreshape.cpp.s
+.PHONY : Operator_1/myreshape.cpp.s
 
 Operator_1/mysigmoid.obj: Operator_1/mysigmoid.cpp.obj
 
@@ -577,6 +935,7 @@ Operator_1/mysigmoid.obj: Operator_1/mysigmoid.cpp.obj
 
 # target to build an object file
 Operator_1/mysigmoid.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mysigmoid.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mysigmoid.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mysigmoid.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mysigmoid.cpp.obj
@@ -588,6 +947,7 @@ Operator_1/mysigmoid.i: Operator_1/mysigmoid.cpp.i
 
 # target to preprocess a source file
 Operator_1/mysigmoid.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mysigmoid.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mysigmoid.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mysigmoid.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mysigmoid.cpp.i
@@ -599,6 +959,7 @@ Operator_1/mysigmoid.s: Operator_1/mysigmoid.cpp.s
 
 # target to generate assembly for a file
 Operator_1/mysigmoid.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mysigmoid.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mysigmoid.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mysigmoid.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mysigmoid.cpp.s
@@ -610,6 +971,7 @@ Operator_1/mysin.obj: Operator_1/mysin.cpp.obj
 
 # target to build an object file
 Operator_1/mysin.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mysin.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mysin.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mysin.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mysin.cpp.obj
@@ -621,6 +983,7 @@ Operator_1/mysin.i: Operator_1/mysin.cpp.i
 
 # target to preprocess a source file
 Operator_1/mysin.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mysin.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mysin.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mysin.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mysin.cpp.i
@@ -632,6 +995,7 @@ Operator_1/mysin.s: Operator_1/mysin.cpp.s
 
 # target to generate assembly for a file
 Operator_1/mysin.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mysin.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mysin.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mysin.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mysin.cpp.s
@@ -643,6 +1007,7 @@ Operator_1/mytanh.obj: Operator_1/mytanh.cpp.obj
 
 # target to build an object file
 Operator_1/mytanh.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mytanh.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mytanh.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mytanh.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mytanh.cpp.obj
@@ -654,6 +1019,7 @@ Operator_1/mytanh.i: Operator_1/mytanh.cpp.i
 
 # target to preprocess a source file
 Operator_1/mytanh.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mytanh.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mytanh.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mytanh.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mytanh.cpp.i
@@ -665,6 +1031,7 @@ Operator_1/mytanh.s: Operator_1/mytanh.cpp.s
 
 # target to generate assembly for a file
 Operator_1/mytanh.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/mytanh.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/mytanh.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/mytanh.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/mytanh.cpp.s
@@ -676,6 +1043,7 @@ Operator_1/operator_1.obj: Operator_1/operator_1.cpp.obj
 
 # target to build an object file
 Operator_1/operator_1.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/operator_1.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/operator_1.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/operator_1.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/operator_1.cpp.obj
@@ -687,6 +1055,7 @@ Operator_1/operator_1.i: Operator_1/operator_1.cpp.i
 
 # target to preprocess a source file
 Operator_1/operator_1.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/operator_1.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/operator_1.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/operator_1.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/operator_1.cpp.i
@@ -698,6 +1067,7 @@ Operator_1/operator_1.s: Operator_1/operator_1.cpp.s
 
 # target to generate assembly for a file
 Operator_1/operator_1.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_1/operator_1.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_1/operator_1.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_1/operator_1.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_1/operator_1.cpp.s
@@ -709,6 +1079,7 @@ Operator_2/myassign.obj: Operator_2/myassign.cpp.obj
 
 # target to build an object file
 Operator_2/myassign.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myassign.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myassign.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myassign.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myassign.cpp.obj
@@ -720,6 +1091,7 @@ Operator_2/myassign.i: Operator_2/myassign.cpp.i
 
 # target to preprocess a source file
 Operator_2/myassign.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myassign.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myassign.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myassign.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myassign.cpp.i
@@ -731,6 +1103,7 @@ Operator_2/myassign.s: Operator_2/myassign.cpp.s
 
 # target to generate assembly for a file
 Operator_2/myassign.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myassign.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myassign.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myassign.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myassign.cpp.s
@@ -742,6 +1115,7 @@ Operator_2/myat.obj: Operator_2/myat.cpp.obj
 
 # target to build an object file
 Operator_2/myat.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myat.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myat.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myat.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myat.cpp.obj
@@ -753,6 +1127,7 @@ Operator_2/myat.i: Operator_2/myat.cpp.i
 
 # target to preprocess a source file
 Operator_2/myat.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myat.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myat.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myat.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myat.cpp.i
@@ -764,6 +1139,7 @@ Operator_2/myat.s: Operator_2/myat.cpp.s
 
 # target to generate assembly for a file
 Operator_2/myat.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myat.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myat.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myat.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myat.cpp.s
@@ -775,6 +1151,7 @@ Operator_2/mybind.obj: Operator_2/mybind.cpp.obj
 
 # target to build an object file
 Operator_2/mybind.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mybind.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mybind.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mybind.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mybind.cpp.obj
@@ -786,6 +1163,7 @@ Operator_2/mybind.i: Operator_2/mybind.cpp.i
 
 # target to preprocess a source file
 Operator_2/mybind.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mybind.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mybind.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mybind.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mybind.cpp.i
@@ -797,10 +1175,65 @@ Operator_2/mybind.s: Operator_2/mybind.cpp.s
 
 # target to generate assembly for a file
 Operator_2/mybind.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mybind.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mybind.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mybind.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mybind.cpp.s
 .PHONY : Operator_2/mybind.cpp.s
+
+Operator_2/myconv.obj: Operator_2/myconv.cpp.obj
+
+.PHONY : Operator_2/myconv.obj
+
+# target to build an object file
+Operator_2/myconv.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myconv.cpp.obj
+.PHONY : Operator_2/myconv.cpp.obj
+
+Operator_2/myconv.i: Operator_2/myconv.cpp.i
+
+.PHONY : Operator_2/myconv.i
+
+# target to preprocess a source file
+Operator_2/myconv.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myconv.cpp.i
+.PHONY : Operator_2/myconv.cpp.i
+
+Operator_2/myconv.s: Operator_2/myconv.cpp.s
+
+.PHONY : Operator_2/myconv.s
+
+# target to generate assembly for a file
+Operator_2/myconv.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myconv.cpp.s
+.PHONY : Operator_2/myconv.cpp.s
+
+Operator_2/mycriterion.obj: Operator_2/mycriterion.cpp.obj
+
+.PHONY : Operator_2/mycriterion.obj
+
+# target to build an object file
+Operator_2/mycriterion.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mycriterion.cpp.obj
+.PHONY : Operator_2/mycriterion.cpp.obj
+
+Operator_2/mycriterion.i: Operator_2/mycriterion.cpp.i
+
+.PHONY : Operator_2/mycriterion.i
+
+# target to preprocess a source file
+Operator_2/mycriterion.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mycriterion.cpp.i
+.PHONY : Operator_2/mycriterion.cpp.i
+
+Operator_2/mycriterion.s: Operator_2/mycriterion.cpp.s
+
+.PHONY : Operator_2/mycriterion.s
+
+# target to generate assembly for a file
+Operator_2/mycriterion.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mycriterion.cpp.s
+.PHONY : Operator_2/mycriterion.cpp.s
 
 Operator_2/mydiv.obj: Operator_2/mydiv.cpp.obj
 
@@ -808,6 +1241,7 @@ Operator_2/mydiv.obj: Operator_2/mydiv.cpp.obj
 
 # target to build an object file
 Operator_2/mydiv.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mydiv.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mydiv.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mydiv.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mydiv.cpp.obj
@@ -819,6 +1253,7 @@ Operator_2/mydiv.i: Operator_2/mydiv.cpp.i
 
 # target to preprocess a source file
 Operator_2/mydiv.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mydiv.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mydiv.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mydiv.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mydiv.cpp.i
@@ -830,6 +1265,7 @@ Operator_2/mydiv.s: Operator_2/mydiv.cpp.s
 
 # target to generate assembly for a file
 Operator_2/mydiv.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mydiv.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mydiv.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mydiv.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mydiv.cpp.s
@@ -841,6 +1277,7 @@ Operator_2/myequal.obj: Operator_2/myequal.cpp.obj
 
 # target to build an object file
 Operator_2/myequal.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myequal.cpp.obj
@@ -852,6 +1289,7 @@ Operator_2/myequal.i: Operator_2/myequal.cpp.i
 
 # target to preprocess a source file
 Operator_2/myequal.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myequal.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myequal.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myequal.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myequal.cpp.i
@@ -863,6 +1301,7 @@ Operator_2/myequal.s: Operator_2/myequal.cpp.s
 
 # target to generate assembly for a file
 Operator_2/myequal.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myequal.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myequal.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myequal.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myequal.cpp.s
@@ -874,6 +1313,7 @@ Operator_2/mygreater.obj: Operator_2/mygreater.cpp.obj
 
 # target to build an object file
 Operator_2/mygreater.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mygreater.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mygreater.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mygreater.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mygreater.cpp.obj
@@ -885,6 +1325,7 @@ Operator_2/mygreater.i: Operator_2/mygreater.cpp.i
 
 # target to preprocess a source file
 Operator_2/mygreater.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mygreater.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mygreater.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mygreater.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mygreater.cpp.i
@@ -896,6 +1337,7 @@ Operator_2/mygreater.s: Operator_2/mygreater.cpp.s
 
 # target to generate assembly for a file
 Operator_2/mygreater.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mygreater.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mygreater.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mygreater.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mygreater.cpp.s
@@ -907,6 +1349,7 @@ Operator_2/mygreaterequal.obj: Operator_2/mygreaterequal.cpp.obj
 
 # target to build an object file
 Operator_2/mygreaterequal.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mygreaterequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mygreaterequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mygreaterequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mygreaterequal.cpp.obj
@@ -918,6 +1361,7 @@ Operator_2/mygreaterequal.i: Operator_2/mygreaterequal.cpp.i
 
 # target to preprocess a source file
 Operator_2/mygreaterequal.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mygreaterequal.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mygreaterequal.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mygreaterequal.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mygreaterequal.cpp.i
@@ -929,6 +1373,7 @@ Operator_2/mygreaterequal.s: Operator_2/mygreaterequal.cpp.s
 
 # target to generate assembly for a file
 Operator_2/mygreaterequal.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mygreaterequal.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mygreaterequal.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mygreaterequal.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mygreaterequal.cpp.s
@@ -940,6 +1385,7 @@ Operator_2/myless.obj: Operator_2/myless.cpp.obj
 
 # target to build an object file
 Operator_2/myless.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myless.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myless.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myless.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myless.cpp.obj
@@ -951,6 +1397,7 @@ Operator_2/myless.i: Operator_2/myless.cpp.i
 
 # target to preprocess a source file
 Operator_2/myless.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myless.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myless.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myless.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myless.cpp.i
@@ -962,6 +1409,7 @@ Operator_2/myless.s: Operator_2/myless.cpp.s
 
 # target to generate assembly for a file
 Operator_2/myless.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myless.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myless.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myless.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myless.cpp.s
@@ -973,6 +1421,7 @@ Operator_2/mylessequal.obj: Operator_2/mylessequal.cpp.obj
 
 # target to build an object file
 Operator_2/mylessequal.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mylessequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mylessequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mylessequal.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mylessequal.cpp.obj
@@ -984,6 +1433,7 @@ Operator_2/mylessequal.i: Operator_2/mylessequal.cpp.i
 
 # target to preprocess a source file
 Operator_2/mylessequal.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mylessequal.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mylessequal.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mylessequal.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mylessequal.cpp.i
@@ -995,6 +1445,7 @@ Operator_2/mylessequal.s: Operator_2/mylessequal.cpp.s
 
 # target to generate assembly for a file
 Operator_2/mylessequal.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mylessequal.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mylessequal.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mylessequal.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mylessequal.cpp.s
@@ -1006,6 +1457,7 @@ Operator_2/mymatmul.obj: Operator_2/mymatmul.cpp.obj
 
 # target to build an object file
 Operator_2/mymatmul.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mymatmul.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mymatmul.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mymatmul.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mymatmul.cpp.obj
@@ -1017,6 +1469,7 @@ Operator_2/mymatmul.i: Operator_2/mymatmul.cpp.i
 
 # target to preprocess a source file
 Operator_2/mymatmul.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mymatmul.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mymatmul.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mymatmul.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mymatmul.cpp.i
@@ -1028,6 +1481,7 @@ Operator_2/mymatmul.s: Operator_2/mymatmul.cpp.s
 
 # target to generate assembly for a file
 Operator_2/mymatmul.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mymatmul.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mymatmul.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mymatmul.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mymatmul.cpp.s
@@ -1039,6 +1493,7 @@ Operator_2/myminus.obj: Operator_2/myminus.cpp.obj
 
 # target to build an object file
 Operator_2/myminus.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myminus.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myminus.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myminus.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myminus.cpp.obj
@@ -1050,6 +1505,7 @@ Operator_2/myminus.i: Operator_2/myminus.cpp.i
 
 # target to preprocess a source file
 Operator_2/myminus.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myminus.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myminus.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myminus.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myminus.cpp.i
@@ -1061,6 +1517,7 @@ Operator_2/myminus.s: Operator_2/myminus.cpp.s
 
 # target to generate assembly for a file
 Operator_2/myminus.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myminus.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myminus.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myminus.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myminus.cpp.s
@@ -1072,6 +1529,7 @@ Operator_2/mymul.obj: Operator_2/mymul.cpp.obj
 
 # target to build an object file
 Operator_2/mymul.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mymul.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mymul.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mymul.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mymul.cpp.obj
@@ -1083,6 +1541,7 @@ Operator_2/mymul.i: Operator_2/mymul.cpp.i
 
 # target to preprocess a source file
 Operator_2/mymul.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mymul.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mymul.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mymul.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mymul.cpp.i
@@ -1094,6 +1553,7 @@ Operator_2/mymul.s: Operator_2/mymul.cpp.s
 
 # target to generate assembly for a file
 Operator_2/mymul.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/mymul.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/mymul.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/mymul.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/mymul.cpp.s
@@ -1105,6 +1565,7 @@ Operator_2/myplus.obj: Operator_2/myplus.cpp.obj
 
 # target to build an object file
 Operator_2/myplus.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myplus.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myplus.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myplus.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myplus.cpp.obj
@@ -1116,6 +1577,7 @@ Operator_2/myplus.i: Operator_2/myplus.cpp.i
 
 # target to preprocess a source file
 Operator_2/myplus.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myplus.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myplus.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myplus.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myplus.cpp.i
@@ -1127,6 +1589,7 @@ Operator_2/myplus.s: Operator_2/myplus.cpp.s
 
 # target to generate assembly for a file
 Operator_2/myplus.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/myplus.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/myplus.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/myplus.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/myplus.cpp.s
@@ -1138,6 +1601,7 @@ Operator_2/operator_2.obj: Operator_2/operator_2.cpp.obj
 
 # target to build an object file
 Operator_2/operator_2.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/operator_2.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/operator_2.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/operator_2.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/operator_2.cpp.obj
@@ -1149,6 +1613,7 @@ Operator_2/operator_2.i: Operator_2/operator_2.cpp.i
 
 # target to preprocess a source file
 Operator_2/operator_2.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/operator_2.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/operator_2.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/operator_2.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/operator_2.cpp.i
@@ -1160,6 +1625,7 @@ Operator_2/operator_2.s: Operator_2/operator_2.cpp.s
 
 # target to generate assembly for a file
 Operator_2/operator_2.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_2/operator_2.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_2/operator_2.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_2/operator_2.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_2/operator_2.cpp.s
@@ -1171,6 +1637,7 @@ Operator_3/MyCond.obj: Operator_3/MyCond.cpp.obj
 
 # target to build an object file
 Operator_3/MyCond.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_3/MyCond.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_3/MyCond.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_3/MyCond.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_3/MyCond.cpp.obj
@@ -1182,6 +1649,7 @@ Operator_3/MyCond.i: Operator_3/MyCond.cpp.i
 
 # target to preprocess a source file
 Operator_3/MyCond.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_3/MyCond.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_3/MyCond.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_3/MyCond.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_3/MyCond.cpp.i
@@ -1193,6 +1661,7 @@ Operator_3/MyCond.s: Operator_3/MyCond.cpp.s
 
 # target to generate assembly for a file
 Operator_3/MyCond.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_3/MyCond.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_3/MyCond.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_3/MyCond.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_3/MyCond.cpp.s
@@ -1204,6 +1673,7 @@ Operator_3/Operator_3.obj: Operator_3/Operator_3.cpp.obj
 
 # target to build an object file
 Operator_3/Operator_3.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_3/Operator_3.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_3/Operator_3.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_3/Operator_3.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_3/Operator_3.cpp.obj
@@ -1215,6 +1685,7 @@ Operator_3/Operator_3.i: Operator_3/Operator_3.cpp.i
 
 # target to preprocess a source file
 Operator_3/Operator_3.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_3/Operator_3.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_3/Operator_3.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_3/Operator_3.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_3/Operator_3.cpp.i
@@ -1226,10 +1697,38 @@ Operator_3/Operator_3.s: Operator_3/Operator_3.cpp.s
 
 # target to generate assembly for a file
 Operator_3/Operator_3.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Operator_3/Operator_3.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Operator_3/Operator_3.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Operator_3/Operator_3.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Operator_3/Operator_3.cpp.s
 .PHONY : Operator_3/Operator_3.cpp.s
+
+Reshape.obj: Reshape.cpp.obj
+
+.PHONY : Reshape.obj
+
+# target to build an object file
+Reshape.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Reshape.cpp.obj
+.PHONY : Reshape.cpp.obj
+
+Reshape.i: Reshape.cpp.i
+
+.PHONY : Reshape.i
+
+# target to preprocess a source file
+Reshape.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Reshape.cpp.i
+.PHONY : Reshape.cpp.i
+
+Reshape.s: Reshape.cpp.s
+
+.PHONY : Reshape.s
+
+# target to generate assembly for a file
+Reshape.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Reshape.cpp.s
+.PHONY : Reshape.cpp.s
 
 Scalar.obj: Scalar.cpp.obj
 
@@ -1237,6 +1736,7 @@ Scalar.obj: Scalar.cpp.obj
 
 # target to build an object file
 Scalar.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Scalar.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Scalar.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Scalar.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Scalar.cpp.obj
@@ -1248,6 +1748,7 @@ Scalar.i: Scalar.cpp.i
 
 # target to preprocess a source file
 Scalar.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Scalar.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Scalar.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Scalar.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Scalar.cpp.i
@@ -1259,6 +1760,7 @@ Scalar.s: Scalar.cpp.s
 
 # target to generate assembly for a file
 Scalar.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Scalar.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Scalar.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Scalar.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Scalar.cpp.s
@@ -1270,6 +1772,7 @@ Storage.obj: Storage.cpp.obj
 
 # target to build an object file
 Storage.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Storage.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Storage.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Storage.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Storage.cpp.obj
@@ -1281,6 +1784,7 @@ Storage.i: Storage.cpp.i
 
 # target to preprocess a source file
 Storage.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Storage.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Storage.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Storage.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Storage.cpp.i
@@ -1292,6 +1796,7 @@ Storage.s: Storage.cpp.s
 
 # target to generate assembly for a file
 Storage.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Storage.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Storage.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Storage.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Storage.cpp.s
@@ -1303,6 +1808,7 @@ Tensor.obj: Tensor.cpp.obj
 
 # target to build an object file
 Tensor.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Tensor.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Tensor.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Tensor.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Tensor.cpp.obj
@@ -1314,6 +1820,7 @@ Tensor.i: Tensor.cpp.i
 
 # target to preprocess a source file
 Tensor.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Tensor.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Tensor.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Tensor.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Tensor.cpp.i
@@ -1325,10 +1832,38 @@ Tensor.s: Tensor.cpp.s
 
 # target to generate assembly for a file
 Tensor.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Tensor.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Tensor.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Tensor.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Tensor.cpp.s
 .PHONY : Tensor.cpp.s
+
+Utils/Data.obj: Utils/Data.cpp.obj
+
+.PHONY : Utils/Data.obj
+
+# target to build an object file
+Utils/Data.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Utils/Data.cpp.obj
+.PHONY : Utils/Data.cpp.obj
+
+Utils/Data.i: Utils/Data.cpp.i
+
+.PHONY : Utils/Data.i
+
+# target to preprocess a source file
+Utils/Data.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Utils/Data.cpp.i
+.PHONY : Utils/Data.cpp.i
+
+Utils/Data.s: Utils/Data.cpp.s
+
+.PHONY : Utils/Data.s
+
+# target to generate assembly for a file
+Utils/Data.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/Utils/Data.cpp.s
+.PHONY : Utils/Data.cpp.s
 
 main1.obj: main1.cpp.obj
 
@@ -1387,12 +1922,67 @@ main3.cpp.s:
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/main3.cpp.s
 .PHONY : main3.cpp.s
 
+main4.obj: main4.cpp.obj
+
+.PHONY : main4.obj
+
+# target to build an object file
+main4.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/main4.cpp.obj
+.PHONY : main4.cpp.obj
+
+main4.i: main4.cpp.i
+
+.PHONY : main4.i
+
+# target to preprocess a source file
+main4.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/main4.cpp.i
+.PHONY : main4.cpp.i
+
+main4.s: main4.cpp.s
+
+.PHONY : main4.s
+
+# target to generate assembly for a file
+main4.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/main4.cpp.s
+.PHONY : main4.cpp.s
+
+test_minst.obj: test_minst.cpp.obj
+
+.PHONY : test_minst.obj
+
+# target to build an object file
+test_minst.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/test_minst.cpp.obj
+.PHONY : test_minst.cpp.obj
+
+test_minst.i: test_minst.cpp.i
+
+.PHONY : test_minst.i
+
+# target to preprocess a source file
+test_minst.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/test_minst.cpp.i
+.PHONY : test_minst.cpp.i
+
+test_minst.s: test_minst.cpp.s
+
+.PHONY : test_minst.s
+
+# target to generate assembly for a file
+test_minst.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/test_minst.cpp.s
+.PHONY : test_minst.cpp.s
+
 ts.obj: ts.cpp.obj
 
 .PHONY : ts.obj
 
 # target to build an object file
 ts.cpp.obj:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/ts.cpp.obj
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/ts.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/ts.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/ts.cpp.obj
@@ -1404,6 +1994,7 @@ ts.i: ts.cpp.i
 
 # target to preprocess a source file
 ts.cpp.i:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/ts.cpp.i
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/ts.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/ts.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/ts.cpp.i
@@ -1415,6 +2006,7 @@ ts.s: ts.cpp.s
 
 # target to generate assembly for a file
 ts.cpp.s:
+	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/ts.cpp.s
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/ts.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/ts.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/ts.cpp.s
@@ -1426,6 +2018,7 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... main4
 	@echo ... main1
 	@echo ... main2
 	@echo ... main3
@@ -1440,9 +2033,33 @@ help:
 	@echo ... GraphCompute.obj
 	@echo ... GraphCompute.i
 	@echo ... GraphCompute.s
+	@echo ... Layer/Conv.obj
+	@echo ... Layer/Conv.i
+	@echo ... Layer/Conv.s
+	@echo ... Layer/Dense.obj
+	@echo ... Layer/Dense.i
+	@echo ... Layer/Dense.s
+	@echo ... Layer/Input.obj
+	@echo ... Layer/Input.i
+	@echo ... Layer/Input.s
+	@echo ... Layer/Reshape.obj
+	@echo ... Layer/Reshape.i
+	@echo ... Layer/Reshape.s
+	@echo ... Layer/activationfunc.obj
+	@echo ... Layer/activationfunc.i
+	@echo ... Layer/activationfunc.s
+	@echo ... Layer/criterion.obj
+	@echo ... Layer/criterion.i
+	@echo ... Layer/criterion.s
+	@echo ... Layer/maxpool.obj
+	@echo ... Layer/maxpool.i
+	@echo ... Layer/maxpool.s
 	@echo ... Matrix.obj
 	@echo ... Matrix.i
 	@echo ... Matrix.s
+	@echo ... Neural_network.obj
+	@echo ... Neural_network.i
+	@echo ... Neural_network.s
 	@echo ... Operator_0/MyConst.obj
 	@echo ... Operator_0/MyConst.i
 	@echo ... Operator_0/MyConst.s
@@ -1467,9 +2084,18 @@ help:
 	@echo ... Operator_1/mylog.obj
 	@echo ... Operator_1/mylog.i
 	@echo ... Operator_1/mylog.s
+	@echo ... Operator_1/mymaxpool.obj
+	@echo ... Operator_1/mymaxpool.i
+	@echo ... Operator_1/mymaxpool.s
 	@echo ... Operator_1/myprint.obj
 	@echo ... Operator_1/myprint.i
 	@echo ... Operator_1/myprint.s
+	@echo ... Operator_1/myrelu.obj
+	@echo ... Operator_1/myrelu.i
+	@echo ... Operator_1/myrelu.s
+	@echo ... Operator_1/myreshape.obj
+	@echo ... Operator_1/myreshape.i
+	@echo ... Operator_1/myreshape.s
 	@echo ... Operator_1/mysigmoid.obj
 	@echo ... Operator_1/mysigmoid.i
 	@echo ... Operator_1/mysigmoid.s
@@ -1491,6 +2117,12 @@ help:
 	@echo ... Operator_2/mybind.obj
 	@echo ... Operator_2/mybind.i
 	@echo ... Operator_2/mybind.s
+	@echo ... Operator_2/myconv.obj
+	@echo ... Operator_2/myconv.i
+	@echo ... Operator_2/myconv.s
+	@echo ... Operator_2/mycriterion.obj
+	@echo ... Operator_2/mycriterion.i
+	@echo ... Operator_2/mycriterion.s
 	@echo ... Operator_2/mydiv.obj
 	@echo ... Operator_2/mydiv.i
 	@echo ... Operator_2/mydiv.s
@@ -1530,6 +2162,9 @@ help:
 	@echo ... Operator_3/Operator_3.obj
 	@echo ... Operator_3/Operator_3.i
 	@echo ... Operator_3/Operator_3.s
+	@echo ... Reshape.obj
+	@echo ... Reshape.i
+	@echo ... Reshape.s
 	@echo ... Scalar.obj
 	@echo ... Scalar.i
 	@echo ... Scalar.s
@@ -1539,12 +2174,21 @@ help:
 	@echo ... Tensor.obj
 	@echo ... Tensor.i
 	@echo ... Tensor.s
+	@echo ... Utils/Data.obj
+	@echo ... Utils/Data.i
+	@echo ... Utils/Data.s
 	@echo ... main1.obj
 	@echo ... main1.i
 	@echo ... main1.s
 	@echo ... main3.obj
 	@echo ... main3.i
 	@echo ... main3.s
+	@echo ... main4.obj
+	@echo ... main4.i
+	@echo ... main4.s
+	@echo ... test_minst.obj
+	@echo ... test_minst.i
+	@echo ... test_minst.s
 	@echo ... ts.obj
 	@echo ... ts.i
 	@echo ... ts.s

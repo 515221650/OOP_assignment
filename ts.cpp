@@ -105,8 +105,16 @@ namespace ts
     }
 
 
-    Tensor max_T(const Tensor & A, const Tensor & B)
+    Tensor max_T(Tensor  A, Tensor  B)
     {
+        if(ts::need_broadcast(A, B))
+        {
+            auto tmppair =  ts::broadcast(A, B);
+            A = tmppair.first;
+            B = tmppair.second;
+        }
+        ts::check_shape(A,B);
+
         return point_mul((A>=B), A) + point_mul((B>A), B);
     }
 
@@ -225,8 +233,8 @@ namespace ts
             B.dim = maxdim;
             std::vector<int> sz;
             for (int i = 0; i < maxdim - dimA; i++)sz.push_back(1);
-            for (auto i : A.size)sz.push_back(i);
-            A.size.swap(sz);
+            for (auto i : B.size)sz.push_back(i);
+            B.size.swap(sz);
         }
 
         std::vector<int> new_size;
@@ -240,11 +248,13 @@ namespace ts
         new_A.size = new_size;
         broadcast(0, new_A, A, 0);
 
+
         Tensor new_B;
         new_B.val.clear();
         new_B.dim = maxdim;
         new_B.size = new_size;
         broadcast(0, new_B, B, 0);
+
 
         return std::make_pair(new_A,new_B);
     }

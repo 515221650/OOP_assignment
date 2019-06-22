@@ -7,7 +7,10 @@
 MyReLU::MyReLU(std::string &s, int x): Operator_1(s, x){}
 
 int MyReLU::Calc(MyGraph &v) {
+    //std::cout<<"num"<<num<<std::endl;
+    //std::cout<<"v[num].NodePos->Val()"<<v[num].NodePos->Val()<<std::endl;
     val = ts::max_T(v[num].NodePos->Val(), Tensor(0.0));
+    //std::cout<<"out!!"<<std::endl;
     return 0;
 }
 
