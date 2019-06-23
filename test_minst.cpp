@@ -162,6 +162,6 @@ void test_Conv() {
     Dataloader Train(train_set, 128);
     Dataloader Test(test_set, 128);
 //    MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
-    MyNet->train(Train, *G, true,  50, 0.1);
+    MyNet->train(Train, *G, true,  50, 0.02);
     MyNet->test(Test, *G, true);
 }

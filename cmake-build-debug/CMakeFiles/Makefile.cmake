@@ -55,4 +55,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main1.dir/DependInfo.cmake"
   "CMakeFiles/main2.dir/DependInfo.cmake"
   "CMakeFiles/main3.dir/DependInfo.cmake"
+  "CMakeFiles/test_tensor.dir/DependInfo.cmake"
   )

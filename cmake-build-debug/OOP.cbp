@@ -193,6 +193,50 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="test_tensor">
+				<Option output="D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/test_tensor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_tensor"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_tensor/fast">
+				<Option output="D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/test_tensor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_tensor/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/hwy/bighomework/2/OOP_assignment/cmake-build-debug"/>
 				<Option type="4"/>
@@ -286,12 +330,14 @@
 			<Option target="main1"/>
 			<Option target="main2"/>
 			<Option target="main3"/>
+			<Option target="test_tensor"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Matrix.h">
 			<Option target="main4"/>
 			<Option target="main1"/>
 			<Option target="main2"/>
 			<Option target="main3"/>
+			<Option target="test_tensor"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Neural_network.cpp">
 			<Option target="main4"/>
@@ -704,9 +750,6 @@
 			<Option target="main2"/>
 			<Option target="main3"/>
 		</Unit>
-		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/SessionRelated.h">
-			<Option target="main4"/>
-		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Storage.cpp">
 			<Option target="main4"/>
 			<Option target="main1"/>
@@ -724,12 +767,14 @@
 			<Option target="main1"/>
 			<Option target="main2"/>
 			<Option target="main3"/>
+			<Option target="test_tensor"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Tensor.h">
 			<Option target="main4"/>
 			<Option target="main1"/>
 			<Option target="main2"/>
 			<Option target="main3"/>
+			<Option target="test_tensor"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/Utils/Data.cpp">
 			<Option target="main4"/>
@@ -753,17 +798,22 @@
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/test_minst.h">
 			<Option target="main4"/>
 		</Unit>
+		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/test_tensor.cpp">
+			<Option target="test_tensor"/>
+		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/ts.cpp">
 			<Option target="main4"/>
 			<Option target="main1"/>
 			<Option target="main2"/>
 			<Option target="main3"/>
+			<Option target="test_tensor"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/ts.h">
 			<Option target="main4"/>
 			<Option target="main1"/>
 			<Option target="main2"/>
 			<Option target="main3"/>
+			<Option target="test_tensor"/>
 		</Unit>
 		<Unit filename="D:/hwy/bighomework/2/OOP_assignment/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

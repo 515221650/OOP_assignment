@@ -56,18 +56,6 @@ iostream
 ts.h
 D:/hwy/bighomework/2/OOP_assignment/ts.h
 
-D:/hwy/bighomework/2/OOP_assignment/Neural_network.cpp
-Neural_network.h
-D:/hwy/bighomework/2/OOP_assignment/Neural_network.h
-Utils/Data.h
-D:/hwy/bighomework/2/OOP_assignment/Utils/Data.h
-algorithm
--
-iostream
--
-ctime
--
-
 D:/hwy/bighomework/2/OOP_assignment/Neural_network.h
 Storage.h
 D:/hwy/bighomework/2/OOP_assignment/Storage.h
@@ -114,22 +102,6 @@ D:/hwy/bighomework/2/OOP_assignment/ts.h
 cmath
 -
 
-D:/hwy/bighomework/2/OOP_assignment/Operator_2/myconv.cpp
-myconv.h
-D:/hwy/bighomework/2/OOP_assignment/Operator_2/myconv.h
-../Matrix.h
-D:/hwy/bighomework/2/OOP_assignment/Matrix.h
-
-D:/hwy/bighomework/2/OOP_assignment/Operator_2/myconv.h
-operator_2.h
-D:/hwy/bighomework/2/OOP_assignment/Operator_2/operator_2.h
-
-D:/hwy/bighomework/2/OOP_assignment/Operator_2/operator_2.h
-../Node.h
-D:/hwy/bighomework/2/OOP_assignment/Node.h
-../ts.h
-D:/hwy/bighomework/2/OOP_assignment/ts.h
-
 D:/hwy/bighomework/2/OOP_assignment/Scalar.h
 Tensor.h
 D:/hwy/bighomework/2/OOP_assignment/Tensor.h
@@ -147,14 +119,6 @@ algorithm
 -
 Tensor.h
 D:/hwy/bighomework/2/OOP_assignment/Tensor.h
-
-D:/hwy/bighomework/2/OOP_assignment/Tensor.cpp
-Tensor.h
-D:/hwy/bighomework/2/OOP_assignment/Tensor.h
-ts.h
-D:/hwy/bighomework/2/OOP_assignment/ts.h
-stdexcept
--
 
 D:/hwy/bighomework/2/OOP_assignment/Tensor.h
 vector
@@ -174,15 +138,17 @@ tuple
 ../Tensor.h
 D:/hwy/bighomework/2/OOP_assignment/Tensor.h
 
-D:/hwy/bighomework/2/OOP_assignment/ts.cpp
-stdexcept
+D:/hwy/bighomework/2/OOP_assignment/test_minst.cpp
+test_minst.h
+D:/hwy/bighomework/2/OOP_assignment/test_minst.h
+
+D:/hwy/bighomework/2/OOP_assignment/test_minst.h
+Neural_network.h
+D:/hwy/bighomework/2/OOP_assignment/Neural_network.h
+vector
 -
-ts.h
-D:/hwy/bighomework/2/OOP_assignment/ts.h
-Matrix.h
-D:/hwy/bighomework/2/OOP_assignment/Matrix.h
-Tensor.h
-D:/hwy/bighomework/2/OOP_assignment/Tensor.h
+fstream
+-
 
 D:/hwy/bighomework/2/OOP_assignment/ts.h
 utility

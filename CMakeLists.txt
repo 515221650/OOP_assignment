@@ -178,3 +178,9 @@ add_executable(main3 main3.cpp Node.h
         Scalar.h Scalar.cpp
         Operator_2/mymatmul.cpp Operator_2/mymatmul.h
         Operator_1/myreshape.cpp Operator_1/myreshape.h)
+
+add_executable(test_tensor
+        test_tensor.cpp
+        Tensor.cpp Tensor.h
+        Matrix.cpp Matrix.h
+        ts.cpp ts.h)

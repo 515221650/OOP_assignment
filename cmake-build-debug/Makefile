@@ -161,6 +161,19 @@ main3/fast:
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/build
 .PHONY : main3/fast
 
+#=============================================================================
+# Target rules for targets named test_tensor
+
+# Build rule for target.
+test_tensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 test_tensor
+.PHONY : test_tensor
+
+# fast build rule for target.
+test_tensor/fast:
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/build
+.PHONY : test_tensor/fast
+
 CreateFunc.obj: CreateFunc.cpp.obj
 
 .PHONY : CreateFunc.obj
@@ -462,6 +475,7 @@ Matrix.cpp.obj:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Matrix.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Matrix.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Matrix.cpp.obj
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/Matrix.cpp.obj
 .PHONY : Matrix.cpp.obj
 
 Matrix.i: Matrix.cpp.i
@@ -474,6 +488,7 @@ Matrix.cpp.i:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Matrix.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Matrix.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Matrix.cpp.i
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/Matrix.cpp.i
 .PHONY : Matrix.cpp.i
 
 Matrix.s: Matrix.cpp.s
@@ -486,6 +501,7 @@ Matrix.cpp.s:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Matrix.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Matrix.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Matrix.cpp.s
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/Matrix.cpp.s
 .PHONY : Matrix.cpp.s
 
 Neural_network.obj: Neural_network.cpp.obj
@@ -1812,6 +1828,7 @@ Tensor.cpp.obj:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Tensor.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Tensor.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Tensor.cpp.obj
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/Tensor.cpp.obj
 .PHONY : Tensor.cpp.obj
 
 Tensor.i: Tensor.cpp.i
@@ -1824,6 +1841,7 @@ Tensor.cpp.i:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Tensor.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Tensor.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Tensor.cpp.i
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/Tensor.cpp.i
 .PHONY : Tensor.cpp.i
 
 Tensor.s: Tensor.cpp.s
@@ -1836,6 +1854,7 @@ Tensor.cpp.s:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/Tensor.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/Tensor.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/Tensor.cpp.s
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/Tensor.cpp.s
 .PHONY : Tensor.cpp.s
 
 Utils/Data.obj: Utils/Data.cpp.obj
@@ -1976,6 +1995,33 @@ test_minst.cpp.s:
 	$(MAKE) -f CMakeFiles\main4.dir\build.make CMakeFiles/main4.dir/test_minst.cpp.s
 .PHONY : test_minst.cpp.s
 
+test_tensor.obj: test_tensor.cpp.obj
+
+.PHONY : test_tensor.obj
+
+# target to build an object file
+test_tensor.cpp.obj:
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/test_tensor.cpp.obj
+.PHONY : test_tensor.cpp.obj
+
+test_tensor.i: test_tensor.cpp.i
+
+.PHONY : test_tensor.i
+
+# target to preprocess a source file
+test_tensor.cpp.i:
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/test_tensor.cpp.i
+.PHONY : test_tensor.cpp.i
+
+test_tensor.s: test_tensor.cpp.s
+
+.PHONY : test_tensor.s
+
+# target to generate assembly for a file
+test_tensor.cpp.s:
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/test_tensor.cpp.s
+.PHONY : test_tensor.cpp.s
+
 ts.obj: ts.cpp.obj
 
 .PHONY : ts.obj
@@ -1986,6 +2032,7 @@ ts.cpp.obj:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/ts.cpp.obj
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/ts.cpp.obj
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/ts.cpp.obj
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/ts.cpp.obj
 .PHONY : ts.cpp.obj
 
 ts.i: ts.cpp.i
@@ -1998,6 +2045,7 @@ ts.cpp.i:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/ts.cpp.i
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/ts.cpp.i
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/ts.cpp.i
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/ts.cpp.i
 .PHONY : ts.cpp.i
 
 ts.s: ts.cpp.s
@@ -2010,6 +2058,7 @@ ts.cpp.s:
 	$(MAKE) -f CMakeFiles\main1.dir\build.make CMakeFiles/main1.dir/ts.cpp.s
 	$(MAKE) -f CMakeFiles\main2.dir\build.make CMakeFiles/main2.dir/ts.cpp.s
 	$(MAKE) -f CMakeFiles\main3.dir\build.make CMakeFiles/main3.dir/ts.cpp.s
+	$(MAKE) -f CMakeFiles\test_tensor.dir\build.make CMakeFiles/test_tensor.dir/ts.cpp.s
 .PHONY : ts.cpp.s
 
 # Help Target
@@ -2022,6 +2071,7 @@ help:
 	@echo ... main1
 	@echo ... main2
 	@echo ... main3
+	@echo ... test_tensor
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CreateFunc.obj
@@ -2189,6 +2239,9 @@ help:
 	@echo ... test_minst.obj
 	@echo ... test_minst.i
 	@echo ... test_minst.s
+	@echo ... test_tensor.obj
+	@echo ... test_tensor.i
+	@echo ... test_tensor.s
 	@echo ... ts.obj
 	@echo ... ts.i
 	@echo ... ts.s
