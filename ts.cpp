@@ -55,7 +55,7 @@ namespace ts
         return ob.abs();
     }
 
-    Matrix concat(const Matrix & a, const Matrix & b, const int catdim)//catdim只能是0/1
+    Matrix concat(const Matrix & a, const Matrix & b, const int catdim)
     {
         return a.concat(b,catdim);
     }
@@ -124,10 +124,9 @@ namespace ts
         tmp.randn();
         return tmp;
     }
-//    using namespace std;
+
     bool need_broadcast(const Tensor &A, const Tensor &B)
     {
-//        std::cout<<'A'<<A<<std::endl<<'B'<<B<<std::endl;
         int dimA = A.get_dim(), dimB = B.get_dim();
         int maxdim = std::max(dimA, dimB);
         bool flag = 0;
@@ -144,9 +143,6 @@ namespace ts
             {
                 if (sizeA > 1 && sizeB > 1)
                 {
-                    //std::terminate();
-//                    cout<<'i'<<endl;
-//                    cout<<sizeA<<' '<<sizeB<<endl;
                     throw std::range_error("can't broadcast");
                 }
                 flag = 1;
@@ -259,9 +255,9 @@ namespace ts
         return std::make_pair(new_A,new_B);
     }
 
-    int get_max_pos_2d(Tensor& a)
+    int get_max_pos_2d(Tensor& a)   //only for 2d Tensor
     {
-        int tensorsize = a.get_size(0) * a.get_size(1);//两维的
+        int tensorsize = a.get_size(0) * a.get_size(1);
         int maxpos = 0;
         double maxv = a.get_val(0).get_mval(0);
         for(int i=0; i<tensorsize; i++)

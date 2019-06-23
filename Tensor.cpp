@@ -8,22 +8,13 @@
 
 bool Tensor::check_shape(const Tensor & obj2) const
 {
-    bool flag = 0;
-    if(get_dim() != obj2.get_dim()){
-        flag = 1;
-       // std::cout<<"dim!!"<<std::endl;
-        //std::cout<<get_dim()<<"  "<<obj2.get_dim()<<std::endl;
-    }
+    bool flag = false;
+    if(get_dim() != obj2.get_dim()) flag = true;
     for(int i = 0; i < dim; i++)
     {
-        if(size[i] != obj2.size[i])flag = 1;
-       // std::cout<<"size!!!!"<<std::endl;
-       // std::cout<<size[i]<<"  "<<obj2.size[i]<<std::endl;
+        if(size[i] != obj2.size[i]) flag = true;
     }
-    if(flag)
-    {
-        throw std::range_error("Tensor's shape doesn't match");
-    }
+    if(flag)  throw std::range_error("Tensor's shape doesn't match");
 }
 
 
@@ -57,8 +48,12 @@ std::ostream& operator << (std::ostream& out,const Tensor &x)
 double Tensor::operator() (std::initializer_list<int> arglist)
 {
     int listsz = arglist.size();
-    //if(listsz != dim) //错误判断
+    if(listsz != dim)
+    {
+        throw(std::range_error("Invalid Input"));
+    }
 
+    //计算目标元素所在Matrix的下标
     int tmpnum = 1;
     int tmprank = 0;//for循环后为矩阵在val中的下标
     int tmpdim = dim-3;
@@ -67,8 +62,10 @@ double Tensor::operator() (std::initializer_list<int> arglist)
         tmprank += (*a)*tmpnum;
         tmpnum *= size[tmpdim];
     }
+
     return val[tmprank].get_mval(*(arglist.end()-2), *(arglist.end()-1));
 }
+
 
 void Tensor::slice_helper(std::vector<int>& startp, std::vector<int>& endp, int now, int pos, Tensor& res)
 {
@@ -83,6 +80,7 @@ void Tensor::slice_helper(std::vector<int>& startp, std::vector<int>& endp, int 
     }
 }
 
+//slice
 Tensor Tensor::operator() (std::initializer_list<std::pair<int,int> > arglist)
 {
     std::vector<int> startp;
@@ -107,7 +105,6 @@ Tensor Tensor::operator() (std::initializer_list<std::pair<int,int> > arglist)
 
 Tensor Tensor::operator+(Tensor b) const
 {
-    //std::cout<<"now +++"<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
@@ -116,6 +113,7 @@ Tensor Tensor::operator+(Tensor b) const
         b = tmppair.second;
     }
     ts::check_shape(tmp,b);
+
     int len = b.val.size();
     for(int i=0;i<len;i++)tmp.val[i] += b.val[i];
     return tmp;
@@ -123,16 +121,15 @@ Tensor Tensor::operator+(Tensor b) const
 
 Tensor Tensor::operator-(Tensor b) const
 {
-    //std::cout<<"now---"<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
         auto tmppair =  ts::broadcast(tmp, b);
         tmp = tmppair.first;
         b = tmppair.second;
-
     }
     ts::check_shape(tmp,b);
+
     int len = b.val.size();
     for(int i=0;i<len;i++)tmp.val[i]-=b.val[i];
     return tmp;
@@ -148,7 +145,6 @@ Tensor Tensor::operator-() const
 
 Tensor Tensor::operator/ (Tensor b) const
 {
-//    std::cout<<"now///"<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
@@ -157,6 +153,7 @@ Tensor Tensor::operator/ (Tensor b) const
         b = tmppair.second;
     }
     ts::check_shape(tmp,b);
+
     int len = b.val.size();
     for(int i=0;i<len;i++)
     {
@@ -167,7 +164,6 @@ Tensor Tensor::operator/ (Tensor b) const
 
 Tensor Tensor::operator> (Tensor b) const
 {
-    //std::cout<<"now>>>"<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
@@ -175,8 +171,8 @@ Tensor Tensor::operator> (Tensor b) const
         tmp = tmppair.first;
         b = tmppair.second;
     }
-
     ts::check_shape(tmp,b);
+
     int len = b.val.size();
     for(int i=0;i<len;i++)
     {
@@ -187,7 +183,6 @@ Tensor Tensor::operator> (Tensor b) const
 
 Tensor Tensor::operator< (Tensor b) const
 {
-    //std::cout<<"now<<<"<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
@@ -196,6 +191,7 @@ Tensor Tensor::operator< (Tensor b) const
         b = tmppair.second;
     }
     ts::check_shape(tmp,b);
+
     int len = b.val.size();
     for(int i=0;i<len;i++)
     {
@@ -206,7 +202,6 @@ Tensor Tensor::operator< (Tensor b) const
 
 Tensor Tensor::operator>= (Tensor b) const
 {
-    //std::cout<<"now>="<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
@@ -215,6 +210,7 @@ Tensor Tensor::operator>= (Tensor b) const
         b = tmppair.second;
     }
     ts::check_shape(tmp,b);
+
     int len = b.val.size();
     for(int i=0;i<len;i++)
     {
@@ -225,7 +221,6 @@ Tensor Tensor::operator>= (Tensor b) const
 
 Tensor Tensor::operator<= (Tensor b) const
 {
-    //std::cout<<"now<="<<std::endl;
     Tensor tmp = *this;
     if(ts::need_broadcast(tmp, b))
     {
@@ -234,6 +229,7 @@ Tensor Tensor::operator<= (Tensor b) const
         b = tmppair.second;
     }
     ts::check_shape(tmp,b);
+
     int len = b.val.size();
     for(int i=0;i<len;i++)
     {
@@ -243,9 +239,8 @@ Tensor Tensor::operator<= (Tensor b) const
 }
 
 
-Tensor Tensor::operator*(Tensor b) const
+Tensor Tensor::operator*(Tensor b) const    //dot product
 {
-//    std::cout<<"now point_mul"<<std::endl;
     Tensor res = *this;
     if(ts::need_broadcast(res, b))
     {
@@ -254,6 +249,7 @@ Tensor Tensor::operator*(Tensor b) const
         b = tmppair.second;
     }
     ts::check_shape(res,b);
+
     int len = b.val.size();
     for(int i = 0; i <len; i++) res.val[i] = ts::point_mul(res.val[i], b.val[i]);
     return res;
@@ -325,12 +321,13 @@ Tensor::Tensor(vector<int> szlist, double mval)
     int valnum = 1;
     for(int i=0; i<size.size()-2; i++) valnum *= size[i];
     val.resize(valnum, Matrix(size[dim-2], size[dim-1], mval));
-}//这个和上面一个可以用模板合并吗?
+}
 
-void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持reshape(-1)
+void Tensor::reshape(std::initializer_list<int> szlist)
 {
-    vector<int> tmpsz;//把szlist转成vector，方便处理
-    int specialdim = -1;//赋成-1的那一维
+    //turn initializer_list into vector
+    vector<int> tmpsz;
+    int specialdim = -1;//赋成-1的那一维，特判
     int k = 0;
     int mul = 1;
     for(auto a: szlist)
@@ -340,19 +337,19 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
         else mul *= a; //除了赋成-1那一维，其余所有维的size的乘积
         k++;
     }
-    bool fail = 0;
 
-    if((specialdim == -1) && (mul != Size())) fail = 1;
+    bool fail = false;
+    if((specialdim == -1) && (mul != Size())) fail = true;
     if(specialdim!=-1)
     {
-        if(Size()%mul != 0) fail = 1;
+        if(Size()%mul != 0) fail = true;
         else tmpsz[specialdim] = Size()/mul;
-
     }
     if(fail)
     {
         throw std::range_error("Tensor's shape doesn't match while reshaping");
     }
+
 
     if(tmpsz.size() == 1)
     {
@@ -360,11 +357,8 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
         tmpsz[0] = 1;
     }
 
-
     size.swap(tmpsz);
     dim = size.size();
-
-
     std::vector<double> tmp;
     for(auto& i : val)
     {
@@ -373,11 +367,9 @@ void Tensor::reshape(std::initializer_list<int> szlist)//现在还不支持resha
             tmp.push_back(j);
         }
     }
-
     int col = size.back(), row = size[size.size()-2];
     int new_size = tmp.size()/(row*col);
     val.clear();
-
     for(int i = 0; i < new_size; i++)
     {
         Matrix matrix(row, col, 0);

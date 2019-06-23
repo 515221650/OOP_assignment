@@ -31,7 +31,6 @@ using namespace std;
 
 void Dense::build(MyGraph& G)
 {
-    //RD
     Node* newNode;
     std::string w_name;
     //命名
@@ -44,78 +43,13 @@ void Dense::build(MyGraph& G)
     int pre_add = G.str_to_int(ans_w_name);
 
     std::string b_name;
-    //
+    //命名
     B = create_var(w_name, G, ts::randn({1, out_num}));
 
 
     std::string pre_out_name;
-    //
+    //命名
     newNode = new MyPlus(pre_out_name, pre_add, B);
     G.insert_node(newNode, b_name);
     out_pos = G.str_to_int(pre_out_name);
 }
-
-/*void Dense::build(MyGraph& G)
-{
-    #define RD ((float)(rand()%101)/20/in_num)+EPS
-
-    for(int j=0;j<out_num;j++)
-    {
-        Node* newNode;
-        int pre_add = -1;
-        for(int i=0;i<in_num;i++)
-        {
-            //Node: wij
-            std::string name_wij;
-            //  这里命名 name
-            newNode= new MyVar(name_wij, RD);
-            G.insert_node(newNode, name_wij);
-            // 第i个输入到第j个输出的权重
-            int id_wij = G.str_to_int(name_wij);
-            W.push_back(id_wij);
-
-            //Node: wij * input
-            std::string name_ans_wij;
-            // 命名name
-            newNode = new MyMul(name_ans_wij, pre_layer.output(i), id_wij);
-            G.insert_node(newNode, name_ans_wij);
-            int id_ans_wij = G.str_to_int(name_ans_wij);
-
-            //Node: add up wij * input
-            if(pre_add==-1)pre_add = id_ans_wij;
-            else
-            {
-                std::string name_temp;
-                //命名name
-                newNode = new MyPlus(name_temp, pre_add, id_ans_wij);
-                G.insert_node(newNode, name_temp);
-                pre_add = G.str_to_int(name_temp);
-            }
-        }
-
-        //Node: bias
-        std::string name_bj;
-        //  这里命名 name
-        newNode= new MyVar(name_bj, RD);
-        G.insert_node(newNode, name_bj);
-        int id_bj = G.str_to_int(name_bj);
-        B.push_back(id_bj);
-
-        //Node: sigma(wij*input)+bias
-        std::string name_pre_outj;
-        // 这里命名 name
-        newNode = new MyPlus(name_pre_outj, id_bj, pre_add);
-        G.insert_node(newNode, name_pre_outj);
-        int id_pre_outj = G.str_to_int(name_pre_outj);
-
-        //Node: sigmoid (output)
-        std::string name_outj;
-        // 这里命名 name
-        newNode = new MySigmoid(name_outj, id_pre_outj);
-        G.insert_node(newNode, name_outj);
-        int id_outj = G.str_to_int(name_outj);
-
-        out_vec.push_back(id_outj);
-
-    }
-}*/

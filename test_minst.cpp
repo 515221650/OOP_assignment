@@ -53,7 +53,6 @@ void read_Data(string filename, vector<vector<double>>& data)
     row = read_int(row);
     col = read_int(col);
 
-   // std::cout<<"num"<<num<<std::endl;
     for(int i=0;i<num;i++)
     {
         vector<double>tp;
@@ -70,6 +69,9 @@ void read_Data(string filename, vector<vector<double>>& data)
     }
 }
 
+//cnn test function
+
+//mainly dense
 void test_MNIST() {
     vector<vector<double> > train_data_v, test_data_v;
     vector<double> train_labels_v, test_labels_v;
@@ -114,6 +116,7 @@ void test_MNIST() {
     MyNet->test(Test, *G, true);
 }
 
+//mainly conv
 void test_Conv() {
     vector<vector<double> > train_data_v, test_data_v;
     vector<double> train_labels_v, test_labels_v;
@@ -158,7 +161,7 @@ void test_Conv() {
     Dataset test_set(test_data, test_labels);
     Dataloader Train(train_set, 128);
     Dataloader Test(test_set, 128);
-    //MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
+//    MyNet->load("epoch7_time=1026068.txt", *G);   //取消注释可开启load功能
     MyNet->train(Train, *G, true,  50, 0.1);
     MyNet->test(Test, *G, true);
 }

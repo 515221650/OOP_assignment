@@ -24,7 +24,6 @@ std::ostream& operator << (std::ostream& out, const Matrix &x)
 
 bool Matrix::check_shape(const Matrix & obj2) const
 {
-   // std::cout<<"row "<<row<<" "<<obj2.row<<" col "<<col<<" "<<obj2.col<<std::endl;
     if(row != obj2.row || col != obj2.col)
     {
         throw std::range_error("Tensor's shape doesn't match");
@@ -46,9 +45,8 @@ Matrix Matrix::operator() (std::pair<int, int> rowp, std::pair<int, int> colp) c
 }
 
 
-Matrix Matrix::operator + (const Matrix& obj2) const//判断不符合相加要求？
+Matrix Matrix::operator + (const Matrix& obj2) const
 {
-   // std::cout<<"check +++"<<std::endl;
     check_shape(obj2);
     Matrix res(row, col);
     res.mval.clear();
@@ -59,9 +57,8 @@ Matrix Matrix::operator + (const Matrix& obj2) const//判断不符合相加要�
     return res;
 }
 
-Matrix Matrix::operator - (const Matrix& obj2) const//判断不符合相加要求？
+Matrix Matrix::operator - (const Matrix& obj2) const
 {
-
     check_shape(obj2);
     Matrix res(row, col);
     res.mval.clear();
@@ -100,7 +97,7 @@ Matrix Matrix::operator / (const Matrix & obj2) const
     return res;
 }
 
-Matrix Matrix::operator > (const Matrix& obj2) const//判断不符合相加要求？
+Matrix Matrix::operator > (const Matrix& obj2) const
 {
     check_shape(obj2);
     Matrix res(row, col);
@@ -112,7 +109,7 @@ Matrix Matrix::operator > (const Matrix& obj2) const//判断不符合相加要�
     return res;
 }
 
-Matrix Matrix::operator < (const Matrix& obj2) const//判断不符合相加要求？
+Matrix Matrix::operator < (const Matrix& obj2) const
 {
     check_shape(obj2);
     Matrix res(row, col);
@@ -124,7 +121,7 @@ Matrix Matrix::operator < (const Matrix& obj2) const//判断不符合相加要�
     return res;
 }
 
-Matrix Matrix::operator >= (const Matrix& obj2) const//判断不符合相加要求？
+Matrix Matrix::operator >= (const Matrix& obj2) const
 {
     check_shape(obj2);
     Matrix res(row, col);
@@ -136,7 +133,7 @@ Matrix Matrix::operator >= (const Matrix& obj2) const//判断不符合相加要�
     return res;
 }
 
-Matrix Matrix::operator <= (const Matrix& obj2) const//判断不符合相加要求？
+Matrix Matrix::operator <= (const Matrix& obj2) const
 {
     check_shape(obj2);
     Matrix res(row, col);
@@ -150,7 +147,6 @@ Matrix Matrix::operator <= (const Matrix& obj2) const//判断不符合相加要�
 
 Matrix Matrix::operator*(const Matrix &B) const
 {
-   // std::cout<<"check point_mul"<<std::endl;
     check_shape(B);
     Matrix res = *this;
     for(int i=0;i<B.get_size();i++)
@@ -250,7 +246,6 @@ Matrix Matrix::abs() const
 
 Matrix Matrix::point_mul(const Matrix & B) const
 {
-    //std::cout<<"check point_mul"<<std::endl;
     check_shape(B);
     Matrix res = *this;
     for(int i=0;i<B.get_size();i++)
@@ -287,16 +282,6 @@ Matrix Matrix::concat( const Matrix & b, const int catdim) const
     {
         throw std::range_error("Tensor's shape doesn't match while concating");
     }
-    /*if((catdim!=0 && catdim!=1))//mismatch
-    {
-        std::cout<<"catdim"<<catdim<<std::endl;
-        throw std::range_error("Tensor's shape doesn't match while concating");
-    }
-    if(this->get_size(1-catdim) != b.get_size(1-catdim))//mismatch
-    {
-        std::cout<<"size"<<this->get_size(1-catdim)<<std::endl<<b.get_size(1-catdim)<<std::endl;
-        throw std::range_error("Tensor's shape doesn't match while concating");
-    }*/
 
     if(catdim == 0)
     {

@@ -10,11 +10,11 @@
 class Criterion : public Layer{
 protected:
     Layer* pre_layer;
-    Layer* tar_layer;//target
+    Layer* tar_layer;//target = truth ground
     virtual void build(MyGraph& G) = 0;
 public:
     friend Neural_network;
-    explicit Criterion(Layer& pre_layer, Layer& tar_layer): Layer(pre_layer.get_size(), 1), pre_layer(&pre_layer), tar_layer(&tar_layer){}
+    Criterion(Layer& pre_layer, Layer& tar_layer): Layer(pre_layer.get_size(), 1), pre_layer(&pre_layer), tar_layer(&tar_layer){}
 };
 
 

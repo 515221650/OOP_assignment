@@ -11,6 +11,7 @@
 
 int main()
 {
+    //Equation_solver
     MyGraph i_love_compute;
     i_love_compute.solve_equation();
 

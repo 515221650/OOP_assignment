@@ -10,6 +10,7 @@
 class Tensor;
 class Matrix;
 
+//namespace created for Tensor computation
 namespace ts
 {
     Matrix sin(const Matrix &);
@@ -44,7 +45,7 @@ namespace ts
     void broadcast(int now_dim, Matrix &new_A, const Matrix &A, int pos);
     std::pair<Tensor, Tensor>broadcast(Tensor A, Tensor B);
 
-    int get_max_pos_2d(Tensor& a);//二维的tensor里面 最大值的位置
+    int get_max_pos_2d(Tensor& a);//for 2d Tensor, the position of the max element
 
     bool check_shape(const Tensor & obj1, const Tensor & obj2);
 }

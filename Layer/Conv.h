@@ -10,7 +10,7 @@
 class Conv : public Layer{
 private:
     int padding, stride, kernel_size;
-    bool bias;
+    bool bias;  //whether need bias or not
     int K, B;
     Layer& pre_layer;
     friend Neural_network;

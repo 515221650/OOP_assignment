@@ -3,7 +3,6 @@
 //
 #include "Scalar.h"
 
-
 Tensor Scalar::operator *(const Tensor & b) const
 {
     Tensor res = b;

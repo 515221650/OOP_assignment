@@ -41,7 +41,7 @@ void Neural_network::add_target(int num, MyGraph &G)
     tar = new Input(num, G);
 }
 
-void Neural_network::add_MSELoss(MyGraph &G)//必须在最后add
+void Neural_network::add_MSELoss(MyGraph &G)
 {
     cri = new MSELoss(*seq.back(), *tar, G);
 }
@@ -87,12 +87,12 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
     {
         double cnt_correct = 0.0;
         double sum_loss = 0.0;
-        double cnt2 = 0.0; //used if you want to see the process more details
+        double cnt2 = 0.0;
         std::vector<Tensor> InputData;
         std::vector<Tensor> TargetData;
         int totalsize = 0;
         int Num = 0;
-        while(DataLoader.get_data(InputData, TargetData)) //warning : each loop may take fairly long time
+        while(DataLoader.get_data(InputData, TargetData))
         {
             totalsize += InputData.size();
             Num++;
@@ -100,13 +100,12 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
             for(int num=0; num<InputData.size(); num++)
             {
                 seq[0]->change_input(InputData[num], G);    //input the image's data
-                tar->change_input(TargetData[num], G);
+                tar->change_input(TargetData[num], G);  //input groud truth
 
                 for (auto i: G.NodeInfoVec)
                 {
                     i.NodePos->rev_der(Tensor(0.0));
                 }
-
                 G.erase_mark();
 
                 Node *OutputNode = G.NodeInfoVec[outputpos()].NodePos;
@@ -114,7 +113,8 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 CriNode->Compt(G, cripos());
                 Tensor outputval = OutputNode->Val();
 
-                if(need_accu)   //check if the answer is correct
+                //check if the answer is correct
+                if(need_accu)
                 {
                     int outputmax = ts::get_max_pos_2d(outputval);
                     int targetmax = ts::get_max_pos_2d(TargetData[num]);
@@ -126,16 +126,16 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
                 }
                 sum_loss += Scalar(CriNode->Val()).get_val();
 
-                //evaluation function: sigma((outputvalue-standard_outputvalue)^2)
+                //derivate & add der to dersum
                 CriNode->rev_der(Tensor(1.0));
                 //CriNode->Derivate(G);//感觉应该是不用的...先留着了万一我zz了...
-
                 for(int i = G.NodeInfoVec.size()-1; i >= 0; i--)
                 {
                     G[i].NodePos->Derivate(G);
                     G[i].NodePos->add_dersum(G[i].NodePos->Der());
                 }
             }
+
             //gradient descent algorithm
             int c = 0;
             for(auto i : parameter)
@@ -150,7 +150,7 @@ void Neural_network::train(Dataloader& DataLoader, MyGraph &G, bool need_accu, i
         if(need_accu) std::cout << "epoch:" << time << " " << "accuracy:" << cnt_correct/totalsize << std::endl;
         std::cout << "epoch:" << time << " " << "loss:" << sum_loss/(Num*InputData.size()) << std::endl;
 
-        //save(time, G);
+//        save(time, G);
     }
 }
 

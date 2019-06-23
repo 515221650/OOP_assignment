@@ -14,9 +14,11 @@ private:
 public:
     explicit Scalar(double val):val(val){}
     explicit Scalar(const Tensor& a): val(a.get_val(0).get_mval(0)){}
+
+    double get_val() const {return val;}
+
     Tensor operator *(const Tensor & b) const;
     Matrix operator *(const Matrix & b) const;
-    double get_val() const {return val;}
 };
 
 #endif //OOP_SCALAR_H

@@ -20,8 +20,6 @@ public:
     {
         build(G);
     }
-    //int id_w(){return W;}
-    //int id_b(){return B;}
 };
 
 

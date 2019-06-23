@@ -29,7 +29,7 @@ public:
     std::string Name(){return name;}
     const Tensor& Der() {return der;}
     const Tensor& DerSum() {return dersum;}
-    const Tensor& Val() {return val;}//MyVar中override
+    virtual const Tensor& Val() {return val;}//MyVar中
 
     void rev_val(Tensor x){val = x;return ;}
     void rev_der(Tensor x){der = x;return ;}

@@ -45,7 +45,6 @@ add_executable(main4 main4.cpp Node.h
         Operator_1/mygrad.cpp Operator_1/mygrad.h
         Operator_2/myat.cpp Operator_2/myat.h
         Scalar.h Scalar.cpp
-        SessionRelated.h
         Layer/activationfunc.h
         Layer/activationfunc.cpp
         Operator_1/myrelu.h

@@ -11,6 +11,7 @@
 
 int main()
 {
+    //normal computation
     MyGraph i_love_compute;
     i_love_compute.create_root();//set const or var or placeholder
     i_love_compute.create_tree();//set others

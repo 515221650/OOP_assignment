@@ -10,10 +10,17 @@
 
 int main()
 {
+    //Neurual Network
     MyGraph i_love_compute;
     std::srand(std::time(0));
-    //test_MNIST();
-    test_Conv();
+    try{
+        //test_MNIST(); //mainly dense
+        test_Conv();    //mainly convolutional
+    }
+    catch(std::range_error & ERROR)
+    {
+        std::cout<<ERROR.what()<<std::endl;
+    }
     return 0;
 }
 
